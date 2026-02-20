@@ -4,7 +4,22 @@
     <loc>https://carpentries.github.io/workbench-template-md/01-introduction.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/workbench-template-md/1-what-is-ai.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/2-machine-learning.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/3-deep-learning.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/4-large-language-models.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/workbench-template-md/404.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/5-ai-in-research.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench-template-md/CODE_OF_CONDUCT.html</loc>
@@ -28,7 +43,22 @@
     <loc>https://carpentries.github.io/workbench-template-md/instructor/01-introduction.html</loc>
   </url>
   <url>
+    <loc>https://carpentries.github.io/workbench-template-md/instructor/1-what-is-ai.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/instructor/2-machine-learning.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/instructor/3-deep-learning.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/instructor/4-large-language-models.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries.github.io/workbench-template-md/instructor/404.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries.github.io/workbench-template-md/instructor/5-ai-in-research.html</loc>
   </url>
   <url>
     <loc>https://carpentries.github.io/workbench-template-md/instructor/CODE_OF_CONDUCT.html</loc>
