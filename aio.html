@@ -1166,7 +1166,7 @@ already in use?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Examples may include:</p>
 <ul>
@@ -1312,15 +1312,7 @@ of language.</p>
 <p>This is sometimes called <strong>self-supervised learning</strong>:
 the training data provides its own labels (the next word is always known
 from the text itself), so no human annotation is required.</p>
-<ul>
-<li>An LLM is a deep learning model trained on vast amounts of text to
-predict and generate language.</li>
-<li>“Large” refers to: the volume of training data (trillions of words)
-and the number of parameters (billions to trillions of weights).</li>
-<li>Key task learned during training: next token prediction — given a
-sequence of words, predict the most likely next word. From this simple
-objective, rich language abilities emerge.</li>
-</ul></section><section><h2 class="section-heading" id="transformer-architecture">Transformer Architecture<a class="anchor" aria-label="anchor" href="#transformer-architecture"></a>
+</section><section><h2 class="section-heading" id="transformer-architecture">Transformer Architecture<a class="anchor" aria-label="anchor" href="#transformer-architecture"></a>
 </h2>
 <hr class="half-width">
 <p>LLMs are built on an architecture called the
@@ -1347,19 +1339,6 @@ financial institution. The attention mechanism allows a Transformer to
 do something similar: it learns to assign higher attention weights to
 the words most relevant for correctly interpreting each part of the
 text.</p>
-<ul>
-<li>Introduced in 2017 (Google Brain); now the foundation of most
-state-of-the-art language models.</li>
-<li>Key innovation: the <strong>attention mechanism</strong> — the model
-learns which parts of the input text to “pay attention to” when
-processing each word.</li>
-<li>Analogy: when reading “The bank was steep and muddy, so she
-slipped,” we automatically pay attention to <em>steep</em>,
-<em>muddy</em>, and <em>slipped</em> to understand that <em>bank</em>
-means a riverbank. Transformers learn to do something similar.</li>
-<li>Unlike older RNNs, Transformers can process all words in parallel,
-making them highly efficient on modern hardware.</li>
-</ul>
 </div>
 <div class="section level3">
 <h3 id="why-transformer-changed-everything">Why “Transformer” changed everything<a class="anchor" aria-label="anchor" href="#why-transformer-changed-everything"></a>
@@ -1378,8 +1357,8 @@ coherence across a long document.</li>
 </ol>
 <p>These properties, combined with the availability of large-scale
 computing hardware (particularly GPUs and TPUs), triggered a step-change
-in what language models could do. Essentially all major LLMs today —
-GPT, Claude, Gemini, LLaMA — are built on the Transformer
+in what language models could do. Essentially all major LLMs today
+including GPT, Claude, and Gemini are built on the Transformer
 architecture.</p>
 </div>
 </section><section><h2 class="section-heading" id="how-llms-are-trained-pre-training-and-fine-tuning">How LLMs Are Trained: Pre-training and Fine-tuning<a class="anchor" aria-label="anchor" href="#how-llms-are-trained-pre-training-and-fine-tuning"></a>
@@ -1663,7 +1642,7 @@ knowledge in real time.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p><strong>False.</strong> A standard LLM generates responses based
@@ -1718,7 +1697,7 @@ capabilities.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Hallucination demo</li>
@@ -1928,93 +1907,6 @@ interpret what those anomalies mean.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="critical-evaluation-questions-to-ask-before-you-adopt-an-ai-tool">Critical Evaluation: Questions to Ask Before You Adopt an AI
-Tool<a class="anchor" aria-label="anchor" href="#critical-evaluation-questions-to-ask-before-you-adopt-an-ai-tool"></a>
-</h2>
-<hr class="half-width">
-<p>The variety and pace of AI tool development can make it difficult to
-know where to start. A useful instinct is to approach any AI tool the
-way you would approach a new research instrument or methodology: with
-curiosity, but also with critical judgement.</p>
-<p>The following questions provide a framework for evaluating any AI
-tool you are considering using in your research.</p>
-<div class="section level3">
-<h3 id="what-was-it-trained-on">1. What was it trained on?<a class="anchor" aria-label="anchor" href="#what-was-it-trained-on"></a>
-</h3>
-<p>Every AI model reflects its training data. A model trained
-predominantly on text written in English, by authors from wealthy
-countries, in a particular historical period, will have gaps and biases
-that reflect those limitations. Ask:</p>
-<ul>
-<li>Does the training data represent the population, domain, or context
-I am working in?</li>
-<li>Is the training data documented? Is there a <strong>model
-card</strong> or <strong>data sheet</strong> — standardised
-documentation that describes what a model was trained on, how it was
-evaluated, and what its known limitations are?</li>
-<li>Is the training data recent enough for my purposes?</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="has-it-been-independently-validated">2. Has it been independently validated?<a class="anchor" aria-label="anchor" href="#has-it-been-independently-validated"></a>
-</h3>
-<p>There is a significant difference between a tool that performs well
-on a benchmark chosen by its developers and one that has been
-independently evaluated on real-world tasks in your domain. Ask:</p>
-<ul>
-<li>Has the tool been validated by researchers independent of those who
-built it?</li>
-<li>What metrics were used, and are those metrics appropriate for my use
-case?</li>
-<li>Has it been tested on data similar to mine?</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="can-i-reproduce-my-results">3. Can I reproduce my results?<a class="anchor" aria-label="anchor" href="#can-i-reproduce-my-results"></a>
-</h3>
-<p>Reproducibility is a cornerstone of research integrity. AI tools
-introduce new reproducibility challenges:</p>
-<ul>
-<li>As noted in <a href="4-large-language-models.html">Episode 4</a>,
-LLM outputs are probabilistic, meaning that the same input can produce
-different outputs on different runs.</li>
-<li>Models are updated over time. A tool you use today may produce
-different outputs from the same inputs next year.</li>
-<li>Cloud-based tools may not allow you to pin or cite a specific model
-version.</li>
-</ul>
-<p>Ask whether you can specify the exact model version used, and whether
-your methodology allows for the inherent variability of the tool.</p>
-</div>
-<div class="section level3">
-<h3 id="can-i-explain-and-justify-the-tools-outputs">4. Can I explain and justify the tool’s outputs?<a class="anchor" aria-label="anchor" href="#can-i-explain-and-justify-the-tools-outputs"></a>
-</h3>
-<p>In a research context, you need to be able to explain and defend your
-methods. This connects to the concept of <strong>explainability</strong>
-introduced in relation to deep learning: some AI models are essentially
-black boxes — they produce outputs without giving any indication of how
-they arrived at them. Others offer some degree of interpretability.</p>
-<p>Ask:</p>
-<ul>
-<li>Do I need to be able to explain <em>why</em> the tool produced a
-particular output, or is the output itself sufficient?</li>
-<li>Is the tool’s decision-making process interpretable, or does it
-require a “trust me” relationship with the model?</li>
-<li>In high-stakes research contexts — clinical, legal, policy — can I
-justify acting on outputs that I cannot explain?</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="what-are-the-known-failure-modes">5. What are the known failure modes?<a class="anchor" aria-label="anchor" href="#what-are-the-known-failure-modes"></a>
-</h3>
-<p>No AI tool works equally well in all conditions. Ask:</p>
-<ul>
-<li>Under what conditions is the tool known to perform poorly?</li>
-<li>Are there documented failure modes, such as hallucination rates,
-demographic disparities in performance, or known edge cases?</li>
-<li>What happens when the tool is wrong? And how would I know?</li>
-</ul>
-</div>
 </section><section><h2 class="section-heading" id="ethical-considerations">Ethical Considerations<a class="anchor" aria-label="anchor" href="#ethical-considerations"></a>
 </h2>
 <hr class="half-width">
@@ -2142,7 +2034,7 @@ like?</li>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><strong>Information that is missing:</strong></p>
 <ul>

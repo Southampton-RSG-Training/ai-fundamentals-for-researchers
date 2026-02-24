@@ -433,14 +433,7 @@ of language.</p>
 <p>This is sometimes called <strong>self-supervised learning</strong>:
 the training data provides its own labels (the next word is always known
 from the text itself), so no human annotation is required.</p>
-<ul><li>An LLM is a deep learning model trained on vast amounts of text to
-predict and generate language.</li>
-<li>“Large” refers to: the volume of training data (trillions of words)
-and the number of parameters (billions to trillions of weights).</li>
-<li>Key task learned during training: next token prediction — given a
-sequence of words, predict the most likely next word. From this simple
-objective, rich language abilities emerge.</li>
-</ul></section><section><h2 class="section-heading" id="transformer-architecture">Transformer Architecture<a class="anchor" aria-label="anchor" href="#transformer-architecture"></a></h2>
+</section><section><h2 class="section-heading" id="transformer-architecture">Transformer Architecture<a class="anchor" aria-label="anchor" href="#transformer-architecture"></a></h2>
 <hr class="half-width"><p>LLMs are built on an architecture called the
 <strong>Transformer</strong>, introduced in a landmark 2017 paper titled
 “Attention Is All You Need”. Before the Transformer, models processed
@@ -464,18 +457,7 @@ financial institution. The attention mechanism allows a Transformer to
 do something similar: it learns to assign higher attention weights to
 the words most relevant for correctly interpreting each part of the
 text.</p>
-<ul><li>Introduced in 2017 (Google Brain); now the foundation of most
-state-of-the-art language models.</li>
-<li>Key innovation: the <strong>attention mechanism</strong> — the model
-learns which parts of the input text to “pay attention to” when
-processing each word.</li>
-<li>Analogy: when reading “The bank was steep and muddy, so she
-slipped,” we automatically pay attention to <em>steep</em>,
-<em>muddy</em>, and <em>slipped</em> to understand that <em>bank</em>
-means a riverbank. Transformers learn to do something similar.</li>
-<li>Unlike older RNNs, Transformers can process all words in parallel,
-making them highly efficient on modern hardware.</li>
-</ul></div>
+</div>
 <div class="section level3">
 <h3 id="why-transformer-changed-everything">Why “Transformer” changed everything<a class="anchor" aria-label="anchor" href="#why-transformer-changed-everything"></a></h3>
 <p>Two properties make Transformers especially powerful:</p>
@@ -490,8 +472,8 @@ words that are many sentences apart, allowing the model to maintain
 coherence across a long document.</li>
 </ol><p>These properties, combined with the availability of large-scale
 computing hardware (particularly GPUs and TPUs), triggered a step-change
-in what language models could do. Essentially all major LLMs today —
-GPT, Claude, Gemini, LLaMA — are built on the Transformer
+in what language models could do. Essentially all major LLMs today
+including GPT, Claude, and Gemini are built on the Transformer
 architecture.</p>
 </div>
 </section><section><h2 class="section-heading" id="how-llms-are-trained-pre-training-and-fine-tuning">How LLMs Are Trained: Pre-training and Fine-tuning<a class="anchor" aria-label="anchor" href="#how-llms-are-trained-pre-training-and-fine-tuning"></a></h2>
@@ -728,7 +710,7 @@ knowledge in real time.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p><strong>False.</strong> A standard LLM generates responses based
 on patterns learned during training — it does not retrieve information
@@ -779,7 +761,7 @@ capabilities.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Hallucination demo</li>
 <li>Stochasticity demo</li>

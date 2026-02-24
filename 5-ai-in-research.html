@@ -264,8 +264,6 @@
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
 <li><a href="#how-researchers-are-using-ai-today">How Researchers Are Using AI Today</a></li>
-<li><a href="#critical-evaluation-questions-to-ask-before-you-adopt-an-ai-tool">Critical Evaluation: Questions to Ask Before You Adopt an AI
-Tool</a></li>
 <li><a href="#ethical-considerations">Ethical Considerations</a></li>
 <li><a href="#looking-ahead-developing-your-ai-literacy">Looking Ahead: Developing Your AI Literacy</a></li>
 <li><a href="#summary">Summary</a></li>
@@ -469,76 +467,6 @@ interpret what those anomalies mean.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="critical-evaluation-questions-to-ask-before-you-adopt-an-ai-tool">Critical Evaluation: Questions to Ask Before You Adopt an AI
-Tool<a class="anchor" aria-label="anchor" href="#critical-evaluation-questions-to-ask-before-you-adopt-an-ai-tool"></a></h2>
-<hr class="half-width"><p>The variety and pace of AI tool development can make it difficult to
-know where to start. A useful instinct is to approach any AI tool the
-way you would approach a new research instrument or methodology: with
-curiosity, but also with critical judgement.</p>
-<p>The following questions provide a framework for evaluating any AI
-tool you are considering using in your research.</p>
-<div class="section level3">
-<h3 id="what-was-it-trained-on">1. What was it trained on?<a class="anchor" aria-label="anchor" href="#what-was-it-trained-on"></a></h3>
-<p>Every AI model reflects its training data. A model trained
-predominantly on text written in English, by authors from wealthy
-countries, in a particular historical period, will have gaps and biases
-that reflect those limitations. Ask:</p>
-<ul><li>Does the training data represent the population, domain, or context
-I am working in?</li>
-<li>Is the training data documented? Is there a <strong>model
-card</strong> or <strong>data sheet</strong> — standardised
-documentation that describes what a model was trained on, how it was
-evaluated, and what its known limitations are?</li>
-<li>Is the training data recent enough for my purposes?</li>
-</ul></div>
-<div class="section level3">
-<h3 id="has-it-been-independently-validated">2. Has it been independently validated?<a class="anchor" aria-label="anchor" href="#has-it-been-independently-validated"></a></h3>
-<p>There is a significant difference between a tool that performs well
-on a benchmark chosen by its developers and one that has been
-independently evaluated on real-world tasks in your domain. Ask:</p>
-<ul><li>Has the tool been validated by researchers independent of those who
-built it?</li>
-<li>What metrics were used, and are those metrics appropriate for my use
-case?</li>
-<li>Has it been tested on data similar to mine?</li>
-</ul></div>
-<div class="section level3">
-<h3 id="can-i-reproduce-my-results">3. Can I reproduce my results?<a class="anchor" aria-label="anchor" href="#can-i-reproduce-my-results"></a></h3>
-<p>Reproducibility is a cornerstone of research integrity. AI tools
-introduce new reproducibility challenges:</p>
-<ul><li>As noted in <a href="4-large-language-models.html">Episode 4</a>,
-LLM outputs are probabilistic, meaning that the same input can produce
-different outputs on different runs.</li>
-<li>Models are updated over time. A tool you use today may produce
-different outputs from the same inputs next year.</li>
-<li>Cloud-based tools may not allow you to pin or cite a specific model
-version.</li>
-</ul><p>Ask whether you can specify the exact model version used, and whether
-your methodology allows for the inherent variability of the tool.</p>
-</div>
-<div class="section level3">
-<h3 id="can-i-explain-and-justify-the-tools-outputs">4. Can I explain and justify the tool’s outputs?<a class="anchor" aria-label="anchor" href="#can-i-explain-and-justify-the-tools-outputs"></a></h3>
-<p>In a research context, you need to be able to explain and defend your
-methods. This connects to the concept of <strong>explainability</strong>
-introduced in relation to deep learning: some AI models are essentially
-black boxes — they produce outputs without giving any indication of how
-they arrived at them. Others offer some degree of interpretability.</p>
-<p>Ask:</p>
-<ul><li>Do I need to be able to explain <em>why</em> the tool produced a
-particular output, or is the output itself sufficient?</li>
-<li>Is the tool’s decision-making process interpretable, or does it
-require a “trust me” relationship with the model?</li>
-<li>In high-stakes research contexts — clinical, legal, policy — can I
-justify acting on outputs that I cannot explain?</li>
-</ul></div>
-<div class="section level3">
-<h3 id="what-are-the-known-failure-modes">5. What are the known failure modes?<a class="anchor" aria-label="anchor" href="#what-are-the-known-failure-modes"></a></h3>
-<p>No AI tool works equally well in all conditions. Ask:</p>
-<ul><li>Under what conditions is the tool known to perform poorly?</li>
-<li>Are there documented failure modes, such as hallucination rates,
-demographic disparities in performance, or known edge cases?</li>
-<li>What happens when the tool is wrong? And how would I know?</li>
-</ul></div>
 </section><section><h2 class="section-heading" id="ethical-considerations">Ethical Considerations<a class="anchor" aria-label="anchor" href="#ethical-considerations"></a></h2>
 <hr class="half-width"><p>Using AI in research is an ethical as well as a methodological
 question. The following are among the most important issues for
@@ -650,7 +578,7 @@ like?</li>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><strong>Information that is missing:</strong></p>
 <ul><li>Which AI tool was used, and which version? (Without this, the
