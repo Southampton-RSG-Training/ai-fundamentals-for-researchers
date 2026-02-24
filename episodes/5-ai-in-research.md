@@ -75,56 +75,6 @@ A theme running through all of these applications is that AI tools work best whe
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## Critical Evaluation: Questions to Ask Before You Adopt an AI Tool
-
-The variety and pace of AI tool development can make it difficult to know where to start. A useful instinct is to approach any AI tool the way you would approach a new research instrument or methodology: with curiosity, but also with critical judgement. 
-
-The following questions provide a framework for evaluating any AI tool you are considering using in your research.
-
-### 1. What was it trained on?
-
-Every AI model reflects its training data. A model trained predominantly on text written in English, by authors from wealthy countries, in a particular historical period, will have gaps and biases that reflect those limitations. Ask:
-
-- Does the training data represent the population, domain, or context I am working in?
-- Is the training data documented? Is there a **model card** or **data sheet** — standardised documentation that describes what a model was trained on, how it was evaluated, and what its known limitations are?
-- Is the training data recent enough for my purposes?
-
-### 2. Has it been independently validated?
-
-There is a significant difference between a tool that performs well on a benchmark chosen by its developers and one that has been independently evaluated on real-world tasks in your domain. Ask:
-
-- Has the tool been validated by researchers independent of those who built it?
-- What metrics were used, and are those metrics appropriate for my use case?
-- Has it been tested on data similar to mine?
-
-### 3. Can I reproduce my results?
-
-Reproducibility is a cornerstone of research integrity. AI tools introduce new reproducibility challenges:
-
-- As noted in [Episode 4](4-large-language-models.md), LLM outputs are probabilistic, meaning that the same input can produce different outputs on different runs.
-- Models are updated over time. A tool you use today may produce different outputs from the same inputs next year.
-- Cloud-based tools may not allow you to pin or cite a specific model version.
-
-Ask whether you can specify the exact model version used, and whether your methodology allows for the inherent variability of the tool.
-
-### 4. Can I explain and justify the tool's outputs?
-
-In a research context, you need to be able to explain and defend your methods. This connects to the concept of **explainability** introduced in relation to deep learning: some AI models are essentially black boxes — they produce outputs without giving any indication of how they arrived at them. Others offer some degree of interpretability.
-
-Ask:
-
-- Do I need to be able to explain *why* the tool produced a particular output, or is the output itself sufficient?
-- Is the tool's decision-making process interpretable, or does it require a "trust me" relationship with the model?
-- In high-stakes research contexts — clinical, legal, policy — can I justify acting on outputs that I cannot explain?
-
-### 5. What are the known failure modes?
-
-No AI tool works equally well in all conditions. Ask:
-
-- Under what conditions is the tool known to perform poorly?
-- Are there documented failure modes, such as hallucination rates, demographic disparities in performance, or known edge cases?
-- What happens when the tool is wrong? And how would I know?
-
 
 ## Ethical Considerations
 
