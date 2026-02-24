@@ -119,11 +119,11 @@
   AI Fundamentals for Researchers
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 89%" class="percentage">
-    89%
+<aside class="col-md-12 lesson-progress"><div style="width: 79%" class="percentage">
+    79%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 89%" aria-valuenow="89" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 79%" aria-valuenow="79" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -252,12 +252,26 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         6. AI in Research
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#introduction">Introduction</a></li>
+<li><a href="#how-researchers-are-using-ai-today">How Researchers Are Using AI Today</a></li>
+<li><a href="#critical-evaluation-questions-to-ask-before-you-adopt-an-ai-tool">Critical Evaluation: Questions to Ask Before You Adopt an AI
+Tool</a></li>
+<li><a href="#ethical-considerations">Ethical Considerations</a></li>
+<li><a href="#looking-ahead-developing-your-ai-literacy">Looking Ahead: Developing Your AI Literacy</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#references">References</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -320,7 +334,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>AI in Research</h1>
-        <p>Last updated on 2026-02-20 |
+        <p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/5-ai-in-research.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -339,128 +353,414 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-</div>
+<ul><li>How are AI techniques being used across research disciplines
+today?</li>
+<li>What questions should I ask before adopting an AI tool in my
+research workflow?</li>
+<li>What ethical responsibilities do I have as a researcher using
+AI?</li>
+<li>How do I handle transparency and reproducibility when AI has been
+part of my methodology?</li>
+</ul></div>
 </div>
 </div>
 <div class="col-md-8">
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Identify practical applications of AI techniques relevant to their
-field.</li>
-<li>Critically assess AI tool outputs rather than accepting them
-uncritically.</li>
-<li>Describe key ethical concerns around bias, transparency, and
-reproducibility in AI.</li>
-<li>Know what questions to ask before adopting an AI tool in their
-research workflow.</li>
+<ul><li>Identify AI applications relevant to your own research
+discipline.</li>
+<li>Apply a set of critical evaluation questions to any AI tool before
+adopting it.</li>
+<li>Describe the key ethical concerns raised by the use of AI in
+research, including bias, transparency, privacy, and attribution.</li>
+<li>Explain why reproducibility is a particular challenge when AI is
+part of a research workflow.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section level1">
-<h1 id="how-researchers-are-using-ai">How Researchers are using AI<a class="anchor" aria-label="anchor" href="#how-researchers-are-using-ai"></a></h1>
-<ul><li>AI applications in research:
-<ul><li>
-<strong>Text and literature:</strong> Automated literature review
-support, document summarisation, qualitative coding assistance.</li>
-<li>
-<strong>Images and signals:</strong> Microscopy image analysis,
-satellite imagery classification, medical imaging, seismology.</li>
-<li>
-<strong>Tabular and structured data:</strong> Predictive modelling,
-anomaly detection, pattern discovery.</li>
-<li>
-<strong>Audio and speech:</strong> Automated transcription, speaker
-identification, bioacoustic analysis.</li>
-<li>
-<strong>Multimodal:</strong> Combining text, image, and data for
-richer analysis.</li>
-</ul></li>
-<li>Emphasis: AI as a <em>tool to augment</em> researchers, not replace
-them. Researchers provide domain knowledge, critical judgement, and
-ethical oversight.</li>
-</ul><div class="section level2">
-<h2 id="critical-evaluation-of-ai-tools">Critical Evaluation of AI Tools<a class="anchor" aria-label="anchor" href="#critical-evaluation-of-ai-tools"></a></h2>
-<ul><li>Questions to ask before using an AI tool in research:
-<ul><li>What data was this model trained on? Does it represent my population
-or domain?</li>
-<li>Has it been independently validated? By whom and on what
-benchmarks?</li>
-<li>What are the known failure modes or limitations?</li>
-<li>Is the tool explainable — can I understand <em>why</em> it produced
-a given output?</li>
-<li>Can I reproduce results and cite the model version?</li>
-</ul></li>
-<li>Introduce the concept of <em>explainability</em> vs
-<em>interpretability</em> — some models are black boxes; in high-stakes
-research, this matters.</li>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
+<hr class="half-width"><p>Throughout this course we have built up a conceptual map of the AI
+landscape: from the broad field of machine learning, through the layered
+representations of deep learning, to the language capabilities of large
+language models. In this final episode we ask the question that matters
+most for you as a researcher - what can I do with AI in my research?</p>
+<p>AI is no longer a technology on the horizon. It is already woven into
+research workflows across disciplines. The goal of this episode is not
+to tell you whether to use AI in your research, but to give you the
+conceptual tools to make that decision well including how to recognise
+opportunities, ask the right critical questions, and engage seriously
+with the ethical responsibilities that come with AI tools.</p>
+</section><section><h2 class="section-heading" id="how-researchers-are-using-ai-today">How Researchers Are Using AI Today<a class="anchor" aria-label="anchor" href="#how-researchers-are-using-ai-today"></a></h2>
+<hr class="half-width"><p>AI techniques are being applied across virtually every research
+domain. The examples below are illustrative rather than exhaustive. The
+aim of this episode is to help you begin connecting the technical ideas
+from earlier episodes to work that may be relevant to your own
+field.</p>
+<div class="section level3">
+<h3 id="working-with-text">Working with Text<a class="anchor" aria-label="anchor" href="#working-with-text"></a></h3>
+<p>Text is one of the most abundant forms of data in research, and AI
+tools for working with text are among the most mature. Researchers are
+using LLMs and related tools to:</p>
+<ul><li>Assist with literature reviews by summarising large volumes of
+papers.</li>
+<li>Support qualitative coding of interview transcripts, field notes, or
+open-ended survey responses.</li>
+<li>Draft and revise written outputs such as grant applications,
+reports, and manuscripts.</li>
+<li>Extract structured information such as dates, entities, or
+relationships from unstructured documents such as historical records or
+clinical notes.</li>
+<li>Analyse sentiment or tone across large amounts of text, such as
+social media data or policy documents.</li>
 </ul></div>
-<div class="section level2">
-<h2 id="ethical-considerations">Ethical Considerations<a class="anchor" aria-label="anchor" href="#ethical-considerations"></a></h2>
+<div class="section level3">
+<h3 id="analysing-images-and-signals">Analysing Images and Signals<a class="anchor" aria-label="anchor" href="#analysing-images-and-signals"></a></h3>
+<p>Convolutional neural networks (introduced in <a href="3-deep-learning.html">Episode 3</a>) have transformed the analysis
+of visual data and complex signals. Applications include:</p>
+<ul><li>Classifying cell types or identifying anomalies in microscopy
+images.</li>
+<li>Detecting objects or changes in satellite or aerial imagery for
+environmental, geographic, or agricultural research.</li>
+<li>Supporting diagnostic imaging in clinical and veterinary research —
+identifying tumours, fractures, or lesions.</li>
+<li>Recognising patterns in audio signals such as birdsong, seismic
+activity, or cardiac rhythms.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="working-with-tabular-and-structured-data">Working with Tabular and Structured Data<a class="anchor" aria-label="anchor" href="#working-with-tabular-and-structured-data"></a></h3>
+<p>Supervised machine learning methods remain highly effective for
+structured datasets of the kind that appear throughout quantitative
+research:</p>
+<ul><li>Predicting outcomes in clinical trials or epidemiological
+studies.</li>
+<li>Detecting anomalies or fraud in financial or administrative
+datasets.</li>
+<li>Classifying observations in ecology, chemistry, or materials
+science.</li>
+<li>Building recommendation systems for research infrastructure, such as
+suggesting reviewers for journal submissions.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="code-and-data-analysis-assistance">Code and Data Analysis Assistance<a class="anchor" aria-label="anchor" href="#code-and-data-analysis-assistance"></a></h3>
+<p>LLMs have rapidly become practical tools for researchers who work
+with data programmatically. They can write, explain, and debug code in
+languages such as Python and R, making computational methods more
+accessible to researchers who do not have a formal programming
+background.</p>
+<div id="ai-as-a-collaborator" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="ai-as-a-collaborator" class="callout-inner">
+<h3 class="callout-title">AI as a Collaborator</h3>
+<div class="callout-content">
+<p>A theme running through all of these applications is that AI tools
+work best when used as a tool to completement the expertise of a human
+researcher, rather than replacing the researcher. An LLM that assists
+with qualitative coding still requires a researcher who understands the
+domain, the methodology, and the data. A computer vision model that
+flags anomalies in microscopy images still requires a scientist who can
+interpret what those anomalies mean.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="critical-evaluation-questions-to-ask-before-you-adopt-an-ai-tool">Critical Evaluation: Questions to Ask Before You Adopt an AI
+Tool<a class="anchor" aria-label="anchor" href="#critical-evaluation-questions-to-ask-before-you-adopt-an-ai-tool"></a></h2>
+<hr class="half-width"><p>The variety and pace of AI tool development can make it difficult to
+know where to start. A useful instinct is to approach any AI tool the
+way you would approach a new research instrument or methodology: with
+curiosity, but also with critical judgement.</p>
+<p>The following questions provide a framework for evaluating any AI
+tool you are considering using in your research.</p>
+<div class="section level3">
+<h3 id="what-was-it-trained-on">1. What was it trained on?<a class="anchor" aria-label="anchor" href="#what-was-it-trained-on"></a></h3>
+<p>Every AI model reflects its training data. A model trained
+predominantly on text written in English, by authors from wealthy
+countries, in a particular historical period, will have gaps and biases
+that reflect those limitations. Ask:</p>
+<ul><li>Does the training data represent the population, domain, or context
+I am working in?</li>
+<li>Is the training data documented? Is there a <strong>model
+card</strong> or <strong>data sheet</strong> — standardised
+documentation that describes what a model was trained on, how it was
+evaluated, and what its known limitations are?</li>
+<li>Is the training data recent enough for my purposes?</li>
+</ul></div>
+<div class="section level3">
+<h3 id="has-it-been-independently-validated">2. Has it been independently validated?<a class="anchor" aria-label="anchor" href="#has-it-been-independently-validated"></a></h3>
+<p>There is a significant difference between a tool that performs well
+on a benchmark chosen by its developers and one that has been
+independently evaluated on real-world tasks in your domain. Ask:</p>
+<ul><li>Has the tool been validated by researchers independent of those who
+built it?</li>
+<li>What metrics were used, and are those metrics appropriate for my use
+case?</li>
+<li>Has it been tested on data similar to mine?</li>
+</ul></div>
+<div class="section level3">
+<h3 id="can-i-reproduce-my-results">3. Can I reproduce my results?<a class="anchor" aria-label="anchor" href="#can-i-reproduce-my-results"></a></h3>
+<p>Reproducibility is a cornerstone of research integrity. AI tools
+introduce new reproducibility challenges:</p>
+<ul><li>As noted in <a href="4-large-language-models.html">Episode 4</a>,
+LLM outputs are probabilistic, meaning that the same input can produce
+different outputs on different runs.</li>
+<li>Models are updated over time. A tool you use today may produce
+different outputs from the same inputs next year.</li>
+<li>Cloud-based tools may not allow you to pin or cite a specific model
+version.</li>
+</ul><p>Ask whether you can specify the exact model version used, and whether
+your methodology allows for the inherent variability of the tool.</p>
+</div>
+<div class="section level3">
+<h3 id="can-i-explain-and-justify-the-tools-outputs">4. Can I explain and justify the tool’s outputs?<a class="anchor" aria-label="anchor" href="#can-i-explain-and-justify-the-tools-outputs"></a></h3>
+<p>In a research context, you need to be able to explain and defend your
+methods. This connects to the concept of <strong>explainability</strong>
+introduced in relation to deep learning: some AI models are essentially
+black boxes — they produce outputs without giving any indication of how
+they arrived at them. Others offer some degree of interpretability.</p>
+<p>Ask:</p>
+<ul><li>Do I need to be able to explain <em>why</em> the tool produced a
+particular output, or is the output itself sufficient?</li>
+<li>Is the tool’s decision-making process interpretable, or does it
+require a “trust me” relationship with the model?</li>
+<li>In high-stakes research contexts — clinical, legal, policy — can I
+justify acting on outputs that I cannot explain?</li>
+</ul></div>
+<div class="section level3">
+<h3 id="what-are-the-known-failure-modes">5. What are the known failure modes?<a class="anchor" aria-label="anchor" href="#what-are-the-known-failure-modes"></a></h3>
+<p>No AI tool works equally well in all conditions. Ask:</p>
+<ul><li>Under what conditions is the tool known to perform poorly?</li>
+<li>Are there documented failure modes, such as hallucination rates,
+demographic disparities in performance, or known edge cases?</li>
+<li>What happens when the tool is wrong? And how would I know?</li>
+</ul></div>
+</section><section><h2 class="section-heading" id="ethical-considerations">Ethical Considerations<a class="anchor" aria-label="anchor" href="#ethical-considerations"></a></h2>
+<hr class="half-width"><p>Using AI in research is an ethical as well as a methodological
+question. The following are among the most important issues for
+researchers to engage with.</p>
+<div class="section level3">
+<h3 id="bias-and-fairness">Bias and Fairness<a class="anchor" aria-label="anchor" href="#bias-and-fairness"></a></h3>
+<p>AI models do not arrive in the world as neutral tools. They are
+trained on data generated by human societies, and those societies
+contain historical and structural inequalities. A model trained on
+historical medical records will reflect historical disparities in who
+received care and who was documented. A model trained on published
+academic literature will reflect who has historically had access to
+publish.</p>
+<p>The consequences can be serious. Models used for clinical risk
+prediction have been shown to perform worse on patients from groups
+underrepresented in the training data. Automated tools used in hiring or
+admissions have reproduced patterns of discrimination from historical
+decisions.</p>
+<p>As a researcher, bias matters in two distinct ways:</p>
 <ul><li>
-<strong>Bias and fairness:</strong> Models reflect the biases in
-their training data. A language model trained on historical text will
-encode historical inequalities. A clinical model trained on data from
-one population may underperform on others.</li>
+<strong>Bias in tools you use:</strong> if an AI tool is part of
+your analysis, its biases may propagate into your findings.</li>
 <li>
-<strong>Transparency and reproducibility:</strong> Can you describe
-your AI methods clearly enough for others to replicate your results? Are
-you using a versioned model?</li>
+<strong>Bias in research you produce:</strong> if you build or
+fine-tune AI models as part of your research, you have a responsibility
+to evaluate and document their limitations across the populations they
+may affect.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="transparency-and-reproducibility">Transparency and Reproducibility<a class="anchor" aria-label="anchor" href="#transparency-and-reproducibility"></a></h3>
+<p>Research integrity depends on being transparent about your methods.
+When AI is part of your workflow, transparency requires:</p>
+<ul><li>Stating clearly which AI tools were used, for what purpose, and at
+what stage of the research.</li>
+<li>Citing specific model versions wherever possible, so that readers
+can assess potential limitations and — where feasible — replicate your
+approach.</li>
+<li>Describing how you validated or checked AI-generated outputs.</li>
+<li>Acknowledging limitations that arise specifically from using AI,
+such as the probabilistic nature of LLM outputs or the knowledge cutoff
+of the model used.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="privacy-and-data-governance">Privacy and Data Governance<a class="anchor" aria-label="anchor" href="#privacy-and-data-governance"></a></h3>
+<p>Many AI tools, particularly cloud-based LLMs, process data on
+external servers. If you input sensitive data — patient records,
+interview transcripts, confidential documents — into a commercial AI
+tool, you may be:</p>
+<ul><li>Breaching participant confidentiality.</li>
+<li>Violating data protection legislation such as the UK GDPR.</li>
+<li>Contravening your institution’s data governance policies or your
+ethical approval conditions.</li>
+</ul><p>Before inputting any data into an AI tool, check your institution’s
+guidance on what categories of data may be processed in this way, and
+review the tool provider’s privacy and data retention policies.</p>
+</div>
+<div class="section level3">
+<h3 id="attribution-and-authorship">Attribution and Authorship<a class="anchor" aria-label="anchor" href="#attribution-and-authorship"></a></h3>
+<p>LLMs have raised genuinely novel questions about authorship and
+attribution that the research community is still working through. Key
+issues include:</p>
+<ul><li>
+<strong>Authorship of AI-generated text:</strong> most major
+publishers and funders now have explicit policies stating that AI tools
+cannot be listed as authors, because authorship carries accountability
+that a model cannot bear. However, policies on <em>disclosing</em> the
+use of AI in drafting or editing text vary and are evolving
+rapidly.</li>
 <li>
-<strong>Privacy and data governance:</strong> Training data or input
-data may contain sensitive personal information. What are the data
-sharing implications?</li>
+<strong>Attribution of AI-generated analysis:</strong> if an LLM
+assists with qualitative coding or data interpretation, how should that
+contribution be disclosed in the methods section?</li>
 <li>
-<strong>Authorship and attribution:</strong> Who is the “author”
-when AI assisted in writing or analysis? What do your institution’s and
-your target journal’s policies say?</li>
-<li>
-<strong>Environmental cost:</strong> Training large models has a
-significant carbon footprint — relevant for sustainability-conscious
-researchers.</li>
-</ul><div id="critical-evaluation-of-ai-in-research" class="callout challenge">
+<strong>Copyright in training data:</strong> LLMs are trained on
+text that may include copyrighted material. The legal and ethical status
+of this is an active area of debate in many jurisdictions.</li>
+</ul><p>You should check the current policies of your target journal or
+funder, and your institution’s own guidance, before submitting work in
+which AI has played a role.</p>
+<div id="challenge-the-critical-reviewer" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="critical-evaluation-of-ai-in-research" class="callout-inner">
-<h3 class="callout-title">Critical Evaluation of AI in Research</h3>
+<div id="challenge-the-critical-reviewer" class="callout-inner">
+<h3 class="callout-title">Challenge: The Critical Reviewer</h3>
 <div class="callout-content">
-<p><strong>Scenario</strong>: You are reviewing a paper where the
-authors used an LLM to assist with qualitative coding of interview
-transcripts. What questions would you want the authors to have answered
-in their methods section?</p>
-</div>
+<p>You are reviewing a manuscript submitted to your field’s leading
+journal. In the methods section, the authors write:</p>
+<blockquote>
+<p><em>“Qualitative thematic analysis of interview transcripts was
+supported by an AI language model, which was used to generate initial
+codes. These codes were then reviewed and refined by the research team.
+The AI tool assisted with the analysis of all 47 transcripts.”</em></p>
+</blockquote>
+<p>Discuss the following questions:</p>
+<ol style="list-style-type: decimal"><li>What information is missing from this methods description that you
+would need as a reviewer?</li>
+<li>What risks or limitations should the authors have acknowledged?</li>
+<li>What would a more complete and transparent methods statement look
+like?</li>
+</ol></div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution1">
+  Points to consider
+  </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>Possible discussion points: which model/version was used; how was the
-output validated; how was human oversight applied; what were the model’s
-known limitations; are there any privacy implications for the
-participants?</p>
+<p><strong>Information that is missing:</strong></p>
+<ul><li>Which AI tool was used, and which version? (Without this, the
+approach cannot be evaluated or replicated.)</li>
+<li>What prompts or instructions were given to the model?</li>
+<li>What was the process for the research team’s review — how were
+AI-generated codes accepted, modified, or rejected?</li>
+<li>Was the tool validated on similar data or in similar research
+contexts?</li>
+<li>How was participant data handled — was it anonymised before being
+input? Was the tool’s data retention policy checked against ethical
+approval conditions?</li>
+</ul><p><strong>Risks and limitations the authors should have
+acknowledged:</strong></p>
+<ul><li>LLMs can produce plausible-sounding codes that do not accurately
+reflect the content of the transcript.</li>
+<li>The model may perform inconsistently across different transcripts,
+introducing variability that is difficult to detect.</li>
+<li>The model’s outputs may reflect biases in its training data rather
+than patterns in the research data.</li>
+<li>If the same analysis were run again, the model might produce
+different initial codes.</li>
+</ul><p><strong>A more complete methods statement might include:</strong></p>
+<ul><li>The name and version of the AI tool used.</li>
+<li>A description of how the tool was prompted and integrated into the
+coding workflow.</li>
+<li>A statement of how participant data was handled in compliance with
+ethical approval and data protection requirements.</li>
+<li>A description of the human review process e.g. how many researchers
+reviewed codes, whether inter-rater reliability was assessed, how
+disagreements were resolved.</li>
+<li>An explicit acknowledgement of the limitations of AI-assisted coding
+and how these were mitigated.</li>
+</ul></div>
 </div>
 </div>
 </div>
 </div>
-<div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
+<div class="section level3">
+<h3 id="environmental-cost-of-ai">Environmental Cost of AI<a class="anchor" aria-label="anchor" href="#environmental-cost-of-ai"></a></h3>
+<p>The environmental cost of AI is larger and more complex than most
+users appreciate. The most recent estimates suggest AI systems generated
+between 32.6 and 79.7 million tonnes of CO₂ and consumed up to 764
+billion litres of water in 2025 (<a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de Vries-Gao,
+2025</a>). These figures are comparable to the annual emissions of a
+major city and global bottled water consumption respectively.</p>
+<p>These costs accumulate across the full lifecycle of a model. This
+includes the water and carbon used to manufacture the specialist chips
+required to run the AI; the intensive one-off cost of training the
+model; and the ongoing costs of inference (the cost every time a query
+is run). Although many people believe that initial training has the
+largest environmental cost, inference can actually account for up to 90%
+of a model’s total lifetime energy use. Water consumption follows a
+similar pattern, with estimates suggesting a standard ChatGPT
+conversation of 20–50 exchanges requires roughly 500 millilitres of
+freshwater for cooling (<a href="https://dl.acm.org/doi/10.1145/3724499" class="external-link">Li et al., 2023</a>).</p>
+<p>Not all AI is equally expensive. General-purpose LLMs are orders of
+magnitude more energy-intensive per inference than smaller,
+task-specific models performing the same job. This means that the
+convenience of using a single general-purpose LLM interface can carry a
+substantial and largely invisible environmental cost when multiplied
+across many uses. A fine-tuned model used for classification or
+information extraction may produce comparable results at a fraction of
+the per-query energy cost (<a href="https://doi.org/10.1145/3630106.3658542" class="external-link">Luccioni et al.,
+2024</a>)</p>
+<p>The biggest obstacle to accurate environmental accounting for AI is
+the problem of transparency. The companies operating the largest AI
+systems publish very little useful data. Furthermore, the published
+per-query emissions figures from AI providers typically reflect
+optimised, market-based conditions, rather than an accurate estimate of
+carbon and water usage (<a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de Vries-Gao,
+2025</a>).</p>
 </div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-
-</div>
-</div>
-</div>
+</section><section><h2 class="section-heading" id="looking-ahead-developing-your-ai-literacy">Looking Ahead: Developing Your AI Literacy<a class="anchor" aria-label="anchor" href="#looking-ahead-developing-your-ai-literacy"></a></h2>
+<hr class="half-width"><p>This course has given you a conceptual foundation — a map of the AI
+landscape and the vocabulary to navigate it. That foundation will serve
+you well, but AI is a fast-moving field. Staying informed does not
+require becoming a technical expert; it does require cultivating an
+ongoing critical curiosity.</p>
+<p>A few practical suggestions for developing your AI literacy beyond
+this course:</p>
+<ul><li>
+<strong>Follow your institution’s guidance.</strong> Most
+universities and research funders are actively developing AI use
+policies. These are the most directly relevant to your work, and they
+will continue to evolve.</li>
+<li>
+<strong>Engage with your community.</strong> Methodological norms
+for AI use in research are being worked out discipline by discipline.
+Engaging with debates in your own field’s journals and conferences is
+more valuable than generic AI news.</li>
+<li>
+<strong>Start small and validate.</strong> If you are considering
+integrating an AI tool into your workflow, start with a small,
+low-stakes task and validate the outputs carefully before scaling
+up.</li>
+<li>
+<strong>Be transparent.</strong> When in doubt about how much to
+disclose about your use of AI, err on the side of transparency. The
+research community is better served by over-disclosure than by the
+alternative.</li>
+</ul></section><section><h2 class="section-heading" id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a></h2>
+<hr class="half-width"><p>This episode has moved from the conceptual to the practical,
+exploring how AI techniques are being applied in research and what it
+means to use them responsibly.</p>
+<p>The technical concepts from this course including training data,
+overfitting, hallucination, attention, fine-tuning are not just
+technical jargon. They are the vocabulary you need to read documentation
+critically, evaluate tools rigorously, and explain your methods
+honestly.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -468,20 +768,43 @@ participants?</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-
+<ul><li>AI techniques are being applied across research disciplines, from
+text analysis and image classification to code generation and structured
+data modelling.</li>
+<li>Before adopting any AI tool, ask: what was it trained on? Has it
+been validated? Can results be reproduced? Can outputs be explained?
+What are the failure modes?</li>
+<li>AI models reflect the biases in their training data — outputs should
+never be accepted uncritically, particularly where equity and
+representation matter.</li>
+<li>Transparency in methods is essential: report which tools were used,
+at what version, for what purpose, and how outputs were validated.</li>
+<li>Privacy and data governance must be considered before inputting any
+sensitive or personal data into an AI tool.</li>
+<li>Authorship, attribution, and environmental cost are emerging ethical
+considerations that researchers should engage with actively.</li>
+<li>Developing AI literacy is an ongoing practice: follow institutional
+guidance, read model documentation, and engage with methodological
+debates in your own field.</li>
+</ul></div>
 </div>
 </div>
-</div>
-<!--
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><ul><li><a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de Vries-Gao,
+A. (2025). The carbon and water footprints of data centers and what this
+could mean for artificial intelligence. Patterns, 6, 101430.</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/3724499" class="external-link">Li, P., Yang, J.,
+Islam, M. A., &amp; Ren, S. (2023). Making AI less “thirsty”: Uncovering
+and addressing the secret water footprint of AI models. Communications
+of the ACM.</a></li>
+<li><a href="https://doi.org/10.1145/3630106.3658542" class="external-link">Luccioni, A. S.,
+Jernite, Y., &amp; Strubell, E. (2024). Power hungry processing: Watts
+driving the cost of AI deployment. Proceedings of the 2024 ACM
+Conference on Fairness, Accountability, and Transparency, 85–99</a></li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</div>
-</div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+ --></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="4-large-language-models.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -541,7 +864,7 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/5-ai-in-research.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/5-ai-in-research.html",
   "dateCreated": "2026-02-20",
-  "dateModified": "2026-02-20",
+  "dateModified": "2026-02-24",
   "datePublished": "2026-02-24"
 }
 
