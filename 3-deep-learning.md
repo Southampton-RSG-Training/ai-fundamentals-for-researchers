@@ -120,15 +120,15 @@ This requires significant computational resources, often specialised hardware. W
 
 There are several major neural network architectures, each suited to particular tasks.
 
-###Convolutional Neural Networks (CNNs)
+### Convolutional Neural Networks (CNNs)
 
 CNNs are particularly effective for image and video analysis. They use specialised layers that focus on local patterns, such as edges and textures. Image classification tools such as [Google Vision image classification tool](https://cloud.google.com/vision) are built on this type of architecture.
 
-###Recurrent Neural Networks (RNNs)
+### Recurrent Neural Networks (RNNs)
 
 RNNs were designed to handle sequential data, such as time-series measurements or text. They process information step by step, maintaining a form of internal memory. In many applications, they have now been replaced by more advanced architectures.
 
-###Transformers
+### Transformers
 
 Transformers are the foundation of most modern natural language processing systems. They are especially effective at modelling relationships within sequences of text and form the basis of contemporary large language models, which we will examine in the next episode.
  

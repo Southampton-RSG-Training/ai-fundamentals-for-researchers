@@ -1,94 +1,267 @@
 ---
-title: AI in Research
-teaching: 10 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+title: "AI in Research"
+teaching: 20
+exercises: 5
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
+- How are AI techniques being used across research disciplines today?
+- What questions should I ask before adopting an AI tool in my research workflow?
+- What ethical responsibilities do I have as a researcher using AI?
+- How do I handle transparency and reproducibility when AI has been part of my methodology?
 
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Identify practical applications of AI techniques relevant to their field.
-- Critically assess AI tool outputs rather than accepting them uncritically.
-- Describe key ethical concerns around bias, transparency, and reproducibility in AI.
-- Know what questions to ask before adopting an AI tool in their research workflow.
+- Identify AI applications relevant to your own research discipline.
+- Apply a set of critical evaluation questions to any AI tool before adopting it.
+- Describe the key ethical concerns raised by the use of AI in research, including bias, transparency, privacy, and attribution.
+- Explain why reproducibility is a particular challenge when AI is part of a research workflow.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-# How Researchers are using AI
 
-- AI applications in research:
-  - **Text and literature:** Automated literature review support, document summarisation, qualitative coding assistance.
-  - **Images and signals:** Microscopy image analysis, satellite imagery classification, medical imaging, seismology.
-  - **Tabular and structured data:** Predictive modelling, anomaly detection, pattern discovery.
-  - **Audio and speech:** Automated transcription, speaker identification, bioacoustic analysis.
-  - **Multimodal:** Combining text, image, and data for richer analysis.
-- Emphasis: AI as a *tool to augment* researchers, not replace them. Researchers provide domain knowledge, critical judgement, and ethical oversight.
+## Introduction
+
+Throughout this course we have built up a conceptual map of the AI landscape: from the broad field of machine learning, through the layered representations of deep learning, to the language capabilities of large language models. In this final episode we ask the question that matters most for you as a researcher - what can I do with AI in my research?
+
+AI is no longer a technology on the horizon. It is already woven into research workflows across disciplines. The goal of this episode is not to tell you whether to use AI in your research, but to give you the conceptual tools to make that decision well including how to recognise opportunities, ask the right critical questions, and engage seriously with the ethical responsibilities that come with AI tools.
 
 
-## Critical Evaluation of AI Tools
+## How Researchers Are Using AI Today
 
-- Questions to ask before using an AI tool in research:
-  - What data was this model trained on? Does it represent my population or domain?
-  - Has it been independently validated? By whom and on what benchmarks?
-  - What are the known failure modes or limitations?
-  - Is the tool explainable — can I understand *why* it produced a given output?
-  - Can I reproduce results and cite the model version?
-- Introduce the concept of *explainability* vs *interpretability* — some models are black boxes; in high-stakes research, this matters.
+AI techniques are being applied across virtually every research domain. The examples below are illustrative rather than exhaustive.  The aim of this episode is to help you begin connecting the technical ideas from earlier episodes to work that may be relevant to your own field.
+
+### Working with Text
+
+Text is one of the most abundant forms of data in research, and AI tools for working with text are among the most mature. Researchers are using LLMs and related tools to:
+
+- Assist with literature reviews by summarising large volumes of papers.
+- Support qualitative coding of interview transcripts, field notes, or open-ended survey responses.
+- Draft and revise written outputs such as grant applications, reports, and manuscripts.
+- Extract structured information such as dates, entities, or relationships from unstructured documents such as historical records or clinical notes.
+- Analyse sentiment or tone across large amounts of text, such as social media data or policy documents.
+
+### Analysing Images and Signals
+
+Convolutional neural networks (introduced in [Episode 3](3-deep-learning.md)) have transformed the analysis of visual data and complex signals. Applications include:
+
+- Classifying cell types or identifying anomalies in microscopy images.
+- Detecting objects or changes in satellite or aerial imagery for environmental, geographic, or agricultural research.
+- Supporting diagnostic imaging in clinical and veterinary research — identifying tumours, fractures, or lesions.
+- Recognising patterns in audio signals such as birdsong, seismic activity, or cardiac rhythms.
+
+### Working with Tabular and Structured Data
+
+Supervised machine learning methods remain highly effective for structured datasets of the kind that appear throughout quantitative research:
+
+- Predicting outcomes in clinical trials or epidemiological studies.
+- Detecting anomalies or fraud in financial or administrative datasets.
+- Classifying observations in ecology, chemistry, or materials science.
+- Building recommendation systems for research infrastructure, such as suggesting reviewers for journal submissions.
+
+### Code and Data Analysis Assistance
+
+LLMs have rapidly become practical tools for researchers who work with data programmatically. They can write, explain, and debug code in languages such as Python and R, making computational methods more accessible to researchers who do not have a formal programming background.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+### AI as a Collaborator
+
+A theme running through all of these applications is that AI tools work best when used as a tool to completement the expertise of a human researcher, rather than replacing the researcher. An LLM that assists with qualitative coding still requires a researcher who understands the domain, the methodology, and the data. A computer vision model that flags anomalies in microscopy images still requires a scientist who can interpret what those anomalies mean.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+## Critical Evaluation: Questions to Ask Before You Adopt an AI Tool
+
+The variety and pace of AI tool development can make it difficult to know where to start. A useful instinct is to approach any AI tool the way you would approach a new research instrument or methodology: with curiosity, but also with critical judgement. 
+
+The following questions provide a framework for evaluating any AI tool you are considering using in your research.
+
+### 1. What was it trained on?
+
+Every AI model reflects its training data. A model trained predominantly on text written in English, by authors from wealthy countries, in a particular historical period, will have gaps and biases that reflect those limitations. Ask:
+
+- Does the training data represent the population, domain, or context I am working in?
+- Is the training data documented? Is there a **model card** or **data sheet** — standardised documentation that describes what a model was trained on, how it was evaluated, and what its known limitations are?
+- Is the training data recent enough for my purposes?
+
+### 2. Has it been independently validated?
+
+There is a significant difference between a tool that performs well on a benchmark chosen by its developers and one that has been independently evaluated on real-world tasks in your domain. Ask:
+
+- Has the tool been validated by researchers independent of those who built it?
+- What metrics were used, and are those metrics appropriate for my use case?
+- Has it been tested on data similar to mine?
+
+### 3. Can I reproduce my results?
+
+Reproducibility is a cornerstone of research integrity. AI tools introduce new reproducibility challenges:
+
+- As noted in [Episode 4](4-large-language-models.md), LLM outputs are probabilistic, meaning that the same input can produce different outputs on different runs.
+- Models are updated over time. A tool you use today may produce different outputs from the same inputs next year.
+- Cloud-based tools may not allow you to pin or cite a specific model version.
+
+Ask whether you can specify the exact model version used, and whether your methodology allows for the inherent variability of the tool.
+
+### 4. Can I explain and justify the tool's outputs?
+
+In a research context, you need to be able to explain and defend your methods. This connects to the concept of **explainability** introduced in relation to deep learning: some AI models are essentially black boxes — they produce outputs without giving any indication of how they arrived at them. Others offer some degree of interpretability.
+
+Ask:
+
+- Do I need to be able to explain *why* the tool produced a particular output, or is the output itself sufficient?
+- Is the tool's decision-making process interpretable, or does it require a "trust me" relationship with the model?
+- In high-stakes research contexts — clinical, legal, policy — can I justify acting on outputs that I cannot explain?
+
+### 5. What are the known failure modes?
+
+No AI tool works equally well in all conditions. Ask:
+
+- Under what conditions is the tool known to perform poorly?
+- Are there documented failure modes, such as hallucination rates, demographic disparities in performance, or known edge cases?
+- What happens when the tool is wrong? And how would I know?
 
 
 ## Ethical Considerations
 
-- **Bias and fairness:** Models reflect the biases in their training data. A language model trained on historical text will encode historical inequalities. A clinical model trained on data from one population may underperform on others.
-- **Transparency and reproducibility:** Can you describe your AI methods clearly enough for others to replicate your results? Are you using a versioned model?
-- **Privacy and data governance:** Training data or input data may contain sensitive personal information. What are the data sharing implications?
-- **Authorship and attribution:** Who is the "author" when AI assisted in writing or analysis? What do your institution's and your target journal's policies say?
-- **Environmental cost:** Training large models has a significant carbon footprint — relevant for sustainability-conscious researchers.
+Using AI in research is an ethical as well as a methodological question. The following are among the most important issues for researchers to engage with.
+
+### Bias and Fairness
+
+AI models do not arrive in the world as neutral tools. They are trained on data generated by human societies, and those societies contain historical and structural inequalities. A model trained on historical medical records will reflect historical disparities in who received care and who was documented. A model trained on published academic literature will reflect who has historically had access to publish.
+
+The consequences can be serious. Models used for clinical risk prediction have been shown to perform worse on patients from groups underrepresented in the training data. Automated tools used in hiring or admissions have reproduced patterns of discrimination from historical decisions.
+
+As a researcher, bias matters in two distinct ways:
+
+- **Bias in tools you use:** if an AI tool is part of your analysis, its biases may propagate into your findings.
+- **Bias in research you produce:** if you build or fine-tune AI models as part of your research, you have a responsibility to evaluate and document their limitations across the populations they may affect.
+
+### Transparency and Reproducibility
+
+Research integrity depends on being transparent about your methods. When AI is part of your workflow, transparency requires:
+
+- Stating clearly which AI tools were used, for what purpose, and at what stage of the research.
+- Citing specific model versions wherever possible, so that readers can assess potential limitations and — where feasible — replicate your approach.
+- Describing how you validated or checked AI-generated outputs.
+- Acknowledging limitations that arise specifically from using AI, such as the probabilistic nature of LLM outputs or the knowledge cutoff of the model used.
+
+### Privacy and Data Governance
+
+Many AI tools, particularly cloud-based LLMs, process data on external servers. If you input sensitive data — patient records, interview transcripts, confidential documents — into a commercial AI tool, you may be:
+
+- Breaching participant confidentiality.
+- Violating data protection legislation such as the UK GDPR.
+- Contravening your institution's data governance policies or your ethical approval conditions.
+
+Before inputting any data into an AI tool, check your institution's guidance on what categories of data may be processed in this way, and review the tool provider's privacy and data retention policies.
 
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+### Attribution and Authorship
+
+LLMs have raised genuinely novel questions about authorship and attribution that the research community is still working through. Key issues include:
+
+- **Authorship of AI-generated text:** most major publishers and funders now have explicit policies stating that AI tools cannot be listed as authors, because authorship carries accountability that a model cannot bear. However, policies on *disclosing* the use of AI in drafting or editing text vary and are evolving rapidly.
+- **Attribution of AI-generated analysis:** if an LLM assists with qualitative coding or data interpretation, how should that contribution be disclosed in the methods section?
+- **Copyright in training data:** LLMs are trained on text that may include copyrighted material. The legal and ethical status of this is an active area of debate in many jurisdictions.
+
+You should check the current policies of your target journal or funder, and your institution's own guidance, before submitting work in which AI has played a role.
+
+
+::::::::::::::::::::::::::::::::::::::::: challenge
+
+### Challenge: The Critical Reviewer
+
+You are reviewing a manuscript submitted to your field's leading journal. In the methods section, the authors write:
+
+> *"Qualitative thematic analysis of interview transcripts was supported by an AI language model, which was used to generate initial codes. These codes were then reviewed and refined by the research team. The AI tool assisted with the analysis of all 47 transcripts."*
+
+Discuss the following questions:
+
+1. What information is missing from this methods description that you would need as a reviewer?
+2. What risks or limitations should the authors have acknowledged?
+3. What would a more complete and transparent methods statement look like?
+
+::::::::::::::::::::: solution
+
+### Points to consider
+
+**Information that is missing:**
+
+- Which AI tool was used, and which version? (Without this, the approach cannot be evaluated or replicated.)
+- What prompts or instructions were given to the model?
+- What was the process for the research team's review — how were AI-generated codes accepted, modified, or rejected?
+- Was the tool validated on similar data or in similar research contexts?
+- How was participant data handled — was it anonymised before being input? Was the tool's data retention policy checked against ethical approval conditions?
+
+**Risks and limitations the authors should have acknowledged:**
+
+- LLMs can produce plausible-sounding codes that do not accurately reflect the content of the transcript.
+- The model may perform inconsistently across different transcripts, introducing variability that is difficult to detect.
+- The model's outputs may reflect biases in its training data rather than patterns in the research data.
+- If the same analysis were run again, the model might produce different initial codes.
+
+**A more complete methods statement might include:**
+
+- The name and version of the AI tool used.
+- A description of how the tool was prompted and integrated into the coding workflow.
+- A statement of how participant data was handled in compliance with ethical approval and data protection requirements.
+- A description of the human review process e.g. how many researchers reviewed codes, whether inter-rater reliability was assessed, how disagreements were resolved.
+- An explicit acknowledgement of the limitations of AI-assisted coding and how these were mitigated.
+
+:::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Environmental Cost of AI
+
+The environmental cost of AI is larger and more complex than most users appreciate. The most recent estimates suggest AI systems generated between 32.6 and 79.7 million tonnes of CO₂ and consumed up to 764 billion litres of water in 2025 ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)).  These figures are comparable to the annual emissions of a major city and global bottled water consumption respectively. 
+
+These costs accumulate across the full lifecycle of a model.  This includes the water and carbon used to manufacture the specialist chips required to run the AI; the intensive one-off cost of training the model; and the ongoing costs of inference (the cost every time a query is run).  Although many people believe that initial training has the largest environmental cost, inference can actually account for up to 90% of a model's total lifetime energy use. Water consumption follows a similar pattern, with estimates suggesting a standard ChatGPT conversation of 20–50 exchanges requires roughly 500 millilitres of freshwater for cooling ([Li et al., 2023](https://dl.acm.org/doi/10.1145/3724499)).
+
+Not all AI is equally expensive. General-purpose LLMs are orders of magnitude more energy-intensive per inference than smaller, task-specific models performing the same job.  This means that the convenience of using a single general-purpose LLM interface can carry a substantial and largely invisible environmental cost when multiplied across many uses. A fine-tuned model used for classification or information extraction may produce comparable results at a fraction of the per-query energy cost ([Luccioni et al., 2024](https://doi.org/10.1145/3630106.3658542))
+
+The biggest obstacle to accurate environmental accounting for AI is the problem of transparency.  The companies operating the largest AI systems publish very little useful data.  Furthermore, the published per-query emissions figures from AI providers typically reflect optimised, market-based conditions, rather than an accurate estimate of carbon and water usage ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). 
+
+
+## Looking Ahead: Developing Your AI Literacy
+
+This course has given you a conceptual foundation — a map of the AI landscape and the vocabulary to navigate it. That foundation will serve you well, but AI is a fast-moving field. Staying informed does not require becoming a technical expert; it does require cultivating an ongoing critical curiosity.
+
+A few practical suggestions for developing your AI literacy beyond this course:
+
+- **Follow your institution's guidance.** Most universities and research funders are actively developing AI use policies. These are the most directly relevant to your work, and they will continue to evolve.
+- **Engage with your community.** Methodological norms for AI use in research are being worked out discipline by discipline. Engaging with debates in your own field's journals and conferences is more valuable than generic AI news.
+- **Start small and validate.** If you are considering integrating an AI tool into your workflow, start with a small, low-stakes task and validate the outputs carefully before scaling up.
+- **Be transparent.** When in doubt about how much to disclose about your use of AI, err on the side of transparency. The research community is better served by over-disclosure than by the alternative.
 
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+## Summary
 
-::::::::::::::::::::::::::::::::::::: challenge 
+This episode has moved from the conceptual to the practical, exploring how AI techniques are being applied in research and what it means to use them responsibly. 
 
-## Critical Evaluation of AI in Research
-
-**Scenario**: You are reviewing a paper where the authors used an LLM to assist with qualitative coding of interview transcripts. What questions would you want the authors to have answered in their methods section?
-
-:::::::::::::::::::::::: solution 
-
-Possible discussion points: which model/version was used; how was the output validated; how was human oversight applied; what were the model's known limitations; are there any privacy implications for the participants?
-
-:::::::::::::::::::::::::::::::::
+The technical concepts from this course including training data, overfitting, hallucination, attention, fine-tuning are not just technical jargon. They are the vocabulary you need to read documentation critically, evaluate tools rigorously, and explain your methods honestly.
 
 
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- AI techniques are being applied across research disciplines, from text analysis and image classification to code generation and structured data modelling.
+- Before adopting any AI tool, ask: what was it trained on? Has it been validated? Can results be reproduced? Can outputs be explained? What are the failure modes?
+- AI models reflect the biases in their training data — outputs should never be accepted uncritically, particularly where equity and representation matter.
+- Transparency in methods is essential: report which tools were used, at what version, for what purpose, and how outputs were validated.
+- Privacy and data governance must be considered before inputting any sensitive or personal data into an AI tool.
+- Authorship, attribution, and environmental cost are emerging ethical considerations that researchers should engage with actively.
+- Developing AI literacy is an ongoing practice: follow institutional guidance, read model documentation, and engage with methodological debates in your own field.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## References
 
-
-::::::::::::::::::::::::::::::::::::: callout
-
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-
-
-
-::::::::::::::::::::::::::::::::::::: keypoints 
-
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
+- [de Vries-Gao, A. (2025). The carbon and water footprints of data centers and what this could mean for artificial intelligence. Patterns, 6, 101430.](https://doi.org/10.1016/j.patter.2025.101430)
+- [Li, P., Yang, J., Islam, M. A., & Ren, S. (2023). Making AI less "thirsty": Uncovering and addressing the secret water footprint of AI models. Communications of the ACM.](https://dl.acm.org/doi/10.1145/3724499)
+- [Luccioni, A. S., Jernite, Y., & Strubell, E. (2024). Power hungry processing: Watts driving the cost of AI deployment. Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency, 85–99](https://doi.org/10.1145/3630106.3658542)
