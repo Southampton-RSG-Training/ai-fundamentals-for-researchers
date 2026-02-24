@@ -6,7 +6,10 @@ exercises: 2 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-
+- How is machine learning different from traditional programming?
+- What are supervised, unsupervised, and reinforcement learning?
+- What does it mean to train and test a model?
+- What is overfitting, and why does it matter?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -21,11 +24,37 @@ exercises: 2 # exercise time in minutes
 
 ## From Rules to Learning
 
-- Traditional programming: humans write rules → computer applies them to data.
-- Machine learning: humans provide data + desired outcomes → computer finds the rules.
-- Analogy: teaching a child to identify cats by showing them many pictures rather than writing a dictionary definition.
+In traditional programming, a human writes explicit rules and the computer follows them.
+
+For example:
+
+- A programmer writes rules to calculate tax.
+- The computer applies those rules to a set of numbers.
+- The output is fully determined by the instructions written in advance.
+
+The logic flows like this:
+
+**Rules + Data -> Answers**
+
+Machine learning takes a different approach. Instead of writing detailed rules, we provide:
+
+- Data
+- The desired outputs (in many cases)
+- The system then learns patterns that connect the two.
+
+The logic becomes:
+
+**Data + Answers -> Rules**
+
+In other words, the computer infers the rules for itself.
+
+A useful analogy is teaching a child to recognise cats. You would not provide a formal definition involving ear angles and whisker length. Instead, you would show many examples of cats and non-cats. Over time, the child internalises patterns that allow them to identify new cats correctly.
+
+Machine learning systems operate in a similar way. They detect statistical patterns in examples and use those patterns to make predictions about new data.
 
 ## Three Types of Machine Learning
+
+Machine learning is not one single method. It includes several different learning paradigms.
 
 | Type | What the model has | What it learns to do | Example |
 |------|---------------------|----------------------|---------|
@@ -33,32 +62,88 @@ exercises: 2 # exercise time in minutes
 | Unsupervised Learning | Unlabelled data only | Find hidden patterns or groups | Customer segmentation, topic modelling of papers |
 | Reinforcement Learning | Reward signals from environment | Maximise a reward through trial and error | Game-playing AI, robot control |
 
+### Supervised learning
+
+In supervised learning, each example includes both the input and the correct output.
+
+For instance, a dataset of medical images might include thousands of scans labelled “tumour” or “no tumour”. The system learns to map image features to the correct diagnosis.
+
+This is currently the most widely used type of machine learning in research and industry.
+
+### Unsupervised learning
+
+In unsupervised learning, the system is given data without explicit labels. Its task is to find structure within the data.
+
+For example, given a large collection of research abstracts, an unsupervised model might group them into themes based on patterns of word usage. No one tells the system what the topics are in advance.
+
+This approach is useful for exploration and discovery.
+
+### Reinforcement learning
+
+In reinforcement learning, an agent interacts with an environment and receives feedback in the form of rewards or penalties.
+
+Over time, the system learns which actions maximise long-term reward. This approach has been used in game-playing systems and robotics.
+
 ## How a Model Learns
 
-Conceptual walkthrough of supervised learning:
-1. Start with a dataset of examples (e.g. 10,000 labelled medical images).
-2. Split into *training set* and *test set* - why the split matters
-3. The model adjusts its internal settings (parameters) to reduce errors on training data.
-4. Evaluate on the *test set* to see how well it generalises.
+Let's walk through a simplified example of supervised learning:
 
-- Introduce *overfitting* with an intuitive analogy: memorising past exam papers versus truly understanding the material.
-- Briefly introduce the idea of *accuracy*, *precision*, and *recall* as measures of model quality
+1. Start with a dataset of examples. For example, 10,000 labelled medical images.
+2. Split the data into two parts:
 
-- [Teachable Machine](https://teachablemachine.withgoogle.com/) demonstration
+- A training set
+- A test set
+
+The training set is used to teach the model. The test set is kept separate and used only for evaluation.
+
+This split matters because we want to know whether the model performs well on new, unseen data. If we test it on the same data it has already seen, we learn very little about its real-world usefulness.
+
+3. During training, the model adjusts its internal parameters. You can think of these as thousands or millions of adjustable dials. The system tweaks these settings to reduce the number of mistakes it makes on the training data.
+4. After training, we evaluate the model on the test set. This tells us how well it generalises beyond the examples it was shown during learning.
+
+### Overfitting
+
+A key risk in machine learning is overfitting.
+
+Overfitting occurs when a model learns the training data too well, including its noise and quirks. Instead of learning general patterns, it effectively memorises the examples.
+
+An analogy is a student who memorises past exam papers word for word. They may perform extremely well on familiar questions, but struggle when the questions are phrased differently.
+
+A well-trained model should capture underlying structure, not just memorise details.
+
+### Measuring Performance
+
+Several metrics are used to evaluate model quality.
+
+- **Accuracy** measures the proportion of correct predictions overall.
+- **Precision** measures how many predicted positive cases were actually positive.
+- **Recall** measures how many actual positive cases were correctly identified.
+
+Different research contexts prioritise different metrics. In medical screening, for example, recall may be especially important to avoid missing true cases.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## Demonstration: Teachable Machine
+
+A useful way to build intuition is to experiment with tools such as [Teachable Machine](https://teachablemachine.withgoogle.com/). These tools allow you to train a simple image or sound classifier using your own examples, without writing code.
+
+The experience reinforces the core idea: the quality and quantity of training examples strongly influence the behaviour of the model.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## What Can Go Wrong?
 
-- Garbage in, garbage out: biased or incomplete training data leads to biased models.
-- Brief examples relevant to research: text analysis trained only on English literature; medical models trained only on one demographic.
-- This is a preview — ethical issues are explored in depth in Episode 5.
-  
-  
+Machine learning systems are only as good as the data they are trained on.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+A common phrase is “garbage in, garbage out”. If the training data is incomplete, biased, or unrepresentative, the resulting model will reflect those limitations.
 
+Research-relevant examples include:
 
+- A text analysis model trained only on English-language literature will struggle with multilingual texts.
+- A medical diagnostic model trained predominantly on one demographic group may perform poorly for others.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+These issues are not purely technical, they're ethically and societally important because they influence who benefits from AI systems and who may be disadvantaged by them. We will examine these ethical and societal questions in greater depth in Episode 5.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -72,7 +157,9 @@ Match each scenario to supervised, unsupervised, or reinforcement learning:
 
 :::::::::::::::::::::::: solution 
 
-(Answers: 1 = Unsupervised, 2 = Supervised, 3 = Reinforcement)
+1 = Unsupervised learning
+2 = Supervised learning
+3 = Reinforcement learning
 
 :::::::::::::::::::::::::::::::::
 
@@ -82,20 +169,14 @@ Match each scenario to supervised, unsupervised, or reinforcement learning:
 
 
 
-::::::::::::::::::::::::::::::::::::: callout
-
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-
-
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-
+- Machine learning systems learn patterns from data rather than following only hand-written rules.
+- Supervised learning uses labelled examples, unsupervised learning finds structure without labels, and reinforcement learning learns through rewards.
+- Training and test sets help us assess whether a model generalises to new data.
+- Overfitting occurs when a model memorises training data instead of learning general patterns.
+- The quality and representativeness of training data strongly influence model performance and fairness.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
