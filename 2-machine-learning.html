@@ -330,7 +330,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Machine Learning - Teaching Computers from Data</h1>
-        <p>Last updated on 2026-02-20 |
+        <p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/2-machine-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -349,7 +349,11 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-</div>
+<ul><li>How is machine learning different from traditional programming?</li>
+<li>What are supervised, unsupervised, and reinforcement learning?</li>
+<li>What does it mean to train and test a model?</li>
+<li>What is overfitting, and why does it matter?</li>
+</ul></div>
 </div>
 </div>
 <div class="col-md-8">
@@ -370,14 +374,35 @@ application.</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="from-rules-to-learning">From Rules to Learning<a class="anchor" aria-label="anchor" href="#from-rules-to-learning"></a></h2>
-<hr class="half-width"><ul><li>Traditional programming: humans write rules → computer applies them
-to data.</li>
-<li>Machine learning: humans provide data + desired outcomes → computer
-finds the rules.</li>
-<li>Analogy: teaching a child to identify cats by showing them many
-pictures rather than writing a dictionary definition.</li>
-</ul></section><section><h2 class="section-heading" id="three-types-of-machine-learning">Three Types of Machine Learning<a class="anchor" aria-label="anchor" href="#three-types-of-machine-learning"></a></h2>
-<hr class="half-width"><table class="table"><colgroup><col width="10%"><col width="36%"><col width="37%"><col width="15%"></colgroup><thead><tr><th>Type</th>
+<hr class="half-width"><p>In traditional programming, a human writes explicit rules and the
+computer follows them.</p>
+<p>For example:</p>
+<ul><li>A programmer writes rules to calculate tax.</li>
+<li>The computer applies those rules to a set of numbers.</li>
+<li>The output is fully determined by the instructions written in
+advance.</li>
+</ul><p>The logic flows like this:</p>
+<p><strong>Rules + Data -&gt; Answers</strong></p>
+<p>Machine learning takes a different approach. Instead of writing
+detailed rules, we provide:</p>
+<ul><li>Data</li>
+<li>The desired outputs (in many cases)</li>
+<li>The system then learns patterns that connect the two.</li>
+</ul><p>The logic becomes:</p>
+<p><strong>Data + Answers -&gt; Rules</strong></p>
+<p>In other words, the computer infers the rules for itself.</p>
+<p>A useful analogy is teaching a child to recognise cats. You would not
+provide a formal definition involving ear angles and whisker length.
+Instead, you would show many examples of cats and non-cats. Over time,
+the child internalises patterns that allow them to identify new cats
+correctly.</p>
+<p>Machine learning systems operate in a similar way. They detect
+statistical patterns in examples and use those patterns to make
+predictions about new data.</p>
+</section><section><h2 class="section-heading" id="three-types-of-machine-learning">Three Types of Machine Learning<a class="anchor" aria-label="anchor" href="#three-types-of-machine-learning"></a></h2>
+<hr class="half-width"><p>Machine learning is not one single method. It includes several
+different learning paradigms.</p>
+<table class="table"><colgroup><col width="10%"><col width="36%"><col width="37%"><col width="15%"></colgroup><thead><tr><th>Type</th>
 <th>What the model has</th>
 <th>What it learns to do</th>
 <th>Example</th>
@@ -393,29 +418,112 @@ pictures rather than writing a dictionary definition.</li>
 <td>Reward signals from environment</td>
 <td>Maximise a reward through trial and error</td>
 <td>Game-playing AI, robot control</td>
-</tr></tbody></table></section><section><h2 class="section-heading" id="how-a-model-learns">How a Model Learns<a class="anchor" aria-label="anchor" href="#how-a-model-learns"></a></h2>
-<hr class="half-width"><p>Conceptual walkthrough of supervised learning: 1. Start with a
-dataset of examples (e.g. 10,000 labelled medical images). 2. Split into
-<em>training set</em> and <em>test set</em> - why the split matters 3.
-The model adjusts its internal settings (parameters) to reduce errors on
-training data. 4. Evaluate on the <em>test set</em> to see how well it
-generalises.</p>
-<ul><li><p>Introduce <em>overfitting</em> with an intuitive analogy:
-memorising past exam papers versus truly understanding the
-material.</p></li>
-<li><p>Briefly introduce the idea of <em>accuracy</em>,
-<em>precision</em>, and <em>recall</em> as measures of model
-quality</p></li>
-<li><p><a href="https://teachablemachine.withgoogle.com/" class="external-link">Teachable
-Machine</a> demonstration</p></li>
-</ul></section><section><h2 class="section-heading" id="what-can-go-wrong">What Can Go Wrong?<a class="anchor" aria-label="anchor" href="#what-can-go-wrong"></a></h2>
-<hr class="half-width"><ul><li>Garbage in, garbage out: biased or incomplete training data leads to
-biased models.</li>
-<li>Brief examples relevant to research: text analysis trained only on
-English literature; medical models trained only on one demographic.</li>
-<li>This is a preview — ethical issues are explored in depth in Episode
-5.</li>
-</ul><div id="machine-learning-in-research-scenarios" class="callout challenge">
+</tr></tbody></table><div class="section level3">
+<h3 id="supervised-learning">Supervised learning<a class="anchor" aria-label="anchor" href="#supervised-learning"></a></h3>
+<p>In supervised learning, each example includes both the input and the
+correct output.</p>
+<p>For instance, a dataset of medical images might include thousands of
+scans labelled “tumour” or “no tumour”. The system learns to map image
+features to the correct diagnosis.</p>
+<p>This is currently the most widely used type of machine learning in
+research and industry.</p>
+</div>
+<div class="section level3">
+<h3 id="unsupervised-learning">Unsupervised learning<a class="anchor" aria-label="anchor" href="#unsupervised-learning"></a></h3>
+<p>In unsupervised learning, the system is given data without explicit
+labels. Its task is to find structure within the data.</p>
+<p>For example, given a large collection of research abstracts, an
+unsupervised model might group them into themes based on patterns of
+word usage. No one tells the system what the topics are in advance.</p>
+<p>This approach is useful for exploration and discovery.</p>
+</div>
+<div class="section level3">
+<h3 id="reinforcement-learning">Reinforcement learning<a class="anchor" aria-label="anchor" href="#reinforcement-learning"></a></h3>
+<p>In reinforcement learning, an agent interacts with an environment and
+receives feedback in the form of rewards or penalties.</p>
+<p>Over time, the system learns which actions maximise long-term reward.
+This approach has been used in game-playing systems and robotics.</p>
+</div>
+</section><section><h2 class="section-heading" id="how-a-model-learns">How a Model Learns<a class="anchor" aria-label="anchor" href="#how-a-model-learns"></a></h2>
+<hr class="half-width"><p>Let’s walk through a simplified example of supervised learning:</p>
+<ol style="list-style-type: decimal"><li>Start with a dataset of examples. For example, 10,000 labelled
+medical images.</li>
+<li>Split the data into two parts:</li>
+</ol><ul><li>A training set</li>
+<li>A test set</li>
+</ul><p>The training set is used to teach the model. The test set is kept
+separate and used only for evaluation.</p>
+<p>This split matters because we want to know whether the model performs
+well on new, unseen data. If we test it on the same data it has already
+seen, we learn very little about its real-world usefulness.</p>
+<ol start="3" style="list-style-type: decimal"><li>During training, the model adjusts its internal parameters. You can
+think of these as thousands or millions of adjustable dials. The system
+tweaks these settings to reduce the number of mistakes it makes on the
+training data.</li>
+<li>After training, we evaluate the model on the test set. This tells us
+how well it generalises beyond the examples it was shown during
+learning.</li>
+</ol><div class="section level3">
+<h3 id="overfitting">Overfitting<a class="anchor" aria-label="anchor" href="#overfitting"></a></h3>
+<p>A key risk in machine learning is overfitting.</p>
+<p>Overfitting occurs when a model learns the training data too well,
+including its noise and quirks. Instead of learning general patterns, it
+effectively memorises the examples.</p>
+<p>An analogy is a student who memorises past exam papers word for word.
+They may perform extremely well on familiar questions, but struggle when
+the questions are phrased differently.</p>
+<p>A well-trained model should capture underlying structure, not just
+memorise details.</p>
+</div>
+<div class="section level3">
+<h3 id="measuring-performance">Measuring Performance<a class="anchor" aria-label="anchor" href="#measuring-performance"></a></h3>
+<p>Several metrics are used to evaluate model quality.</p>
+<ul><li>
+<strong>Accuracy</strong> measures the proportion of correct
+predictions overall.</li>
+<li>
+<strong>Precision</strong> measures how many predicted positive
+cases were actually positive.</li>
+<li>
+<strong>Recall</strong> measures how many actual positive cases were
+correctly identified.</li>
+</ul><p>Different research contexts prioritise different metrics. In medical
+screening, for example, recall may be especially important to avoid
+missing true cases.</p>
+<div id="demonstration-teachable-machine" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="demonstration-teachable-machine" class="callout-inner">
+<h3 class="callout-title">Demonstration: Teachable Machine</h3>
+<div class="callout-content">
+<p>A useful way to build intuition is to experiment with tools such as
+<a href="https://teachablemachine.withgoogle.com/" class="external-link">Teachable
+Machine</a>. These tools allow you to train a simple image or sound
+classifier using your own examples, without writing code.</p>
+<p>The experience reinforces the core idea: the quality and quantity of
+training examples strongly influence the behaviour of the model.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="what-can-go-wrong">What Can Go Wrong?<a class="anchor" aria-label="anchor" href="#what-can-go-wrong"></a></h2>
+<hr class="half-width"><p>Machine learning systems are only as good as the data they are
+trained on.</p>
+<p>A common phrase is “garbage in, garbage out”. If the training data is
+incomplete, biased, or unrepresentative, the resulting model will
+reflect those limitations.</p>
+<p>Research-relevant examples include:</p>
+<ul><li>A text analysis model trained only on English-language literature
+will struggle with multilingual texts.</li>
+<li>A medical diagnostic model trained predominantly on one demographic
+group may perform poorly for others.</li>
+</ul><p>These issues are not purely technical, they’re ethically and
+societally important because they influence who benefits from AI systems
+and who may be disadvantaged by them. We will examine these ethical and
+societal questions in greater depth in Episode 5.</p>
+<div id="machine-learning-in-research-scenarios" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -439,21 +547,11 @@ each time it gets closer to the exit.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>(Answers: 1 = Unsupervised, 2 = Supervised, 3 = Reinforcement)</p>
+<p>1 = Unsupervised learning 2 = Supervised learning 3 = Reinforcement
+learning</p>
 </div>
-</div>
-</div>
-</div>
-<div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-
 </div>
 </div>
 </div>
@@ -464,8 +562,18 @@ each time it gets closer to the exit.</li>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-
-</div>
+<ul><li>Machine learning systems learn patterns from data rather than
+following only hand-written rules.</li>
+<li>Supervised learning uses labelled examples, unsupervised learning
+finds structure without labels, and reinforcement learning learns
+through rewards.</li>
+<li>Training and test sets help us assess whether a model generalises to
+new data.</li>
+<li>Overfitting occurs when a model memorises training data instead of
+learning general patterns.</li>
+<li>The quality and representativeness of training data strongly
+influence model performance and fairness.</li>
+</ul></div>
 </div>
 </div>
 <!--
@@ -532,7 +640,7 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/2-machine-learning.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/2-machine-learning.html",
   "dateCreated": "2026-02-20",
-  "dateModified": "2026-02-20",
+  "dateModified": "2026-02-24",
   "datePublished": "2026-02-24"
 }
 
