@@ -909,7 +909,7 @@ each time it gets closer to the exit.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 = Unsupervised learning 2 = Supervised learning 3 = Reinforcement
 learning</p>
@@ -1166,7 +1166,7 @@ already in use?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples may include:</p>
 <ul>
@@ -1642,7 +1642,7 @@ knowledge in real time.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p><strong>False.</strong> A standard LLM generates responses based
@@ -1697,7 +1697,7 @@ capabilities.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Hallucination demo</li>
@@ -2034,7 +2034,7 @@ like?</li>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>Information that is missing:</strong></p>
 <ul>
@@ -2083,21 +2083,27 @@ and how these were mitigated.</li>
 <h3 id="environmental-cost-of-ai">Environmental Cost of AI<a class="anchor" aria-label="anchor" href="#environmental-cost-of-ai"></a>
 </h3>
 <p>The environmental cost of AI is larger and more complex than most
-users appreciate. The most recent estimates suggest AI systems generated
-between 32.6 and 79.7 million tonnes of CO₂ and consumed up to 764
-billion litres of water in 2025 (<a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de Vries-Gao,
-2025</a>). These figures are comparable to the annual emissions of a
-major city and global bottled water consumption respectively.</p>
-<p>These costs accumulate across the full lifecycle of a model. This
+users appreciate. The most recent estimates suggest that in 2025, AI
+systems generated up to 79.7 million tonnes of carbon, which is
+comparable to the annual emissions of a major city, and consumed up to
+764 billion litres of water, which is comparable to global bottled water
+consumption (<a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de
+Vries-Gao, 2025</a>).</p>
+<p>These costs accumulate across the full lifecycle of an AI model. This
 includes the water and carbon used to manufacture the specialist chips
 required to run the AI; the intensive one-off cost of training the
 model; and the ongoing costs of inference (the cost every time a query
-is run). Although many people believe that initial training has the
-largest environmental cost, inference can actually account for up to 90%
-of a model’s total lifetime energy use. Water consumption follows a
-similar pattern, with estimates suggesting a standard ChatGPT
-conversation of 20–50 exchanges requires roughly 500 millilitres of
-freshwater for cooling (<a href="https://dl.acm.org/doi/10.1145/3724499" class="external-link">Li et al., 2023</a>).</p>
+is run).</p>
+<p>A <a href="https://www.technologyreview.com/2019/06/06/239031/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/#:~:text=A%20paper%20from%20the%20University%20of%20Massachusetts%2C,on%20teaching%20machines%20to%20handle%20human%20language." class="external-link">2019
+study</a> found that training a single large transformer model can emit
+over 283,000 kg (626,000 pounds) of carbon, which is roughly equivalent
+to five times the lifetime emissions of an average American car.
+Although many people believe that initial training has the largest
+environmental cost, recent studies have found that inference can
+actually account for up to 90% of a model’s lifetime energy use. Water
+consumption follows a similar pattern, with estimates suggesting a
+standard ChatGPT conversation of 20–50 exchanges requires roughly 500
+millilitres of freshwater for cooling the servers in data centres (<a href="https://dl.acm.org/doi/10.1145/3724499" class="external-link">Li et al., 2023</a>).</p>
 <p>Not all AI is equally expensive. General-purpose LLMs are orders of
 magnitude more energy-intensive per inference than smaller,
 task-specific models performing the same job. This means that the
