@@ -951,7 +951,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-3-deep-learning"><p>Content from <a href="3-deep-learning.html">Deep Learning and Neural Networks</a></p>
 <hr>
-<p>Last updated on 2026-02-20 |
+<p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-deep-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -965,6 +965,13 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
+<ul>
+<li>What is an artificial neural network?</li>
+<li>What does “deep” mean in deep learning?</li>
+<li>How do neural networks learn from errors?</li>
+<li>Why does deep learning require substantial data and computing
+resources?</li>
+</ul>
 </div>
 </div>
 </div>
@@ -987,108 +994,197 @@ power.</li>
 <section><h2 class="section-heading" id="what-is-a-neural-network">What is a Neural Network?<a class="anchor" aria-label="anchor" href="#what-is-a-neural-network"></a>
 </h2>
 <hr class="half-width">
+<p>Deep learning is built on a concept called the artificial neural
+network.</p>
+<p>The name comes from a loose analogy with biology. In the human brain,
+neurons receive signals from other neurons. If the combined signal is
+strong enough, the neuron “fires” and passes a signal onwards.</p>
+<p>An artificial neuron works in a simplified mathematical way:</p>
 <ul>
-<li>Biological analogy: neurons fire when stimulated; artificial neurons
-activate when their inputs are strong enough.</li>
-<li>An artificial neuron takes in numbers, applies a weight to each,
-adds them up, and passes the result forward.</li>
-<li>Neural networks are <em>inspired</em> by biology but are not
-simulations of the brain.</li>
-<li>Single neuron → layer of neurons → multiple layers = a neural
-network.</li>
-</ul></section><section><h2 class="section-heading" id="layers-depth-and-feature-learning">Layers, Depth and Feature Learning<a class="anchor" aria-label="anchor" href="#layers-depth-and-feature-learning"></a>
+<li>It receives numbers as inputs.</li>
+<li>Each input is multiplied by a weight, which represents its
+importance.</li>
+<li>These weighted values are added together.</li>
+<li>The result is passed through a function that determines the
+output.</li>
+<li>That output is then sent to the next layer.</li>
+</ul>
+<p>It is important to be clear that artificial neural networks are
+inspired by biology, but they are not realistic simulations of the
+brain. They are mathematical models designed to detect patterns in
+data.</p>
+<p>A single artificial neuron is rarely useful on its own. When we
+arrange many neurons together, we form a layer. When we stack multiple
+layers together, we create a neural network.</p>
+</section><section><h2 class="section-heading" id="layers-depth-and-feature-learning">Layers, Depth and Feature Learning<a class="anchor" aria-label="anchor" href="#layers-depth-and-feature-learning"></a>
 </h2>
 <hr class="half-width">
+<p>A neural network is typically organised into three types of
+layers:</p>
 <ul>
-<li>A network processes data through layers: <em>input layer → hidden
-layers → output layer</em>.</li>
-<li>Each layer learns to detect increasingly abstract patterns:
-<ul>
-<li>Image recognition example: layer 1 detects edges → layer 2 detects
-shapes → layer 3 detects faces.</li>
-<li>Text example: layer 1 detects characters → layer 2 detects words →
-layer 3 detects meaning.</li>
+<li>An input layer, which receives the raw data.</li>
+<li>One or more hidden layers, where most of the computation
+happens.</li>
+<li>An output layer, which produces the final prediction.</li>
 </ul>
-</li>
-<li>“Deep” simply means many hidden layers (typically dozens to hundreds
-in modern models).</li>
-<li>Contrast with older “shallow” machine learning: deep learning can
-learn its own features; older methods required humans to design features
-manually.</li>
-</ul></section><section><h2 class="section-heading" id="training-a-neural-network">Training a Neural Network<a class="anchor" aria-label="anchor" href="#training-a-neural-network"></a>
+<p>As data passes through the network, each layer transforms it into a
+slightly more abstract representation.</p>
+<p>For example, in image recognition:</p>
+<ul>
+<li>An early layer might detect simple edges and lines.</li>
+<li>A later layer might detect shapes or textures.</li>
+<li>A deeper layer might detect complex structures such as faces.</li>
+</ul>
+<p>In text processing:</p>
+<ul>
+<li>Early layers might detect characters or short word patterns.</li>
+<li>Middle layers might represent words or phrases.</li>
+<li>Later layers might capture aspects of meaning or context.</li>
+</ul>
+<p>This hierarchical pattern detection is one of the main strengths of
+deep learning.</p>
+<p>The word <strong>‘deep’</strong> simply refers to the number of
+hidden layers. A shallow model might have one hidden layer. A deep model
+may have dozens or even hundreds.</p>
+<div class="section level3">
+<h3 id="feature-learning">Feature Learning<a class="anchor" aria-label="anchor" href="#feature-learning"></a>
+</h3>
+<p>A key reason deep learning marked such a significant shift from
+earlier machine learning approaches lies in how models learn from the
+features within the data.</p>
+<p>Earlier machine learning approaches depended heavily on feature
+engineering. Researchers had to decide in advance which aspects of the
+data might be useful and then write code to extract them.</p>
+<p>In image classification, for example, a researcher might calculate
+edge counts, colour histograms, or texture measures. The model would not
+see the raw pixels. It would only see these hand-crafted data measures.
+If the chosen features were poor, the model’s performance would suffer.
+A great deal of expertise and experimentation often went into designing
+them.</p>
+<p>Deep learning changes this. Instead of feeding the model carefully
+designed features, we provide the raw data, such as pixel values. A
+neural network with multiple layers then learns its own internal
+representations during training. Early layers might detect simple
+patterns like edges, while later layers combine these into more complex
+structures.</p>
+<p>In short, traditional methods rely on humans to decide what matters
+in the data. Deep learning models learn what matters directly from the
+data itself, given enough examples and computing power.</p>
+</div>
+</section><section><h2 class="section-heading" id="training-a-neural-network">Training a Neural Network<a class="anchor" aria-label="anchor" href="#training-a-neural-network"></a>
 </h2>
 <hr class="half-width">
+<p>Training a neural network follows a repeated cycle.</p>
+<ol style="list-style-type: decimal">
+<li>The network receives an input and produces a prediction.</li>
+<li>The prediction is compared with the correct answer.</li>
+<li>The difference between them is calculated as an error.</li>
+<li>This error signal is sent backwards through the network.</li>
+<li>The weights are adjusted slightly to reduce future errors.</li>
+</ol>
+<p>This backward flow of error is known as
+<strong>backpropagation</strong>.</p>
+<p>As an analogy for training a deep learning model, imagine standing on
+a foggy hillside and trying to reach the lowest point (the correct
+answer). You cannot see the whole landscape, but you can feel the slope
+under your feet. You take small steps downhill. Repeating this process
+eventually brings you closer to the lowest point.</p>
+<p>In neural networks, the ‘height’ represents error. The model
+repeatedly takes small steps in the direction that reduces error.</p>
+<p>This process is repeated across many examples, often millions, and
+over many passes through the dataset.</p>
+<div id="try-training-a-neural-network" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="try-training-a-neural-network" class="callout-inner">
+<h3 class="callout-title">Try Training a Neural Network</h3>
+<div class="callout-content">
+<p>You can experiment with the process of training a neural network
+interactively using tools such as <a href="https://playground.tensorflow.org" class="external-link">Tensorflow Playground</a> .
+Adjusting parameters and watching how decision boundaries change can
+help make these abstract ideas more concrete.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="why-so-much-data-and-computing-power">Why So Much Data and Computing Power?<a class="anchor" aria-label="anchor" href="#why-so-much-data-and-computing-power"></a>
+</h3>
+<p>Modern neural networks often contain millions or even billions of
+adjustable parameters. Training them involves:</p>
 <ul>
-<li>Conceptual walkthrough:
-<ul>
-<li>The network makes a prediction.</li>
-<li>The error is calculated (how wrong was it?).</li>
-<li>The error signal flows <em>backwards</em> through the network,
-adjusting weights to reduce the error.</li>
-<li>Repeat millions of times across the training data.</li>
+<li>Processing very large datasets.</li>
+<li>Performing repeated calculations across all parameters.</li>
+<li>Iterating many thousands of times.</li>
 </ul>
-</li>
-<li>Try out adjusting the parameters in a neural network in <a href="https://playground.tensorflow.org" class="external-link">tensorflow playground</a>
-</li>
-<li>Introduce <em>gradient descent</em> as a metaphor: imagine rolling a
-ball downhill to find the lowest point (minimum error).</li>
-<li>Why this needs compute: millions of parameters, millions of
-examples, many thousands of repetitions.</li>
-</ul></section><section><h2 class="section-heading" id="types-of-deep-learning">Types of Deep Learning<a class="anchor" aria-label="anchor" href="#types-of-deep-learning"></a>
+<p>This requires significant computational resources, often specialised
+hardware. Without large datasets and substantial computing power, deep
+models tend to perform poorly.</p>
+</div>
+</section><section><h2 class="section-heading" id="types-of-deep-learning">Types of Deep Learning<a class="anchor" aria-label="anchor" href="#types-of-deep-learning"></a>
 </h2>
 <hr class="half-width">
-<ul>
-<li>
-<strong>Convolutional Neural Networks (CNNs):</strong> excellent at
-image and video analysis. Example of <a href="https://cloud.google.com/vision" class="external-link">Google Vision image
-classification tool</a>
-</li>
-<li>
-<strong>Recurrent Neural Networks (RNNs):</strong> designed for
-sequential data like time-series; now largely superseded by
-Transformers.</li>
-<li>
-<strong>Transformers:</strong> the architecture behind most modern
-NLP tools and LLMs (to be explored in Episode 4).</li>
-</ul>
+<p>There are several major neural network architectures, each suited to
+particular tasks.</p>
+<p>###Convolutional Neural Networks (CNNs)</p>
+<p>CNNs are particularly effective for image and video analysis. They
+use specialised layers that focus on local patterns, such as edges and
+textures. Image classification tools such as <a href="https://cloud.google.com/vision" class="external-link">Google Vision image
+classification tool</a> are built on this type of architecture.</p>
+<p>###Recurrent Neural Networks (RNNs)</p>
+<p>RNNs were designed to handle sequential data, such as time-series
+measurements or text. They process information step by step, maintaining
+a form of internal memory. In many applications, they have now been
+replaced by more advanced architectures.</p>
+<p>###Transformers</p>
+<p>Transformers are the foundation of most modern natural language
+processing systems. They are especially effective at modelling
+relationships within sequences of text and form the basis of
+contemporary large language models, which we will examine in the next
+episode.</p>
 <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 
 </div>
 </div>
 </div>
 </div>
-<div id="discussion" class="callout discussion">
+<div id="discussion" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Discussion</span>
+<span class="callout-header">Challenge</span>
 <div id="discussion" class="callout-inner">
 <h3 class="callout-title">Discussion</h3>
 <div class="callout-content">
-<p>Deep learning has transformed image recognition — now matching or
-exceeding human accuracy in some tasks. Can you think of a research
-application in your field where this might be useful or is already used?
-:::::::::::::::::::::::: solution</p>
-<p>(Possible prompts: satellite imagery analysis, microscopy, document
-digitisation, audio transcription.)</p>
+<p>Deep learning has transformed image recognition and, in some
+contexts, now matches or exceeds human performance. Can you identify a
+research application in your field where this capability is useful or
+already in use?</p>
 </div>
 </div>
 </div>
-<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
-<div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Examples may include:</p>
+<ul>
+<li>Analysing satellite imagery to detect environmental change.</li>
+<li>Identifying cell structures in microscopy images.</li>
+<li>Digitising and classifying historical documents.</li>
+<li>Transcribing and analysing handwritten documents</li>
+</ul>
 </div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-
 </div>
 </div>
 </div>
@@ -1099,7 +1195,18 @@ digitisation, audio transcription.)</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-
+<ul>
+<li>Artificial neural networks consist of layers of weighted
+computational units inspired by biological neurons.</li>
+<li>‘Deep’ refers to having multiple hidden layers that learn
+increasingly abstract representations.</li>
+<li>Training involves making predictions, measuring error, and adjusting
+weights using backpropagation.</li>
+<li>Deep learning excels at complex pattern recognition tasks such as
+image, audio, and text analysis.</li>
+<li>Large models require extensive data and computing resources to train
+effectively.</li>
+</ul>
 </div>
 </div>
 </div>
