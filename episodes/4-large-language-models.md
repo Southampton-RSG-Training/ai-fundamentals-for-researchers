@@ -96,7 +96,7 @@ Building a capable LLM is typically a two-stage process.
 
 ### Stage 1: Pre-training
 
-In the pre-training stage, the model is trained from scratch on an enormous general-purpose text corpus. The training objective is next-word prediction, as described above. The model adjusts its billions of parameters through backpropagation (see [Episode 3](03-deep-learning.md)) until it becomes very good at predicting text across a huge range of topics and styles.
+In the pre-training stage, the model is trained from scratch on an enormous general-purpose text corpus. The training objective is next-word prediction, as described above. The model adjusts its billions of parameters through backpropagation (see [Episode 3](3-deep-learning.md)) until it becomes very good at predicting text across a huge range of topics and styles.
 
 Pre-training is extraordinarily resource-intensive. Training a leading LLM can:
 
@@ -264,7 +264,7 @@ Go to a conversational AI tool such as ChatGPT, Microsoft Copilot or Claude and 
 
 In this episode we have seen how the simple task of predicting the next word can lead to the powerful, general-purpose language tools that are reshaping how people interact with information today. 
 
-In [Episode 5](05-ai-in-research.md), we will bring together everything from the course to explore how AI tools — including LLMs — are being used in research today, and how to evaluate them critically and ethically.
+In [Episode 5](5-ai-in-research.md), we will bring together everything from the course to explore how AI tools — including LLMs — are being used in research today, and how to evaluate them critically and ethically.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
