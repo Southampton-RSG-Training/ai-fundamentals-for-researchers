@@ -57,11 +57,6 @@ A well-trained model should assign a high probability to words like *journal* or
 This is sometimes called **self-supervised learning**: the training data provides its own labels (the next word is always known from the text itself), so no human annotation is required.
 
 
-
-- An LLM is a deep learning model trained on vast amounts of text to predict and generate language.
-- "Large" refers to: the volume of training data (trillions of words) and the number of parameters (billions to trillions of weights).
-- Key task learned during training: next token prediction — given a sequence of words, predict the most likely next word. From this simple objective, rich language abilities emerge.
-
 ## Transformer Architecture
 
 LLMs are built on an architecture called the **Transformer**, introduced in a landmark 2017 paper titled "Attention Is All You Need". Before the Transformer, models processed text sequentially — one word at a time — which was slow and made it hard to capture relationships between words that were far apart in a sentence. The Transformer solved both problems at once.
@@ -76,10 +71,6 @@ Consider this sentence:
 
 When processing the word *"bank"*, a human reader immediately uses context clues such as *steep*, *muddy*, and *climbing*, to understand that this is a riverbank, not a financial institution. The attention mechanism allows a Transformer to do something similar: it learns to assign higher attention weights to the words most relevant for correctly interpreting each part of the text.
 
-- Introduced in 2017 (Google Brain); now the foundation of most state-of-the-art language models.
-- Key innovation: the **attention mechanism** — the model learns which parts of the input text to "pay attention to" when processing each word.
-- Analogy: when reading "The bank was steep and muddy, so she slipped," we automatically pay attention to *steep*, *muddy*, and *slipped* to understand that *bank* means a riverbank. Transformers learn to do something similar.
-- Unlike older RNNs, Transformers can process all words in parallel, making them highly efficient on modern hardware.
 
 ### Why "Transformer" changed everything
 
@@ -88,7 +79,7 @@ Two properties make Transformers especially powerful:
 1. **Parallelism:** Unlike earlier architectures, Transformers can process all words in a passage at the same time, rather than one word at a time. This makes training dramatically faster and allows much larger models to be trained.
 2. **Long-range dependencies:** Attention can connect words that are many sentences apart, allowing the model to maintain coherence across a long document.
 
-These properties, combined with the availability of large-scale computing hardware (particularly GPUs and TPUs), triggered a step-change in what language models could do. Essentially all major LLMs today — GPT, Claude, Gemini, LLaMA — are built on the Transformer architecture.
+These properties, combined with the availability of large-scale computing hardware (particularly GPUs and TPUs), triggered a step-change in what language models could do. Essentially all major LLMs today including GPT, Claude, and Gemini are built on the Transformer architecture.
 
 ## How LLMs Are Trained: Pre-training and Fine-tuning
 
