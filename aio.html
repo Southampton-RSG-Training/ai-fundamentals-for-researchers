@@ -409,7 +409,7 @@ their own research.</li>
 </div>
 </div></section><section id="aio-1-what-is-ai"><p>Content from <a href="1-what-is-ai.html">What is Artificial Intelligence?</a></p>
 <hr>
-<p>Last updated on 2026-02-24 |
+<p>Last updated on 2026-03-03 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/1-what-is-ai.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -465,35 +465,20 @@ several decades.</p>
 <p><strong>Rule-based systems (1950s–1980s)</strong> Early AI systems
 relied on explicit rules written by humans. For example, a medical
 expert system might contain hundreds of “if–then” statements created by
-specialists. These systems could perform well in narrow domains but were
-brittle and difficult to scale.</p>
+specialists, designed to lead to a diagnosis. These systems could
+perform well in narrow domains but were inflexible and difficult to
+scale.</p>
 <p><strong>Statistical approaches (1980s–2000s)</strong> Researchers
 began using probability and statistics to handle uncertainty and
 variability in real-world data. Instead of hard-coded rules, systems
 estimated likelihoods and made predictions based on data.</p>
-<p>Modern machine learning (2000s–present) With increased data and
-computing power, systems began to “learn” patterns directly from large
-datasets. Rather than being told exactly what to do, they infer patterns
-from examples.</p>
+<p><strong>Modern machine learning (2000s–present)</strong> With
+increased data and computing power, systems began to “learn”” patterns
+directly from large datasets. Rather than being told exactly what to do,
+they infer patterns from examples.</p>
 <p>Throughout all these phases, the goal has remained broadly the same:
 to build systems that can carry out tasks we associate with intelligent
 behaviour.</p>
-</div>
-<div class="section level3">
-<h3 id="common-misconceptions">Common misconceptions<a class="anchor" aria-label="anchor" href="#common-misconceptions"></a>
-</h3>
-<p>AI is often portrayed in ways that are misleading. It is helpful to
-address a few common misconceptions early:</p>
-<ul>
-<li>AI is not sentient. Current systems do not have consciousness,
-self-awareness, or understanding.</li>
-<li>AI is not magic. It relies on mathematics, data, and
-computation.</li>
-<li>AI is not one single thing. It is a collection of methods and tools
-that solve different kinds of problems.</li>
-</ul>
-<p>Keeping these points in mind helps us approach AI more critically and
-realistically.</p>
 </div>
 <div class="section level3">
 <h3 id="narrow-ai-vs-general-ai">Narrow AI vs General AI<a class="anchor" aria-label="anchor" href="#narrow-ai-vs-general-ai"></a>
@@ -512,8 +497,6 @@ able to learn, reason, and adapt flexibly in unfamiliar situations.</p>
 <p>General AI is the overarching goal of many AI companies but, at
 present, general AI does not exist. When discussing real-world research
 and applications, we are dealing with narrow AI.</p>
-<p>Understanding this distinction prevents confusion between science
-fiction narratives and current technological reality.</p>
 </div>
 </section><section><h2 class="section-heading" id="the-ai-family-tree">The AI Family Tree<a class="anchor" aria-label="anchor" href="#the-ai-family-tree"></a>
 </h2>
@@ -551,9 +534,6 @@ uses multi-layered neural networks to model complex patterns.</li>
 application of deep learning, trained on vast amounts of text data to
 generate and understand language.</li>
 </ul>
-<p>This nesting matters because it clarifies terminology. Not all AI is
-machine learning. Not all machine learning is deep learning. And not all
-deep learning systems are large language models.</p>
 <p>As the course progresses, we will move gradually from the outer layer
 towards the inner layers, building conceptual understanding at each
 step.</p>
@@ -574,7 +554,8 @@ deep learning.</p></li>
 <li><p><strong>Algorithmic advances</strong>: New training methods and
 model architectures have significantly improved performance,
 particularly in areas such as image recognition and natural language
-processing.</p></li>
+processing. For example the transformer architecture that underpins most
+large language models (transformer is the ‘T’ in ChatGPT)</p></li>
 </ol>
 <p>The current wave of AI is therefore not the result of a single
 breakthrough, but the interaction between data, hardware, and improved
@@ -599,7 +580,7 @@ and what output it produced.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples might include:</p>
 <ul>
@@ -647,7 +628,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-2-machine-learning"><p>Content from <a href="2-machine-learning.html">Machine Learning - Teaching Computers from Data</a></p>
 <hr>
-<p>Last updated on 2026-02-24 |
+<p>Last updated on 2026-03-03 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/2-machine-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -695,22 +676,22 @@ application.</li>
 computer follows them.</p>
 <p>For example:</p>
 <ul>
-<li>A programmer writes rules to calculate tax.</li>
-<li>The computer applies those rules to a set of numbers.</li>
-<li>The output is fully determined by the instructions written in
-advance.</li>
+<li>A programmer writes <strong>rules</strong> to calculate tax.</li>
+<li>The computer applies those rules to some <strong>data</strong>.</li>
+<li>The output is fully determined by the rules written in advance.</li>
 </ul>
 <p>The logic flows like this:</p>
-<p><strong>Rules + Data -&gt; Answers</strong></p>
+<p><strong>Rules + Data -&gt; Output</strong></p>
 <p>Machine learning takes a different approach. Instead of writing
 detailed rules, we provide:</p>
 <ul>
-<li>Data</li>
-<li>The desired outputs (in many cases)</li>
-<li>The system then learns patterns that connect the two.</li>
+<li><strong>Data</strong></li>
+<li>The desired <strong>outputs</strong>
+</li>
+<li>The system then learns rules or patterns that connect the two.</li>
 </ul>
 <p>The logic becomes:</p>
-<p><strong>Data + Answers -&gt; Rules</strong></p>
+<p><strong>Data + Output -&gt; Rules</strong></p>
 <p>In other words, the computer infers the rules for itself.</p>
 <p>A useful analogy is teaching a child to recognise cats. You would not
 provide a formal definition involving ear angles and whisker length.
@@ -775,7 +756,7 @@ research and industry.</p>
 </h3>
 <p>In unsupervised learning, the system is given data without explicit
 labels. Its task is to find structure within the data.</p>
-<p>For example, given a large collection of research abstracts, an
+<p>For example, given a large collection of research paper abstracts, an
 unsupervised model might group them into themes based on patterns of
 word usage. No one tells the system what the topics are in advance.</p>
 <p>This approach is useful for exploration and discovery.</p>
@@ -854,12 +835,12 @@ missing true cases.</p>
 <div id="demonstration-teachable-machine" class="callout-inner">
 <h3 class="callout-title">Demonstration: Teachable Machine</h3>
 <div class="callout-content">
-<p>A useful way to build intuition is to experiment with tools such as
-<a href="https://teachablemachine.withgoogle.com/" class="external-link">Teachable
-Machine</a>. These tools allow you to train a simple image or sound
-classifier using your own examples, without writing code.</p>
-<p>The experience reinforces the core idea: the quality and quantity of
-training examples strongly influence the behaviour of the model.</p>
+<p>A useful way to build understanding without the need to write code is
+to experiment with tools such as <a href="https://teachablemachine.withgoogle.com/" class="external-link">Teachable Machine</a>.
+These tools allow you to train a simple image or sound classifier using
+your own examples, without any coding required.</p>
+<p>Notice how the quality and quantity of training examples strongly
+influence the behaviour of the model.</p>
 </div>
 </div>
 </div>
@@ -909,7 +890,7 @@ each time it gets closer to the exit.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 = Unsupervised learning 2 = Supervised learning 3 = Reinforcement
 learning</p>
@@ -946,7 +927,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-3-deep-learning"><p>Content from <a href="3-deep-learning.html">Deep Learning and Neural Networks</a></p>
 <hr>
-<p>Last updated on 2026-02-24 |
+<p>Last updated on 2026-03-03 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-deep-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1003,13 +984,13 @@ importance.</li>
 output.</li>
 <li>That output is then sent to the next layer.</li>
 </ul>
-<p>It is important to be clear that artificial neural networks are
-inspired by biology, but they are not realistic simulations of the
-brain. They are mathematical models designed to detect patterns in
-data.</p>
-<p>A single artificial neuron is rarely useful on its own. When we
-arrange many neurons together, we form a layer. When we stack multiple
-layers together, we create a neural network.</p>
+<p>Note that artificial neural networks are inspired by biology, but
+they are not realistic simulations of the brain. They are mathematical
+models designed to detect patterns in data.</p>
+<p>A single artificial neuron is rarely useful on its own but can be
+really powerful when combined with many other artificial neurons. We can
+arrange many neurons together to form a layer and then stack multiple
+layers together to create a neural network.</p>
 </section><section><h2 class="section-heading" id="layers-depth-and-feature-learning">Layers, Depth and Feature Learning<a class="anchor" aria-label="anchor" href="#layers-depth-and-feature-learning"></a>
 </h2>
 <hr class="half-width">
@@ -1037,28 +1018,28 @@ slightly more abstract representation.</p>
 </ul>
 <p>This hierarchical pattern detection is one of the main strengths of
 deep learning.</p>
-<p>The word <strong>‘deep’</strong> simply refers to the number of
-hidden layers. A shallow model might have one hidden layer. A deep model
-may have dozens or even hundreds.</p>
+<p>The word <strong>deep</strong> simply refers to the number of hidden
+layers. A shallow model might have one hidden layer. A deep model may
+have dozens or even hundreds of layers.</p>
 <div class="section level3">
 <h3 id="feature-learning">Feature Learning<a class="anchor" aria-label="anchor" href="#feature-learning"></a>
 </h3>
-<p>A key reason deep learning marked such a significant shift from
-earlier machine learning approaches lies in how models learn from the
-features within the data.</p>
+<p>A key reason deep learning differs from earlier machine learning
+approaches lies in how models learn from the features within the
+data.</p>
 <p>Earlier machine learning approaches depended heavily on feature
 engineering. Researchers had to decide in advance which aspects of the
 data might be useful and then write code to extract them.</p>
 <p>In image classification, for example, a researcher might calculate
 edge counts, colour histograms, or texture measures. The model would not
-see the raw pixels. It would only see these hand-crafted data measures.
-If the chosen features were poor, the model’s performance would suffer.
-A great deal of expertise and experimentation often went into designing
-them.</p>
-<p>Deep learning changes this. Instead of feeding the model carefully
-designed features, we provide the raw data, such as pixel values. A
-neural network with multiple layers then learns its own internal
-representations during training. Early layers might detect simple
+see the raw pixels but instead would only see these hand-crafted feature
+measures. If the chosen features were poor, the model’s performance
+would suffer. A great deal of expertise and experimentation often went
+into designing the feature measures for a model.</p>
+<p>This is not the case for deep learning. Instead of feeding the model
+carefully designed features, we provide the raw data, such as pixel
+values. A neural network with multiple layers then learns its own
+feature measures during training. Early layers might detect simple
 patterns like edges, while later layers combine these into more complex
 structures.</p>
 <p>In short, traditional methods rely on humans to decide what matters
@@ -1076,15 +1057,9 @@ data itself, given enough examples and computing power.</p>
 <li>This error signal is sent backwards through the network.</li>
 <li>The weights are adjusted slightly to reduce future errors.</li>
 </ol>
-<p>This backward flow of error is known as
-<strong>backpropagation</strong>.</p>
-<p>As an analogy for training a deep learning model, imagine standing on
-a foggy hillside and trying to reach the lowest point (the correct
-answer). You cannot see the whole landscape, but you can feel the slope
-under your feet. You take small steps downhill. Repeating this process
-eventually brings you closer to the lowest point.</p>
-<p>In neural networks, the ‘height’ represents error. The model
-repeatedly takes small steps in the direction that reduces error.</p>
+<p>Sending the error backwards through the network is known as
+<strong>backpropagation</strong>. We’ll mention this again in the next
+episode in the context of large language models.</p>
 <p>This process is repeated across many examples, often millions, and
 over many passes through the dataset.</p>
 <div id="try-training-a-neural-network" class="callout discussion">
@@ -1096,9 +1071,8 @@ over many passes through the dataset.</p>
 <h3 class="callout-title">Try Training a Neural Network</h3>
 <div class="callout-content">
 <p>You can experiment with the process of training a neural network
-interactively using tools such as <a href="https://playground.tensorflow.org" class="external-link">Tensorflow Playground</a> .
-Adjusting parameters and watching how decision boundaries change can
-help make these abstract ideas more concrete.</p>
+interactively using tools such as <a href="https://playground.tensorflow.org" class="external-link">Tensorflow Playground</a>.
+Adjust the parameters and watch how decision boundaries change.</p>
 </div>
 </div>
 </div>
@@ -1119,8 +1093,8 @@ models tend to perform poorly.</p>
 </section><section><h2 class="section-heading" id="types-of-deep-learning">Types of Deep Learning<a class="anchor" aria-label="anchor" href="#types-of-deep-learning"></a>
 </h2>
 <hr class="half-width">
-<p>There are several major neural network architectures, each suited to
-particular tasks.</p>
+<p>There are many neural network architectures, each suited to
+particular tasks. Just a few common examples are discussed below.</p>
 <div class="section level3">
 <h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)<a class="anchor" aria-label="anchor" href="#convolutional-neural-networks-cnns"></a>
 </h3>
@@ -1145,7 +1119,9 @@ processing systems. They are especially effective at modelling
 relationships within sequences of text and form the basis of
 contemporary large language models, which we will examine in the next
 episode.</p>
-
+<p>To read more about different neural network architectures have a look
+at the <a href="https://www.asimovinstitute.org/neural-network-zoo/" class="external-link">Neural
+Network Zoo</a>, a cheat sheet for neural network architectures.</p>
 <div id="discussion" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1208,7 +1184,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-4-large-language-models"><p>Content from <a href="4-large-language-models.html">Large Language Models</a></p>
 <hr>
-<p>Last updated on 2026-02-24 |
+<p>Last updated on 2026-03-03 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/4-large-language-models.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1258,8 +1234,8 @@ explain why they matter for research use.</li>
 machines can learn from data, and how deep neural networks can learn
 rich, layered representations of the world. In this episode we apply
 those ideas to language. We will explore <strong>Large Language Models
-(LLMs)</strong> — the technology behind tools such as ChatGPT, Claude,
-Gemini, and Copilot — to understand what they are, how they are built,
+(LLMs)</strong>, the technology behind tools such as ChatGPT, Claude,
+Gemini, and Copilot, to understand what they are, how they are built,
 and what their real limitations are.</p>
 <p>By the end of this episode you will be in a much stronger position to
 use these tools critically and responsibly in your own research</p>
@@ -1301,13 +1277,13 @@ representations of language.</p>
 surprisingly simple objective: <strong>given a sequence of words,
 predict what word is most likely to come next</strong>.</p>
 <p>Consider the sentence:</p>
-<p>*“The researcher submitted her manuscript to the ___“*</p>
+<p>*The researcher submitted her manuscript to the ___*</p>
 <p>A well-trained model should assign a high probability to words like
 <em>journal</em> or <em>publisher</em>, and a low probability to words
 like <em>submarine</em> or <em>Tuesday</em>. By doing this billions of
 times across an enormous training corpus, the model is forced to learn
 grammar, facts, writing conventions, and even something resembling
-reasoning — because all of these are encoded in the statistical patterns
+reasoning because all of these are encoded in the statistical patterns
 of language.</p>
 <p>This is sometimes called <strong>self-supervised learning</strong>:
 the training data provides its own labels (the next word is always known
@@ -1318,9 +1294,9 @@ from the text itself), so no human annotation is required.</p>
 <p>LLMs are built on an architecture called the
 <strong>Transformer</strong>, introduced in a landmark 2017 paper titled
 “Attention Is All You Need”. Before the Transformer, models processed
-text sequentially — one word at a time — which was slow and made it hard
-to capture relationships between words that were far apart in a
-sentence. The Transformer solved both problems at once.</p>
+text one word at a time, which was slow and made it hard to capture
+relationships between words that were far apart in a sentence. The
+Transformer solved both problems.</p>
 <div class="section level3">
 <h3 id="the-attention-mechanism">The attention mechanism<a class="anchor" aria-label="anchor" href="#the-attention-mechanism"></a>
 </h3>
@@ -1330,36 +1306,19 @@ allows the model to look at all the words in a passage simultaneously
 and learn which ones are most relevant to understanding each particular
 word.</p>
 <p>Consider this sentence:</p>
-<p><em>“The bank was steep and muddy, so she slipped climbing down
-it.”</em></p>
-<p>When processing the word <em>“bank”</em>, a human reader immediately
+<p><em>The bank was steep and muddy, so she slipped climbing down
+it.</em></p>
+<p>When processing the word <em>bank</em>, a human reader immediately
 uses context clues such as <em>steep</em>, <em>muddy</em>, and
 <em>climbing</em>, to understand that this is a riverbank, not a
 financial institution. The attention mechanism allows a Transformer to
 do something similar: it learns to assign higher attention weights to
 the words most relevant for correctly interpreting each part of the
 text.</p>
-</div>
-<div class="section level3">
-<h3 id="why-transformer-changed-everything">Why “Transformer” changed everything<a class="anchor" aria-label="anchor" href="#why-transformer-changed-everything"></a>
-</h3>
-<p>Two properties make Transformers especially powerful:</p>
-<ol style="list-style-type: decimal">
-<li>
-<strong>Parallelism:</strong> Unlike earlier architectures,
-Transformers can process all words in a passage at the same time, rather
-than one word at a time. This makes training dramatically faster and
-allows much larger models to be trained.</li>
-<li>
-<strong>Long-range dependencies:</strong> Attention can connect
-words that are many sentences apart, allowing the model to maintain
-coherence across a long document.</li>
-</ol>
-<p>These properties, combined with the availability of large-scale
-computing hardware (particularly GPUs and TPUs), triggered a step-change
-in what language models could do. Essentially all major LLMs today
-including GPT, Claude, and Gemini are built on the Transformer
-architecture.</p>
+<p>The attention mechanism combined with the availability of large-scale
+computing hardware, triggered a step up in what language models could
+do. Essentially all major LLMs today including ChatGPT, Claude, and
+Gemini are built on the Transformer architecture.</p>
 </div>
 </section><section><h2 class="section-heading" id="how-llms-are-trained-pre-training-and-fine-tuning">How LLMs Are Trained: Pre-training and Fine-tuning<a class="anchor" aria-label="anchor" href="#how-llms-are-trained-pre-training-and-fine-tuning"></a>
 </h2>
@@ -1369,18 +1328,22 @@ architecture.</p>
 <h3 id="stage-1-pre-training">Stage 1: Pre-training<a class="anchor" aria-label="anchor" href="#stage-1-pre-training"></a>
 </h3>
 <p>In the pre-training stage, the model is trained from scratch on an
-enormous general-purpose text corpus. The training objective is
-next-word prediction, as described above. The model adjusts its billions
-of parameters through backpropagation (see <a href="3-deep-learning.html">Episode 3</a>) until it becomes very good at
-predicting text across a huge range of topics and styles.</p>
-<p>Pre-training is extraordinarily resource-intensive. Training a
-leading LLM can:</p>
+enormous, general-purpose body of text. The training objective is to
+predict the next word. The model adjusts its billions of parameters
+through backpropagation (the backward flow of error through a neural
+network, see <a href="3-deep-learning.html">Episode 3</a>) until it
+becomes very good at predicting text across a huge range of topics and
+styles.</p>
+<p>Pre-training is extremely resource-intensive. Training a leading LLM
+can:</p>
 <ul>
 <li>Require thousands of specialised computer chips running in parallel
 for weeks or months.</li>
 <li>Consume millions of pounds’ worth of electricity and hardware
 time.</li>
-<li>Produce a significant carbon footprint.</li>
+<li>Produce a significant carbon footprint. <a href="https://www.technologyreview.com/2019/06/06/239031/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/#:~:text=A%20paper%20from%20the%20University%20of%20Massachusetts%2C,on%20teaching%20machines%20to%20handle%20human%20language." class="external-link">One
+study</a> found that training a single large transformer model can emit
+over 283,000 kg of carbon</li>
 </ul>
 <p>This cost means that pre-trained models are rarely trained from
 scratch by individual researchers or institutions. Instead,
@@ -1390,16 +1353,16 @@ others can build on.</p>
 <div class="section level3">
 <h3 id="stage-2-fine-tuning">Stage 2: Fine-tuning<a class="anchor" aria-label="anchor" href="#stage-2-fine-tuning"></a>
 </h3>
-<p>Once a base model exists, it can be <strong>fine-tuned</strong> —
-trained further on a smaller, more targeted dataset to adapt its
-behaviour for a specific purpose or domain. For example:</p>
+<p>Once a base model exists, it can be <strong>fine-tuned</strong>. This
+means it can be trained further on a smaller, more targeted dataset to
+adapt its behaviour for a specific purpose or domain. For example, a
+base model might be fine-tuned…</p>
 <ul>
-<li>A base model might be fine-tuned on medical literature to improve
-its performance on clinical questions.</li>
-<li>A base model might be fine-tuned on legal documents to better
-support contract analysis.</li>
-<li>A base model might be fine-tuned using human feedback to make it
-more helpful, harmless, and honest in conversation.</li>
+<li>on medical literature to improve its performance on clinical
+questions.</li>
+<li>on legal documents to better support contract analysis.</li>
+<li>using human feedback to make it more helpful, harmless, and honest
+in conversation.</li>
 </ul>
 <p>That last approach, of using human ratings to guide the model toward
 more desirable outputs, is called <strong>Reinforcement Learning from
@@ -1421,7 +1384,7 @@ reasoning skills. Fine-tuning is then like a postgraduate
 specialisation: the student goes deep into a specific field, building on
 their broad foundation.</p>
 <p>A model trained this way inherits both the strengths and the
-limitations of its pre-training. If the pre-training corpus contained
+limitations of its pre-training. If the pre-training data contained
 biased, outdated, or incorrect material, those properties will be
 present in the base model and may persist even after fine-tuning.</p>
 </div>
@@ -1431,13 +1394,12 @@ present in the base model and may persist even after fine-tuning.</p>
 </section><section><h2 class="section-heading" id="what-llms-can-do">What LLMs Can Do<a class="anchor" aria-label="anchor" href="#what-llms-can-do"></a>
 </h2>
 <hr class="half-width">
-<p>LLMs have demonstrated remarkable capabilities across a wide range of
-language tasks, including:</p>
+<p>LLMs have demonstrated some amazing capabilities across a wide range
+of language tasks, including:</p>
 <ul>
 <li>
 <strong>Text generation and summarisation</strong> — producing
-coherent prose, summarising long documents, drafting
-correspondence.</li>
+coherent text, summarising long documents, drafting emails.</li>
 <li>
 <strong>Question answering</strong> — responding to factual queries
 based on patterns in training data.</li>
@@ -1456,8 +1418,8 @@ relationships, or themes in text.</li>
 </ul>
 <p>For researchers, LLMs offer potential value in tasks such as
 summarising literature, drafting sections of text for revision,
-assisting with qualitative coding, generating data analysis code, and
-exploring ideas interactively.</p>
+assisting with qualitative coding, generating data analysis computer
+code, and exploring ideas interactively.</p>
 </section><section><h2 class="section-heading" id="what-llms-cannot-do-key-limitations">What LLMs Cannot Do: Key Limitations<a class="anchor" aria-label="anchor" href="#what-llms-cannot-do-key-limitations"></a>
 </h2>
 <hr class="half-width">
@@ -1468,14 +1430,14 @@ applications where accuracy and reproducibility matter.</p>
 <h3 id="hallucination">Hallucination<a class="anchor" aria-label="anchor" href="#hallucination"></a>
 </h3>
 <p>Perhaps the most important limitation to understand is
-<strong>hallucination</strong>: LLMs can and do generate confident,
-fluent, plausible-sounding text that is factually incorrect.</p>
+<strong>hallucination</strong>: LLMs often generate confident, fluent,
+plausible-sounding text that is factually incorrect.</p>
 <p>This is not an occasional bug that will eventually be fixed, it is a
 fundamental property of how these models work. An LLM is optimised to
 produce coherent, contextually appropriate text but it is not optimised
-to produce verified truth. It has no direct access to a database of
-facts it can look up. Instead, it generates text by predicting what is
-most likely to come next, based on patterns learned during training.</p>
+to produce truth. It has no direct access to a database of facts it can
+look up. Instead, it generates text by predicting what is most likely to
+come next, based on patterns learned during training.</p>
 <p>In practice this means an LLM might:</p>
 <ul>
 <li>Invent citations to academic papers that do not exist, complete with
@@ -1498,8 +1460,8 @@ perceiving something that is not actually there. When an LLM
 “hallucinates”, it generates content that feels real and is presented
 confidently, but has no basis in fact. The model has no way to flag its
 own uncertainty in the way a cautious human expert might say “I’m not
-certain, but I believe…”. Always verify factual claims from LLM outputs
-using primary sources.</p>
+certain, but I believe…”. That’s why it’s important to verify factual
+claims from LLMs using primary sources.</p>
 </div>
 </div>
 </div>
@@ -1507,27 +1469,15 @@ using primary sources.</p>
 <div class="section level3">
 <h3 id="knowledge-cutoff">Knowledge Cutoff<a class="anchor" aria-label="anchor" href="#knowledge-cutoff"></a>
 </h3>
-<p>LLMs are trained on data collected up to a specific point in time —
-their <strong>knowledge cutoff</strong> date. They have no awareness of
-events, publications, or developments that occurred after that date,
-unless they are connected to external tools such as a web search
-capability.</p>
+<p>LLMs are trained on data collected up to a specific point in time,
+this is known as their <strong>knowledge cutoff</strong> date. They have
+no awareness of events, publications, or developments that occurred
+after that date, unless they are connected to external tools such as a
+web search capability.</p>
 <p>This matters particularly for research, where the most recent
 literature may be the most relevant. An LLM asked about the current
 state of a fast-moving field may give a confident account that is months
 or years out of date.</p>
-</div>
-<div class="section level3">
-<h3 id="context-window">Context Window<a class="anchor" aria-label="anchor" href="#context-window"></a>
-</h3>
-<p>Every LLM has a <strong>context window</strong>: the maximum amount
-of text it can “see” and process at one time. Think of it as the model’s
-working memory for a single interaction. If you provide a document that
-exceeds the context window, the model may be forced to ignore parts of
-it, potentially affecting the quality of its output.</p>
-<p>Context window sizes vary widely across models and have grown
-considerably in recent years, but they remain a practical constraint
-when working with very long documents.</p>
 </div>
 <div class="section level3">
 <h3 id="stochasticity-different-answers-each-time">Stochasticity: Different Answers Each Time<a class="anchor" aria-label="anchor" href="#stochasticity-different-answers-each-time"></a>
@@ -1538,6 +1488,18 @@ produce a different output on subsequent runs. This has implications for
 reproducibility in research: if you use an LLM in your methodology, you
 cannot guarantee that re-running your analysis will produce identical
 results.</p>
+</div>
+<div class="section level3">
+<h3 id="context-window">Context Window<a class="anchor" aria-label="anchor" href="#context-window"></a>
+</h3>
+<p>Every LLM has a <strong>context window</strong>, which is the maximum
+amount of text it can “see” and process at one time. You can think of it
+as the model’s working memory for a single interaction. If you provide a
+document that exceeds the context window, the model may be forced to
+ignore parts of it, potentially affecting the quality of its output.</p>
+<p>Context window sizes vary widely across models and have grown
+considerably in recent years, but they remain a practical constraint
+when working with very long documents.</p>
 </div>
 <div class="section level3">
 <h3 id="no-genuine-understanding">No Genuine Understanding<a class="anchor" aria-label="anchor" href="#no-genuine-understanding"></a>
@@ -1575,12 +1537,12 @@ just learned what such paragraphs tend to look like.</p>
 <td>The model is unaware of events after its training data ends</td>
 </tr>
 <tr>
-<td>Context window</td>
-<td>Very long documents may be partially ignored</td>
-</tr>
-<tr>
 <td>Stochasticity</td>
 <td>The same question can produce different answers</td>
+</tr>
+<tr>
+<td>Context window</td>
+<td>Very long documents may be partially ignored</td>
 </tr>
 <tr>
 <td>No verified understanding</td>
@@ -1591,29 +1553,6 @@ just learned what such paragraphs tend to look like.</p>
 </div>
 </div>
 </div>
-</div>
-</section><section><h2 class="section-heading" id="putting-it-together-from-prediction-to-conversation">Putting It Together: From Prediction to Conversation<a class="anchor" aria-label="anchor" href="#putting-it-together-from-prediction-to-conversation"></a>
-</h2>
-<hr class="half-width">
-<p>It is worth pausing to appreciate how much emerges from the single
-objective of next-word prediction. By training on enough text, a model
-learns:</p>
-<ul>
-<li>Grammar and style (to produce fluent sentences).</li>
-<li>Facts (because factual statements appear repeatedly across the
-corpus).</li>
-<li>Reasoning patterns (because logical arguments follow predictable
-structures in text).</li>
-<li>Tone and register (because different types of writing have distinct
-statistical signatures).</li>
-</ul>
-<p>What we experience as a ‘conversation’ with an LLM is the model
-repeatedly predicting the most contextually appropriate continuation of
-the text it has been given, which, in a chat interface, includes the
-history of the conversation so far.</p>
-<p>This is a remarkable engineering achievement. It is also a useful
-reminder that the model is doing something fundamentally different from
-how a human expert would approach the same question.</p>
 <div id="challenge-true-or-false" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1642,7 +1581,7 @@ knowledge in real time.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p><strong>False.</strong> A standard LLM generates responses based
@@ -1697,7 +1636,7 @@ capabilities.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Hallucination demo</li>
@@ -1758,9 +1697,10 @@ responses, with implications for research reproducibility.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></section><section id="aio-5-ai-in-research"><p>Content from <a href="5-ai-in-research.html">AI in Research</a></p>
 <hr>
-<p>Last updated on 2026-02-24 |
+<p>Last updated on 2026-03-03 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/5-ai-in-research.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1812,13 +1752,13 @@ part of a research workflow.</li>
 landscape: from the broad field of machine learning, through the layered
 representations of deep learning, to the language capabilities of large
 language models. In this final episode we ask the question that matters
-most for you as a researcher - what can I do with AI in my research?</p>
-<p>AI is no longer a technology on the horizon. It is already woven into
-research workflows across disciplines. The goal of this episode is not
-to tell you whether to use AI in your research, but to give you the
-conceptual tools to make that decision well including how to recognise
-opportunities, ask the right critical questions, and engage seriously
-with the ethical responsibilities that come with AI tools.</p>
+most for you as a researcher: “What can I do with AI in my
+research?”</p>
+<p>The goal of this episode is not to tell you whether to use AI in your
+research, but to give you the knowledge to make that decision well
+including how to recognise opportunities, ask the right critical
+questions, and engage seriously with the ethical responsibilities that
+come with AI tools.</p>
 </section><section><h2 class="section-heading" id="how-researchers-are-using-ai-today">How Researchers Are Using AI Today<a class="anchor" aria-label="anchor" href="#how-researchers-are-using-ai-today"></a>
 </h2>
 <hr class="half-width">
@@ -1857,8 +1797,8 @@ of visual data and complex signals. Applications include:</p>
 images.</li>
 <li>Detecting objects or changes in satellite or aerial imagery for
 environmental, geographic, or agricultural research.</li>
-<li>Supporting diagnostic imaging in clinical and veterinary research —
-identifying tumours, fractures, or lesions.</li>
+<li>Supporting diagnostic imaging in clinical settings by identifying
+tumours, fractures, or lesions.</li>
 <li>Recognising patterns in audio signals such as birdsong, seismic
 activity, or cardiac rhythms.</li>
 </ul>
@@ -1866,16 +1806,14 @@ activity, or cardiac rhythms.</li>
 <div class="section level3">
 <h3 id="working-with-tabular-and-structured-data">Working with Tabular and Structured Data<a class="anchor" aria-label="anchor" href="#working-with-tabular-and-structured-data"></a>
 </h3>
-<p>Supervised machine learning methods remain highly effective for
-structured datasets of the kind that appear throughout quantitative
-research:</p>
+<p>Supervised machine learning methods are highly effective for
+analysing structured datasets of the kind that appear throughout
+quantitative research. For example:</p>
 <ul>
 <li>Predicting outcomes in clinical trials or epidemiological
 studies.</li>
-<li>Detecting anomalies or fraud in financial or administrative
-datasets.</li>
-<li>Classifying observations in ecology, chemistry, or materials
-science.</li>
+<li>Detecting anomalies or fraud in financial datasets.</li>
+<li>Classifying observations in ecology.</li>
 <li>Building recommendation systems for research infrastructure, such as
 suggesting reviewers for journal submissions.</li>
 </ul>
@@ -1884,10 +1822,13 @@ suggesting reviewers for journal submissions.</li>
 <h3 id="code-and-data-analysis-assistance">Code and Data Analysis Assistance<a class="anchor" aria-label="anchor" href="#code-and-data-analysis-assistance"></a>
 </h3>
 <p>LLMs have rapidly become practical tools for researchers who work
-with data programmatically. They can write, explain, and debug code in
-languages such as Python and R, making computational methods more
-accessible to researchers who do not have a formal programming
-background.</p>
+with data by writing code. AI coding assistants can write, explain, and
+debug code in languages such as Python and R, making computational
+methods more accessible to researchers who do not have a formal
+programming background. This can be incredibly useful but you should be
+cautious about using AI-written code in your research if you don’t
+understand it. Due to the limitations in LLMs, AI generated code isn’t
+always correct!</p>
 <div id="ai-as-a-collaborator" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1897,7 +1838,7 @@ background.</p>
 <h3 class="callout-title">AI as a Collaborator</h3>
 <div class="callout-content">
 <p>A theme running through all of these applications is that AI tools
-work best when used as a tool to completement the expertise of a human
+work best when used as a tool to complement the expertise of a human
 researcher, rather than replacing the researcher. An LLM that assists
 with qualitative coding still requires a researcher who understands the
 domain, the methodology, and the data. A computer vision model that
@@ -1949,8 +1890,7 @@ When AI is part of your workflow, transparency requires:</p>
 <li>Stating clearly which AI tools were used, for what purpose, and at
 what stage of the research.</li>
 <li>Citing specific model versions wherever possible, so that readers
-can assess potential limitations and — where feasible — replicate your
-approach.</li>
+can assess potential limitations and replicate your approach.</li>
 <li>Describing how you validated or checked AI-generated outputs.</li>
 <li>Acknowledging limitations that arise specifically from using AI,
 such as the probabilistic nature of LLM outputs or the knowledge cutoff
@@ -1961,8 +1901,8 @@ of the model used.</li>
 <h3 id="privacy-and-data-governance">Privacy and Data Governance<a class="anchor" aria-label="anchor" href="#privacy-and-data-governance"></a>
 </h3>
 <p>Many AI tools, particularly cloud-based LLMs, process data on
-external servers. If you input sensitive data — patient records,
-interview transcripts, confidential documents — into a commercial AI
+external servers. If you input sensitive data such as patient records,
+interview transcripts, or confidential documents, into a commercial AI
 tool, you may be:</p>
 <ul>
 <li>Breaching participant confidentiality.</li>
@@ -1971,8 +1911,9 @@ tool, you may be:</p>
 ethical approval conditions.</li>
 </ul>
 <p>Before inputting any data into an AI tool, check your institution’s
-guidance on what categories of data may be processed in this way, and
-review the tool provider’s privacy and data retention policies.</p>
+and research group’s guidance on what categories of data may be
+processed in this way, and review the tool provider’s privacy and data
+retention policies.</p>
 </div>
 <div class="section level3">
 <h3 id="attribution-and-authorship">Attribution and Authorship<a class="anchor" aria-label="anchor" href="#attribution-and-authorship"></a>
@@ -1985,8 +1926,8 @@ issues include:</p>
 <strong>Authorship of AI-generated text:</strong> most major
 publishers and funders now have explicit policies stating that AI tools
 cannot be listed as authors, because authorship carries accountability
-that a model cannot bear. However, policies on <em>disclosing</em> the
-use of AI in drafting or editing text vary and are evolving
+that an AI model cannot hold. However, policies on <em>disclosing</em>
+the use of AI in drafting or editing text vary and are evolving
 rapidly.</li>
 <li>
 <strong>Attribution of AI-generated analysis:</strong> if an LLM
@@ -1995,7 +1936,9 @@ contribution be disclosed in the methods section?</li>
 <li>
 <strong>Copyright in training data:</strong> LLMs are trained on
 text that may include copyrighted material. The legal and ethical status
-of this is an active area of debate in many jurisdictions.</li>
+of this is an active area of debate. By including AI-generated text or
+code in your research, you may inadvertantly be infringing
+copyright.</li>
 </ul>
 <p>You should check the current policies of your target journal or
 funder, and your institution’s own guidance, before submitting work in
@@ -2041,11 +1984,10 @@ like?</li>
 <li>Which AI tool was used, and which version? (Without this, the
 approach cannot be evaluated or replicated.)</li>
 <li>What prompts or instructions were given to the model?</li>
-<li>What was the process for the research team’s review — how were
-AI-generated codes accepted, modified, or rejected?</li>
+<li>How were AI-generated codes accepted, modified, or rejected?</li>
 <li>Was the tool validated on similar data or in similar research
 contexts?</li>
-<li>How was participant data handled — was it anonymised before being
+<li>How was participant data handled? Was it anonymised before being
 input? Was the tool’s data retention policy checked against ethical
 approval conditions?</li>
 </ul>
@@ -2097,21 +2039,21 @@ is run).</p>
 <p>A <a href="https://www.technologyreview.com/2019/06/06/239031/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/#:~:text=A%20paper%20from%20the%20University%20of%20Massachusetts%2C,on%20teaching%20machines%20to%20handle%20human%20language." class="external-link">2019
 study</a> found that training a single large transformer model can emit
 over 283,000 kg (626,000 pounds) of carbon, which is roughly equivalent
-to five times the lifetime emissions of an average American car.
-Although many people believe that initial training has the largest
+to five times the lifetime emissions of an average American car.</p>
+<p>Although many people believe that initial training has the largest
 environmental cost, recent studies have found that inference can
 actually account for up to 90% of a model’s lifetime energy use. Water
 consumption follows a similar pattern, with estimates suggesting a
 standard ChatGPT conversation of 20–50 exchanges requires roughly 500
 millilitres of freshwater for cooling the servers in data centres (<a href="https://dl.acm.org/doi/10.1145/3724499" class="external-link">Li et al., 2023</a>).</p>
-<p>Not all AI is equally expensive. General-purpose LLMs are orders of
-magnitude more energy-intensive per inference than smaller,
-task-specific models performing the same job. This means that the
-convenience of using a single general-purpose LLM interface can carry a
-substantial and largely invisible environmental cost when multiplied
-across many uses. A fine-tuned model used for classification or
-information extraction may produce comparable results at a fraction of
-the per-query energy cost (<a href="https://doi.org/10.1145/3630106.3658542" class="external-link">Luccioni et al.,
+<p>Not all AI is equally environmentally expensive. General-purpose LLMs
+are orders of magnitude more energy-intensive per inference than
+smaller, task-specific models performing the same job. This means that
+the convenience of using a single general-purpose LLM interface can
+carry a substantial and largely invisible environmental cost when
+multiplied across many uses. A fine-tuned model used for classification
+or information extraction may produce comparable results at a fraction
+of the per-query energy cost (<a href="https://doi.org/10.1145/3630106.3658542" class="external-link">Luccioni et al.,
 2024</a>)</p>
 <p>The biggest obstacle to accurate environmental accounting for AI is
 the problem of transparency. The companies operating the largest AI
@@ -2124,11 +2066,8 @@ carbon and water usage (<a href="https://doi.org/10.1016/j.patter.2025.101430" c
 </section><section><h2 class="section-heading" id="looking-ahead-developing-your-ai-literacy">Looking Ahead: Developing Your AI Literacy<a class="anchor" aria-label="anchor" href="#looking-ahead-developing-your-ai-literacy"></a>
 </h2>
 <hr class="half-width">
-<p>This course has given you a conceptual foundation — a map of the AI
-landscape and the vocabulary to navigate it. That foundation will serve
-you well, but AI is a fast-moving field. Staying informed does not
-require becoming a technical expert; it does require cultivating an
-ongoing critical curiosity.</p>
+<p>This course has given you a map of the AI landscape and the
+vocabulary to navigate it.</p>
 <p>A few practical suggestions for developing your AI literacy beyond
 this course:</p>
 <ul>
@@ -2138,10 +2077,10 @@ universities and research funders are actively developing AI use
 policies. These are the most directly relevant to your work, and they
 will continue to evolve.</li>
 <li>
-<strong>Engage with your community.</strong> Methodological norms
-for AI use in research are being worked out discipline by discipline.
-Engaging with debates in your own field’s journals and conferences is
-more valuable than generic AI news.</li>
+<strong>Engage with your research community.</strong> Methodological
+norms for AI use in research are being worked out discipline by
+discipline. Engaging with debates in your own field’s journals and
+conferences is more valuable than generic AI news.</li>
 <li>
 <strong>Start small and validate.</strong> If you are considering
 integrating an AI tool into your workflow, start with a small,
@@ -2151,18 +2090,8 @@ up.</li>
 <strong>Be transparent.</strong> When in doubt about how much to
 disclose about your use of AI, err on the side of transparency. The
 research community is better served by over-disclosure than by the
-alternative.</li>
-</ul></section><section><h2 class="section-heading" id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a>
-</h2>
-<hr class="half-width">
-<p>This episode has moved from the conceptual to the practical,
-exploring how AI techniques are being applied in research and what it
-means to use them responsibly.</p>
-<p>The technical concepts from this course including training data,
-overfitting, hallucination, attention, fine-tuning are not just
-technical jargon. They are the vocabulary you need to read documentation
-critically, evaluate tools rigorously, and explain your methods
-honestly.</p>
+opposite.</li>
+</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -2177,9 +2106,7 @@ data modelling.</li>
 <li>Before adopting any AI tool, ask: what was it trained on? Has it
 been validated? Can results be reproduced? Can outputs be explained?
 What are the failure modes?</li>
-<li>AI models reflect the biases in their training data — outputs should
-never be accepted uncritically, particularly where equity and
-representation matter.</li>
+<li>AI models reflect the biases in their training data.</li>
 <li>Transparency in methods is essential: report which tools were used,
 at what version, for what purpose, and how outputs were validated.</li>
 <li>Privacy and data governance must be considered before inputting any

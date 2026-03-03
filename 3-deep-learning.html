@@ -330,7 +330,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Deep Learning and Neural Networks</h1>
-        <p>Last updated on 2026-02-24 |
+        <p>Last updated on 2026-03-03 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-deep-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -385,13 +385,13 @@ importance.</li>
 <li>The result is passed through a function that determines the
 output.</li>
 <li>That output is then sent to the next layer.</li>
-</ul><p>It is important to be clear that artificial neural networks are
-inspired by biology, but they are not realistic simulations of the
-brain. They are mathematical models designed to detect patterns in
-data.</p>
-<p>A single artificial neuron is rarely useful on its own. When we
-arrange many neurons together, we form a layer. When we stack multiple
-layers together, we create a neural network.</p>
+</ul><p>Note that artificial neural networks are inspired by biology, but
+they are not realistic simulations of the brain. They are mathematical
+models designed to detect patterns in data.</p>
+<p>A single artificial neuron is rarely useful on its own but can be
+really powerful when combined with many other artificial neurons. We can
+arrange many neurons together to form a layer and then stack multiple
+layers together to create a neural network.</p>
 </section><section><h2 class="section-heading" id="layers-depth-and-feature-learning">Layers, Depth and Feature Learning<a class="anchor" aria-label="anchor" href="#layers-depth-and-feature-learning"></a></h2>
 <hr class="half-width"><p>A neural network is typically organised into three types of
 layers:</p>
@@ -411,27 +411,27 @@ slightly more abstract representation.</p>
 <li>Later layers might capture aspects of meaning or context.</li>
 </ul><p>This hierarchical pattern detection is one of the main strengths of
 deep learning.</p>
-<p>The word <strong>‘deep’</strong> simply refers to the number of
-hidden layers. A shallow model might have one hidden layer. A deep model
-may have dozens or even hundreds.</p>
+<p>The word <strong>deep</strong> simply refers to the number of hidden
+layers. A shallow model might have one hidden layer. A deep model may
+have dozens or even hundreds of layers.</p>
 <div class="section level3">
 <h3 id="feature-learning">Feature Learning<a class="anchor" aria-label="anchor" href="#feature-learning"></a></h3>
-<p>A key reason deep learning marked such a significant shift from
-earlier machine learning approaches lies in how models learn from the
-features within the data.</p>
+<p>A key reason deep learning differs from earlier machine learning
+approaches lies in how models learn from the features within the
+data.</p>
 <p>Earlier machine learning approaches depended heavily on feature
 engineering. Researchers had to decide in advance which aspects of the
 data might be useful and then write code to extract them.</p>
 <p>In image classification, for example, a researcher might calculate
 edge counts, colour histograms, or texture measures. The model would not
-see the raw pixels. It would only see these hand-crafted data measures.
-If the chosen features were poor, the model’s performance would suffer.
-A great deal of expertise and experimentation often went into designing
-them.</p>
-<p>Deep learning changes this. Instead of feeding the model carefully
-designed features, we provide the raw data, such as pixel values. A
-neural network with multiple layers then learns its own internal
-representations during training. Early layers might detect simple
+see the raw pixels but instead would only see these hand-crafted feature
+measures. If the chosen features were poor, the model’s performance
+would suffer. A great deal of expertise and experimentation often went
+into designing the feature measures for a model.</p>
+<p>This is not the case for deep learning. Instead of feeding the model
+carefully designed features, we provide the raw data, such as pixel
+values. A neural network with multiple layers then learns its own
+feature measures during training. Early layers might detect simple
 patterns like edges, while later layers combine these into more complex
 structures.</p>
 <p>In short, traditional methods rely on humans to decide what matters
@@ -445,15 +445,9 @@ data itself, given enough examples and computing power.</p>
 <li>The difference between them is calculated as an error.</li>
 <li>This error signal is sent backwards through the network.</li>
 <li>The weights are adjusted slightly to reduce future errors.</li>
-</ol><p>This backward flow of error is known as
-<strong>backpropagation</strong>.</p>
-<p>As an analogy for training a deep learning model, imagine standing on
-a foggy hillside and trying to reach the lowest point (the correct
-answer). You cannot see the whole landscape, but you can feel the slope
-under your feet. You take small steps downhill. Repeating this process
-eventually brings you closer to the lowest point.</p>
-<p>In neural networks, the ‘height’ represents error. The model
-repeatedly takes small steps in the direction that reduces error.</p>
+</ol><p>Sending the error backwards through the network is known as
+<strong>backpropagation</strong>. We’ll mention this again in the next
+episode in the context of large language models.</p>
 <p>This process is repeated across many examples, often millions, and
 over many passes through the dataset.</p>
 <div id="try-training-a-neural-network" class="callout discussion">
@@ -465,9 +459,8 @@ over many passes through the dataset.</p>
 <h3 class="callout-title">Try Training a Neural Network</h3>
 <div class="callout-content">
 <p>You can experiment with the process of training a neural network
-interactively using tools such as <a href="https://playground.tensorflow.org" class="external-link">Tensorflow Playground</a> .
-Adjusting parameters and watching how decision boundaries change can
-help make these abstract ideas more concrete.</p>
+interactively using tools such as <a href="https://playground.tensorflow.org" class="external-link">Tensorflow Playground</a>.
+Adjust the parameters and watch how decision boundaries change.</p>
 </div>
 </div>
 </div>
@@ -483,8 +476,8 @@ hardware. Without large datasets and substantial computing power, deep
 models tend to perform poorly.</p>
 </div>
 </section><section><h2 class="section-heading" id="types-of-deep-learning">Types of Deep Learning<a class="anchor" aria-label="anchor" href="#types-of-deep-learning"></a></h2>
-<hr class="half-width"><p>There are several major neural network architectures, each suited to
-particular tasks.</p>
+<hr class="half-width"><p>There are many neural network architectures, each suited to
+particular tasks. Just a few common examples are discussed below.</p>
 <div class="section level3">
 <h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)<a class="anchor" aria-label="anchor" href="#convolutional-neural-networks-cnns"></a></h3>
 <p>CNNs are particularly effective for image and video analysis. They
@@ -506,7 +499,9 @@ processing systems. They are especially effective at modelling
 relationships within sequences of text and form the basis of
 contemporary large language models, which we will examine in the next
 episode.</p>
-
+<p>To read more about different neural network architectures have a look
+at the <a href="https://www.asimovinstitute.org/neural-network-zoo/" class="external-link">Neural
+Network Zoo</a>, a cheat sheet for neural network architectures.</p>
 <div id="discussion" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -623,7 +618,7 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/3-deep-learning.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/3-deep-learning.html",
   "dateCreated": "2026-02-20",
-  "dateModified": "2026-02-24",
+  "dateModified": "2026-03-03",
   "datePublished": "2026-03-03"
 }
 
