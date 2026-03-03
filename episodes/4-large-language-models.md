@@ -24,7 +24,7 @@ exercises: 5 # exercise time in minutes
 
 ## Introduction
 
-Over the previous two episodes we have built up a picture of how machines can learn from data, and how deep neural networks can learn rich, layered representations of the world. In this episode we apply those ideas to language. We will explore **Large Language Models (LLMs)** — the technology behind tools such as ChatGPT, Claude, Gemini, and Copilot — to understand what they are, how they are built, and what their real limitations are.
+Over the previous two episodes we have built up a picture of how machines can learn from data, and how deep neural networks can learn rich, layered representations of the world. In this episode we apply those ideas to language. We will explore **Large Language Models (LLMs)**, the technology behind tools such as ChatGPT, Claude, Gemini, and Copilot, to understand what they are, how they are built, and what their real limitations are.
 
 By the end of this episode you will be in a much stronger position to use these tools critically and responsibly in your own research
 
@@ -50,16 +50,16 @@ Despite their apparent sophistication, LLMs are trained on a surprisingly simple
 
 Consider the sentence:
 
-*"The researcher submitted her manuscript to the ___"*
+*The researcher submitted her manuscript to the ___*
 
-A well-trained model should assign a high probability to words like *journal* or *publisher*, and a low probability to words like *submarine* or *Tuesday*. By doing this billions of times across an enormous training corpus, the model is forced to learn grammar, facts, writing conventions, and even something resembling reasoning — because all of these are encoded in the statistical patterns of language.
+A well-trained model should assign a high probability to words like *journal* or *publisher*, and a low probability to words like *submarine* or *Tuesday*. By doing this billions of times across an enormous training corpus, the model is forced to learn grammar, facts, writing conventions, and even something resembling reasoning because all of these are encoded in the statistical patterns of language.
 
 This is sometimes called **self-supervised learning**: the training data provides its own labels (the next word is always known from the text itself), so no human annotation is required.
 
 
 ## Transformer Architecture
 
-LLMs are built on an architecture called the **Transformer**, introduced in a landmark 2017 paper titled "Attention Is All You Need". Before the Transformer, models processed text sequentially — one word at a time — which was slow and made it hard to capture relationships between words that were far apart in a sentence. The Transformer solved both problems at once.
+LLMs are built on an architecture called the **Transformer**, introduced in a landmark 2017 paper titled "Attention Is All You Need". Before the Transformer, models processed text one word at a time, which was slow and made it hard to capture relationships between words that were far apart in a sentence. The Transformer solved both problems.
 
 ### The attention mechanism
 
@@ -67,19 +67,12 @@ The key innovation of the Transformer is the **attention mechanism**. Rather tha
 
 Consider this sentence:
 
-*"The bank was steep and muddy, so she slipped climbing down it."*
+*The bank was steep and muddy, so she slipped climbing down it.*
 
-When processing the word *"bank"*, a human reader immediately uses context clues such as *steep*, *muddy*, and *climbing*, to understand that this is a riverbank, not a financial institution. The attention mechanism allows a Transformer to do something similar: it learns to assign higher attention weights to the words most relevant for correctly interpreting each part of the text.
+When processing the word *bank*, a human reader immediately uses context clues such as *steep*, *muddy*, and *climbing*, to understand that this is a riverbank, not a financial institution. The attention mechanism allows a Transformer to do something similar: it learns to assign higher attention weights to the words most relevant for correctly interpreting each part of the text.
 
 
-### Why "Transformer" changed everything
-
-Two properties make Transformers especially powerful:
-
-1. **Parallelism:** Unlike earlier architectures, Transformers can process all words in a passage at the same time, rather than one word at a time. This makes training dramatically faster and allows much larger models to be trained.
-2. **Long-range dependencies:** Attention can connect words that are many sentences apart, allowing the model to maintain coherence across a long document.
-
-These properties, combined with the availability of large-scale computing hardware (particularly GPUs and TPUs), triggered a step-change in what language models could do. Essentially all major LLMs today including GPT, Claude, and Gemini are built on the Transformer architecture.
+The attention mechanism combined with the availability of large-scale computing hardware, triggered a step up in what language models could do. Essentially all major LLMs today including ChatGPT, Claude, and Gemini are built on the Transformer architecture.
 
 ## How LLMs Are Trained: Pre-training and Fine-tuning
 
@@ -87,23 +80,23 @@ Building a capable LLM is typically a two-stage process.
 
 ### Stage 1: Pre-training
 
-In the pre-training stage, the model is trained from scratch on an enormous general-purpose text corpus. The training objective is next-word prediction, as described above. The model adjusts its billions of parameters through backpropagation (see [Episode 3](3-deep-learning.md)) until it becomes very good at predicting text across a huge range of topics and styles.
+In the pre-training stage, the model is trained from scratch on an enormous, general-purpose body of text. The training objective is to predict the next word. The model adjusts its billions of parameters through backpropagation (the backward flow of error through a neural network, see [Episode 3](3-deep-learning.md)) until it becomes very good at predicting text across a huge range of topics and styles.
 
-Pre-training is extraordinarily resource-intensive. Training a leading LLM can:
+Pre-training is extremely  resource-intensive. Training a leading LLM can:
 
 - Require thousands of specialised computer chips running in parallel for weeks or months.
 - Consume millions of pounds' worth of electricity and hardware time.
-- Produce a significant carbon footprint.
+- Produce a significant carbon footprint.  [One study](https://www.technologyreview.com/2019/06/06/239031/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/#:~:text=A%20paper%20from%20the%20University%20of%20Massachusetts%2C,on%20teaching%20machines%20to%20handle%20human%20language.) found that training a single large transformer model can emit over 283,000 kg of carbon 
 
 This cost means that pre-trained models are rarely trained from scratch by individual researchers or institutions. Instead, organisations release **pre-trained base models** that others can build on.
 
 ### Stage 2: Fine-tuning
 
-Once a base model exists, it can be **fine-tuned** — trained further on a smaller, more targeted dataset to adapt its behaviour for a specific purpose or domain. For example:
+Once a base model exists, it can be **fine-tuned**. This means it can be trained further on a smaller, more targeted dataset to adapt its behaviour for a specific purpose or domain. For example, a base model might be fine-tuned...
 
-- A base model might be fine-tuned on medical literature to improve its performance on clinical questions.
-- A base model might be fine-tuned on legal documents to better support contract analysis.
-- A base model might be fine-tuned using human feedback to make it more helpful, harmless, and honest in conversation.
+- on medical literature to improve its performance on clinical questions.
+- on legal documents to better support contract analysis.
+- using human feedback to make it more helpful, harmless, and honest in conversation.
 
 That last approach, of using human ratings to guide the model toward more desirable outputs, is called **Reinforcement Learning from Human Feedback (RLHF)**. It is largely responsible for the conversational, 'helpful assistant' style of tools like ChatGPT. Human raters score model outputs, and the model is trained to produce outputs that score more highly.
 
@@ -113,22 +106,22 @@ That last approach, of using human ratings to guide the model toward more desira
 
 Think of pre-training as an undergraduate education: the student reads broadly across many subjects and develops general knowledge and reasoning skills. Fine-tuning is then like a postgraduate specialisation: the student goes deep into a specific field, building on their broad foundation.
 
-A model trained this way inherits both the strengths and the limitations of its pre-training. If the pre-training corpus contained biased, outdated, or incorrect material, those properties will be present in the base model and may persist even after fine-tuning.
+A model trained this way inherits both the strengths and the limitations of its pre-training. If the pre-training data contained biased, outdated, or incorrect material, those properties will be present in the base model and may persist even after fine-tuning.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## What LLMs Can Do
 
-LLMs have demonstrated remarkable capabilities across a wide range of language tasks, including:
+LLMs have demonstrated some amazing capabilities across a wide range of language tasks, including:
 
-- **Text generation and summarisation** — producing coherent prose, summarising long documents, drafting correspondence.
+- **Text generation and summarisation** — producing coherent text, summarising long documents, drafting emails.
 - **Question answering** — responding to factual queries based on patterns in training data.
 - **Translation** — converting text between languages.
 - **Code generation** — writing, explaining, and debugging computer code.
 - **Step-by-step reasoning** — working through multi-step problems when prompted appropriately.
 - **Information extraction** — identifying entities, relationships, or themes in text.
 
-For researchers, LLMs offer potential value in tasks such as summarising literature, drafting sections of text for revision, assisting with qualitative coding, generating data analysis code, and exploring ideas interactively.
+For researchers, LLMs offer potential value in tasks such as summarising literature, drafting sections of text for revision, assisting with qualitative coding, generating data analysis computer code, and exploring ideas interactively.
 
 ## What LLMs Cannot Do: Key Limitations
 
@@ -136,9 +129,9 @@ Understanding what LLMs *cannot* reliably do is at least as important as knowing
 
 ### Hallucination
 
-Perhaps the most important limitation to understand is **hallucination**: LLMs can and do generate confident, fluent, plausible-sounding text that is factually incorrect.
+Perhaps the most important limitation to understand is **hallucination**: LLMs often generate confident, fluent, plausible-sounding text that is factually incorrect.
 
-This is not an occasional bug that will eventually be fixed, it is a fundamental property of how these models work. An LLM is optimised to produce coherent, contextually appropriate text but it is not optimised to produce verified truth. It has no direct access to a database of facts it can look up. Instead, it generates text by predicting what is most likely to come next, based on patterns learned during training.
+This is not an occasional bug that will eventually be fixed, it is a fundamental property of how these models work. An LLM is optimised to produce coherent, contextually appropriate text but it is not optimised to produce truth. It has no direct access to a database of facts it can look up. Instead, it generates text by predicting what is most likely to come next, based on patterns learned during training.
 
 In practice this means an LLM might:
 
@@ -150,25 +143,28 @@ In practice this means an LLM might:
 
 ### Why is it called 'hallucination'?
 
-The term is borrowed from psychology, where hallucination refers to perceiving something that is not actually there. When an LLM "hallucinates", it generates content that feels real and is presented confidently, but has no basis in fact. The model has no way to flag its own uncertainty in the way a cautious human expert might say "I'm not certain, but I believe...". Always verify factual claims from LLM outputs using primary sources.
+The term is borrowed from psychology, where hallucination refers to perceiving something that is not actually there. When an LLM "hallucinates", it generates content that feels real and is presented confidently, but has no basis in fact. The model has no way to flag its own uncertainty in the way a cautious human expert might say "I'm not certain, but I believe...". That's why it's important to verify factual claims from LLMs using primary sources.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Knowledge Cutoff
 
-LLMs are trained on data collected up to a specific point in time — their **knowledge cutoff** date. They have no awareness of events, publications, or developments that occurred after that date, unless they are connected to external tools such as a web search capability.
+LLMs are trained on data collected up to a specific point in time, this is known as their **knowledge cutoff** date. They have no awareness of events, publications, or developments that occurred after that date, unless they are connected to external tools such as a web search capability.
 
 This matters particularly for research, where the most recent literature may be the most relevant. An LLM asked about the current state of a fast-moving field may give a confident account that is months or years out of date.
 
-### Context Window
-
-Every LLM has a **context window**: the maximum amount of text it can "see" and process at one time. Think of it as the model's working memory for a single interaction. If you provide a document that exceeds the context window, the model may be forced to ignore parts of it, potentially affecting the quality of its output.
-
-Context window sizes vary widely across models and have grown considerably in recent years, but they remain a practical constraint when working with very long documents.
 
 ### Stochasticity: Different Answers Each Time
 
 LLM outputs are **probabilistic** rather than deterministic. Even when given exactly the same input, an LLM will often produce a different output on subsequent runs. This has implications for reproducibility in research: if you use an LLM in your methodology, you cannot guarantee that re-running your analysis will produce identical results.
+
+
+### Context Window
+
+Every LLM has a **context window**, which is the maximum amount of text it can "see" and process at one time. You can think of it as the model's working memory for a single interaction. If you provide a document that exceeds the context window, the model may be forced to ignore parts of it, potentially affecting the quality of its output.
+
+Context window sizes vary widely across models and have grown considerably in recent years, but they remain a practical constraint when working with very long documents.
+
 
 ### No Genuine Understanding
 
@@ -184,24 +180,12 @@ Finally, it is important to resist the temptation to interpret LLM fluency as un
 |---|---|
 | Hallucination | Outputs may be confidently wrong; always verify factual claims |
 | Knowledge cutoff | The model is unaware of events after its training data ends |
-| Context window | Very long documents may be partially ignored |
 | Stochasticity | The same question can produce different answers |
+| Context window | Very long documents may be partially ignored |
 | No verified understanding | Fluency does not equal accuracy or expertise |
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Putting It Together: From Prediction to Conversation
-
-It is worth pausing to appreciate how much emerges from the single objective of next-word prediction. By training on enough text, a model learns:
-
-- Grammar and style (to produce fluent sentences).
-- Facts (because factual statements appear repeatedly across the corpus).
-- Reasoning patterns (because logical arguments follow predictable structures in text).
-- Tone and register (because different types of writing have distinct statistical signatures).
-
-What we experience as a 'conversation' with an LLM is the model repeatedly predicting the most contextually appropriate continuation of the text it has been given, which, in a chat interface, includes the history of the conversation so far.
-
-This is a remarkable engineering achievement. It is also a useful reminder that the model is doing something fundamentally different from how a human expert would approach the same question.
 
 ::::::::::::::::::::::::::::::::::::::::: challenge
 

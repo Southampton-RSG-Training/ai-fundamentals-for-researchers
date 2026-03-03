@@ -25,9 +25,9 @@ exercises: 5
 
 ## Introduction
 
-Throughout this course we have built up a conceptual map of the AI landscape: from the broad field of machine learning, through the layered representations of deep learning, to the language capabilities of large language models. In this final episode we ask the question that matters most for you as a researcher - what can I do with AI in my research?
+Throughout this course we have built up a conceptual map of the AI landscape: from the broad field of machine learning, through the layered representations of deep learning, to the language capabilities of large language models. In this final episode we ask the question that matters most for you as a researcher: "What can I do with AI in my research?"
 
-AI is no longer a technology on the horizon. It is already woven into research workflows across disciplines. The goal of this episode is not to tell you whether to use AI in your research, but to give you the conceptual tools to make that decision well including how to recognise opportunities, ask the right critical questions, and engage seriously with the ethical responsibilities that come with AI tools.
+The goal of this episode is not to tell you whether to use AI in your research, but to give you the knowledge to make that decision well including how to recognise opportunities, ask the right critical questions, and engage seriously with the ethical responsibilities that come with AI tools.
 
 
 ## How Researchers Are Using AI Today
@@ -50,27 +50,27 @@ Convolutional neural networks (introduced in [Episode 3](3-deep-learning.md)) ha
 
 - Classifying cell types or identifying anomalies in microscopy images.
 - Detecting objects or changes in satellite or aerial imagery for environmental, geographic, or agricultural research.
-- Supporting diagnostic imaging in clinical and veterinary research — identifying tumours, fractures, or lesions.
+- Supporting diagnostic imaging in clinical settings by identifying tumours, fractures, or lesions.
 - Recognising patterns in audio signals such as birdsong, seismic activity, or cardiac rhythms.
 
 ### Working with Tabular and Structured Data
 
-Supervised machine learning methods remain highly effective for structured datasets of the kind that appear throughout quantitative research:
+Supervised machine learning methods are highly effective for analysing structured datasets of the kind that appear throughout quantitative research.  For example:
 
 - Predicting outcomes in clinical trials or epidemiological studies.
-- Detecting anomalies or fraud in financial or administrative datasets.
-- Classifying observations in ecology, chemistry, or materials science.
+- Detecting anomalies or fraud in financial datasets.
+- Classifying observations in ecology.
 - Building recommendation systems for research infrastructure, such as suggesting reviewers for journal submissions.
 
 ### Code and Data Analysis Assistance
 
-LLMs have rapidly become practical tools for researchers who work with data programmatically. They can write, explain, and debug code in languages such as Python and R, making computational methods more accessible to researchers who do not have a formal programming background.
+LLMs have rapidly become practical tools for researchers who work with data by writing code. AI coding assistants can write, explain, and debug code in languages such as Python and R, making computational methods more accessible to researchers who do not have a formal programming background. This can be incredibly useful but you should be cautious about using AI-written code in your research if you don't understand it. Due to the limitations in LLMs, AI generated code isn't always correct! 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 
 ### AI as a Collaborator
 
-A theme running through all of these applications is that AI tools work best when used as a tool to completement the expertise of a human researcher, rather than replacing the researcher. An LLM that assists with qualitative coding still requires a researcher who understands the domain, the methodology, and the data. A computer vision model that flags anomalies in microscopy images still requires a scientist who can interpret what those anomalies mean.
+A theme running through all of these applications is that AI tools work best when used as a tool to complement the expertise of a human researcher, rather than replacing the researcher. An LLM that assists with qualitative coding still requires a researcher who understands the domain, the methodology, and the data. A computer vision model that flags anomalies in microscopy images still requires a scientist who can interpret what those anomalies mean.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -96,28 +96,28 @@ As a researcher, bias matters in two distinct ways:
 Research integrity depends on being transparent about your methods. When AI is part of your workflow, transparency requires:
 
 - Stating clearly which AI tools were used, for what purpose, and at what stage of the research.
-- Citing specific model versions wherever possible, so that readers can assess potential limitations and — where feasible — replicate your approach.
+- Citing specific model versions wherever possible, so that readers can assess potential limitations and replicate your approach.
 - Describing how you validated or checked AI-generated outputs.
 - Acknowledging limitations that arise specifically from using AI, such as the probabilistic nature of LLM outputs or the knowledge cutoff of the model used.
 
 ### Privacy and Data Governance
 
-Many AI tools, particularly cloud-based LLMs, process data on external servers. If you input sensitive data — patient records, interview transcripts, confidential documents — into a commercial AI tool, you may be:
+Many AI tools, particularly cloud-based LLMs, process data on external servers. If you input sensitive data such as patient records, interview transcripts, or confidential documents, into a commercial AI tool, you may be:
 
 - Breaching participant confidentiality.
 - Violating data protection legislation such as the UK GDPR.
 - Contravening your institution's data governance policies or your ethical approval conditions.
 
-Before inputting any data into an AI tool, check your institution's guidance on what categories of data may be processed in this way, and review the tool provider's privacy and data retention policies.
+Before inputting any data into an AI tool, check your institution's and research group's guidance on what categories of data may be processed in this way, and review the tool provider's privacy and data retention policies.
 
 
 ### Attribution and Authorship
 
 LLMs have raised genuinely novel questions about authorship and attribution that the research community is still working through. Key issues include:
 
-- **Authorship of AI-generated text:** most major publishers and funders now have explicit policies stating that AI tools cannot be listed as authors, because authorship carries accountability that a model cannot bear. However, policies on *disclosing* the use of AI in drafting or editing text vary and are evolving rapidly.
+- **Authorship of AI-generated text:** most major publishers and funders now have explicit policies stating that AI tools cannot be listed as authors, because authorship carries accountability that an AI model cannot hold. However, policies on *disclosing* the use of AI in drafting or editing text vary and are evolving rapidly.
 - **Attribution of AI-generated analysis:** if an LLM assists with qualitative coding or data interpretation, how should that contribution be disclosed in the methods section?
-- **Copyright in training data:** LLMs are trained on text that may include copyrighted material. The legal and ethical status of this is an active area of debate in many jurisdictions.
+- **Copyright in training data:** LLMs are trained on text that may include copyrighted material. The legal and ethical status of this is an active area of debate.  By including AI-generated text or code in your research, you may inadvertantly be infringing copyright.
 
 You should check the current policies of your target journal or funder, and your institution's own guidance, before submitting work in which AI has played a role.
 
@@ -144,9 +144,9 @@ Discuss the following questions:
 
 - Which AI tool was used, and which version? (Without this, the approach cannot be evaluated or replicated.)
 - What prompts or instructions were given to the model?
-- What was the process for the research team's review — how were AI-generated codes accepted, modified, or rejected?
+- How were AI-generated codes accepted, modified, or rejected?
 - Was the tool validated on similar data or in similar research contexts?
-- How was participant data handled — was it anonymised before being input? Was the tool's data retention policy checked against ethical approval conditions?
+- How was participant data handled? Was it anonymised before being input? Was the tool's data retention policy checked against ethical approval conditions?
 
 **Risks and limitations the authors should have acknowledged:**
 
@@ -173,38 +173,32 @@ The environmental cost of AI is larger and more complex than most users apprecia
 
 These costs accumulate across the full lifecycle of an AI model.  This includes the water and carbon used to manufacture the specialist chips required to run the AI; the intensive one-off cost of training the model; and the ongoing costs of inference (the cost every time a query is run). 
 
-A [2019 study](https://www.technologyreview.com/2019/06/06/239031/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/#:~:text=A%20paper%20from%20the%20University%20of%20Massachusetts%2C,on%20teaching%20machines%20to%20handle%20human%20language.) found that training a single large transformer model can emit over 283,000 kg (626,000 pounds) of carbon, which is roughly equivalent to five times the lifetime emissions of an average American car. Although many people believe that initial training has the largest environmental cost, recent studies have found that inference can actually account for up to 90% of a model's lifetime energy use. Water consumption follows a similar pattern, with estimates suggesting a standard ChatGPT conversation of 20–50 exchanges requires roughly 500 millilitres of freshwater for cooling the servers in data centres ([Li et al., 2023](https://dl.acm.org/doi/10.1145/3724499)).
+A [2019 study](https://www.technologyreview.com/2019/06/06/239031/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/#:~:text=A%20paper%20from%20the%20University%20of%20Massachusetts%2C,on%20teaching%20machines%20to%20handle%20human%20language.) found that training a single large transformer model can emit over 283,000 kg (626,000 pounds) of carbon, which is roughly equivalent to five times the lifetime emissions of an average American car. 
 
-Not all AI is equally expensive. General-purpose LLMs are orders of magnitude more energy-intensive per inference than smaller, task-specific models performing the same job.  This means that the convenience of using a single general-purpose LLM interface can carry a substantial and largely invisible environmental cost when multiplied across many uses. A fine-tuned model used for classification or information extraction may produce comparable results at a fraction of the per-query energy cost ([Luccioni et al., 2024](https://doi.org/10.1145/3630106.3658542))
+Although many people believe that initial training has the largest environmental cost, recent studies have found that inference can actually account for up to 90% of a model's lifetime energy use. Water consumption follows a similar pattern, with estimates suggesting a standard ChatGPT conversation of 20–50 exchanges requires roughly 500 millilitres of freshwater for cooling the servers in data centres ([Li et al., 2023](https://dl.acm.org/doi/10.1145/3724499)).
+
+Not all AI is equally environmentally expensive. General-purpose LLMs are orders of magnitude more energy-intensive per inference than smaller, task-specific models performing the same job.  This means that the convenience of using a single general-purpose LLM interface can carry a substantial and largely invisible environmental cost when multiplied across many uses. A fine-tuned model used for classification or information extraction may produce comparable results at a fraction of the per-query energy cost ([Luccioni et al., 2024](https://doi.org/10.1145/3630106.3658542))
 
 The biggest obstacle to accurate environmental accounting for AI is the problem of transparency.  The companies operating the largest AI systems publish very little useful data.  Furthermore, the published per-query emissions figures from AI providers typically reflect optimised, market-based conditions, rather than an accurate estimate of carbon and water usage ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). 
 
 
 ## Looking Ahead: Developing Your AI Literacy
 
-This course has given you a conceptual foundation — a map of the AI landscape and the vocabulary to navigate it. That foundation will serve you well, but AI is a fast-moving field. Staying informed does not require becoming a technical expert; it does require cultivating an ongoing critical curiosity.
+This course has given you a map of the AI landscape and the vocabulary to navigate it. 
 
 A few practical suggestions for developing your AI literacy beyond this course:
 
 - **Follow your institution's guidance.** Most universities and research funders are actively developing AI use policies. These are the most directly relevant to your work, and they will continue to evolve.
-- **Engage with your community.** Methodological norms for AI use in research are being worked out discipline by discipline. Engaging with debates in your own field's journals and conferences is more valuable than generic AI news.
+- **Engage with your research community.** Methodological norms for AI use in research are being worked out discipline by discipline. Engaging with debates in your own field's journals and conferences is more valuable than generic AI news.
 - **Start small and validate.** If you are considering integrating an AI tool into your workflow, start with a small, low-stakes task and validate the outputs carefully before scaling up.
-- **Be transparent.** When in doubt about how much to disclose about your use of AI, err on the side of transparency. The research community is better served by over-disclosure than by the alternative.
-
-
-
-## Summary
-
-This episode has moved from the conceptual to the practical, exploring how AI techniques are being applied in research and what it means to use them responsibly. 
-
-The technical concepts from this course including training data, overfitting, hallucination, attention, fine-tuning are not just technical jargon. They are the vocabulary you need to read documentation critically, evaluate tools rigorously, and explain your methods honestly.
+- **Be transparent.** When in doubt about how much to disclose about your use of AI, err on the side of transparency. The research community is better served by over-disclosure than by the opposite.
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - AI techniques are being applied across research disciplines, from text analysis and image classification to code generation and structured data modelling.
 - Before adopting any AI tool, ask: what was it trained on? Has it been validated? Can results be reproduced? Can outputs be explained? What are the failure modes?
-- AI models reflect the biases in their training data — outputs should never be accepted uncritically, particularly where equity and representation matter.
+- AI models reflect the biases in their training data.
 - Transparency in methods is essential: report which tools were used, at what version, for what purpose, and how outputs were validated.
 - Privacy and data governance must be considered before inputting any sensitive or personal data into an AI tool.
 - Authorship, attribution, and environmental cost are emerging ethical considerations that researchers should engage with actively.

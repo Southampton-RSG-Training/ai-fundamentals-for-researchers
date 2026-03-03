@@ -28,23 +28,23 @@ In traditional programming, a human writes explicit rules and the computer follo
 
 For example:
 
-- A programmer writes rules to calculate tax.
-- The computer applies those rules to a set of numbers.
-- The output is fully determined by the instructions written in advance.
+- A programmer writes **rules** to calculate tax.
+- The computer applies those rules to some **data**.
+- The output is fully determined by the rules written in advance.
 
 The logic flows like this:
 
-**Rules + Data -> Answers**
+**Rules + Data -> Output**
 
 Machine learning takes a different approach. Instead of writing detailed rules, we provide:
 
-- Data
-- The desired outputs (in many cases)
-- The system then learns patterns that connect the two.
+- **Data**
+- The desired **outputs** 
+- The system then learns rules or patterns that connect the two.
 
 The logic becomes:
 
-**Data + Answers -> Rules**
+**Data + Output -> Rules**
 
 In other words, the computer infers the rules for itself.
 
@@ -66,7 +66,7 @@ Machine learning is not one single method. It includes several different learnin
 
 In supervised learning, each example includes both the input and the correct output.
 
-For instance, a dataset of medical images might include thousands of scans labelled “tumour” or “no tumour”. The system learns to map image features to the correct diagnosis.
+For instance, a dataset of medical images might include thousands of scans labelled "tumour" or "no tumour". The system learns to map image features to the correct diagnosis.
 
 This is currently the most widely used type of machine learning in research and industry.
 
@@ -74,7 +74,7 @@ This is currently the most widely used type of machine learning in research and 
 
 In unsupervised learning, the system is given data without explicit labels. Its task is to find structure within the data.
 
-For example, given a large collection of research abstracts, an unsupervised model might group them into themes based on patterns of word usage. No one tells the system what the topics are in advance.
+For example, given a large collection of research paper abstracts, an unsupervised model might group them into themes based on patterns of word usage. No one tells the system what the topics are in advance.
 
 This approach is useful for exploration and discovery.
 
@@ -125,9 +125,9 @@ Different research contexts prioritise different metrics. In medical screening, 
 
 ## Demonstration: Teachable Machine
 
-A useful way to build intuition is to experiment with tools such as [Teachable Machine](https://teachablemachine.withgoogle.com/). These tools allow you to train a simple image or sound classifier using your own examples, without writing code.
+A useful way to build understanding without the need to write code is to experiment with tools such as [Teachable Machine](https://teachablemachine.withgoogle.com/). These tools allow you to train a simple image or sound classifier using your own examples, without any coding required.
 
-The experience reinforces the core idea: the quality and quantity of training examples strongly influence the behaviour of the model.
+Notice how the quality and quantity of training examples strongly influence the behaviour of the model.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
