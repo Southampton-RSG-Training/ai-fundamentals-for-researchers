@@ -34,25 +34,16 @@ It is worth noting that AI is not a single technique or tool. It is an umbrella 
 ### A Brief History in Three Phases
 
 **Rule-based systems (1950s–1980s)**
-Early AI systems relied on explicit rules written by humans. For example, a medical expert system might contain hundreds of “if–then” statements created by specialists. These systems could perform well in narrow domains but were brittle and difficult to scale.
+Early AI systems relied on explicit rules written by humans. For example, a medical expert system might contain hundreds of “if–then” statements created by specialists, designed to lead to a diagnosis. These systems could perform well in narrow domains but were inflexible and difficult to scale.
 
 **Statistical approaches (1980s–2000s)**
 Researchers began using probability and statistics to handle uncertainty and variability in real-world data. Instead of hard-coded rules, systems estimated likelihoods and made predictions based on data.
 
-Modern machine learning (2000s–present)
-With increased data and computing power, systems began to “learn” patterns directly from large datasets. Rather than being told exactly what to do, they infer patterns from examples.
+**Modern machine learning (2000s–present)**
+With increased data and computing power, systems began to "learn"" patterns directly from large datasets. Rather than being told exactly what to do, they infer patterns from examples.
 
 Throughout all these phases, the goal has remained broadly the same: to build systems that can carry out tasks we associate with intelligent behaviour.
 
-### Common misconceptions
-
-AI is often portrayed in ways that are misleading. It is helpful to address a few common misconceptions early:
-
-- AI is not sentient. Current systems do not have consciousness, self-awareness, or understanding.
-- AI is not magic. It relies on mathematics, data, and computation.
-- AI is not one single thing. It is a collection of methods and tools that solve different kinds of problems.
-
-Keeping these points in mind helps us approach AI more critically and realistically.
 
 ### Narrow AI vs General AI
 
@@ -64,7 +55,6 @@ A crucial distinction is between narrow AI and general AI.
 
 General AI is the overarching goal of many AI companies but, at present, general AI does not exist. When discussing real-world research and applications, we are dealing with narrow AI.
 
-Understanding this distinction prevents confusion between science fiction narratives and current technological reality.
 
 ## The AI Family Tree
 
@@ -91,8 +81,6 @@ We can interpret this diagram from the outside in:
 - **Deep Learning** is a subset of machine learning that uses multi-layered neural networks to model complex patterns.
 - **Large Language Models (LLMs)** are a specific application of deep learning, trained on vast amounts of text data to generate and understand language.
 
-This nesting matters because it clarifies terminology. Not all AI is machine learning. Not all machine learning is deep learning. And not all deep learning systems are large language models.
-
 As the course progresses, we will move gradually from the outer layer towards the inner layers, building conceptual understanding at each step.
 
 
@@ -106,7 +94,7 @@ Three enabling factors have converged:
 
 2. **Computing power**: Graphics Processing Units (GPUs), originally developed for rendering images in gaming, turned out to be highly effective for the kinds of parallel computations used in deep learning.
 
-3. **Algorithmic advances**: New training methods and model architectures have significantly improved performance, particularly in areas such as image recognition and natural language processing.
+3. **Algorithmic advances**: New training methods and model architectures have significantly improved performance, particularly in areas such as image recognition and natural language processing. For example the transformer architecture that underpins most large language models (transformer is the 'T' in ChatGPT)
 
 The current wave of AI is therefore not the result of a single breakthrough, but the interaction between data, hardware, and improved methods.
 

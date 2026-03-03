@@ -26,7 +26,7 @@ exercises: 2 # exercise time in minutes
 
 Deep learning is built on a concept called the artificial neural network.
 
-The name comes from a loose analogy with biology. In the human brain, neurons receive signals from other neurons. If the combined signal is strong enough, the neuron “fires” and passes a signal onwards.
+The name comes from a loose analogy with biology. In the human brain, neurons receive signals from other neurons. If the combined signal is strong enough, the neuron "fires" and passes a signal onwards.
 
 An artificial neuron works in a simplified mathematical way:
 
@@ -36,9 +36,9 @@ An artificial neuron works in a simplified mathematical way:
 - The result is passed through a function that determines the output.
 - That output is then sent to the next layer.
 
-It is important to be clear that artificial neural networks are inspired by biology, but they are not realistic simulations of the brain. They are mathematical models designed to detect patterns in data.
+Note that artificial neural networks are inspired by biology, but they are not realistic simulations of the brain. They are mathematical models designed to detect patterns in data.
 
-A single artificial neuron is rarely useful on its own. When we arrange many neurons together, we form a layer. When we stack multiple layers together, we create a neural network.
+A single artificial neuron is rarely useful on its own but can be really powerful when combined with many other artificial neurons. We can arrange many neurons together to form a layer and then stack multiple layers together to create a neural network.
 
 
 ## Layers, Depth and Feature Learning
@@ -65,17 +65,17 @@ In text processing:
 
 This hierarchical pattern detection is one of the main strengths of deep learning.
 
-The word **'deep'** simply refers to the number of hidden layers. A shallow model might have one hidden layer. A deep model may have dozens or even hundreds.
+The word **deep** simply refers to the number of hidden layers. A shallow model might have one hidden layer. A deep model may have dozens or even hundreds of layers.
 
 ### Feature Learning
 
-A key reason deep learning marked such a significant shift from earlier machine learning approaches lies in how models learn from the features within the data.
+A key reason deep learning differs from earlier machine learning approaches lies in how models learn from the features within the data.
 
 Earlier machine learning approaches depended heavily on feature engineering. Researchers had to decide in advance which aspects of the data might be useful and then write code to extract them.
 
-In image classification, for example, a researcher might calculate edge counts, colour histograms, or texture measures. The model would not see the raw pixels. It would only see these hand-crafted data measures. If the chosen features were poor, the model’s performance would suffer. A great deal of expertise and experimentation often went into designing them.
+In image classification, for example, a researcher might calculate edge counts, colour histograms, or texture measures. The model would not see the raw pixels but instead would only see these hand-crafted feature measures. If the chosen features were poor, the model’s performance would suffer. A great deal of expertise and experimentation often went into designing the feature measures for a model.
 
-Deep learning changes this. Instead of feeding the model carefully designed features, we provide the raw data, such as pixel values. A neural network with multiple layers then learns its own internal representations during training. Early layers might detect simple patterns like edges, while later layers combine these into more complex structures.
+This is not the case for deep learning. Instead of feeding the model carefully designed features, we provide the raw data, such as pixel values. A neural network with multiple layers then learns its own feature measures during training. Early layers might detect simple patterns like edges, while later layers combine these into more complex structures.
 
 In short, traditional methods rely on humans to decide what matters in the data. Deep learning models learn what matters directly from the data itself, given enough examples and computing power.
 
@@ -89,11 +89,7 @@ Training a neural network follows a repeated cycle.
 4. This error signal is sent backwards through the network.
 5. The weights are adjusted slightly to reduce future errors.
 
-This backward flow of error is known as **backpropagation**.
-
-As an analogy for training a deep learning model, imagine standing on a foggy hillside and trying to reach the lowest point (the correct answer). You cannot see the whole landscape, but you can feel the slope under your feet. You take small steps downhill. Repeating this process eventually brings you closer to the lowest point.
-
-In neural networks, the 'height' represents error. The model repeatedly takes small steps in the direction that reduces error.
+Sending the error backwards through the network is known as **backpropagation**.  We'll mention this again in the next episode in the context of large language models.
 
 This process is repeated across many examples, often millions, and over many passes through the dataset.
 
@@ -101,7 +97,7 @@ This process is repeated across many examples, often millions, and over many pas
 
 ## Try Training a Neural Network
 
-You can experiment with the process of training a neural network interactively using tools such as [Tensorflow Playground](https://playground.tensorflow.org) . Adjusting parameters and watching how decision boundaries change can help make these abstract ideas more concrete.
+You can experiment with the process of training a neural network interactively using tools such as [Tensorflow Playground](https://playground.tensorflow.org). Adjust the parameters and watch how decision boundaries change.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -118,7 +114,7 @@ This requires significant computational resources, often specialised hardware. W
 
 ## Types of Deep Learning
 
-There are several major neural network architectures, each suited to particular tasks.
+There are many neural network architectures, each suited to particular tasks.  Just a few common examples are discussed below.  
 
 ### Convolutional Neural Networks (CNNs)
 
@@ -132,11 +128,8 @@ RNNs were designed to handle sequential data, such as time-series measurements o
 
 Transformers are the foundation of most modern natural language processing systems. They are especially effective at modelling relationships within sequences of text and form the basis of contemporary large language models, which we will examine in the next episode.
  
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+To read more about different neural network architectures have a look at the [Neural Network Zoo](https://www.asimovinstitute.org/neural-network-zoo/), a cheat sheet for neural network architectures.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
