@@ -149,8 +149,29 @@ Examples may include:
 :::::::::::::::::::::::::::::::::
 
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## How can I Train My Own Deep Learning Model?
+
+Training a deep learning model from scratch is significantly more demanding than training a conventional machine learning model, but it is not out of reach for motivated researchers, particularly with access to institutional computing infrastructure and Research Software Engineering support. More commonly, researchers work with **pre-trained models** and adapt them, rather than training from scratch.
+
+### What skills this requires
+
+Deep learning requires all of the skills needed for conventional machine learning (programming in Python, data preparation, evaluation) plus additional capabilities. You will need familiarity with a **deep learning framework** such as PyTorch or TensorFlow, both of which have extensive documentation and active research communities.
+
+**Access to appropriate hardware** is a practical requirement. Training deep learning models on a standard laptop CPU is rarely feasible for research-scale tasks. Most researchers use GPUs, either through institutional high-performance computing (HPC) facilities or cloud platforms such as Google Colab, which provides free GPU access for smaller experiments.
+
+**Experiment management** becomes important at this level of complexity. Tracking which model configuration produced which results, managing large datasets, and handling training runs that may take hours or days requires a great deal of organisation and tools such as Weights & Biases or MLflow.
+
+Deep learning also demands a somewhat deeper understanding of model architecture and training dynamics than conventional ML. You need enough conceptual understanding to diagnose when training is going wrong, for example, when a model is failing to learn, overfitting, or producing unexpected outputs.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+### Transfer learning lowers the barrier considerably
+
+The requirement to train a deep learning model entirely from scratch is rarer than it might appear. For many research tasks, a pre-trained model from a repository such as [Hugging Face](https://huggingface.co) or [PyTorch Hub](https://pytorch.org/hub/) can be downloaded and fine-tuned in a matter of hours on a modest GPU. The skills required for fine-tuning are closer to those needed for conventional ML than to the full deep learning training pipeline.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
