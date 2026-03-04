@@ -29,21 +29,25 @@ exercises: 5 # exercise time in minutes
 
 In traditional programming, a human writes explicit rules and the computer follows them.
 
-For example:
+For example, a researcher studying whether a scientific paper is relevant to a systematic review on arthritis interventions might write rules such as:
 
-- A programmer writes **rules** to calculate tax.
-- The computer applies those rules to some **data**.
-- The output is fully determined by the rules written in advance.
+- If the paper mentions "randomised controlled trial" and the "arthritis", include it.
+- If the paper is published before 1990, exclude it.
+
+The computer applies those rules to some data, in this case, paper abstracts, and the output is fully determined by the rules written in advance.
 
 The logic flows like this:
 
 **Rules + Data -> Output**
 
+This works reasonably well when the criteria are clear and consistent. However, in reality, relevance is rarely so clean. Papers use different terminology, describe similar interventions in different ways, and sometimes the abstract alone is not enough to judge. Writing rules that handle all of this becomes increasingly difficult and fragile.
+
 Machine learning takes a different approach. Instead of writing detailed rules, we provide:
 
-- **Data**
-- The desired **outputs** 
-- The system then learns rules or patterns that connect the two.
+- **Data** - a large collection of abstracts
+- The desired **outputs** - human judgements about whether papers are relevant
+
+The system then learns the patterns that connect the two.
 
 The logic becomes:
 
@@ -51,9 +55,28 @@ The logic becomes:
 
 In other words, the computer infers the rules for itself.
 
-A useful analogy is teaching a child to recognise cats. You would not provide a formal definition involving ear angles and whisker length. Instead, you would show many examples of cats and non-cats. Over time, the child internalises patterns that allow them to identify new cats correctly.
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+### AI for Systematic Reviews
+
+Tools such as [ASReview](https://asreview.nl/) use machine learning to accelerate the title and abstract screening stage of systematic reviews.
+
+[ASReview](https://asreview.nl/) is an open-source machine learning tool designed specifically to assist researchers with the title and abstract screening stage of systematic reviews. Rather than screening papers in a fixed order, ASReview learns from each inclusion or exclusion decision the reviewer makes and continuously re-ranks the remaining papers, surfacing the most likely relevant records first. 
+
+This means the most important papers tend to be found early, and screening can stop before every record has been manually checked.
+
+ASReview is free to use, runs in a web browser, requires no programming knowledge, and produces a full log of every decision made during screening, which can be reported in a methods section. It is described in a peer-reviewed paper in Nature Machine Intelligence [(van de Schoot et al., 2021)](https://www.nature.com/articles/s42256-020-00287-7) and has been used in fields including medicine, psychology, and environmental science.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Machine Learning Analogy
+
+A useful analogy is teaching a child to recognise dogs. You would not provide a formal definition involving ear angles and tail length. Instead, you would show many examples of dogs and non-dogs. Over time, the child internalises patterns that allow them to identify new dogs correctly.
 
 Machine learning systems operate in a similar way. They detect statistical patterns in examples and use those patterns to make predictions about new data.
+
+![](fig/dogs_cropped.jpg){alt="Three dogs standing on a mounting block in some woodland"}
+
 
 ## Three Types of Machine Learning
 
@@ -297,3 +320,4 @@ If the machine learning component is central to your research, working with a Re
 ## References
 
 - [scikit-learn algorithm cheat sheet](https://scikit-learn.org/stable/machine_learning_map.html)
+- [Van De Schoot, R., De Bruin, J., Schram, R., Zahedi, P., De Boer, J., Weijdema, F., ... & Oberski, D. L. (2021). An open source machine learning framework for efficient and transparent systematic reviews. Nature machine intelligence, 3(2), 125-133.](https://www.nature.com/articles/s42256-020-00287-7)
