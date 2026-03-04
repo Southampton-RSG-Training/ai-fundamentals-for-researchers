@@ -259,6 +259,28 @@ For each research scenario below, decide whether you would lean towards a tradit
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+## How Can I Train My Own Machine Learning Model?
+
+For many research tasks, training a machine learning model from scratch can be useful and within the realm of possibility. Researchers do this regularly, not because off-the-shelf tools are unavailable, but because a custom model trained on domain-specific data can outperform a general-purpose one, and because owning the model gives you full control over how it is evaluated, documented, and reported.
+
+### What skills this requires
+
+Training a conventional machine learning model requires **programming skills**, typically in Python or R, and familiarity with standard machine learning libraries such as scikit-learn (Python) or caret/tidymodels (R). You do not need to understand the mathematical derivations of the algorithms, but you do need to be comfortable working with tabular data, splitting datasets, selecting and configuring models, and interpreting evaluation metrics.
+
+A basic understanding of **data preparation** is essential as most of the practical work in machine learning involves cleaning, transforming, and structuring data rather than tuning models. Familiarity with concepts such as cross-validation, train/test splits, and overfitting (covered earlier in this episode) will take you a long way.
+
+An understanding of **statistics** is also valuable. Understanding what your evaluation metrics actually mean, and being able to reason about whether your model has learned something meaningful or has simply exploited a pattern in the training data, requires a degree of statstical understanding.
+
+If you are new to programming or data science, many researchers begin with the Carpentries lessons on [Python](https://swcarpentry.github.io/python-novice-gapminder/) or [R](https://swcarpentry.github.io/r-novice-gapminder/), followed by the [Introduction to Machine Learning with Python](https://carpentries-incubator.github.io/machine-learning-novice-sklearn/) lesson in the Carpentries Incubator.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+### Working with a Research Software Engineer
+
+If the machine learning component is central to your research, working with a Research Software Engineer (RSE) could be a helpful. RSEs can help you choose appropriate methods, implement them correctly and efficiently, and ensure your code is reliable, robust and well-documented. 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Machine learning systems learn patterns from data rather than following only hand-written rules.

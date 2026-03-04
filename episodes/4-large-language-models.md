@@ -237,6 +237,30 @@ Go to a conversational AI tool such as ChatGPT, Microsoft Copilot or Claude and 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+# Could I Build or Fine-Tune My Own LLM?
+
+For most researchers and institutions, training an LLM from scratch is not realistic. The compute and financial resources required place it firmly in the domain of large technology companies. However, there are several meaningful ways researchers can work with and adapt language models without training one from scratch.
+
+
+### What skills this requires
+
+Fine-tuning a language model requires all of the skills described in the deep learning section above, plus familiarity with the specific landscape of **large language model tooling**.  This may include the [Hugging Face ecosystem](https://huggingface.co), which provides pre-trained models, fine-tuning utilities, datasets, and deployment infrastructure that have become the de facto standard for research-scale language model work.
+
+**Working with large datasets of text** introduces additional challenges. Cleaning and deduplicating large text corpora, handling tokenisation, and managing data pipelines that may involve hundreds of gigabytes of text. These are software engineering problems as much as machine learning ones.
+
+For fine-tuning specifically, **understanding the task you are optimising for** matters enormously.  Fine-tuning a generative model to produce better, safer, or more domain-appropriate outputs requires careful design of the fine-tuning data and evaluation approach.
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+### The Hugging Face ecosystem
+
+[Hugging Face](https://huggingface.co) is the primary hub for open-source language model research. It hosts thousands of pre-trained models, datasets, and fine-tuning tools, and its `transformers` library is the standard Python interface for working with language models in research. If you are considering any form of language model work, this is the most important resource to be aware of. The Hugging Face [NLP Course](https://huggingface.co/learn/nlp-course) is a free introductory course on working with language models in code.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Summary
 
 In this episode we have seen how the simple task of predicting the next word can lead to the powerful, general-purpose language tools that are reshaping how people interact with information today. 
