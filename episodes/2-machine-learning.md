@@ -239,7 +239,7 @@ These issues are not purely technical, they're ethically and societally importan
 
 ## Choosing the Right Approach
 
-For each research scenario below, decide whether you would lean towards a traditional statistical method, a machine learning model, or a combination of both — and briefly explain why.
+For each research scenario below, decide whether you would lean towards a traditional statistical method, a machine learning model, or a combination of both:
 
 1. A clinical researcher wants to know whether a new drug significantly reduces blood pressure compared to a placebo, using data from a randomised controlled trial of 120 participants.
 2. A team wants to build a tool that automatically flags grant applications likely to score in the top 10%, trained on 50,000 previously scored applications.
