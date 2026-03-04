@@ -242,6 +242,7 @@
 <li><a href="#interpretable-models-vs-black-box-models">Interpretable Models vs Black Box Models</a></li>
 <li><a href="#when-not-to-use-machine-learning">When Not to Use Machine Learning</a></li>
 <li><a href="#what-can-go-wrong">What Can Go Wrong?</a></li>
+<li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -513,6 +514,10 @@ might compress thousands of gene measurements per patient down to two or
 three variables that capture the most meaningful variation, making it
 possible to plot all patients on a single chart and spot groupings that
 may correspond to clinically relevant subtypes.</p>
+<p>When choosing the right machine learning algorithm for the job, often
+deciding which task is required is the first step. For a guide, have a
+look at the <a href="https://scikit-learn.org/stable/machine_learning_map.html" class="external-link">scikit-learn
+algorithm cheat sheet</a></p>
 </section><section><h2 class="section-heading" id="how-a-model-learns">How a Model Learns<a class="anchor" aria-label="anchor" href="#how-a-model-learns"></a></h2>
 <hr class="half-width"><p>Let’s walk through a simplified example of supervised learning:</p>
 <ol style="list-style-type: decimal"><li>Start with a dataset of examples. For example, 10,000 labelled
@@ -580,10 +585,8 @@ influence the behaviour of the model.</p>
 </section><section><h2 class="section-heading" id="interpretable-models-vs-black-box-models">Interpretable Models vs Black Box Models<a class="anchor" aria-label="anchor" href="#interpretable-models-vs-black-box-models"></a></h2>
 <hr class="half-width"><p>Before choosing a machine learning approach, one of the most
 important questions to ask is:</p>
-<blockquote>
 <p><em>“Do I need to understand why the model makes a particular
 prediction, or is the prediction itself sufficient?”</em></p>
-</blockquote>
 <p>This is the distinction between <strong>interpretable</strong> and
 <strong>black box</strong> models.</p>
 <p>An <strong>interpretable model</strong> produces outputs that can be
@@ -762,11 +765,13 @@ influence model performance and fairness.</li>
 </ul></div>
 </div>
 </div>
-<!--
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><ul><li><a href="https://scikit-learn.org/stable/machine_learning_map.html" class="external-link">scikit-learn
+algorithm cheat sheet</a></li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</section></div> <!-- / div.lesson-content -->
+ --></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="1-what-is-ai.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="3-deep-learning.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
