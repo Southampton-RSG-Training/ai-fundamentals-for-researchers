@@ -163,5 +163,8 @@ Examples may include:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## References
 
+- [Neural Network Zoo](https://www.asimovinstitute.org/neural-network-zoo/)
+- [Choosing the right deep learning model a comprehensive guide](https://www.artiba.org/blog/choosing-the-right-deep-learning-model-a-comprehensive-guide)
 

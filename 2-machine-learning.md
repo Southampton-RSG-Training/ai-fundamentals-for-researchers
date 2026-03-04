@@ -119,6 +119,7 @@ Machine learning can be applied to several different types of tasks: regression,
 
 **Dimensionality reduction** - compressing high-dimensional data into a simpler representation for visualisation or further analysis.  For example, in gene expression research, scientists might compress thousands of gene measurements per patient down to two or three variables that capture the most meaningful variation, making it possible to plot all patients on a single chart and spot groupings that may correspond to clinically relevant subtypes.
 
+When choosing the right machine learning algorithm for the job, often deciding which task is required is the first step.  For a guide, have a look at the [scikit-learn algorithm cheat sheet](https://scikit-learn.org/stable/machine_learning_map.html)
 
 ## How a Model Learns
 
@@ -171,7 +172,7 @@ Notice how the quality and quantity of training examples strongly influence the 
 
 Before choosing a machine learning approach, one of the most important questions to ask is:
 
-> *"Do I need to understand why the model makes a particular prediction, or is the prediction itself sufficient?"*
+*"Do I need to understand why the model makes a particular prediction, or is the prediction itself sufficient?"*
 
 This is the distinction between **interpretable** and **black box** models.
 
@@ -270,3 +271,7 @@ For each research scenario below, decide whether you would lean towards a tradit
 - The quality and representativeness of training data strongly influence model performance and fairness.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## References
+
+- [scikit-learn algorithm cheat sheet](https://scikit-learn.org/stable/machine_learning_map.html)
