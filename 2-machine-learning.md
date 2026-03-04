@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning - Teaching Computers from Data"
-teaching: 10 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+teaching: 20 # teaching time in minutes
+exercises: 5 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -10,6 +10,7 @@ exercises: 2 # exercise time in minutes
 - What are supervised, unsupervised, and reinforcement learning?
 - What does it mean to train and test a model?
 - What is overfitting, and why does it matter?
+- When is machine learning the right choice — and when is it not?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -17,8 +18,10 @@ exercises: 2 # exercise time in minutes
 
 - Explain what machine learning is and how it differs from traditional programming.
 - Distinguish between supervised, unsupervised, and reinforcement learning.
+- Identify the main types of ML task: regression, classification, and clustering.
 - Describe the concept of training, testing, and overfitting in plain language.
-- Give a domain-relevant example of a machine learning application.
+- Explain the difference between interpretable and black box models, and why it matters.
+- Recognise when a traditional statistical approach may be more appropriate than machine learning.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -84,6 +87,39 @@ In reinforcement learning, an agent interacts with an environment and receives f
 
 Over time, the system learns which actions maximise long-term reward. This approach has been used in game-playing systems and robotics.
 
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Machine Learning in Research Scenarios
+
+Match each scenario to supervised, unsupervised, or reinforcement learning:
+
+1. A tool that groups research papers into topics automatically, without anyone labelling the topics in advance.
+2. A system trained on thousands of labelled X-rays to flag potential tumours.
+3. A robot that learns to navigate a maze by receiving a reward signal each time it gets closer to the exit.
+
+:::::::::::::::::::::::: solution 
+
+1 = Unsupervised learning
+2 = Supervised learning
+3 = Reinforcement learning
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## What Kind of Task Is It?
+
+Machine learning can be applied to several different types of tasks: regression, classification, clustering and dimensionality reduction.  Supervised learning is usually applied to regression and classification tasks, whereas unsupervised learning is often applied to clustering or dimensionality reduction tasks (although there are exceptions to both of these statements).
+
+**Regression** — predicting a continuous numerical value. For example, predicting a patient's length of hospital stay based on clinical variables, or estimating the yield of a crop from environmental measurements. The output is a number on a continuous scale.
+
+**Classification** — predicting which category an input belongs to. For example, classifying an email as spam or not spam, identifying the species of a plant from an image, or flagging whether a research paper is relevant to a systematic review. The output is a label chosen from a defined set.
+
+**Clustering** — grouping unlabelled data into meaningful clusters based on similarity, without being told in advance what the groups are. For example, grouping survey respondents by response patterns, or identifying subtypes of a disease from patient data.
+
+**Dimensionality reduction** - compressing high-dimensional data into a simpler representation for visualisation or further analysis.  For example, in gene expression research, scientists might compress thousands of gene measurements per patient down to two or three variables that capture the most meaningful variation, making it possible to plot all patients on a single chart and spot groupings that may correspond to clinically relevant subtypes.
+
+
 ## How a Model Learns
 
 Let's walk through a simplified example of supervised learning:
@@ -131,54 +167,106 @@ Notice how the quality and quantity of training examples strongly influence the 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Interpretable Models vs Black Box Models
+
+Before choosing a machine learning approach, one of the most important questions to ask is:
+
+> *"Do I need to understand why the model makes a particular prediction, or is the prediction itself sufficient?"*
+
+This is the distinction between **interpretable** and **black box** models.
+
+An **interpretable model** produces outputs that can be traced back to a clear, human-readable explanation. A linear regression, for instance, gives you a coefficient for each input variable and you can see directly how much each factor contributed to the prediction. A decision tree reaches its conclusion through a series of simple yes/no rules that can be printed out and inspected. When accountability, transparency, or regulatory compliance matter, interpretability may be essential.
+
+A **black box model**, such as a deep neural network with many layers, may produce highly accurate predictions, but the internal reasoning process is not directly accessible. You can observe the inputs and outputs, but the path between them involves thousands or millions of interacting numerical parameters that do not correspond to human-understandable concepts. 
+
+Consider an interpretable model when:
+
+- You need to explain or justify individual predictions
+- Your field has regulatory or ethical requirements for transparency
+- Discovering which variables matter is part of the research question
+- Stakeholders (e.g. patients, policymakers, or funders) need to understand the rationale
+
+A black box model may be acceptable when:
+
+- Predictive accuracy is the primary goal
+- Outputs will be validated independently before acting on them
+- Large volumes of complex data (images, audio) make interpretability impractical
+
+
+## When Not to Use Machine Learning
+
+Machine learning is a powerful set of tools, but it is not always the right one. Depending on the research question, traditional statistics may be better suited.
+
+The main factor that should help you decide whether your goal is explanation or prediction:
+
+- **Explanation** involves understanding the relationship between variables, testing hypotheses, and drawing causal or inferential conclusions e.g. *Does this treatment reduce recovery time?*
+- **Prediction** involves building a system that produces accurate outputs for new cases e.g. *Can we flag likely hospital readmissions before they happen?*
+
+Traditional statistical methods including regression models, t-tests, and ANOVA have been developed with explanation as their primary goal. They come with well-understood assumptions and and inferential frameworks, such as p-values and confidence intervals, that are widely understood in research communities. When your goal is to understand what is going on and why, these tools are often more appropriate than a machine learning model.
+
+Machine learning, by contrast, is optimised for predictive performance. It works well when the dataset is large, the relationship between inputs and outputs is complex, the goal is prediction rather than inference, and formal hypothesis testing is not required.
+
+Many research workflows combine a statistical model to test a hypothesis, and then a machine learning model to build a practical prediction tool. The important thing is to choose machine learning or traditional statistics deliberately, based on your research question.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+## Signs that a traditional statistical approach may be more appropriate
+
+- Your primary goal is to test a specific hypothesis.
+- Your dataset is small (many ML methods need substantial amounts of data to generalise reliably).
+- You need to quantify uncertainty formally, with confidence intervals or p-values.
+- Assumptions are well-understood and can be checked (e.g. normality, independence).
+- Interpretability is essential and a simpler statistical model performs adequately.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## What Can Go Wrong?
 
 Machine learning systems are only as good as the data they are trained on.
 
-A common phrase is “garbage in, garbage out”. If the training data is incomplete, biased, or unrepresentative, the resulting model will reflect those limitations.
+A common phrase is "garbage in, garbage out". If the training data is incomplete, biased, or unrepresentative, the resulting model will reflect those limitations.
 
 Research-relevant examples include:
 
 - A text analysis model trained only on English-language literature will struggle with multilingual texts.
 - A medical diagnostic model trained predominantly on one demographic group may perform poorly for others.
 
-These issues are not purely technical, they're ethically and societally important because they influence who benefits from AI systems and who may be disadvantaged by them. We will examine these ethical and societal questions in greater depth in Episode 5.
+These issues are not purely technical, they're ethically and societally important because they influence who benefits from AI systems and who may be disadvantaged by them. We will examine these ethical and societal questions in greater depth in [Episode 5](05-ai-in-research.md).
 
-::::::::::::::::::::::::::::::::::::: challenge 
 
-## Machine Learning in Research Scenarios
+::::::::::::::::::::::::::::::::::::: challenge
 
-Match each scenario to supervised, unsupervised, or reinforcement learning:
+## Choosing the Right Approach
 
-1. A tool that groups research papers into topics automatically, without anyone labelling the topics in advance.
-2. A system trained on thousands of labelled X-rays to flag potential tumours.
-3. A robot that learns to navigate a maze by receiving a reward signal each time it gets closer to the exit.
+For each research scenario below, decide whether you would lean towards a traditional statistical method, a machine learning model, or a combination of both — and briefly explain why.
 
-:::::::::::::::::::::::: solution 
+1. A clinical researcher wants to know whether a new drug significantly reduces blood pressure compared to a placebo, using data from a randomised controlled trial of 120 participants.
+2. A team wants to build a tool that automatically flags grant applications likely to score in the top 10%, trained on 50,000 previously scored applications.
+3. An ecologist wants to understand which environmental variables most strongly predict the presence of a rare species, and needs to report effect sizes to inform conservation policy.
 
-1 = Unsupervised learning
-2 = Supervised learning
-3 = Reinforcement learning
+:::::::::::::::::::::::: solution
+
+1. **Traditional statistics.** The goal is hypothesis testing and effect estimation in a small, well-controlled dataset. A t-test or regression model is appropriate, interpretable, and produces the confidence intervals and p-values the clinical audience expects.
+
+2. **Machine learning.** The goal is prediction, the dataset is large, and accuracy on unseen applications is the primary criterion. Interpretability may still matter (to avoid bias in funding decisions), so the choice of model and evaluation for fairness would both warrant careful thought.
+
+3. **Traditional statistics, possibly combined with ML.** The goal is explanation and communication of effect sizes to a policy audience. A regression-based approach is likely more appropriate. If the dataset is large and the relationships complex, a machine learning model might improve predictive accuracy, but the interpretability requirement points toward simpler, explainable methods.
 
 :::::::::::::::::::::::::::::::::
 
-
-
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Machine learning systems learn patterns from data rather than following only hand-written rules.
 - Supervised learning uses labelled examples, unsupervised learning finds structure without labels, and reinforcement learning learns through rewards.
+- The main task types are regression (predicting a continuous value), classification (predicting a category), and clustering (grouping unlabelled data).
 - Training and test sets help us assess whether a model generalises to new data.
 - Overfitting occurs when a model memorises training data instead of learning general patterns.
+- Interpretable models make their reasoning transparent; black box models do not — the right choice depends on whether explanation or prediction is the primary goal.
+- Traditional statistical methods are often more appropriate than machine learning when the goal is hypothesis testing, effect estimation, or causal inference, particularly with small datasets.
 - The quality and representativeness of training data strongly influence model performance and fairness.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
