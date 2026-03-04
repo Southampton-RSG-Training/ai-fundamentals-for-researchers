@@ -259,8 +259,6 @@
 <li><a href="#how-llms-are-trained-pre-training-and-fine-tuning">How LLMs Are Trained: Pre-training and Fine-tuning</a></li>
 <li><a href="#what-llms-can-do">What LLMs Can Do</a></li>
 <li><a href="#what-llms-cannot-do-key-limitations">What LLMs Cannot Do: Key Limitations</a></li>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -747,8 +745,55 @@ output is reviewed critically.</li>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a></h2>
-<hr class="half-width"><p>In this episode we have seen how the simple task of predicting the
+</section><div class="section level1">
+<h1 id="could-i-build-or-fine-tune-my-own-llm">Could I Build or Fine-Tune My Own LLM?<a class="anchor" aria-label="anchor" href="#could-i-build-or-fine-tune-my-own-llm"></a></h1>
+<p>For most researchers and institutions, training an LLM from scratch
+is not realistic. The compute and financial resources required place it
+firmly in the domain of large technology companies. However, there are
+several meaningful ways researchers can work with and adapt language
+models without training one from scratch.</p>
+<div class="section level3">
+<h3 id="what-skills-this-requires">What skills this requires<a class="anchor" aria-label="anchor" href="#what-skills-this-requires"></a></h3>
+<p>Fine-tuning a language model requires all of the skills described in
+the deep learning section above, plus familiarity with the specific
+landscape of <strong>large language model tooling</strong>. This may
+include the <a href="https://huggingface.co" class="external-link">Hugging Face ecosystem</a>,
+which provides pre-trained models, fine-tuning utilities, datasets, and
+deployment infrastructure that have become the de facto standard for
+research-scale language model work.</p>
+<p><strong>Working with large datasets of text</strong> introduces
+additional challenges. Cleaning and deduplicating large text corpora,
+handling tokenisation, and managing data pipelines that may involve
+hundreds of gigabytes of text. These are software engineering problems
+as much as machine learning ones.</p>
+<p>For fine-tuning specifically, <strong>understanding the task you are
+optimising for</strong> matters enormously. Fine-tuning a generative
+model to produce better, safer, or more domain-appropriate outputs
+requires careful design of the fine-tuning data and evaluation
+approach.</p>
+<div id="the-hugging-face-ecosystem" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="the-hugging-face-ecosystem" class="callout-inner">
+<h3 class="callout-title">The Hugging Face ecosystem</h3>
+<div class="callout-content">
+<p><a href="https://huggingface.co" class="external-link">Hugging Face</a> is the primary hub
+for open-source language model research. It hosts thousands of
+pre-trained models, datasets, and fine-tuning tools, and its
+<code>transformers</code> library is the standard Python interface for
+working with language models in research. If you are considering any
+form of language model work, this is the most important resource to be
+aware of. The Hugging Face <a href="https://huggingface.co/learn/nlp-course" class="external-link">NLP Course</a> is a free
+introductory course on working with language models in code.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a></h2>
+<p>In this episode we have seen how the simple task of predicting the
 next word can lead to the powerful, general-purpose language tools that
 are reshaping how people interact with information today.</p>
 <p>In <a href="5-ai-in-research.html">Episode 5</a>, we will bring
@@ -779,8 +824,10 @@ responses, with implications for research reproducibility.</li>
 </ul></div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-<hr class="half-width"><ul><li><a href="https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html" class="external-link">Vaswani,
+</div>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<ul><li><a href="https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html" class="external-link">Vaswani,
 A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., …
 &amp; Polosukhin, I. (2017). Attention is all you need. Advances in
 neural information processing systems, 30.</a></li>
@@ -938,7 +985,12 @@ computing hardware made the current generation of LLMs possible.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></div> <!-- / div.lesson-content -->
+</div>
+</div>
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/3-deep-learning.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/5-ai-in-research.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>

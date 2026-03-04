@@ -248,6 +248,7 @@
 <li><a href="#layers-depth-and-feature-learning">Layers, Depth and Feature Learning</a></li>
 <li><a href="#training-a-neural-network">Training a Neural Network</a></li>
 <li><a href="#types-of-deep-learning">Types of Deep Learning</a></li>
+<li><a href="#how-can-i-train-my-own-deep-learning-model">How can I Train My Own Deep Learning Model?</a></li>
 <li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -531,6 +532,57 @@ already in use?</p>
 <li>Digitising and classifying historical documents.</li>
 <li>Transcribing and analysing handwritten documents</li>
 </ul></div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="how-can-i-train-my-own-deep-learning-model">How can I Train My Own Deep Learning Model?<a class="anchor" aria-label="anchor" href="#how-can-i-train-my-own-deep-learning-model"></a></h2>
+<hr class="half-width"><p>Training a deep learning model from scratch is significantly more
+demanding than training a conventional machine learning model, but it is
+not out of reach for motivated researchers, particularly with access to
+institutional computing infrastructure and Research Software Engineering
+support. More commonly, researchers work with <strong>pre-trained
+models</strong> and adapt them, rather than training from scratch.</p>
+<div class="section level3">
+<h3 id="what-skills-this-requires">What skills this requires<a class="anchor" aria-label="anchor" href="#what-skills-this-requires"></a></h3>
+<p>Deep learning requires all of the skills needed for conventional
+machine learning (programming in Python, data preparation, evaluation)
+plus additional capabilities. You will need familiarity with a
+<strong>deep learning framework</strong> such as PyTorch or TensorFlow,
+both of which have extensive documentation and active research
+communities.</p>
+<p><strong>Access to appropriate hardware</strong> is a practical
+requirement. Training deep learning models on a standard laptop CPU is
+rarely feasible for research-scale tasks. Most researchers use GPUs,
+either through institutional high-performance computing (HPC) facilities
+or cloud platforms such as Google Colab, which provides free GPU access
+for smaller experiments.</p>
+<p><strong>Experiment management</strong> becomes important at this
+level of complexity. Tracking which model configuration produced which
+results, managing large datasets, and handling training runs that may
+take hours or days requires a great deal of organisation and tools such
+as Weights &amp; Biases or MLflow.</p>
+<p>Deep learning also demands a somewhat deeper understanding of model
+architecture and training dynamics than conventional ML. You need enough
+conceptual understanding to diagnose when training is going wrong, for
+example, when a model is failing to learn, overfitting, or producing
+unexpected outputs.</p>
+<div id="transfer-learning-lowers-the-barrier-considerably" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="transfer-learning-lowers-the-barrier-considerably" class="callout-inner">
+<h3 class="callout-title">Transfer learning lowers the barrier
+considerably</h3>
+<div class="callout-content">
+<p>The requirement to train a deep learning model entirely from scratch
+is rarer than it might appear. For many research tasks, a pre-trained
+model from a repository such as <a href="https://huggingface.co" class="external-link">Hugging
+Face</a> or <a href="https://pytorch.org/hub/" class="external-link">PyTorch Hub</a> can be
+downloaded and fine-tuned in a matter of hours on a modest GPU. The
+skills required for fine-tuning are closer to those needed for
+conventional ML than to the full deep learning training pipeline.</p>
 </div>
 </div>
 </div>

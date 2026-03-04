@@ -242,6 +242,7 @@
 <li><a href="#interpretable-models-vs-black-box-models">Interpretable Models vs Black Box Models</a></li>
 <li><a href="#when-not-to-use-machine-learning">When Not to Use Machine Learning</a></li>
 <li><a href="#what-can-go-wrong">What Can Go Wrong?</a></li>
+<li><a href="#how-can-i-train-my-own-machine-learning-model">How Can I Train My Own Machine Learning Model?</a></li>
 <li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -478,7 +479,7 @@ each time it gets closer to the exit.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 = Unsupervised learning 2 = Supervised learning 3 = Reinforcement
 learning</p>
@@ -714,7 +715,7 @@ effect sizes to inform conservation policy.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p><strong>Traditional statistics.</strong> The goal is hypothesis
 testing and effect estimation in a small, well-controlled dataset. A
@@ -734,6 +735,56 @@ machine learning model might improve predictive accuracy, but the
 interpretability requirement points toward simpler, explainable
 methods.</p></li>
 </ol></div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="how-can-i-train-my-own-machine-learning-model">How Can I Train My Own Machine Learning Model?<a class="anchor" aria-label="anchor" href="#how-can-i-train-my-own-machine-learning-model"></a></h2>
+<hr class="half-width"><p>For many research tasks, training a machine learning model from
+scratch can be useful and within the realm of possibility. Researchers
+do this regularly, not because off-the-shelf tools are unavailable, but
+because a custom model trained on domain-specific data can outperform a
+general-purpose one, and because owning the model gives you full control
+over how it is evaluated, documented, and reported.</p>
+<div class="section level3">
+<h3 id="what-skills-this-requires">What skills this requires<a class="anchor" aria-label="anchor" href="#what-skills-this-requires"></a></h3>
+<p>Training a conventional machine learning model requires
+<strong>programming skills</strong>, typically in Python or R, and
+familiarity with standard machine learning libraries such as
+scikit-learn (Python) or caret/tidymodels (R). You do not need to
+understand the mathematical derivations of the algorithms, but you do
+need to be comfortable working with tabular data, splitting datasets,
+selecting and configuring models, and interpreting evaluation
+metrics.</p>
+<p>A basic understanding of <strong>data preparation</strong> is
+essential as most of the practical work in machine learning involves
+cleaning, transforming, and structuring data rather than tuning models.
+Familiarity with concepts such as cross-validation, train/test splits,
+and overfitting (covered earlier in this episode) will take you a long
+way.</p>
+<p>An understanding of <strong>statistics</strong> is also valuable.
+Understanding what your evaluation metrics actually mean, and being able
+to reason about whether your model has learned something meaningful or
+has simply exploited a pattern in the training data, requires a degree
+of statstical understanding.</p>
+<p>If you are new to programming or data science, many researchers begin
+with the Carpentries lessons on <a href="https://swcarpentry.github.io/python-novice-gapminder/" class="external-link">Python</a>
+or <a href="https://swcarpentry.github.io/r-novice-gapminder/" class="external-link">R</a>,
+followed by the <a href="https://carpentries-incubator.github.io/machine-learning-novice-sklearn/" class="external-link">Introduction
+to Machine Learning with Python</a> lesson in the Carpentries
+Incubator.</p>
+<div id="working-with-a-research-software-engineer" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="working-with-a-research-software-engineer" class="callout-inner">
+<h3 class="callout-title">Working with a Research Software Engineer</h3>
+<div class="callout-content">
+<p>If the machine learning component is central to your research,
+working with a Research Software Engineer (RSE) could be a helpful. RSEs
+can help you choose appropriate methods, implement them correctly and
+efficiently, and ensure your code is reliable, robust and
+well-documented.</p>
 </div>
 </div>
 </div>
@@ -765,6 +816,7 @@ or causal inference, particularly with small datasets.</li>
 <li>The quality and representativeness of training data strongly
 influence model performance and fairness.</li>
 </ul></div>
+</div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
