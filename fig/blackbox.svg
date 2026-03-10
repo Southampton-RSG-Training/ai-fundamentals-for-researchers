@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1422.7" height="406.67" version="1.1" viewBox="0 0 1422.7 406.67" text-anchor="middle" font-family="sans-serif">
+ <defs>
+  <marker id="TriangleStart" overflow="visible" markerHeight="9" markerWidth="12" orient="auto-start-reverse" preserveAspectRatio="none" viewBox="0 0 5.3244081 6.1553851">
+   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
+  </marker>
+  <marker id="TriangleStart-3" overflow="visible" markerHeight="9" markerWidth="12" orient="auto-start-reverse" preserveAspectRatio="none" viewBox="0 0 5.3244081 6.1553851">
+   <path transform="scale(.5)" d="m5.77 0-8.65 5v-10z" fill="context-stroke" fill-rule="evenodd" stroke="context-stroke" stroke-width="1pt"/>
+  </marker>
+  <linearGradient id="linearGradient70415" x1="567.33" x2="838.96" y1="196" y2="196" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#4f4f4f" offset="0"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <path d="m568 270v-117l16-31 254-1v119l-14 30z"/>
+  <path d="m822.21 154.03 1.7879 115.97 14.293-28.626m0-119.38-16.081 32.034-254.21-1.0287 16-31" stroke="url(#linearGradient70415)" stroke-dashoffset="2.682" stroke-linejoin="bevel" stroke-miterlimit="2.5" stroke-width="2.6"/>
+
+ </g>
+ <g fill="none">
+  <path d="m1.5127e-5 108.09v179.35m30.1-179.35v179.35m30.1-179.35v179.35m30.1-179.35v179.35m30.1-179.35v179.35m30.1-179.35v179.35m30.1-179.35v179.35m30.1-179.35v179.35m30.1-179.35v179.35m30.1-179.35v179.35m30.1-179.35v179.35m30.1-179.35v179.35m-331.1-176.35h342.89m-342.89 25.7h342.89m-342.89 25.7h342.89m-342.89 25.7h342.89m-342.89 25.7h342.89m-342.89 25.7h342.89m-342.89 25.7h342.89" stroke="#000" stroke-dasharray="1, 3" stroke-width="1px"/>
+  <g stroke="#2f17ff" stroke-linejoin="bevel" stroke-miterlimit="2.5" stroke-width="1.3">
+   <path d="m67.194 286.49-0.16021-13.312"/>
+   <path d="m68.023 286.49 0.70619-46.043"/>
+   <path d="m71.446 286.49 0.03966-5.9665"/>
+   <path d="m74.304 272.63 0.14549 13.856"/>
+  </g>
+ </g>
+ <g stroke="#2f17ff" stroke-linejoin="bevel" stroke-miterlimit="2.5" stroke-width="1.3">
+  <path d="m75.593 286.49 0.35351-30.119"/>
+  <path d="m80.715 272.02-0.18403 14.466"/>
+  <path d="m91.247 271.43 0.05305 15.059"/>
+  <path d="m90.184 272.63 0.11559 14.811"/>
+  <path d="m101.75 265.29 0.12287 21.198"/>
+  <path d="m107.44 280.52-0.0967 5.9665"/>
+  <path d="m112.61 216.53-0.0393 69.957"/>
+  <path d="m116.62 255.46-0.0178 31.024"/>
+  <path d="m122.11 224.53 0.0663 61.956"/>
+  <path d="m143.78 129.71 0.65065 156.78"/>
+  <path d="m150.5 185.7v101.74"/>
+  <path d="m152.58 224.53 0.0237 61.956"/>
+  <path d="m156.4 272.02 0.22274 14.466"/>
+  <path d="m78.004 272.63-0.13167 14.818"/>
+  <path d="m126.46 247.52 0.57141 38.973"/>
+  <path d="m136.68 254.84 0.67538 32.605"/>
+  <path d="m134.65 256.36 0.25325 30.137"/>
+  <path d="m131.53 254.82-0.42139 31.679"/>
+  <path d="m129.46 256.36 0.0315 30.156"/>
+  <path d="m124.26 256.36 5e-3 30.133"/>
+  <path d="m114.63 248.91-0.32997 37.576"/>
+  <path d="m140.86 248.91 0.0198 37.584"/>
+  <path d="m139.51 271.14-0.20621 15.351"/>
+  <path d="m154.82 272.31 0.2339 14.193"/>
+  <path d="m157.86 272.3 0.0329 14.203"/>
+  <path d="m88.288 280.04 0.0652 6.4527"/>
+  <path d="m183.44 283.04-0.0141 3.4595"/>
+  <path d="m185.01 279.4-0.15738 8.0466"/>
+  <path d="m144 183.27 0.42837 103.22"/>
+  <path d="m146.22 199.3-0.41828 87.194"/>
+  <path d="m147.85 280.2 0.0813 6.2893"/>
+  <path d="m149.59 286.5-0.14269-100.52"/>
+  <path d="m117.81 256.36 0.14671 30.133"/>
+  <path d="m119.25 232.49-0.14776 54.955"/>
+ </g>
+ <g fill="none">
+  <path d="m1.5127e-5 287.44h340.59" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="2.5" stroke-width="1.91"/>
+  <path d="m1136.7 125.85v176.77m27.8-176.77v176.77m27.8-176.77v176.77m27.8-176.77v176.77m27.8-176.77v176.77m27.8-176.77v176.77m27.8-176.77v176.77m27.8-176.77v176.77m27.8-176.77v176.77m27.8-176.77v176.77m27.8-176.77v176.77m-305.8-154.87h316.02m-316.02 21.9h316.02m-316.02 21.9h316.02m-316.02 21.9h316.02m-316.02 21.9h316.02m-316.02 21.9h316.02m-316.02 21.9h316.02m-316.02-153.3v176.77zm316.02 175.2h-316.02v-175.2m316.02 0h-316.02l-0.9499 176.12" stroke="#000" stroke-dasharray="1,1" stroke-width="1px"/>
+  <path d="m1108.9 301.05v-175.2" stroke="#000001" stroke-linejoin="bevel" stroke-miterlimit="2.5" stroke-width="2"/>
+  <path d="m1108.9 279.15h79.914l20.932-11.278h9.9941l12.993-10.622 11.764-21.9 3.403-21.115 7.534-22.685 2.8027-13.05 1.5561-18.129 4.8654-15.586 5.6683 7.916 1.1924 16.949 4.1811 9.4749-1.5443 12.425 3.3275 11.787 4.3991 8.3017c1.7856 7.9037 9.4571 15.807 17.833 23.711l15.275 4.5038 9.1242 2.1254 15.502 6.6614 9.7192 5.3926 20.329 3.6624 53.005 5.7748" stroke="#ff0e0e" stroke-linejoin="bevel" stroke-miterlimit="2.5" stroke-width="3.5"/>
+   <g stroke-dashoffset="2.682" stroke-linejoin="bevel" stroke-miterlimit="2.5">
+  <path d="m342.89 212.22 204.54-0.61811" fill="none" marker-end="url(#TriangleStart)" stroke="#000" stroke-width="2.7223"/></g>
+  <path d="m837.65 212.16 229.44-0.55885" fill="none" marker-end="url(#TriangleStart-3)" stroke="#000" stroke-width="2.7416"/>
+
+  <!-- Blackbox -->
+  <switch transform="translate(695 220)" fill="#ffffff" font-size="37px">
+    <text systemLanguage="en" id="trsvg23"><tspan id="trsvg1">Blackbox</tspan></text>
+    <text systemLanguage="nl" dy="-0.5em" id="trsvg24"><tspan id="trsvg2">Zwarte</tspan><tspan dy="1em" x="0" id="trsvg3">doos</tspan></text>
+    <text systemLanguage="pl" dy="-0.5em" id="trsvg25"><tspan id="trsvg4">Czarna</tspan><tspan dy="1em" x="0" id="trsvg5">skrzynka</tspan></text>
+    <text systemLanguage="yue" id="trsvg26-yue"><tspan id="trsvg6-yue">黑盒</tspan></text>
+    <text systemLanguage="gl" id="trsvg26-gl"><tspan id="trsvg6-gl">Caixa negra</tspan></text>
+    <text systemLanguage="uk" dy="-0.5em" id="trsvg26-uk"><tspan id="trsvg26-uk1">Чорна</tspan><tspan dy="1em" x="0" id="trsvg26-uk2">скринька</tspan></text>
+    
+  <text id="trsvg26-tr" systemLanguage="tr"><tspan id="trsvg6-tr">Kara kutu</tspan></text><text id="trsvg26"><tspan id="trsvg6">Blackbox</tspan></text></switch>
+
+  <!-- Output -->
+  <switch transform="translate(955 202)" fill="#000000" font-size="37px">
+    <text systemLanguage="en" id="trsvg27"><tspan id="trsvg7">Output</tspan></text>
+    <text systemLanguage="nl" id="trsvg28"><tspan id="trsvg8">Uitvoer</tspan></text>
+    <text systemLanguage="pl" id="trsvg29"><tspan id="trsvg9">Wyjście</tspan></text>
+    <text systemLanguage="yue" id="trsvg30-yue"><tspan id="trsvg10-yue">輸出</tspan></text>
+    <text systemLanguage="gl" id="trsvg30-gl"><tspan id="trsvg10-gl">Saída</tspan></text>
+    <text systemLanguage="uk" id="trsvg30-uk"><tspan id="trsvg10-uk">Вихід</tspan></text>
+    
+  <text id="trsvg30-tr" systemLanguage="tr"><tspan id="trsvg10-tr">Çıktı</tspan></text><text id="trsvg30"><tspan id="trsvg10">Output</tspan></text></switch>
+
+  <!-- Input -->
+  <switch transform="translate(445 202)" fill="#000000" font-size="37px">
+    <text systemLanguage="en" id="trsvg31"><tspan id="trsvg11">Input</tspan></text>
+    <text systemLanguage="nl" id="trsvg32"><tspan id="trsvg12">Invoer</tspan></text>
+    <text systemLanguage="pl" id="trsvg33"><tspan id="trsvg13">Wejście</tspan></text>
+    <text systemLanguage="yue" id="trsvg34-yue"><tspan id="trsvg14-yue">輸入</tspan></text>
+    <text systemLanguage="gl" id="trsvg34-gl"><tspan id="trsvg14-gl">Entrada</tspan></text>
+    <text systemLanguage="uk" id="trsvg34-uk"><tspan id="trsvg14-uk">Вхід</tspan></text>
+    
+  <text id="trsvg34-tr" systemLanguage="tr"><tspan id="trsvg14-tr">Girdi</tspan></text><text id="trsvg34"><tspan id="trsvg14">Input</tspan></text></switch>
+
+  <!-- Stimulus -->
+  <switch transform="translate(445 273)" fill="#000000" font-size="21px">
+    <text systemLanguage="en" id="trsvg35"><tspan id="trsvg15">Stimulus</tspan></text>
+    <text systemLanguage="nl" id="trsvg36"><tspan id="trsvg16">Stimulus</tspan></text>
+    <text systemLanguage="pl" id="trsvg37"><tspan id="trsvg17">Stymulacja</tspan></text>
+    <text systemLanguage="yue" id="trsvg38-yue"><tspan id="trsvg18-yue">刺激</tspan></text>
+    <text systemLanguage="gl" id="trsvg38-gl"><tspan id="trsvg18-gl">Estímulo</tspan></text>
+    <text systemLanguage="uk" id="trsvg38-uk"><tspan id="trsvg18-uk">Збудник</tspan></text>
+    
+  <text id="trsvg38-tr" systemLanguage="tr"><tspan id="trsvg18-tr">Uyaran</tspan></text><text id="trsvg38"><tspan id="trsvg18">Stimulus</tspan></text></switch>
+
+  <!-- Response -->
+  <switch transform="translate(957 273)" fill="#000000" font-size="21px">
+    <text systemLanguage="en" id="trsvg39"><tspan id="trsvg19">Response</tspan></text>
+    <text systemLanguage="nl" id="trsvg40"><tspan id="trsvg20">Reactie</tspan></text>
+    <text systemLanguage="pl" id="trsvg41"><tspan id="trsvg21">Reakcja</tspan></text>
+    <text systemLanguage="yue" id="trsvg42-yue"><tspan id="trsvg22-yue">反應</tspan></text>
+    <text systemLanguage="gl" id="trsvg42-gl"><tspan id="trsvg22-gl">Resposta</tspan></text>
+    <text systemLanguage="uk" id="trsvg42-uk"><tspan id="trsvg22-uk">Відповідь</tspan></text>
+    
+  <text id="trsvg42-tr" systemLanguage="tr"><tspan id="trsvg22-tr">Cevap</tspan></text><text id="trsvg42"><tspan id="trsvg22">Response</tspan></text></switch>
+</g>
+</svg>

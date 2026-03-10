@@ -237,7 +237,6 @@
       <div class="accordion-body">
         <ul><li><a href="#from-rules-to-learning">From Rules to Learning</a></li>
 <li><a href="#three-types-of-machine-learning">Three Types of Machine Learning</a></li>
-<li><a href="#what-kind-of-task-is-it">What Kind of Task Is It?</a></li>
 <li><a href="#how-a-model-learns">How a Model Learns</a></li>
 <li><a href="#interpretable-models-vs-black-box-models">Interpretable Models vs Black Box Models</a></li>
 <li><a href="#when-not-to-use-machine-learning">When Not to Use Machine Learning</a></li>
@@ -522,7 +521,7 @@ each time it gets closer to the exit.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 = Unsupervised learning 2 = Supervised learning 3 = Reinforcement
 learning</p>
@@ -530,9 +529,15 @@ learning</p>
 </div>
 </div>
 </div>
+<div id="what-kind-of-task-is-it" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-</section><section><h2 class="section-heading" id="what-kind-of-task-is-it">What Kind of Task Is It?<a class="anchor" aria-label="anchor" href="#what-kind-of-task-is-it"></a></h2>
-<hr class="half-width"><p>Machine learning can be applied to several different types of tasks:
+<span class="callout-header">Callout</span>
+<div id="what-kind-of-task-is-it" class="callout-inner">
+<h3 class="callout-title">What Kind of Task Is It?</h3>
+<div class="callout-content">
+<p>Machine learning can be applied to several different types of tasks:
 regression, classification, clustering and dimensionality reduction.
 Supervised learning is usually applied to regression and classification
 tasks, whereas unsupervised learning is often applied to clustering or
@@ -564,6 +569,10 @@ may correspond to clinically relevant subtypes.</p>
 deciding which task is required is the first step. For a guide, have a
 look at the <a href="https://scikit-learn.org/stable/machine_learning_map.html" class="external-link">scikit-learn
 algorithm cheat sheet</a></p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="how-a-model-learns">How a Model Learns<a class="anchor" aria-label="anchor" href="#how-a-model-learns"></a></h2>
 <hr class="half-width"><p>Let’s walk through a simplified example of supervised learning:</p>
 <ol style="list-style-type: decimal"><li>Start with a dataset of examples. For example, 10,000 labelled
@@ -662,7 +671,9 @@ understand the rationale</li>
 <li>Outputs will be validated independently before acting on them</li>
 <li>Large volumes of complex data (images, audio) make interpretability
 impractical</li>
-</ul></section><section><h2 class="section-heading" id="when-not-to-use-machine-learning">When Not to Use Machine Learning<a class="anchor" aria-label="anchor" href="#when-not-to-use-machine-learning"></a></h2>
+</ul><figure><img src="../fig/blackbox.svg" alt="diagram showing inputs to a black box producing unexplainable outputs" class="figure mx-auto d-block"><div class="figcaption">Original: Krauss Vector: Pduive23, CC BY-SA 4.0,
+via Wikimedia Commons</div>
+</figure></section><section><h2 class="section-heading" id="when-not-to-use-machine-learning">When Not to Use Machine Learning<a class="anchor" aria-label="anchor" href="#when-not-to-use-machine-learning"></a></h2>
 <hr class="half-width"><p>Machine learning is a powerful set of tools, but it is not always the
 right one. Depending on the research question, traditional statistics
 may be better suited.</p>
@@ -758,7 +769,7 @@ effect sizes to inform conservation policy.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p><strong>Traditional statistics.</strong> The goal is hypothesis
 testing and effect estimation in a small, well-controlled dataset. A

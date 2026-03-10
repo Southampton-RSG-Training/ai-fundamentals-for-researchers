@@ -332,7 +332,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Deep Learning and Neural Networks</h1>
-        <p>Last updated on 2026-03-04 |
+        <p>Last updated on 2026-03-10 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-deep-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -381,7 +381,9 @@ network.</p>
 <p>The name comes from a loose analogy with biology. In the human brain,
 neurons receive signals from other neurons. If the combined signal is
 strong enough, the neuron “fires” and passes a signal onwards.</p>
-<p>An artificial neuron works in a simplified mathematical way:</p>
+<figure><img src="../fig/neuron.png" alt="Neuron and myelinated axon, with signal flow from inputs at dendrites to outputs at axon terminals." class="figure mx-auto d-block"><div class="figcaption">A diagram of a neuron. Egm4313.s12 at English
+Wikipedia, CC BY-SA 3.0, via Wikimedia Commons</div>
+</figure><p>An artificial neuron works in a simplified mathematical way:</p>
 <ul><li>It receives numbers as inputs.</li>
 <li>Each input is multiplied by a weight, which represents its
 importance.</li>
@@ -418,8 +420,16 @@ deep learning.</p>
 <p>The word <strong>deep</strong> simply refers to the number of hidden
 layers. A shallow model might have one hidden layer. A deep model may
 have dozens or even hundreds of layers.</p>
-<div class="section level3">
-<h3 id="feature-learning">Feature Learning<a class="anchor" aria-label="anchor" href="#feature-learning"></a></h3>
+<figure><img src="../fig/artificial_neural_network.svg" alt="Artificial neural network with layer coloring" class="figure mx-auto d-block"><div class="figcaption">A simplified diagram of an artificial neural
+network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons</div>
+</figure><div id="feature-learning" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="feature-learning" class="callout-inner">
+<h3 class="callout-title">Feature Learning</h3>
+<div class="callout-content">
 <p>A key reason deep learning differs from earlier machine learning
 approaches lies in how models learn from the features within the
 data.</p>
@@ -441,6 +451,8 @@ structures.</p>
 <p>In short, traditional methods rely on humans to decide what matters
 in the data. Deep learning models learn what matters directly from the
 data itself, given enough examples and computing power.</p>
+</div>
+</div>
 </div>
 </section><section><h2 class="section-heading" id="training-a-neural-network">Training a Neural Network<a class="anchor" aria-label="anchor" href="#training-a-neural-network"></a></h2>
 <hr class="half-width"><p>Training a neural network follows a repeated cycle.</p>
@@ -677,7 +689,7 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/instructor/3-deep-learning.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/3-deep-learning.html",
   "dateCreated": "2026-02-20",
-  "dateModified": "2026-03-04",
+  "dateModified": "2026-03-10",
   "datePublished": "2026-03-10"
 }
 

@@ -480,7 +480,7 @@ and what output it produced.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples might include:</p>
 <ul>
@@ -901,7 +901,7 @@ each time it gets closer to the exit.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 = Unsupervised learning 2 = Supervised learning 3 = Reinforcement
 learning</p>
@@ -909,10 +909,14 @@ learning</p>
 </div>
 </div>
 </div>
+<div id="what-kind-of-task-is-it" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-</section><section><h2 class="section-heading" id="what-kind-of-task-is-it">What Kind of Task Is It?<a class="anchor" aria-label="anchor" href="#what-kind-of-task-is-it"></a>
-</h2>
-<hr class="half-width">
+<span class="callout-header">Callout</span>
+<div id="what-kind-of-task-is-it" class="callout-inner">
+<h3 class="callout-title">What Kind of Task Is It?</h3>
+<div class="callout-content">
 <p>Machine learning can be applied to several different types of tasks:
 regression, classification, clustering and dimensionality reduction.
 Supervised learning is usually applied to regression and classification
@@ -945,6 +949,10 @@ may correspond to clinically relevant subtypes.</p>
 deciding which task is required is the first step. For a guide, have a
 look at the <a href="https://scikit-learn.org/stable/machine_learning_map.html" class="external-link">scikit-learn
 algorithm cheat sheet</a></p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="how-a-model-learns">How a Model Learns<a class="anchor" aria-label="anchor" href="#how-a-model-learns"></a>
 </h2>
 <hr class="half-width">
@@ -1060,7 +1068,10 @@ understand the rationale</li>
 <li>Outputs will be validated independently before acting on them</li>
 <li>Large volumes of complex data (images, audio) make interpretability
 impractical</li>
-</ul></section><section><h2 class="section-heading" id="when-not-to-use-machine-learning">When Not to Use Machine Learning<a class="anchor" aria-label="anchor" href="#when-not-to-use-machine-learning"></a>
+</ul>
+<figure><img src="../fig/blackbox.svg" alt="diagram showing inputs to a black box producing unexplainable outputs" class="figure mx-auto d-block"><div class="figcaption">Original: Krauss Vector: Pduive23, CC BY-SA 4.0,
+via Wikimedia Commons</div>
+</figure></section><section><h2 class="section-heading" id="when-not-to-use-machine-learning">When Not to Use Machine Learning<a class="anchor" aria-label="anchor" href="#when-not-to-use-machine-learning"></a>
 </h2>
 <hr class="half-width">
 <p>Machine learning is a powerful set of tools, but it is not always the
@@ -1168,7 +1179,7 @@ effect sizes to inform conservation policy.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p><strong>Traditional statistics.</strong> The goal is hypothesis
@@ -1296,7 +1307,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-3-deep-learning"><p>Content from <a href="3-deep-learning.html">Deep Learning and Neural Networks</a></p>
 <hr>
-<p>Last updated on 2026-03-04 |
+<p>Last updated on 2026-03-10 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-deep-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -1344,7 +1355,9 @@ network.</p>
 <p>The name comes from a loose analogy with biology. In the human brain,
 neurons receive signals from other neurons. If the combined signal is
 strong enough, the neuron “fires” and passes a signal onwards.</p>
-<p>An artificial neuron works in a simplified mathematical way:</p>
+<figure><img src="../fig/neuron.png" alt="Neuron and myelinated axon, with signal flow from inputs at dendrites to outputs at axon terminals." class="figure mx-auto d-block"><div class="figcaption">A diagram of a neuron. Egm4313.s12 at English
+Wikipedia, CC BY-SA 3.0, via Wikimedia Commons</div>
+</figure><p>An artificial neuron works in a simplified mathematical way:</p>
 <ul>
 <li>It receives numbers as inputs.</li>
 <li>Each input is multiplied by a weight, which represents its
@@ -1391,9 +1404,16 @@ deep learning.</p>
 <p>The word <strong>deep</strong> simply refers to the number of hidden
 layers. A shallow model might have one hidden layer. A deep model may
 have dozens or even hundreds of layers.</p>
-<div class="section level3">
-<h3 id="feature-learning">Feature Learning<a class="anchor" aria-label="anchor" href="#feature-learning"></a>
-</h3>
+<figure><img src="../fig/artificial_neural_network.svg" alt="Artificial neural network with layer coloring" class="figure mx-auto d-block"><div class="figcaption">A simplified diagram of an artificial neural
+network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons</div>
+</figure><div id="feature-learning" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="feature-learning" class="callout-inner">
+<h3 class="callout-title">Feature Learning</h3>
+<div class="callout-content">
 <p>A key reason deep learning differs from earlier machine learning
 approaches lies in how models learn from the features within the
 data.</p>
@@ -1415,6 +1435,8 @@ structures.</p>
 <p>In short, traditional methods rely on humans to decide what matters
 in the data. Deep learning models learn what matters directly from the
 data itself, given enough examples and computing power.</p>
+</div>
+</div>
 </div>
 </section><section><h2 class="section-heading" id="training-a-neural-network">Training a Neural Network<a class="anchor" aria-label="anchor" href="#training-a-neural-network"></a>
 </h2>
@@ -1616,7 +1638,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-4-large-language-models"><p>Content from <a href="4-large-language-models.html">Large Language Models</a></p>
 <hr>
-<p>Last updated on 2026-03-04 |
+<p>Last updated on 2026-03-10 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/4-large-language-models.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -1710,7 +1732,7 @@ representations of language.</p>
 surprisingly simple objective: <strong>given a sequence of words,
 predict what word is most likely to come next</strong>.</p>
 <p>Consider the sentence:</p>
-<p>*The researcher submitted her manuscript to the ___*</p>
+<p><em>The researcher submitted her manuscript to the…</em></p>
 <p>A well-trained model should assign a high probability to words like
 <em>journal</em> or <em>publisher</em>, and a low probability to words
 like <em>submarine</em> or <em>Tuesday</em>. By doing this billions of
