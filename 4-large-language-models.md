@@ -50,7 +50,7 @@ Despite their apparent sophistication, LLMs are trained on a surprisingly simple
 
 Consider the sentence:
 
-*The researcher submitted her manuscript to the ___*
+*The researcher submitted her manuscript to the...*
 
 A well-trained model should assign a high probability to words like *journal* or *publisher*, and a low probability to words like *submarine* or *Tuesday*. By doing this billions of times across an enormous training corpus, the model is forced to learn grammar, facts, writing conventions, and even something resembling reasoning because all of these are encoded in the statistical patterns of language.
 

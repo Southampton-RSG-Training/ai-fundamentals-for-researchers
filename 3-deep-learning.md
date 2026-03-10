@@ -28,6 +28,8 @@ Deep learning is built on a concept called the artificial neural network.
 
 The name comes from a loose analogy with biology. In the human brain, neurons receive signals from other neurons. If the combined signal is strong enough, the neuron "fires" and passes a signal onwards.
 
+![A diagram of a neuron. Egm4313.s12 at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons](fig/neuron.png){alt='Neuron and myelinated axon, with signal flow from inputs at dendrites to outputs at axon terminals.'}
+
 An artificial neuron works in a simplified mathematical way:
 
 - It receives numbers as inputs.
@@ -67,6 +69,9 @@ This hierarchical pattern detection is one of the main strengths of deep learnin
 
 The word **deep** simply refers to the number of hidden layers. A shallow model might have one hidden layer. A deep model may have dozens or even hundreds of layers.
 
+![A simplified diagram of an artificial neural network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons](fig/artificial_neural_network.svg){alt='Artificial neural network with layer coloring'}
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 ### Feature Learning
 
 A key reason deep learning differs from earlier machine learning approaches lies in how models learn from the features within the data.
@@ -78,6 +83,7 @@ In image classification, for example, a researcher might calculate edge counts, 
 This is not the case for deep learning. Instead of feeding the model carefully designed features, we provide the raw data, such as pixel values. A neural network with multiple layers then learns its own feature measures during training. Early layers might detect simple patterns like edges, while later layers combine these into more complex structures.
 
 In short, traditional methods rely on humans to decide what matters in the data. Deep learning models learn what matters directly from the data itself, given enough examples and computing power.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Training a Neural Network
 
