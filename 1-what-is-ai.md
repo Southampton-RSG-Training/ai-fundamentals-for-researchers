@@ -29,32 +29,70 @@ Artificial Intelligence, or AI, is a broad term. A useful working definition is:
 
 These tasks might include recognising images, understanding language, making recommendations, detecting patterns in data, or playing strategic games.
 
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Noticing AI
+
+Can you think of an AI system you have encountered recently? What task was it performing?
+
+Write down one example and briefly describe what input it received and what output it produced.
+
+:::::::::::::::::::::::: solution 
+
+Examples might include:
+
+- A spam filter classifying incoming emails as “spam” or “not spam”.
+- A recommendation system suggesting articles, products, or videos based on previous behaviour.
+- Autocomplete predicting the next word or line of code while you type.
+- A medical imaging tool highlighting areas of a scan that may require clinical attention.
+
+In each case, the system is performing a specific task based on patterns learned from data.
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 It is worth noting that AI is not a single technique or tool. It is an umbrella term covering a wide range of approaches developed over several decades.
 
-### A Brief History in Three Phases
+### A Brief History of AI in Three Phases
 
 **Rule-based systems (1950s–1980s)**
-Early AI systems relied on explicit rules written by humans. For example, a medical expert system might contain hundreds of “if–then” statements created by specialists, designed to lead to a diagnosis. These systems could perform well in narrow domains but were inflexible and difficult to scale.
+Early AI systems relied on explicit rules written by humans. For example, a medical expert system might contain hundreds of “if–then” statements created by specialists, designed to lead to a diagnosis. These systems could perform well in narrow domains but were inflexible and difficult to scale.  For example, a chatbot called ELIZA was developed in 1966, it answered questions only according to explicitly defined rules.
+
+![Public domain, via Wikimedia Commons](fig/ELIZA_conversation.png){alt="A conversation with the chatbot ELIZA"}
 
 **Statistical approaches (1980s–2000s)**
 Researchers began using probability and statistics to handle uncertainty and variability in real-world data. Instead of hard-coded rules, systems estimated likelihoods and made predictions based on data.
 
 **Modern machine learning (2000s–present)**
-With increased data and computing power, systems began to "learn"" patterns directly from large datasets. Rather than being told exactly what to do, they infer patterns from examples.
+With increased data and computing power, systems began to "learn" patterns directly from large datasets. Rather than being told exactly what to do, they infer patterns from examples.
 
 Throughout all these phases, the goal has remained broadly the same: to build systems that can carry out tasks we associate with intelligent behaviour.
 
+In 1950 Alan Turing proposed a test for machine intelligence, known as the Turing Test:
+
+>"The idea of the test is that the machine has to try and pretend to be a man, by answering questions put to it, and it will only pass if the pretence is reasonably convincing. A considerable portion of a jury, who should not be experts about machines, must be taken in by the pretence"
+
+So, this test involves a human judge engaging in natural language conversations with both a human and a machine designed to generate human-like responses. The machine passes the test if it can convince the judge that it is human a significant fraction of the time. 
+
+A 2025 pre-print reports the performance of AI systems including ELIZA and GPT-4.5 in two randomised, controlled, and pre-registered Turing tests. Participants had 5 minute conversations simultaneously with another human participant and one of these systems before judging which conversational partner they thought was human. When prompted to adopt a humanlike persona, GPT-4.5 was judged to be the human 73% of the time: significantly more often than the real human participant was selected. In contrast, ELIZA was judged to be the human only 23% of the time[(Jones & Bergen, 2025)](https://arxiv.org/pdf/2503.23674).
+
+![Juan Alberto Sánchez Margallo, CC BY 2.5, via Wikimedia Commons](fig/Turing_test_diagram.png){alt="Diagram of the Turing test"}
+
+This result illustrates how capable current systems have become at specific tasks. However, passing a five-minute conversation test is not the same as general intelligence. GPT-4.5 has been trained on an enormous quantity of human-written text, which makes it exceptionally good at producing human-like language and this is exactly what the Turing test measures. It is, in a sense, the task it was most directly prepared for.
+
+It's important that we also consider what the same system cannot do. It cannot walk into an unfamiliar laboratory and figure out how the equipment works. It cannot notice that a colleague seems stressed and decide whether to ask about it. It cannot read a paper, recognise that the methodology is flawed, and devise a better approach. These are things a competent human researcher does routinely, involving transferring knowledge and judgement flexibly across situations they have never seen before. No current AI system can do this reliably.
 
 ### Narrow AI vs General AI
 
-A crucial distinction is between narrow AI and general AI.
+Some people categorise AI into narrow AI and general AI.
 
 **Narrow AI** (also called weak AI) refers to systems designed to perform a specific task. Examples include image classification, language translation, and recommendation systems. All AI systems in practical use today fall into this category. They can perform their assigned task very effectively, but they cannot transfer that ability broadly to unrelated domains.
 
 **General AI** (also called strong AI or Artificial General Intelligence) refers to a hypothetical system with human-level reasoning ability across a wide range of tasks. Such a system would be able to learn, reason, and adapt flexibly in unfamiliar situations. 
 
-General AI is the overarching goal of many AI companies but, at present, general AI does not exist. When discussing real-world research and applications, we are dealing with narrow AI.
-
+General AI is the overarching goal of many AI companies. There is no consensus that any current system meets the definition of AGI, although the owners of AI companies including OpenAI and Anthropic claim that this is not far off.
 
 ## The AI Family Tree
 
@@ -100,34 +138,6 @@ The current wave of AI is therefore not the result of a single breakthrough, but
 
 
 
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Noticing AI
-
-Can you think of an AI system you have encountered recently? What task was it performing?
-
-Write down one example and briefly describe what input it received and what output it produced.
-
-:::::::::::::::::::::::: solution 
-
-Examples might include:
-
-- A spam filter classifying incoming emails as “spam” or “not spam”.
-- A recommendation system suggesting articles, products, or videos based on previous behaviour.
-- Autocomplete predicting the next word or line of code while you type.
-- A medical imaging tool highlighting areas of a scan that may require clinical attention.
-
-In each case, the system is performing a specific task based on patterns learned from data.
-
-:::::::::::::::::::::::::::::::::
-
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Artificial Intelligence is a broad field concerned with systems that perform tasks associated with human intelligence.
@@ -139,4 +149,8 @@ In each case, the system is performing a specific task based on patterns learned
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## References
+
+- [Jones, C. R., & Bergen, B. K. (2025). Large language models pass the turing test. arXiv preprint arXiv:2503.23674.](https://arxiv.org/pdf/2503.23674)
+- [Artificial General Intelligence Wikipedia](https://en.wikipedia.org/wiki/Artificial_general_intelligence)
 
