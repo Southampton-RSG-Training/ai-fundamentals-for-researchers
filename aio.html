@@ -409,7 +409,7 @@ their own research.</li>
 </div>
 </div></section><section id="aio-1-what-is-ai"><p>Content from <a href="1-what-is-ai.html">What is Artificial Intelligence?</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-10 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/1-what-is-ai.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -456,34 +456,115 @@ typically require human intelligence.</strong></p>
 <p>These tasks might include recognising images, understanding language,
 making recommendations, detecting patterns in data, or playing strategic
 games.</p>
+<div id="noticing-ai" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="noticing-ai" class="callout-inner">
+<h3 class="callout-title">Noticing AI</h3>
+<div class="callout-content">
+<p>Can you think of an AI system you have encountered recently? What
+task was it performing?</p>
+<p>Write down one example and briefly describe what input it received
+and what output it produced.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Examples might include:</p>
+<ul>
+<li>A spam filter classifying incoming emails as “spam” or “not
+spam”.</li>
+<li>A recommendation system suggesting articles, products, or videos
+based on previous behaviour.</li>
+<li>Autocomplete predicting the next word or line of code while you
+type.</li>
+<li>A medical imaging tool highlighting areas of a scan that may require
+clinical attention.</li>
+</ul>
+<p>In each case, the system is performing a specific task based on
+patterns learned from data.</p>
+</div>
+</div>
+</div>
+</div>
 <p>It is worth noting that AI is not a single technique or tool. It is
 an umbrella term covering a wide range of approaches developed over
 several decades.</p>
 <div class="section level3">
-<h3 id="a-brief-history-in-three-phases">A Brief History in Three Phases<a class="anchor" aria-label="anchor" href="#a-brief-history-in-three-phases"></a>
+<h3 id="a-brief-history-of-ai-in-three-phases">A Brief History of AI in Three Phases<a class="anchor" aria-label="anchor" href="#a-brief-history-of-ai-in-three-phases"></a>
 </h3>
 <p><strong>Rule-based systems (1950s–1980s)</strong> Early AI systems
 relied on explicit rules written by humans. For example, a medical
 expert system might contain hundreds of “if–then” statements created by
 specialists, designed to lead to a diagnosis. These systems could
 perform well in narrow domains but were inflexible and difficult to
-scale.</p>
-<p><strong>Statistical approaches (1980s–2000s)</strong> Researchers
+scale. For example, a chatbot called ELIZA was developed in 1966, it
+answered questions only according to explicitly defined rules.</p>
+<figure><img src="fig/ELIZA_conversation.png" alt="A conversation with the chatbot ELIZA" class="figure mx-auto d-block"><div class="figcaption">Public domain, via Wikimedia Commons</div>
+</figure><p><strong>Statistical approaches (1980s–2000s)</strong> Researchers
 began using probability and statistics to handle uncertainty and
 variability in real-world data. Instead of hard-coded rules, systems
 estimated likelihoods and made predictions based on data.</p>
 <p><strong>Modern machine learning (2000s–present)</strong> With
-increased data and computing power, systems began to “learn”” patterns
+increased data and computing power, systems began to “learn” patterns
 directly from large datasets. Rather than being told exactly what to do,
 they infer patterns from examples.</p>
 <p>Throughout all these phases, the goal has remained broadly the same:
 to build systems that can carry out tasks we associate with intelligent
 behaviour.</p>
+<p>In 1950 Alan Turing proposed a test for machine intelligence, known
+as the Turing Test:</p>
+<blockquote>
+<p>“The idea of the test is that the machine has to try and pretend to
+be a man, by answering questions put to it, and it will only pass if the
+pretence is reasonably convincing. A considerable portion of a jury, who
+should not be experts about machines, must be taken in by the
+pretence”</p>
+</blockquote>
+<p>So, this test involves a human judge engaging in natural language
+conversations with both a human and a machine designed to generate
+human-like responses. The machine passes the test if it can convince the
+judge that it is human a significant fraction of the time.</p>
+<p>A 2025 pre-print reports the performance of AI systems including
+ELIZA and GPT-4.5 in two randomised, controlled, and pre-registered
+Turing tests. Participants had 5 minute conversations simultaneously
+with another human participant and one of these systems before judging
+which conversational partner they thought was human. When prompted to
+adopt a humanlike persona, GPT-4.5 was judged to be the human 73% of the
+time: significantly more often than the real human participant was
+selected. In contrast, ELIZA was judged to be the human only 23% of the
+time<a href="https://arxiv.org/pdf/2503.23674" class="external-link">(Jones &amp; Bergen,
+2025)</a>.</p>
+<figure><img src="fig/Turing_test_diagram.png" alt="Diagram of the Turing test" class="figure mx-auto d-block"><div class="figcaption">Juan Alberto Sánchez Margallo, CC BY 2.5, via
+Wikimedia Commons</div>
+</figure><p>This result illustrates how capable current systems have become at
+specific tasks. However, passing a five-minute conversation test is not
+the same as general intelligence. GPT-4.5 has been trained on an
+enormous quantity of human-written text, which makes it exceptionally
+good at producing human-like language and this is exactly what the
+Turing test measures. It is, in a sense, the task it was most directly
+prepared for.</p>
+<p>It’s important that we also consider what the same system cannot do.
+It cannot walk into an unfamiliar laboratory and figure out how the
+equipment works. It cannot notice that a colleague seems stressed and
+decide whether to ask about it. It cannot read a paper, recognise that
+the methodology is flawed, and devise a better approach. These are
+things a competent human researcher does routinely, involving
+transferring knowledge and judgement flexibly across situations they
+have never seen before. No current AI system can do this reliably.</p>
 </div>
 <div class="section level3">
 <h3 id="narrow-ai-vs-general-ai">Narrow AI vs General AI<a class="anchor" aria-label="anchor" href="#narrow-ai-vs-general-ai"></a>
 </h3>
-<p>A crucial distinction is between narrow AI and general AI.</p>
+<p>Some people categorise AI into narrow AI and general AI.</p>
 <p><strong>Narrow AI</strong> (also called weak AI) refers to systems
 designed to perform a specific task. Examples include image
 classification, language translation, and recommendation systems. All AI
@@ -494,9 +575,10 @@ ability broadly to unrelated domains.</p>
 General Intelligence) refers to a hypothetical system with human-level
 reasoning ability across a wide range of tasks. Such a system would be
 able to learn, reason, and adapt flexibly in unfamiliar situations.</p>
-<p>General AI is the overarching goal of many AI companies but, at
-present, general AI does not exist. When discussing real-world research
-and applications, we are dealing with narrow AI.</p>
+<p>General AI is the overarching goal of many AI companies. There is no
+consensus that any current system meets the definition of AGI, although
+the owners of AI companies including OpenAI and Anthropic claim that
+this is not far off.</p>
 </div>
 </section><section><h2 class="section-heading" id="the-ai-family-tree">The AI Family Tree<a class="anchor" aria-label="anchor" href="#the-ai-family-tree"></a>
 </h2>
@@ -560,45 +642,6 @@ large language models (transformer is the ‘T’ in ChatGPT)</p></li>
 <p>The current wave of AI is therefore not the result of a single
 breakthrough, but the interaction between data, hardware, and improved
 methods.</p>
-<div id="noticing-ai" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="noticing-ai" class="callout-inner">
-<h3 class="callout-title">Noticing AI</h3>
-<div class="callout-content">
-<p>Can you think of an AI system you have encountered recently? What
-task was it performing?</p>
-<p>Write down one example and briefly describe what input it received
-and what output it produced.</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<p>Examples might include:</p>
-<ul>
-<li>A spam filter classifying incoming emails as “spam” or “not
-spam”.</li>
-<li>A recommendation system suggesting articles, products, or videos
-based on previous behaviour.</li>
-<li>Autocomplete predicting the next word or line of code while you
-type.</li>
-<li>A medical imaging tool highlighting areas of a scan that may require
-clinical attention.</li>
-</ul>
-<p>In each case, the system is performing a specific task based on
-patterns learned from data.</p>
-</div>
-</div>
-</div>
-</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -622,13 +665,22 @@ increased computing power, and algorithmic advances.</li>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li><a href="https://arxiv.org/pdf/2503.23674" class="external-link">Jones, C. R., &amp;
+Bergen, B. K. (2025). Large language models pass the turing test. arXiv
+preprint arXiv:2503.23674.</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence" class="external-link">Artificial
+General Intelligence Wikipedia</a></li>
+</ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</section></section><section id="aio-2-machine-learning"><p>Content from <a href="2-machine-learning.html">Machine Learning - Teaching Computers from Data</a></p>
+ --></section></section><section id="aio-2-machine-learning"><p>Content from <a href="2-machine-learning.html">Machine Learning - Teaching Computers from Data</a></p>
 <hr>
-<p>Last updated on 2026-03-04 |
+<p>Last updated on 2026-03-10 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/2-machine-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -679,33 +731,78 @@ appropriate than machine learning.</li>
 <hr class="half-width">
 <p>In traditional programming, a human writes explicit rules and the
 computer follows them.</p>
-<p>For example:</p>
+<p>For example, a researcher studying whether a scientific paper is
+relevant to a systematic review on arthritis interventions might write
+rules such as:</p>
 <ul>
-<li>A programmer writes <strong>rules</strong> to calculate tax.</li>
-<li>The computer applies those rules to some <strong>data</strong>.</li>
-<li>The output is fully determined by the rules written in advance.</li>
+<li>If the paper mentions “randomised controlled trial” and the
+“arthritis”, include it.</li>
+<li>If the paper is published before 1990, exclude it.</li>
 </ul>
+<p>The computer applies those rules to some data, in this case, paper
+abstracts, and the output is fully determined by the rules written in
+advance.</p>
 <p>The logic flows like this:</p>
 <p><strong>Rules + Data -&gt; Output</strong></p>
+<p>This works reasonably well when the criteria are clear and
+consistent. However, in reality, relevance is rarely so clean. Papers
+use different terminology, describe similar interventions in different
+ways, and sometimes the abstract alone is not enough to judge. Writing
+rules that handle all of this becomes increasingly difficult and
+fragile.</p>
 <p>Machine learning takes a different approach. Instead of writing
 detailed rules, we provide:</p>
 <ul>
-<li><strong>Data</strong></li>
-<li>The desired <strong>outputs</strong>
-</li>
-<li>The system then learns rules or patterns that connect the two.</li>
+<li>
+<strong>Data</strong> - a large collection of abstracts</li>
+<li>The desired <strong>outputs</strong> - human judgements about
+whether papers are relevant</li>
 </ul>
+<p>The system then learns the patterns that connect the two.</p>
 <p>The logic becomes:</p>
 <p><strong>Data + Output -&gt; Rules</strong></p>
 <p>In other words, the computer infers the rules for itself.</p>
-<p>A useful analogy is teaching a child to recognise cats. You would not
-provide a formal definition involving ear angles and whisker length.
-Instead, you would show many examples of cats and non-cats. Over time,
-the child internalises patterns that allow them to identify new cats
+<div id="ai-for-systematic-reviews" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="ai-for-systematic-reviews" class="callout-inner">
+<h3 class="callout-title">AI for Systematic Reviews</h3>
+<div class="callout-content">
+<p>Tools such as <a href="https://asreview.nl/" class="external-link">ASReview</a> use machine
+learning to accelerate the title and abstract screening stage of
+systematic reviews.</p>
+<p><a href="https://asreview.nl/" class="external-link">ASReview</a> is an open-source machine
+learning tool designed specifically to assist researchers with the title
+and abstract screening stage of systematic reviews. Rather than
+screening papers in a fixed order, ASReview learns from each inclusion
+or exclusion decision the reviewer makes and continuously re-ranks the
+remaining papers, surfacing the most likely relevant records first.</p>
+<p>This means the most important papers tend to be found early, and
+screening can stop before every record has been manually checked.</p>
+<p>ASReview is free to use, runs in a web browser, requires no
+programming knowledge, and produces a full log of every decision made
+during screening, which can be reported in a methods section. It is
+described in a peer-reviewed paper in Nature Machine Intelligence <a href="https://www.nature.com/articles/s42256-020-00287-7" class="external-link">(van de Schoot
+et al., 2021)</a> and has been used in fields including medicine,
+psychology, and environmental science.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="machine-learning-analogy">Machine Learning Analogy<a class="anchor" aria-label="anchor" href="#machine-learning-analogy"></a>
+</h3>
+<p>A useful analogy is teaching a child to recognise dogs. You would not
+provide a formal definition involving ear angles and tail length.
+Instead, you would show many examples of dogs and non-dogs. Over time,
+the child internalises patterns that allow them to identify new dogs
 correctly.</p>
 <p>Machine learning systems operate in a similar way. They detect
 statistical patterns in examples and use those patterns to make
 predictions about new data.</p>
+<figure><img src="fig/dogs_cropped.jpg" alt="Three dogs standing on a mounting block in some woodland" class="figure mx-auto d-block"></figure>
+</div>
 </section><section><h2 class="section-heading" id="three-types-of-machine-learning">Three Types of Machine Learning<a class="anchor" aria-label="anchor" href="#three-types-of-machine-learning"></a>
 </h2>
 <hr class="half-width">
@@ -1183,6 +1280,11 @@ influence model performance and fairness.</li>
 <ul>
 <li><a href="https://scikit-learn.org/stable/machine_learning_map.html" class="external-link">scikit-learn
 algorithm cheat sheet</a></li>
+<li><a href="https://www.nature.com/articles/s42256-020-00287-7" class="external-link">Van De
+Schoot, R., De Bruin, J., Schram, R., Zahedi, P., De Boer, J., Weijdema,
+F., … &amp; Oberski, D. L. (2021). An open source machine learning
+framework for efficient and transparent systematic reviews. Nature
+machine intelligence, 3(2), 125-133.</a></li>
 </ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
@@ -1404,7 +1506,7 @@ already in use?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Examples may include:</p>
 <ul>
@@ -1906,7 +2008,7 @@ knowledge in real time.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p><strong>False.</strong> A standard LLM generates responses based
@@ -1961,7 +2063,7 @@ capabilities.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Hallucination demo</li>
@@ -2503,7 +2605,7 @@ like?</li>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>Information that is missing:</strong></p>
 <ul>

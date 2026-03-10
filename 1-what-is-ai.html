@@ -229,6 +229,7 @@
         <ul><li><a href="#defining-ai">Defining AI</a></li>
 <li><a href="#the-ai-family-tree">The AI Family Tree</a></li>
 <li><a href="#why-ai-now">Why AI Now?</a></li>
+<li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -329,7 +330,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>What is Artificial Intelligence?</h1>
-        <p>Last updated on 2026-03-03 |
+        <p>Last updated on 2026-03-10 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/1-what-is-ai.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -376,32 +377,111 @@ typically require human intelligence.</strong></p>
 <p>These tasks might include recognising images, understanding language,
 making recommendations, detecting patterns in data, or playing strategic
 games.</p>
+<div id="noticing-ai" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="noticing-ai" class="callout-inner">
+<h3 class="callout-title">Noticing AI</h3>
+<div class="callout-content">
+<p>Can you think of an AI system you have encountered recently? What
+task was it performing?</p>
+<p>Write down one example and briefly describe what input it received
+and what output it produced.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Examples might include:</p>
+<ul><li>A spam filter classifying incoming emails as “spam” or “not
+spam”.</li>
+<li>A recommendation system suggesting articles, products, or videos
+based on previous behaviour.</li>
+<li>Autocomplete predicting the next word or line of code while you
+type.</li>
+<li>A medical imaging tool highlighting areas of a scan that may require
+clinical attention.</li>
+</ul><p>In each case, the system is performing a specific task based on
+patterns learned from data.</p>
+</div>
+</div>
+</div>
+</div>
 <p>It is worth noting that AI is not a single technique or tool. It is
 an umbrella term covering a wide range of approaches developed over
 several decades.</p>
 <div class="section level3">
-<h3 id="a-brief-history-in-three-phases">A Brief History in Three Phases<a class="anchor" aria-label="anchor" href="#a-brief-history-in-three-phases"></a></h3>
+<h3 id="a-brief-history-of-ai-in-three-phases">A Brief History of AI in Three Phases<a class="anchor" aria-label="anchor" href="#a-brief-history-of-ai-in-three-phases"></a></h3>
 <p><strong>Rule-based systems (1950s–1980s)</strong> Early AI systems
 relied on explicit rules written by humans. For example, a medical
 expert system might contain hundreds of “if–then” statements created by
 specialists, designed to lead to a diagnosis. These systems could
 perform well in narrow domains but were inflexible and difficult to
-scale.</p>
-<p><strong>Statistical approaches (1980s–2000s)</strong> Researchers
+scale. For example, a chatbot called ELIZA was developed in 1966, it
+answered questions only according to explicitly defined rules.</p>
+<figure><img src="fig/ELIZA_conversation.png" alt="A conversation with the chatbot ELIZA" class="figure mx-auto d-block"><div class="figcaption">Public domain, via Wikimedia Commons</div>
+</figure><p><strong>Statistical approaches (1980s–2000s)</strong> Researchers
 began using probability and statistics to handle uncertainty and
 variability in real-world data. Instead of hard-coded rules, systems
 estimated likelihoods and made predictions based on data.</p>
 <p><strong>Modern machine learning (2000s–present)</strong> With
-increased data and computing power, systems began to “learn”” patterns
+increased data and computing power, systems began to “learn” patterns
 directly from large datasets. Rather than being told exactly what to do,
 they infer patterns from examples.</p>
 <p>Throughout all these phases, the goal has remained broadly the same:
 to build systems that can carry out tasks we associate with intelligent
 behaviour.</p>
+<p>In 1950 Alan Turing proposed a test for machine intelligence, known
+as the Turing Test:</p>
+<blockquote>
+<p>“The idea of the test is that the machine has to try and pretend to
+be a man, by answering questions put to it, and it will only pass if the
+pretence is reasonably convincing. A considerable portion of a jury, who
+should not be experts about machines, must be taken in by the
+pretence”</p>
+</blockquote>
+<p>So, this test involves a human judge engaging in natural language
+conversations with both a human and a machine designed to generate
+human-like responses. The machine passes the test if it can convince the
+judge that it is human a significant fraction of the time.</p>
+<p>A 2025 pre-print reports the performance of AI systems including
+ELIZA and GPT-4.5 in two randomised, controlled, and pre-registered
+Turing tests. Participants had 5 minute conversations simultaneously
+with another human participant and one of these systems before judging
+which conversational partner they thought was human. When prompted to
+adopt a humanlike persona, GPT-4.5 was judged to be the human 73% of the
+time: significantly more often than the real human participant was
+selected. In contrast, ELIZA was judged to be the human only 23% of the
+time<a href="https://arxiv.org/pdf/2503.23674" class="external-link">(Jones &amp; Bergen,
+2025)</a>.</p>
+<figure><img src="fig/Turing_test_diagram.png" alt="Diagram of the Turing test" class="figure mx-auto d-block"><div class="figcaption">Juan Alberto Sánchez Margallo, CC BY 2.5, via
+Wikimedia Commons</div>
+</figure><p>This result illustrates how capable current systems have become at
+specific tasks. However, passing a five-minute conversation test is not
+the same as general intelligence. GPT-4.5 has been trained on an
+enormous quantity of human-written text, which makes it exceptionally
+good at producing human-like language and this is exactly what the
+Turing test measures. It is, in a sense, the task it was most directly
+prepared for.</p>
+<p>It’s important that we also consider what the same system cannot do.
+It cannot walk into an unfamiliar laboratory and figure out how the
+equipment works. It cannot notice that a colleague seems stressed and
+decide whether to ask about it. It cannot read a paper, recognise that
+the methodology is flawed, and devise a better approach. These are
+things a competent human researcher does routinely, involving
+transferring knowledge and judgement flexibly across situations they
+have never seen before. No current AI system can do this reliably.</p>
 </div>
 <div class="section level3">
 <h3 id="narrow-ai-vs-general-ai">Narrow AI vs General AI<a class="anchor" aria-label="anchor" href="#narrow-ai-vs-general-ai"></a></h3>
-<p>A crucial distinction is between narrow AI and general AI.</p>
+<p>Some people categorise AI into narrow AI and general AI.</p>
 <p><strong>Narrow AI</strong> (also called weak AI) refers to systems
 designed to perform a specific task. Examples include image
 classification, language translation, and recommendation systems. All AI
@@ -412,9 +492,10 @@ ability broadly to unrelated domains.</p>
 General Intelligence) refers to a hypothetical system with human-level
 reasoning ability across a wide range of tasks. Such a system would be
 able to learn, reason, and adapt flexibly in unfamiliar situations.</p>
-<p>General AI is the overarching goal of many AI companies but, at
-present, general AI does not exist. When discussing real-world research
-and applications, we are dealing with narrow AI.</p>
+<p>General AI is the overarching goal of many AI companies. There is no
+consensus that any current system meets the definition of AGI, although
+the owners of AI companies including OpenAI and Anthropic claim that
+this is not far off.</p>
 </div>
 </section><section><h2 class="section-heading" id="the-ai-family-tree">The AI Family Tree<a class="anchor" aria-label="anchor" href="#the-ai-family-tree"></a></h2>
 <hr class="half-width"><p>AI can be visualised as a set of nested fields. Each inner layer
@@ -470,43 +551,6 @@ large language models (transformer is the ‘T’ in ChatGPT)</p></li>
 </ol><p>The current wave of AI is therefore not the result of a single
 breakthrough, but the interaction between data, hardware, and improved
 methods.</p>
-<div id="noticing-ai" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="noticing-ai" class="callout-inner">
-<h3 class="callout-title">Noticing AI</h3>
-<div class="callout-content">
-<p>Can you think of an AI system you have encountered recently? What
-task was it performing?</p>
-<p>Write down one example and briefly describe what input it received
-and what output it produced.</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<p>Examples might include:</p>
-<ul><li>A spam filter classifying incoming emails as “spam” or “not
-spam”.</li>
-<li>A recommendation system suggesting articles, products, or videos
-based on previous behaviour.</li>
-<li>Autocomplete predicting the next word or line of code while you
-type.</li>
-<li>A medical imaging tool highlighting areas of a scan that may require
-clinical attention.</li>
-</ul><p>In each case, the system is performing a specific task based on
-patterns learned from data.</p>
-</div>
-</div>
-</div>
-</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -528,11 +572,16 @@ increased computing power, and algorithmic advances.</li>
 </ul></div>
 </div>
 </div>
-<!--
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><ul><li><a href="https://arxiv.org/pdf/2503.23674" class="external-link">Jones, C. R., &amp;
+Bergen, B. K. (2025). Large language models pass the turing test. arXiv
+preprint arXiv:2503.23674.</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence" class="external-link">Artificial
+General Intelligence Wikipedia</a></li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</section></div> <!-- / div.lesson-content -->
+ --></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="introduction.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="2-machine-learning.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -592,7 +641,7 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/1-what-is-ai.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/1-what-is-ai.html",
   "dateCreated": "2026-02-20",
-  "dateModified": "2026-03-03",
+  "dateModified": "2026-03-10",
   "datePublished": "2026-03-10"
 }
 
