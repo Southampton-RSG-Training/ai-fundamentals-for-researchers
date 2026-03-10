@@ -256,7 +256,7 @@ Research-relevant examples include:
 - A text analysis model trained only on English-language literature will struggle with multilingual texts.
 - A medical diagnostic model trained predominantly on one demographic group may perform poorly for others.
 
-These issues are not purely technical, they're ethically and societally important because they influence who benefits from AI systems and who may be disadvantaged by them. We will examine these ethical and societal questions in greater depth in [Episode 5](05-ai-in-research.md).
+These issues are not purely technical, they're ethically and societally important because they influence who benefits from AI systems and who may be disadvantaged by them. We will examine these ethical and societal questions in greater depth in [Episode 5](5-ai-in-research.md).
 
 
 ::::::::::::::::::::::::::::::::::::: challenge
@@ -294,7 +294,7 @@ A basic understanding of **data preparation** is essential as most of the practi
 
 An understanding of **statistics** is also valuable. Understanding what your evaluation metrics actually mean, and being able to reason about whether your model has learned something meaningful or has simply exploited a pattern in the training data, requires a degree of statstical understanding.
 
-If you are new to programming or data science, many researchers begin with the Carpentries lessons on [Python](https://swcarpentry.github.io/python-novice-gapminder/) or [R](https://swcarpentry.github.io/r-novice-gapminder/), followed by the [Introduction to Machine Learning with Python](https://carpentries-incubator.github.io/machine-learning-novice-sklearn/) lesson in the Carpentries Incubator.
+If you are new to programming or data science, many researchers begin with the Carpentries lessons on [Plotting and Programming in Python ](https://swcarpentry.github.io/python-novice-gapminder/) or [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/), followed by the [Introduction to Machine Learning with Python](https://carpentries-incubator.github.io/machine-learning-novice-sklearn/) lesson in the Carpentries Incubator.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 

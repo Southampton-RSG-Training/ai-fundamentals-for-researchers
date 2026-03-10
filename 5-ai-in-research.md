@@ -80,6 +80,68 @@ A theme running through all of these applications is that AI tools work best whe
 
 Using AI in research is an ethical as well as a methodological question. The following are among the most important issues for researchers to engage with.
 
+### Environmental Cost of AI
+
+The environmental cost of AI is larger and more complex than most users appreciate. Due to increasing demand, data centres could consume up to 9% of global electricity demand by 2030 ([Hankendi et al., 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12613045/)). AI systems are the fastest-growing source of this demand, but measuring their precise impact is difficult because operators rarely separate AI from non-AI workloads in their environmental reporting. The most recent estimates suggest that in 2025, AI systems generated up to 79.7 million tonnes of carbon - comparable to the annual emissions of a major city - and consumed up to 764 billion litres of water, comparable to global bottled water consumption ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). 
+
+Environmental costs accumulate across the full lifecycle of an AI model. This includes the water and carbon used to manufacture the specialist chips required to run the AI; the intensive one-off cost of training the model; and the ongoing costs of inference (the cost every time a query is run).
+
+**Lifetime costs**: Embodied carbon (the carbon produced from manufacturing the hardware) can account for a significant fraction of the overall environmental cost of the model, but it is challenging to calculate and seldom reported. 
+
+**Training**: A [2019 study](https://www.technologyreview.com/2019/06/06/239031/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/#:~:text=A%20paper%20from%20the%20University%20of%20Massachusetts%2C,on%20teaching%20machines%20to%20handle%20human%20language.) found that training a single large transformer model can emit over 283,000 kg (626,000 pounds) of carbon, which is roughly equivalent to five times the lifetime emissions of an average American car (including the emissions from building the car!). 
+
+**Inference**: Although many people believe that initial training has the largest environmental cost, recent studies have found that inference can actually account for up to 90% of a model’s lifetime energy use ([Desislavov et al., 2023](https://www.sciencedirect.com/science/article/pii/S2210537923000124)). Water consumption follows a similar pattern, with estimates suggesting a standard ChatGPT conversation of 20–50 exchanges requires roughly 500 millilitres of freshwater for cooling the servers in data centres ([Li et al., 2023](https://dl.acm.org/doi/10.1145/3724499)).
+
+Some tools exist that can help developers better understand the cost of training and inference, for example in the Green Algorithms AI calculator users can enter details on the hardware, runtime, and location of the work and see the potential environmental cost: [https://calculator.green-algorithms.org/ai](https://calculator.green-algorithms.org/ai).
+
+
+Not all AI is equally environmentally expensive. General-purpose LLMs are orders of magnitude more energy-intensive per inference than smaller, task-specific models performing the same job. This means that the convenience of using a single general-purpose LLM interface can carry a substantial and largely invisible environmental cost when multiplied across many uses. A fine-tuned model used for classification or information extraction may produce comparable results at a fraction of the per-query energy cost ([Luccioni et al., 2024](https://doi.org/10.1145/3630106.3658542)).
+
+Similarly not all energy has the same environmental impact, data centers that run using renewable electricity (electricity that has a lower “carbon intensity”) will have reduced environmental impact.  The [Electricity Maps](https://app.electricitymaps.com/map/live/fifteen_minutes) website maps the amount of greenhouse gas (equivalent) emitted for every kWH of electricity produced, it’s clear that training an AI model in a data center in e.g. Scandinavia would have a lower environmental impact than training the model in Australia. However, the relationship between renewable energy and AI's actual carbon footprint is more complex than it first appears. Many data centre operators claim to run on renewable energy by purchasing Renewable Energy Certificates (RECs), which allow them to offset their consumption on paper without necessarily drawing clean power from the grid in real time. This distinction - between matching renewable energy and actually using it - has attracted significant criticism of major providers including Google and Microsoft ([Bjørn et al., 2022](https://www.nature.com/articles/s41558-022-01379-5)).
+
+
+But overall, the biggest obstacle to accurate environmental accounting for AI is the problem of transparency. The companies operating the largest AI systems publish very little useful data. Furthermore, the published per-query emissions figures from AI providers typically reflect optimised, market-based conditions that incorporate REC purchases, rather than an accurate estimate of carbon and water usage ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). Until providers are required to report location-based emissions data transparently and consistently, the true environmental cost of AI will remain difficult to measure and easy to understate ([Masanet et al., 2024](https://www.cell.com/joule/fulltext/S2542-4351(24)00347-7)).
+
+::::::::::::::::::::::::::::::::::::::::: challenge
+
+## Environmental Cost Discussion
+
+Can the societal benefits of AI justify its environmental costs? Where should we draw the line?
+
+
+::::::::::::::::::::: solution
+
+## Points to consider
+
+### Benefits Justify Costs
+
+- AI is already being used in climate-relevant applications: optimising energy grids, accelerating materials discovery for batteries and solar cells, improving weather and climate modelling, and monitoring deforestation via satellite imagery. These applications could meaningfully contribute to decarbonisation long-term.
+- Drug discovery and medical diagnostics applications could save lives and reduce the resource burden of healthcare systems.
+- Efficiency gains from AI in logistics, agriculture, and manufacturing may reduce emissions elsewhere in the economy, potentially offsetting AI's own footprint.
+
+### Costs Outweigh Benefits
+
+- The benefits of AI are often speculative or early-stage, while the environmental costs are immediate and certain. Should we be justifying present costs with uncertain future benefits?
+- Many of the highest-energy AI applications, such as generating images, powering chatbots, and recommending content, have unclear societal benefit relative to their cost.
+- Efficiency gains from new technologies have historically tended to increase overall consumption.  This a phenomenon known as the [Jevons paradox](https://en.wikipedia.org/wiki/Jevons_paradox) because in 1865, the English economist William Stanley Jevons observed that technological improvements that increased the efficiency of coal use led to the increased consumption of coal in a wide range of industries. 
+- The benefits of AI are unevenly distributed globally, while environmental costs, particularly water stress, fall disproportionately on communities that may derive little benefit from the technology.
+
+### Who decides where we draw the line?
+
+- "Societal benefit" is not a neutral concept, it depends on whose society and whose benefits are being counted. Researchers, developers, regulators, and affected communities may weigh the trade-offs very differently.
+- Individual researchers have limited power over the training of frontier models, but they do have agency over which tools they choose, how often they use them, and whether they advocate for greater transparency and accountability from providers.
+- Should the decision be left to market forces, regulated by governments, or governed by professional communities such as researchers?
+
+### Where do we draw the line?
+
+- Is it possible to draw a principled line, or does it require case-by-case judgement? A diagnostic AI that saves lives in a resource-limited setting may be easier to justify than a generative AI that writes marketing copy.
+- Should the burden of proof lie with those deploying AI to demonstrate net benefit, or with critics to demonstrate net harm?
+- Who bears responsibility? Is it the companies training the models, the institutions deploying them, or the researchers using them?
+
+:::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ### Bias and Fairness
 
 AI models do not arrive in the world as neutral tools. They are trained on data generated by human societies, and those societies contain historical and structural inequalities. A model trained on historical medical records will reflect historical disparities in who received care and who was documented. A model trained on published academic literature will reflect who has historically had access to publish.
@@ -167,19 +229,6 @@ Discuss the following questions:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Environmental Cost of AI
-
-The environmental cost of AI is larger and more complex than most users appreciate. The most recent estimates suggest that in 2025, AI systems generated up to 79.7 million tonnes of carbon, which is comparable to the annual emissions of a major city, and consumed up to 764 billion litres of water, which is comparable to global bottled water consumption  ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). 
-
-These costs accumulate across the full lifecycle of an AI model.  This includes the water and carbon used to manufacture the specialist chips required to run the AI; the intensive one-off cost of training the model; and the ongoing costs of inference (the cost every time a query is run). 
-
-A [2019 study](https://www.technologyreview.com/2019/06/06/239031/training-a-single-ai-model-can-emit-as-much-carbon-as-five-cars-in-their-lifetimes/#:~:text=A%20paper%20from%20the%20University%20of%20Massachusetts%2C,on%20teaching%20machines%20to%20handle%20human%20language.) found that training a single large transformer model can emit over 283,000 kg (626,000 pounds) of carbon, which is roughly equivalent to five times the lifetime emissions of an average American car. 
-
-Although many people believe that initial training has the largest environmental cost, recent studies have found that inference can actually account for up to 90% of a model's lifetime energy use. Water consumption follows a similar pattern, with estimates suggesting a standard ChatGPT conversation of 20–50 exchanges requires roughly 500 millilitres of freshwater for cooling the servers in data centres ([Li et al., 2023](https://dl.acm.org/doi/10.1145/3724499)).
-
-Not all AI is equally environmentally expensive. General-purpose LLMs are orders of magnitude more energy-intensive per inference than smaller, task-specific models performing the same job.  This means that the convenience of using a single general-purpose LLM interface can carry a substantial and largely invisible environmental cost when multiplied across many uses. A fine-tuned model used for classification or information extraction may produce comparable results at a fraction of the per-query energy cost ([Luccioni et al., 2024](https://doi.org/10.1145/3630106.3658542))
-
-The biggest obstacle to accurate environmental accounting for AI is the problem of transparency.  The companies operating the largest AI systems publish very little useful data.  Furthermore, the published per-query emissions figures from AI providers typically reflect optimised, market-based conditions, rather than an accurate estimate of carbon and water usage ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). 
 
 
 ## Looking Ahead: Developing Your AI Literacy
