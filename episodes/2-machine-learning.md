@@ -130,6 +130,8 @@ Match each scenario to supervised, unsupervised, or reinforcement learning:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: callout
+
 ## What Kind of Task Is It?
 
 Machine learning can be applied to several different types of tasks: regression, classification, clustering and dimensionality reduction.  Supervised learning is usually applied to regression and classification tasks, whereas unsupervised learning is often applied to clustering or dimensionality reduction tasks (although there are exceptions to both of these statements).
@@ -143,6 +145,10 @@ Machine learning can be applied to several different types of tasks: regression,
 **Dimensionality reduction** - compressing high-dimensional data into a simpler representation for visualisation or further analysis.  For example, in gene expression research, scientists might compress thousands of gene measurements per patient down to two or three variables that capture the most meaningful variation, making it possible to plot all patients on a single chart and spot groupings that may correspond to clinically relevant subtypes.
 
 When choosing the right machine learning algorithm for the job, often deciding which task is required is the first step.  For a guide, have a look at the [scikit-learn algorithm cheat sheet](https://scikit-learn.org/stable/machine_learning_map.html)
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 
 ## How a Model Learns
 
@@ -215,6 +221,8 @@ A black box model may be acceptable when:
 - Predictive accuracy is the primary goal
 - Outputs will be validated independently before acting on them
 - Large volumes of complex data (images, audio) make interpretability impractical
+
+![Original:  Krauss Vector:  Pduive23, CC BY-SA 4.0, via Wikimedia Commons](fig/blackbox.svg){alt="diagram showing inputs to a black box producing unexplainable outputs"}
 
 
 ## When Not to Use Machine Learning
