@@ -480,7 +480,7 @@ and what output it produced.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples might include:</p>
 <ul>
@@ -901,7 +901,7 @@ each time it gets closer to the exit.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 = Unsupervised learning 2 = Supervised learning 3 = Reinforcement
 learning</p>
@@ -1179,7 +1179,7 @@ effect sizes to inform conservation policy.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p><strong>Traditional statistics.</strong> The goal is hypothesis
@@ -1307,7 +1307,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-3-deep-learning"><p>Content from <a href="3-deep-learning.html">Deep Learning and Neural Networks</a></p>
 <hr>
-<p>Last updated on 2026-03-10 |
+<p>Last updated on 2026-03-11 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-deep-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -1355,25 +1355,36 @@ network.</p>
 <p>The name comes from a loose analogy with biology. In the human brain,
 neurons receive signals from other neurons. If the combined signal is
 strong enough, the neuron “fires” and passes a signal onwards.</p>
-<figure><img src="../fig/neuron.png" alt="Neuron and myelinated axon, with signal flow from inputs at dendrites to outputs at axon terminals." class="figure mx-auto d-block"><div class="figcaption">A diagram of a neuron. Egm4313.s12 at English
-Wikipedia, CC BY-SA 3.0, via Wikimedia Commons</div>
+<figure><img src="../fig/neuron.png" alt="Neuron and myelinated axon, with signal flow from inputs at dendrites to outputs at axon terminals." class="figure mx-auto d-block"><div class="figcaption">Egm4313.s12 at English Wikipedia, CC BY-SA 3.0,
+via Wikimedia Commons</div>
 </figure><p>An artificial neuron works in a simplified mathematical way:</p>
 <ul>
 <li>It receives numbers as inputs.</li>
 <li>Each input is multiplied by a weight, which represents its
 importance.</li>
 <li>These weighted values are added together.</li>
-<li>The result is passed through a function that determines the
-output.</li>
+<li>If the result is large enough, the neuron produces an output.</li>
 <li>That output is then sent to the next layer.</li>
 </ul>
-<p>Note that artificial neural networks are inspired by biology, but
-they are not realistic simulations of the brain. They are mathematical
-models designed to detect patterns in data.</p>
-<p>A single artificial neuron is rarely useful on its own but can be
-really powerful when combined with many other artificial neurons. We can
-arrange many neurons together to form a layer and then stack multiple
-layers together to create a neural network.</p>
+<p>Both biological and artificial neurons act as filters that combine
+many incoming signals, weighted by importance, and decide whether the
+combined signal should be passed to the next layer and, if so, how
+strongly the it should be passed on.</p>
+<p>The differences, however, are just as important. A biological neuron
+is a very complex living cell embedded in a chemical environment. It
+communicates using electrochemical pulses, it can form and prune
+thousands of connections dynamically, and it operates within a brain of
+roughly 86 billion neurons shaped by millions of years of evolution. On
+the other hand, an artificial neuron is an arithmetic operation of a
+weighted sum followed by a mathematical function. The weights are
+adjusted during training by an algorithm, not by biological processes.
+Modern neural networks, despite their name, are better understood as
+powerful pattern-matching mathematical models than as simulations of the
+brain.</p>
+<p>A single artificial neuron is rarely useful on its own. But, if you
+arrange many neurons together, you get a layer, and if you stack
+multiple layers you get a neural network. It is the depth of the layer
+stacking that gives deep learning its name and its power.</p>
 </section><section><h2 class="section-heading" id="layers-depth-and-feature-learning">Layers, Depth and Feature Learning<a class="anchor" aria-label="anchor" href="#layers-depth-and-feature-learning"></a>
 </h2>
 <hr class="half-width">
@@ -1406,115 +1417,7 @@ layers. A shallow model might have one hidden layer. A deep model may
 have dozens or even hundreds of layers.</p>
 <figure><img src="../fig/artificial_neural_network.svg" alt="Artificial neural network with layer coloring" class="figure mx-auto d-block"><div class="figcaption">A simplified diagram of an artificial neural
 network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons</div>
-</figure><div id="feature-learning" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="feature-learning" class="callout-inner">
-<h3 class="callout-title">Feature Learning</h3>
-<div class="callout-content">
-<p>A key reason deep learning differs from earlier machine learning
-approaches lies in how models learn from the features within the
-data.</p>
-<p>Earlier machine learning approaches depended heavily on feature
-engineering. Researchers had to decide in advance which aspects of the
-data might be useful and then write code to extract them.</p>
-<p>In image classification, for example, a researcher might calculate
-edge counts, colour histograms, or texture measures. The model would not
-see the raw pixels but instead would only see these hand-crafted feature
-measures. If the chosen features were poor, the model’s performance
-would suffer. A great deal of expertise and experimentation often went
-into designing the feature measures for a model.</p>
-<p>This is not the case for deep learning. Instead of feeding the model
-carefully designed features, we provide the raw data, such as pixel
-values. A neural network with multiple layers then learns its own
-feature measures during training. Early layers might detect simple
-patterns like edges, while later layers combine these into more complex
-structures.</p>
-<p>In short, traditional methods rely on humans to decide what matters
-in the data. Deep learning models learn what matters directly from the
-data itself, given enough examples and computing power.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="training-a-neural-network">Training a Neural Network<a class="anchor" aria-label="anchor" href="#training-a-neural-network"></a>
-</h2>
-<hr class="half-width">
-<p>Training a neural network follows a repeated cycle.</p>
-<ol style="list-style-type: decimal">
-<li>The network receives an input and produces a prediction.</li>
-<li>The prediction is compared with the correct answer.</li>
-<li>The difference between them is calculated as an error.</li>
-<li>This error signal is sent backwards through the network.</li>
-<li>The weights are adjusted slightly to reduce future errors.</li>
-</ol>
-<p>Sending the error backwards through the network is known as
-<strong>backpropagation</strong>. We’ll mention this again in the next
-episode in the context of large language models.</p>
-<p>This process is repeated across many examples, often millions, and
-over many passes through the dataset.</p>
-<div id="try-training-a-neural-network" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div id="try-training-a-neural-network" class="callout-inner">
-<h3 class="callout-title">Try Training a Neural Network</h3>
-<div class="callout-content">
-<p>You can experiment with the process of training a neural network
-interactively using tools such as <a href="https://playground.tensorflow.org" class="external-link">Tensorflow Playground</a>.
-Adjust the parameters and watch how decision boundaries change.</p>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="why-so-much-data-and-computing-power">Why So Much Data and Computing Power?<a class="anchor" aria-label="anchor" href="#why-so-much-data-and-computing-power"></a>
-</h3>
-<p>Modern neural networks often contain millions or even billions of
-adjustable parameters. Training them involves:</p>
-<ul>
-<li>Processing very large datasets.</li>
-<li>Performing repeated calculations across all parameters.</li>
-<li>Iterating many thousands of times.</li>
-</ul>
-<p>This requires significant computational resources, often specialised
-hardware. Without large datasets and substantial computing power, deep
-models tend to perform poorly.</p>
-</div>
-</section><section><h2 class="section-heading" id="types-of-deep-learning">Types of Deep Learning<a class="anchor" aria-label="anchor" href="#types-of-deep-learning"></a>
-</h2>
-<hr class="half-width">
-<p>There are many neural network architectures, each suited to
-particular tasks. Just a few common examples are discussed below.</p>
-<div class="section level3">
-<h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)<a class="anchor" aria-label="anchor" href="#convolutional-neural-networks-cnns"></a>
-</h3>
-<p>CNNs are particularly effective for image and video analysis. They
-use specialised layers that focus on local patterns, such as edges and
-textures. Image classification tools such as <a href="https://cloud.google.com/vision" class="external-link">Google Vision image
-classification tool</a> are built on this type of architecture.</p>
-</div>
-<div class="section level3">
-<h3 id="recurrent-neural-networks-rnns">Recurrent Neural Networks (RNNs)<a class="anchor" aria-label="anchor" href="#recurrent-neural-networks-rnns"></a>
-</h3>
-<p>RNNs were designed to handle sequential data, such as time-series
-measurements or text. They process information step by step, maintaining
-a form of internal memory. In many applications, they have now been
-replaced by more advanced architectures.</p>
-</div>
-<div class="section level3">
-<h3 id="transformers">Transformers<a class="anchor" aria-label="anchor" href="#transformers"></a>
-</h3>
-<p>Transformers are the foundation of most modern natural language
-processing systems. They are especially effective at modelling
-relationships within sequences of text and form the basis of
-contemporary large language models, which we will examine in the next
-episode.</p>
-<p>To read more about different neural network architectures have a look
-at the <a href="https://www.asimovinstitute.org/neural-network-zoo/" class="external-link">Neural
-Network Zoo</a>, a cheat sheet for neural network architectures.</p>
-<div id="discussion" class="callout challenge">
+</figure><div id="discussion" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -1547,6 +1450,137 @@ already in use?</p>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="training-a-neural-network">Training a Neural Network<a class="anchor" aria-label="anchor" href="#training-a-neural-network"></a>
+</h2>
+<hr class="half-width">
+<p>First, a collection of software “neurons” are created and connected
+together, allowing them to send messages to each other. Next, the
+network is asked to solve a problem, which it attempts to do over and
+over, each time strengthening the connections that lead to success and
+diminishing those that lead to failure.</p>
+<p>During training, a neural network follows a repeated cycle.</p>
+<ol style="list-style-type: decimal">
+<li>The network receives an input and produces a prediction.</li>
+<li>The prediction is compared with the correct answer.</li>
+<li>The difference between them is calculated as an error.</li>
+<li>This error signal is sent backwards through the network.</li>
+<li>The weights are adjusted slightly to reduce future errors.</li>
+</ol>
+<p>Sending the error backwards through the network is known as
+<strong>backpropagation</strong>. We’ll mention this again in the next
+episode in the context of large language models.</p>
+<p>This process is repeated across many examples, often millions, and
+over many passes through the dataset.</p>
+<div id="try-training-a-neural-network" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="try-training-a-neural-network" class="callout-inner">
+<h3 class="callout-title">Try Training a Neural Network</h3>
+<div class="callout-content">
+<p>You can experiment with the process of training a neural network
+interactively using tools such as <a href="https://playground.tensorflow.org" class="external-link">Tensorflow Playground</a>.</p>
+<p>The main task in TensorFlow Playground is classification: the network
+is trying to learn to separate two groups of data points — shown as
+orange and blue dots — by finding a boundary between them.</p>
+<div class="section level3">
+<h3 id="what-the-colours-mean">What the colours mean<a class="anchor" aria-label="anchor" href="#what-the-colours-mean"></a>
+</h3>
+<p>The data points (the small circles on the graph) are coloured orange
+or blue to show which group they belong to.</p>
+<p>The background colour of the output panel shows what the network is
+currently predicting for every possible point on the graph. If an area
+is blue, the network would classify any point there as belonging to the
+blue group. If it is orange, it would classify it as orange. The deeper
+and more saturated the colour, the more confident the network is in that
+prediction.</p>
+<p>As training progresses, watch how the background pattern shifts and
+sharpens. This is the network adjusting its internal weights and
+gradually learning a better boundary between the two groups.</p>
+<p>The lines connecting neurons in the hidden layers show the weights of
+the connections between neurons. A blue line means the connection has a
+positive weight and so the signal is passed forward and amplified. An
+orange line means the connection has a negative weight and so the signal
+is inverted or suppressed. Thick lines indicate strong weights in either
+direction whereas thin lines indicate weak ones.</p>
+</div>
+<div class="section level3">
+<h3 id="what-to-try">What to try<a class="anchor" aria-label="anchor" href="#what-to-try"></a>
+</h3>
+<ul>
+<li>Press the play button and watch the network train. Notice how the
+background pattern in the output panel gradually changes as the network
+improves. The epoch counter shows how many times the network has passed
+through the training data.</li>
+<li>Try increasing the number of hidden layers or neurons and observe
+whether the network can learn more complex boundaries.</li>
+<li>Try a more complex dataset (selectable on the left under ‘DATA’) and
+see whether the same network architecture struggles to separate the
+groups.</li>
+<li>Pause training at different points and observe how the confidence of
+the predictions, shown by colour intensity, changes over time.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="why-so-much-data-and-computing-power">Why So Much Data and Computing Power?<a class="anchor" aria-label="anchor" href="#why-so-much-data-and-computing-power"></a>
+</h3>
+<p>Modern neural networks often contain millions or even billions of
+adjustable parameters. Training them involves:</p>
+<ul>
+<li>
+<strong>Processing very large datasets.</strong> In TensorFlow
+Playground you are working with a few hundred data points at most, a
+fraction of what real-world models require. Real models might be trained
+on millions of data points.</li>
+<li>
+<strong>Performing repeated calculations across all
+parameters.</strong> A deep learning model may have billions of
+equivalent values all being updated simultaneously.</li>
+<li>
+<strong>Iterating many thousands of times.</strong> Models may
+require tens of thousands of passes through the training data to
+converge.</li>
+</ul>
+<p>This requires significant computational resources, often specialised
+hardware. Without large datasets and substantial computing power, deep
+models tend to perform poorly.</p>
+</div>
+</section><section><h2 class="section-heading" id="types-of-deep-learning">Types of Deep Learning<a class="anchor" aria-label="anchor" href="#types-of-deep-learning"></a>
+</h2>
+<hr class="half-width">
+<p>There are many neural network architectures, each suited to
+particular tasks. Just a few common examples are discussed below.</p>
+<div class="section level3">
+<h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)<a class="anchor" aria-label="anchor" href="#convolutional-neural-networks-cnns"></a>
+</h3>
+<p>CNNs are particularly effective for image and video analysis. They
+use specialised layers that focus on local patterns, such as edges and
+textures. Image classification tools are built on this type of
+architecture.</p>
+</div>
+<div class="section level3">
+<h3 id="recurrent-neural-networks-rnns">Recurrent Neural Networks (RNNs)<a class="anchor" aria-label="anchor" href="#recurrent-neural-networks-rnns"></a>
+</h3>
+<p>RNNs were designed to handle sequential data, such as time-series
+measurements or text. They process information step by step, maintaining
+a form of internal memory. In many applications, they have now been
+replaced by more advanced architectures.</p>
+</div>
+<div class="section level3">
+<h3 id="transformers">Transformers<a class="anchor" aria-label="anchor" href="#transformers"></a>
+</h3>
+<p>Transformers are the foundation of most modern natural language
+processing systems. They are especially effective at modelling
+relationships within sequences of text and form the basis of
+contemporary large language models, which we will examine in the next
+episode.</p>
+<p>To read more about different neural network architectures have a look
+at the <a href="https://www.asimovinstitute.org/neural-network-zoo/" class="external-link">Neural
+Network Zoo</a>, a cheat sheet for neural network architectures.</p>
 </div>
 </section><section><h2 class="section-heading" id="how-can-i-train-my-own-deep-learning-model">How can I Train My Own Deep Learning Model?<a class="anchor" aria-label="anchor" href="#how-can-i-train-my-own-deep-learning-model"></a>
 </h2>
@@ -1582,25 +1616,6 @@ architecture and training dynamics than conventional ML. You need enough
 conceptual understanding to diagnose when training is going wrong, for
 example, when a model is failing to learn, overfitting, or producing
 unexpected outputs.</p>
-<div id="transfer-learning-lowers-the-barrier-considerably" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="transfer-learning-lowers-the-barrier-considerably" class="callout-inner">
-<h3 class="callout-title">Transfer learning lowers the barrier
-considerably</h3>
-<div class="callout-content">
-<p>The requirement to train a deep learning model entirely from scratch
-is rarer than it might appear. For many research tasks, a pre-trained
-model from a repository such as <a href="https://huggingface.co" class="external-link">Hugging
-Face</a> or <a href="https://pytorch.org/hub/" class="external-link">PyTorch Hub</a> can be
-downloaded and fine-tuned in a matter of hours on a modest GPU. The
-skills required for fine-tuning are closer to those needed for
-conventional ML than to the full deep learning training pipeline.</p>
-</div>
-</div>
-</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1632,6 +1647,12 @@ effectively.</li>
 Network Zoo</a></li>
 <li><a href="https://www.artiba.org/blog/choosing-the-right-deep-learning-model-a-comprehensive-guide" class="external-link">Choosing
 the right deep learning model a comprehensive guide</a></li>
+<li><a href="https://playground.tensorflow.org" class="external-link">Tensorflow
+Playground</a></li>
+<li><a href="https://librarycarpentry.github.io/lc-machine-learning/04-what-is-ml-good-at.html" class="external-link">Carpentries
+Intro to AI for GLAM - What is machine learning good at?</a></li>
+<li><a href="https://pytorch.org/" class="external-link">pytorch</a></li>
+<li><a href="https://www.tensorflow.org/" class="external-link">tensorflow</a></li>
 </ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
@@ -2610,7 +2631,7 @@ Where should we draw the line?</p>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="benefits-justify-costs">Benefits Justify Costs<a class="anchor" aria-label="anchor" href="#benefits-justify-costs"></a>
@@ -2808,7 +2829,7 @@ like?</li>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p><strong>Information that is missing:</strong></p>
 <ul>
