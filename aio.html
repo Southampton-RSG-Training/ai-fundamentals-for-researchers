@@ -896,7 +896,7 @@ each time it gets closer to the exit.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>1 = Unsupervised learning 2 = Supervised learning 3 = Reinforcement
 learning</p>
@@ -1174,7 +1174,7 @@ effect sizes to inform conservation policy.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p><strong>Traditional statistics.</strong> The goal is hypothesis
@@ -1431,7 +1431,7 @@ already in use?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples may include:</p>
 <ul>
@@ -2414,7 +2414,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-5-ai-in-research"><p>Content from <a href="5-ai-in-research.html">AI in Research</a></p>
 <hr>
-<p>Last updated on 2026-03-10 |
+<p>Last updated on 2026-03-13 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/5-ai-in-research.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2463,13 +2463,12 @@ part of a research workflow.</li>
 </h2>
 <hr class="half-width">
 <p>Throughout this course we have built up a conceptual map of the AI
-landscape: from the broad field of machine learning, through the layered
-representations of deep learning, to the language capabilities of large
-language models. In this final episode we ask the question that matters
-most for you as a researcher: “What can I do with AI in my
-research?”</p>
+landscape: from the broad field of machine learning, to deep learning
+with neural networks, to the language capabilities of large language
+models. In this final episode we ask the question: “What can I do with
+AI in my research?”</p>
 <p>The goal of this episode is not to tell you whether to use AI in your
-research, but to give you the knowledge to make that decision well
+research, but to allow you to make informed decisions when using AI
 including how to recognise opportunities, ask the right critical
 questions, and engage seriously with the ethical responsibilities that
 come with AI tools.</p>
@@ -2481,6 +2480,7 @@ domain. The examples below are illustrative rather than exhaustive. The
 aim of this episode is to help you begin connecting the technical ideas
 from earlier episodes to work that may be relevant to your own
 field.</p>
+<p>[Examples from research for each]</p>
 <div class="section level3">
 <h3 id="working-with-text">Working with Text<a class="anchor" aria-label="anchor" href="#working-with-text"></a>
 </h3>
@@ -2582,7 +2582,11 @@ AI systems generated up to 79.7 million tonnes of carbon - comparable to
 the annual emissions of a major city - and consumed up to 764 billion
 litres of water, comparable to global bottled water consumption (<a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de Vries-Gao,
 2025</a>).</p>
-<p>Environmental costs accumulate across the full lifecycle of an AI
+<figure><img src="fig/google_data_centre.jpg" alt="Google Data Center, The Dalles, Oregon" class="figure mx-auto d-block"><div class="figcaption">Google Data Center, The Dalles, Oregon by
+Visitor7, CC BY-SA 3.0, via Wikimedia Commons</div>
+</figure><figure><img src="fig/cern_data_centre.jpg" alt="The CERN datacenter with World Wide Web and Mail servers. The rear of the equipment racks are exposed to the room, indicating cold aisle containment is being practiced." class="figure mx-auto d-block"><div class="figcaption">Cern Data Centre by Hugovanmeijeren, CC BY-SA
+3.0, via Wikimedia Commons</div>
+</figure><p>Environmental costs accumulate across the full lifecycle of an AI
 model. This includes the water and carbon used to manufacture the
 specialist chips required to run the AI; the intensive one-off cost of
 training the model; and the ongoing costs of inference (the cost every
@@ -2609,7 +2613,8 @@ al., 2023</a>).</p>
 of training and inference, for example in the Green Algorithms AI
 calculator users can enter details on the hardware, runtime, and
 location of the work and see the potential environmental cost: <a href="https://calculator.green-algorithms.org/ai" class="external-link">https://calculator.green-algorithms.org/ai</a>.</p>
-<p>Not all AI is equally environmentally expensive. General-purpose LLMs
+<figure><img src="fig/green_algorithms_calculator.png" alt="Screenshot of the green algorithms calculator" class="figure mx-auto d-block"><div class="figcaption">The Green Algorithms Calculator</div>
+</figure><p>Not all AI is equally environmentally expensive. General-purpose LLMs
 are orders of magnitude more energy-intensive per inference than
 smaller, task-specific models performing the same job. This means that
 the convenience of using a single general-purpose LLM interface can
@@ -2634,7 +2639,10 @@ distinction - between matching renewable energy and actually using it -
 has attracted significant criticism of major providers including Google
 and Microsoft (<a href="https://www.nature.com/articles/s41558-022-01379-5" class="external-link">Bjørn et al.,
 2022</a>).</p>
-<p>But overall, the biggest obstacle to accurate environmental
+<figure><img src="fig/electricity_map.png" alt="Screenshot of the electricity maps website showing the carbon intensity i.e. the grams of CO2 equivalent per kilowatt-hour (gCO2eq/kWh) measuring the greenhouse gas emissions from generating electricity" class="figure mx-auto d-block"><div class="figcaption">Electricity Maps Carbon Intensity (the grams of
+CO2 equivalent per kilowatt-hour (gCO2eq/kWh) measuring the greenhouse
+gas emissions from generating electricity)</div>
+</figure><p>But overall, the biggest obstacle to accurate environmental
 accounting for AI is the problem of transparency. The companies
 operating the largest AI systems publish very little useful data.
 Furthermore, the published per-query emissions figures from AI providers
@@ -2666,7 +2674,7 @@ Where should we draw the line?</p>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="benefits-justify-costs">Benefits Justify Costs<a class="anchor" aria-label="anchor" href="#benefits-justify-costs"></a>
@@ -2756,17 +2764,7 @@ prediction have been shown to perform worse on patients from groups
 underrepresented in the training data. Automated tools used in hiring or
 admissions have reproduced patterns of discrimination from historical
 decisions.</p>
-<p>As a researcher, bias matters in two distinct ways:</p>
-<ul>
-<li>
-<strong>Bias in tools you use:</strong> if an AI tool is part of
-your analysis, its biases may propagate into your findings.</li>
-<li>
-<strong>Bias in research you produce:</strong> if you build or
-fine-tune AI models as part of your research, you have a responsibility
-to evaluate and document their limitations across the populations they
-may affect.</li>
-</ul>
+<p>Example of bias in AI tools</p>
 </div>
 <div class="section level3">
 <h3 id="transparency-and-reproducibility">Transparency and Reproducibility<a class="anchor" aria-label="anchor" href="#transparency-and-reproducibility"></a>
@@ -2864,7 +2862,7 @@ like?</li>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Information that is missing:</strong></p>
 <ul>
@@ -2908,6 +2906,21 @@ and how these were mitigated.</li>
 </div>
 </div>
 </div>
+<div class="section level3">
+<h3 id="cognitive-offloading-and-de-skilling-todo">Cognitive Offloading and De-skilling [TODO]<a class="anchor" aria-label="anchor" href="#cognitive-offloading-and-de-skilling-todo"></a>
+</h3>
+<p>The dangers of using AI for research tasks. Use info from coding with
+AI.</p>
+<p>Researchers don’t understand the code that’s analysing their data or
+running their experiments -&gt; can’t say for sure that your research
+results are correct. We lose the understanding of how research software
+works.</p>
+<p>More generally, in outsourcing tasks to AI we don’t have use our
+brains for them and we lose the ability to do these tasks for ourselves.
+This is scary -&gt; especially working in research we should value our
+ability to think critically and deeply. Example of using google maps to
+navigate.</p>
+</div>
 </section><section><h2 class="section-heading" id="looking-ahead-developing-your-ai-literacy">Looking Ahead: Developing Your AI Literacy<a class="anchor" aria-label="anchor" href="#looking-ahead-developing-your-ai-literacy"></a>
 </h2>
 <hr class="half-width">
@@ -2920,7 +2933,12 @@ this course:</p>
 <strong>Follow your institution’s guidance.</strong> Most
 universities and research funders are actively developing AI use
 policies. These are the most directly relevant to your work, and they
-will continue to evolve.</li>
+will continue to evolve. For example, for researchers at the University
+of Southampton, point 3.8 of the <a href="https://www.southampton.ac.uk/about/governance/regulations-policies/policies/ethics" class="external-link">Ethics
+Policy for Research at University of Southampton</a> shows the Principle
+of ethical conduct of research when using Artificial Intelligence (AI)
+and students should also consult guidance on <a href="https://www.southampton.ac.uk/about/governance/regulations-policies/policies/using-gen-ai-during-your-studies" class="external-link">Using
+generative artificial intelligence during your studies</a>.</li>
 <li>
 <strong>Engage with your research community.</strong> Methodological
 norms for AI use in research are being worked out discipline by
@@ -2980,6 +2998,12 @@ of the ACM.</a></li>
 Jernite, Y., &amp; Strubell, E. (2024). Power hungry processing: Watts
 driving the cost of AI deployment. Proceedings of the 2024 ACM
 Conference on Fairness, Accountability, and Transparency, 85–99</a></li>
+<li><a href="https://calculator.green-algorithms.org/" class="external-link">Lannelongue, L.,
+Grealey, J., Inouye, M., Green Algorithms: Quantifying the Carbon
+Footprint of Computation. Adv. Sci. 2021, 2100707.
+https://doi.org/10.1002/advs.202100707</a></li>
+<li><a href="https://app.electricitymaps.com/map/live/fifteen_minutes" class="external-link">Electricity
+Maps</a></li>
 </ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
