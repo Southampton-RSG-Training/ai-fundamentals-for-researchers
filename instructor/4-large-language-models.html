@@ -259,6 +259,9 @@
 <li><a href="#how-llms-are-trained-pre-training-and-fine-tuning">How LLMs Are Trained: Pre-training and Fine-tuning</a></li>
 <li><a href="#what-llms-can-do">What LLMs Can Do</a></li>
 <li><a href="#what-llms-cannot-do-key-limitations">What LLMs Cannot Do: Key Limitations</a></li>
+<li><a href="#could-i-build-or-fine-tune-my-own-llm">Could I Build or Fine-Tune My Own LLM?</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -332,7 +335,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Large Language Models</h1>
-        <p>Last updated on 2026-03-10 |
+        <p>Last updated on 2026-03-13 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/4-large-language-models.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -437,13 +440,16 @@ from the text itself), so no human annotation is required.</p>
 </section><section><h2 class="section-heading" id="transformer-architecture">Transformer Architecture<a class="anchor" aria-label="anchor" href="#transformer-architecture"></a></h2>
 <hr class="half-width"><p>LLMs are built on an architecture called the
 <strong>Transformer</strong>, introduced in a landmark 2017 paper titled
-“Attention Is All You Need” (cited over 234,000 times as of Spring
-2026). Before the Transformer, models processed text one word at a time,
-which was slow and made it hard to capture relationships between words
-that were far apart in a sentence. The Transformer solved both
-problems.</p>
-<div class="section level3">
-<h3 id="the-attention-mechanism">The attention mechanism<a class="anchor" aria-label="anchor" href="#the-attention-mechanism"></a></h3>
+<a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf" class="external-link">“Attention
+Is All You Need”</a> (cited over 234,000 times as of Spring 2026)
+written by researchers working for Google. Before the Transformer,
+models processed text one word at a time, which:</p>
+<ol style="list-style-type: decimal"><li>was slow</li>
+<li>made it hard to capture relationships between words that were far
+apart in a sentence.</li>
+</ol><p>The Transformer solved both problems.</p>
+<figure><img src="../fig/attention_is_all_you_need.png" alt="A screenshot of the title, authors and abstract of the paper 'attention is all you need'" class="figure mx-auto d-block"></figure><div class="section level3">
+<h3 id="the-attention-mechanism">The Attention Mechanism<a class="anchor" aria-label="anchor" href="#the-attention-mechanism"></a></h3>
 <p>The key innovation of the Transformer is the <strong>attention
 mechanism</strong>. Rather than processing words in isolation, attention
 allows the model to look at all the words in a passage simultaneously
@@ -488,13 +494,18 @@ over 283,000 kg of carbon</li>
 scratch by individual researchers or institutions. Instead,
 organisations release <strong>pre-trained base models</strong> that
 others can build on.</p>
-</div>
+<p>This bar plot below is from the Stanford Institute for Human-Centered
+Artificial Intelligence 2024 AI index. It shows the rapid increase in
+the computing cost of training large language models.</p>
+<figure><img src="../fig/llm_training_cost.jpg" alt="Bar plot showing the rapid increase in the computing used to train large language models. It also shows that the training cost of the best closed large language models seems much higher than the training cost of the best open-weight ones, leading to higher performance. The training cost of models like GPT-4 is not publicly known, so this is just an estimate. The data is from Epoch in 2023, and the chart is from Stanford University's 2024 AI index." class="figure mx-auto d-block"><div class="figcaption">Stanford Institute for Human-Centered Artificial
+Intelligence, CC BY-SA 4.0, via Wikimedia Commons</div>
+</figure></div>
 <div class="section level3">
 <h3 id="stage-2-fine-tuning">Stage 2: Fine-tuning<a class="anchor" aria-label="anchor" href="#stage-2-fine-tuning"></a></h3>
 <p>Once a base model exists, it can be <strong>fine-tuned</strong>. This
 means it can be trained further on a smaller, more targeted dataset to
 adapt its behaviour for a specific purpose or domain. For example, a
-base model might be fine-tuned…</p>
+base model might be fine-tuned:</p>
 <ul><li>on medical literature to improve its performance on clinical
 questions.</li>
 <li>on legal documents to better support contract analysis.</li>
@@ -506,6 +517,9 @@ Human Feedback (RLHF)</strong>. It is largely responsible for the
 conversational, ‘helpful assistant’ style of tools like ChatGPT. Human
 raters score model outputs, and the model is trained to produce outputs
 that score more highly.</p>
+<p>You may have already encountered Reinforcement Learning from Human
+Feedback when a generative AI tool such as ChatGPT gives you two
+different responses and asks you to choose which one you prefer.</p>
 <div id="pre-training-and-fine-tuning-analogy" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -552,7 +566,12 @@ relationships, or themes in text.</li>
 summarising literature, drafting sections of text for revision,
 assisting with qualitative coding, generating data analysis computer
 code, and exploring ideas interactively.</p>
-</section><section><h2 class="section-heading" id="what-llms-cannot-do-key-limitations">What LLMs Cannot Do: Key Limitations<a class="anchor" aria-label="anchor" href="#what-llms-cannot-do-key-limitations"></a></h2>
+<p>For example, given a dataset, an LLM can generate code for tasks such
+as data analysis. Generative AI tools can even run the code as well!
+This is incredible but <strong>we should be cautious when outsourcing
+these tasks to LLMs</strong> due to several limitations that we will
+discuss below.</p>
+<figure><img src="../fig/animals_plot_chatgpt.png" alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="what-llms-cannot-do-key-limitations">What LLMs Cannot Do: Key Limitations<a class="anchor" aria-label="anchor" href="#what-llms-cannot-do-key-limitations"></a></h2>
 <hr class="half-width"><p>Understanding what LLMs <em>cannot</em> reliably do is at least as
 important as knowing what they can do, especially for research
 applications where accuracy and reproducibility matter.</p>
@@ -574,7 +593,18 @@ plausible-sounding titles, authors, and journal names.</li>
 confidence.</li>
 <li>Describe the findings of a study inaccurately, even when the study
 is real.</li>
-</ul><div id="why-is-it-called-hallucination" class="callout">
+</ul><p>For example, the Google AI Overviews result (10 August 2025)
+incorrectly stated that Joaquín Correa is the brother of Ángel Correa
+while in reality the two are unrelated.</p>
+<figure><img src="../fig/hallucination_example.jpg" alt="AI Overviews result for Joaquin Correa brother, 10 August 2025" class="figure mx-auto d-block"><div class="figcaption">AI Overviews, prompted by the query “Joaquin
+Correa brother” on 10 August 2025, Public domain, via Wikimedia
+Commons</div>
+</figure><p>Another example - when prompted to “summarize an article” with a fake
+URL that contains meaningful keywords, even with no Internet connection,
+ChatGPT generates a response that seems valid at first glance.</p>
+<figure><img src="../fig/ChatGPT_hallucination.png" alt="An example of a ChatGPT hallucination. When prompted to “summarize an article” with a fake URL that contains meaningful keywords as slug, even with no Internet connection, the chatbot generates a response that seems valid at first glance." class="figure mx-auto d-block"><div class="figcaption">ChatGPT, Public domain, via Wikimedia
+Commons</div>
+</figure><div id="why-is-it-called-hallucination" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -600,11 +630,15 @@ this is known as their <strong>knowledge cutoff</strong> date. They have
 no awareness of events, publications, or developments that occurred
 after that date, unless they are connected to external tools such as a
 web search capability.</p>
+<p>For example, GPT-5.4 (the latest OpenAI model as of March 2026) has a
+knowledge cutoff of August 31st 2025 and GPT-4.1 has a knowledge cutoff
+of 1st June 2024 (<a href="https://developers.openai.com/api/docs/models/compare" class="external-link">OpenAI
+Developers - Compare Models</a>).</p>
 <p>This matters particularly for research, where the most recent
 literature may be the most relevant. An LLM asked about the current
 state of a fast-moving field may give a confident account that is months
 or years out of date.</p>
-</div>
+<figure><img src="../fig/gpt_model_comparison.png" alt="screenshot of the comparison between features of three GPT models" class="figure mx-auto d-block"></figure></div>
 <div class="section level3">
 <h3 id="stochasticity-different-answers-each-time">Stochasticity: Different Answers Each Time<a class="anchor" aria-label="anchor" href="#stochasticity-different-answers-each-time"></a></h3>
 <p>LLM outputs are <strong>probabilistic</strong> rather than
@@ -624,6 +658,11 @@ ignore parts of it, potentially affecting the quality of its output.</p>
 <p>Context window sizes vary widely across models and have grown
 considerably in recent years, but they remain a practical constraint
 when working with very long documents.</p>
+<p>The context window for the free tier of ChatGPT using the model
+‘GPT-5.3 Instant’ is 16,000 tokens (words, parts of words or
+punctuation), whereas the context window of ‘GPT-5.4 Thinking’ is
+400,000 tokens (<a href="https://help.openai.com/en/articles/11909943-gpt-53-and-gpt-54-in-chatgpt" class="external-link">OpenAI
+Help Docs</a>)</p>
 </div>
 <div class="section level3">
 <h3 id="no-genuine-understanding">No Genuine Understanding<a class="anchor" aria-label="anchor" href="#no-genuine-understanding"></a></h3>
@@ -745,9 +784,8 @@ output is reviewed critically.</li>
 </div>
 </div>
 </div>
-</section><div class="section level1">
-<h1 id="could-i-build-or-fine-tune-my-own-llm">Could I Build or Fine-Tune My Own LLM?<a class="anchor" aria-label="anchor" href="#could-i-build-or-fine-tune-my-own-llm"></a></h1>
-<p>For most researchers and institutions, training an LLM from scratch
+</section><section><h2 class="section-heading" id="could-i-build-or-fine-tune-my-own-llm">Could I Build or Fine-Tune My Own LLM?<a class="anchor" aria-label="anchor" href="#could-i-build-or-fine-tune-my-own-llm"></a></h2>
+<hr class="half-width"><p>For most researchers and institutions, training an LLM from scratch
 is not realistic. The compute and financial resources required place it
 firmly in the domain of large technology companies. However, there are
 several meaningful ways researchers can work with and adapt language
@@ -762,15 +800,14 @@ which provides pre-trained models, fine-tuning utilities, datasets, and
 deployment infrastructure that have become the de facto standard for
 research-scale language model work.</p>
 <p><strong>Working with large datasets of text</strong> introduces
-additional challenges. Cleaning and deduplicating large text corpora,
-handling tokenisation, and managing data pipelines that may involve
-hundreds of gigabytes of text. These are software engineering problems
-as much as machine learning ones.</p>
-<p>For fine-tuning specifically, <strong>understanding the task you are
-optimising for</strong> matters enormously. Fine-tuning a generative
-model to produce better, safer, or more domain-appropriate outputs
-requires careful design of the fine-tuning data and evaluation
-approach.</p>
+additional challenges. Cleaning and de-duplicating large amounts of
+text, handling tokenisation, and managing data pipelines that may
+involve hundreds of gigabytes of text. These problems involve software
+engineering skills as well as machine learning expertise.</p>
+<p>For fine-tuning, <strong>understanding the task you are optimising
+for</strong> matters a lot. You’d need to carefully design the
+approaches for determining which data to use and how to evaluate the
+model.</p>
 <div id="the-hugging-face-ecosystem" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -791,9 +828,8 @@ introductory course on working with language models in code.</p>
 </div>
 </div>
 </div>
-<div class="section level2">
-<h2 id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a></h2>
-<p>In this episode we have seen how the simple task of predicting the
+</section><section><h2 class="section-heading" id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a></h2>
+<hr class="half-width"><p>In this episode we have seen how the simple task of predicting the
 next word can lead to the powerful, general-purpose language tools that
 are reshaping how people interact with information today.</p>
 <p>In <a href="5-ai-in-research.html">Episode 5</a>, we will bring
@@ -824,13 +860,17 @@ responses, with implications for research reproducibility.</li>
 </ul></div>
 </div>
 </div>
-</div>
-<div class="section level2">
-<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-<ul><li><a href="https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html" class="external-link">Vaswani,
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<hr class="half-width"><ul><li><a href="https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html" class="external-link">Vaswani,
 A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., …
 &amp; Polosukhin, I. (2017). Attention is all you need. Advances in
 neural information processing systems, 30.</a></li>
+<li><a href="https://hai.stanford.edu/ai-index" class="external-link">Stanford AI
+Index</a></li>
+<li><a href="https://help.openai.com/en" class="external-link">OpenAI Help Docs</a></li>
+<li><a href="https://developers.openai.com/" class="external-link">OpenAI Developers
+Documentation</a></li>
+<li><a href="https://huggingface.co" class="external-link">Hugging Face</a></li>
 </ul><div id="glossary" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -985,12 +1025,7 @@ computing hardware made the current generation of LLMs possible.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
-</div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/3-deep-learning.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/5-ai-in-research.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -1050,8 +1085,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/instructor/4-large-language-models.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/4-large-language-models.html",
   "dateCreated": "2026-02-20",
-  "dateModified": "2026-03-10",
-  "datePublished": "2026-03-11"
+  "dateModified": "2026-03-13",
+  "datePublished": "2026-03-13"
 }
 
   </script><script>
