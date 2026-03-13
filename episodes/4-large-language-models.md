@@ -59,9 +59,16 @@ This is sometimes called **self-supervised learning**: the training data provide
 
 ## Transformer Architecture
 
-LLMs are built on an architecture called the **Transformer**, introduced in a landmark 2017 paper titled "Attention Is All You Need" (cited over 234,000 times as of Spring 2026). Before the Transformer, models processed text one word at a time, which was slow and made it hard to capture relationships between words that were far apart in a sentence. The Transformer solved both problems.
+LLMs are built on an architecture called the **Transformer**, introduced in a landmark 2017 paper titled ["Attention Is All You Need"](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) (cited over 234,000 times as of Spring 2026) written by researchers working for Google. Before the Transformer, models processed text one word at a time, which:
 
-### The attention mechanism
+1. was slow 
+2. made it hard to capture relationships between words that were far apart in a sentence. 
+
+The Transformer solved both problems.
+
+![](fig/attention_is_all_you_need.png){alt="A screenshot of the title, authors and abstract of the paper 'attention is all you need'"}
+
+### The Attention Mechanism
 
 The key innovation of the Transformer is the **attention mechanism**. Rather than processing words in isolation, attention allows the model to look at all the words in a passage simultaneously and learn which ones are most relevant to understanding each particular word.
 
@@ -90,15 +97,21 @@ Pre-training is extremely  resource-intensive. Training a leading LLM can:
 
 This cost means that pre-trained models are rarely trained from scratch by individual researchers or institutions. Instead, organisations release **pre-trained base models** that others can build on.
 
+This bar plot below is from the Stanford Institute for Human-Centered Artificial Intelligence 2024 AI index. It shows the rapid increase in the computing cost of training large language models. 
+
+![Stanford Institute for Human-Centered Artificial Intelligence, CC BY-SA 4.0, via Wikimedia Commons](fig/llm_training_cost.jpg){alt="Bar plot showing the rapid increase in the computing used to train large language models. It also shows that the training cost of the best closed large language models seems much higher than the training cost of the best open-weight ones, leading to higher performance. The training cost of models like GPT-4 is not publicly known, so this is just an estimate. The data is from Epoch in 2023, and the chart is from Stanford University's 2024 AI index."}
+
 ### Stage 2: Fine-tuning
 
-Once a base model exists, it can be **fine-tuned**. This means it can be trained further on a smaller, more targeted dataset to adapt its behaviour for a specific purpose or domain. For example, a base model might be fine-tuned...
+Once a base model exists, it can be **fine-tuned**. This means it can be trained further on a smaller, more targeted dataset to adapt its behaviour for a specific purpose or domain. For example, a base model might be fine-tuned:
 
 - on medical literature to improve its performance on clinical questions.
 - on legal documents to better support contract analysis.
 - using human feedback to make it more helpful, harmless, and honest in conversation.
 
 That last approach, of using human ratings to guide the model toward more desirable outputs, is called **Reinforcement Learning from Human Feedback (RLHF)**. It is largely responsible for the conversational, 'helpful assistant' style of tools like ChatGPT. Human raters score model outputs, and the model is trained to produce outputs that score more highly.
+
+You may have already encountered Reinforcement Learning from Human Feedback when a generative AI tool such as ChatGPT gives you two different responses and asks you to choose which one you prefer.  
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 
@@ -123,6 +136,10 @@ LLMs have demonstrated some amazing capabilities across a wide range of language
 
 For researchers, LLMs offer potential value in tasks such as summarising literature, drafting sections of text for revision, assisting with qualitative coding, generating data analysis computer code, and exploring ideas interactively.
 
+For example, given a dataset, an LLM can generate code for tasks such as data analysis. Generative AI tools can even run the code as well! This is incredible but **we should be cautious when outsourcing these tasks to LLMs** due to several limitations that we will discuss below.
+
+![](fig/animals_plot_chatgpt.png){alt="Screenshot of uploaded csv, chatGPT prompt, and generated plot"}
+
 ## What LLMs Cannot Do: Key Limitations
 
 Understanding what LLMs *cannot* reliably do is at least as important as knowing what they can do, especially for research applications where accuracy and reproducibility matter.
@@ -139,8 +156,16 @@ In practice this means an LLM might:
 - State incorrect dates, statistics, or quotations with complete confidence.
 - Describe the findings of a study inaccurately, even when the study is real.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+For example, the Google AI Overviews result (10 August 2025) incorrectly stated that Joaquín Correa is the brother of Ángel Correa while in reality the two are unrelated.
 
+![AI Overviews, prompted by the query "Joaquin Correa brother" on 10 August 2025, Public domain, via Wikimedia Commons](fig/hallucination_example.jpg){alt="AI Overviews result for Joaquin Correa brother, 10 August 2025"}
+
+
+Another example - when prompted to "summarize an article" with a fake URL that contains meaningful keywords, even with no Internet connection, ChatGPT generates a response that seems valid at first glance.
+
+![ChatGPT, Public domain, via Wikimedia Commons](fig/ChatGPT_hallucination.png){alt="An example of a ChatGPT hallucination. When prompted to “summarize an article” with a fake URL that contains meaningful keywords as slug, even with no Internet connection, the chatbot generates a response that seems valid at first glance."}
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 ### Why is it called 'hallucination'?
 
 The term is borrowed from psychology, where hallucination refers to perceiving something that is not actually there. When an LLM "hallucinates", it generates content that feels real and is presented confidently, but has no basis in fact. The model has no way to flag its own uncertainty in the way a cautious human expert might say "I'm not certain, but I believe...". That's why it's important to verify factual claims from LLMs using primary sources.
@@ -151,8 +176,11 @@ The term is borrowed from psychology, where hallucination refers to perceiving s
 
 LLMs are trained on data collected up to a specific point in time, this is known as their **knowledge cutoff** date. They have no awareness of events, publications, or developments that occurred after that date, unless they are connected to external tools such as a web search capability.
 
+For example, GPT-5.4 (the latest OpenAI model as of March 2026) has a knowledge cutoff of August 31st 2025 and GPT-4.1 has a knowledge cutoff of 1st June 2024 ([OpenAI Developers - Compare Models ](https://developers.openai.com/api/docs/models/compare)). 
+
 This matters particularly for research, where the most recent literature may be the most relevant. An LLM asked about the current state of a fast-moving field may give a confident account that is months or years out of date.
 
+![](fig/gpt_model_comparison.png){alt="screenshot of the comparison between features of three GPT models"}
 
 ### Stochasticity: Different Answers Each Time
 
@@ -164,6 +192,8 @@ LLM outputs are **probabilistic** rather than deterministic. Even when given exa
 Every LLM has a **context window**, which is the maximum amount of text it can "see" and process at one time. You can think of it as the model's working memory for a single interaction. If you provide a document that exceeds the context window, the model may be forced to ignore parts of it, potentially affecting the quality of its output.
 
 Context window sizes vary widely across models and have grown considerably in recent years, but they remain a practical constraint when working with very long documents.
+
+The context window for the free tier of ChatGPT using the model 'GPT-5.3 Instant' is 16,000 tokens (words, parts of words or punctuation), whereas the context window of 'GPT-5.4 Thinking' is 400,000 tokens ([OpenAI Help Docs](https://help.openai.com/en/articles/11909943-gpt-53-and-gpt-54-in-chatgpt))
 
 
 ### No Genuine Understanding
@@ -238,7 +268,7 @@ Go to a conversational AI tool such as ChatGPT, Microsoft Copilot or Claude and 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-# Could I Build or Fine-Tune My Own LLM?
+## Could I Build or Fine-Tune My Own LLM?
 
 For most researchers and institutions, training an LLM from scratch is not realistic. The compute and financial resources required place it firmly in the domain of large technology companies. However, there are several meaningful ways researchers can work with and adapt language models without training one from scratch.
 
@@ -247,9 +277,9 @@ For most researchers and institutions, training an LLM from scratch is not reali
 
 Fine-tuning a language model requires all of the skills described in the deep learning section above, plus familiarity with the specific landscape of **large language model tooling**.  This may include the [Hugging Face ecosystem](https://huggingface.co), which provides pre-trained models, fine-tuning utilities, datasets, and deployment infrastructure that have become the de facto standard for research-scale language model work.
 
-**Working with large datasets of text** introduces additional challenges. Cleaning and deduplicating large text corpora, handling tokenisation, and managing data pipelines that may involve hundreds of gigabytes of text. These are software engineering problems as much as machine learning ones.
+**Working with large datasets of text** introduces additional challenges. Cleaning and de-duplicating large amounts of text, handling tokenisation, and managing data pipelines that may involve hundreds of gigabytes of text. These problems involve software engineering skills as well as machine learning expertise.
 
-For fine-tuning specifically, **understanding the task you are optimising for** matters enormously.  Fine-tuning a generative model to produce better, safer, or more domain-appropriate outputs requires careful design of the fine-tuning data and evaluation approach.
+For fine-tuning, **understanding the task you are optimising for** matters a lot.  You'd need to carefully design the approaches for determining which data to use and how to evaluate the model.
 
 
 
@@ -281,6 +311,10 @@ In [Episode 5](5-ai-in-research.md), we will bring together everything from the 
 ## References
 
 - [Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. Advances in neural information processing systems, 30.](https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
+- [Stanford AI Index](https://hai.stanford.edu/ai-index)
+- [OpenAI Help Docs](https://help.openai.com/en)
+- [OpenAI Developers Documentation](https://developers.openai.com/)
+- [Hugging Face](https://huggingface.co)
 
 
 ::::::::::::::::::::::::::::::::::::: callout
