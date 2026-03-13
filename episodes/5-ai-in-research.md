@@ -25,14 +25,16 @@ exercises: 5
 
 ## Introduction
 
-Throughout this course we have built up a conceptual map of the AI landscape: from the broad field of machine learning, through the layered representations of deep learning, to the language capabilities of large language models. In this final episode we ask the question that matters most for you as a researcher: "What can I do with AI in my research?"
+Throughout this course we have built up a conceptual map of the AI landscape: from the broad field of machine learning, to deep learning with neural networks, to the language capabilities of large language models. In this final episode we ask the question: "What can I do with AI in my research?"
 
-The goal of this episode is not to tell you whether to use AI in your research, but to give you the knowledge to make that decision well including how to recognise opportunities, ask the right critical questions, and engage seriously with the ethical responsibilities that come with AI tools.
+The goal of this episode is not to tell you whether to use AI in your research, but to allow you to make informed decisions when using AI including how to recognise opportunities, ask the right critical questions, and engage seriously with the ethical responsibilities that come with AI tools.
 
 
 ## How Researchers Are Using AI Today
 
 AI techniques are being applied across virtually every research domain. The examples below are illustrative rather than exhaustive.  The aim of this episode is to help you begin connecting the technical ideas from earlier episodes to work that may be relevant to your own field.
+
+[Examples from research for each]
 
 ### Working with Text
 
@@ -43,6 +45,7 @@ Text is one of the most abundant forms of data in research, and AI tools for wor
 - Draft and revise written outputs such as grant applications, reports, and manuscripts.
 - Extract structured information such as dates, entities, or relationships from unstructured documents such as historical records or clinical notes.
 - Analyse sentiment or tone across large amounts of text, such as social media data or policy documents.
+
 
 ### Analysing Images and Signals
 
@@ -84,6 +87,12 @@ Using AI in research is an ethical as well as a methodological question. The fol
 
 The environmental cost of AI is larger and more complex than most users appreciate. Due to increasing demand, data centres could consume up to 9% of global electricity demand by 2030 ([Hankendi et al., 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12613045/)). AI systems are the fastest-growing source of this demand, but measuring their precise impact is difficult because operators rarely separate AI from non-AI workloads in their environmental reporting. The most recent estimates suggest that in 2025, AI systems generated up to 79.7 million tonnes of carbon - comparable to the annual emissions of a major city - and consumed up to 764 billion litres of water, comparable to global bottled water consumption ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). 
 
+![Google Data Center, The Dalles, Oregon by Visitor7, CC BY-SA 3.0, via Wikimedia Commons](fig/google_data_centre.jpg){alt="Google Data Center, The Dalles, Oregon"}
+
+
+
+![Cern Data Centre by Hugovanmeijeren, CC BY-SA 3.0, via Wikimedia Commons](fig/cern_data_centre.jpg){alt="The CERN datacenter with World Wide Web and Mail servers. The rear of the equipment racks are exposed to the room, indicating cold aisle containment is being practiced."}
+
 Environmental costs accumulate across the full lifecycle of an AI model. This includes the water and carbon used to manufacture the specialist chips required to run the AI; the intensive one-off cost of training the model; and the ongoing costs of inference (the cost every time a query is run).
 
 **Lifetime costs**: Embodied carbon (the carbon produced from manufacturing the hardware) can account for a significant fraction of the overall environmental cost of the model, but it is challenging to calculate and seldom reported. 
@@ -94,10 +103,14 @@ Environmental costs accumulate across the full lifecycle of an AI model. This in
 
 Some tools exist that can help developers better understand the cost of training and inference, for example in the Green Algorithms AI calculator users can enter details on the hardware, runtime, and location of the work and see the potential environmental cost: [https://calculator.green-algorithms.org/ai](https://calculator.green-algorithms.org/ai).
 
+![The Green Algorithms Calculator](fig/green_algorithms_calculator.png){alt="Screenshot of the green algorithms calculator"}
+
 
 Not all AI is equally environmentally expensive. General-purpose LLMs are orders of magnitude more energy-intensive per inference than smaller, task-specific models performing the same job. This means that the convenience of using a single general-purpose LLM interface can carry a substantial and largely invisible environmental cost when multiplied across many uses. A fine-tuned model used for classification or information extraction may produce comparable results at a fraction of the per-query energy cost ([Luccioni et al., 2024](https://doi.org/10.1145/3630106.3658542)).
 
 Similarly not all energy has the same environmental impact, data centers that run using renewable electricity (electricity that has a lower “carbon intensity”) will have reduced environmental impact.  The [Electricity Maps](https://app.electricitymaps.com/map/live/fifteen_minutes) website maps the amount of greenhouse gas (equivalent) emitted for every kWH of electricity produced, it’s clear that training an AI model in a data center in e.g. Scandinavia would have a lower environmental impact than training the model in Australia. However, the relationship between renewable energy and AI's actual carbon footprint is more complex than it first appears. Many data centre operators claim to run on renewable energy by purchasing Renewable Energy Certificates (RECs), which allow them to offset their consumption on paper without necessarily drawing clean power from the grid in real time. This distinction - between matching renewable energy and actually using it - has attracted significant criticism of major providers including Google and Microsoft ([Bjørn et al., 2022](https://www.nature.com/articles/s41558-022-01379-5)).
+
+![Electricity Maps Carbon Intensity (the grams of CO2 equivalent per kilowatt-hour (gCO2eq/kWh) measuring the greenhouse gas emissions from generating electricity)](fig/electricity_map.png){alt="Screenshot of the electricity maps website showing the carbon intensity i.e. the grams of CO2 equivalent per kilowatt-hour (gCO2eq/kWh) measuring the greenhouse gas emissions from generating electricity"}
 
 
 But overall, the biggest obstacle to accurate environmental accounting for AI is the problem of transparency. The companies operating the largest AI systems publish very little useful data. Furthermore, the published per-query emissions figures from AI providers typically reflect optimised, market-based conditions that incorporate REC purchases, rather than an accurate estimate of carbon and water usage ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). Until providers are required to report location-based emissions data transparently and consistently, the true environmental cost of AI will remain difficult to measure and easy to understate ([Masanet et al., 2024](https://www.cell.com/joule/fulltext/S2542-4351(24)00347-7)).
@@ -148,10 +161,8 @@ AI models do not arrive in the world as neutral tools. They are trained on data 
 
 The consequences can be serious. Models used for clinical risk prediction have been shown to perform worse on patients from groups underrepresented in the training data. Automated tools used in hiring or admissions have reproduced patterns of discrimination from historical decisions.
 
-As a researcher, bias matters in two distinct ways:
+Example of bias in AI tools
 
-- **Bias in tools you use:** if an AI tool is part of your analysis, its biases may propagate into your findings.
-- **Bias in research you produce:** if you build or fine-tune AI models as part of your research, you have a responsibility to evaluate and document their limitations across the populations they may affect.
 
 ### Transparency and Reproducibility
 
@@ -229,7 +240,13 @@ Discuss the following questions:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Cognitive Offloading and De-skilling [TODO]
 
+The dangers of using AI for research tasks.  Use info from coding with AI.
+
+Researchers don't understand the code that's analysing their data or running their experiments -> can't say for sure that your research results are correct. We lose the understanding of how research software works.
+
+More generally, in outsourcing tasks to AI we don't have use our brains for them and we lose the ability to do these tasks for ourselves. This is scary -> especially working in research we should value our ability to think critically and deeply.  Example of using google maps to navigate. 
 
 ## Looking Ahead: Developing Your AI Literacy
 
@@ -237,7 +254,7 @@ This course has given you a map of the AI landscape and the vocabulary to naviga
 
 A few practical suggestions for developing your AI literacy beyond this course:
 
-- **Follow your institution's guidance.** Most universities and research funders are actively developing AI use policies. These are the most directly relevant to your work, and they will continue to evolve.
+- **Follow your institution's guidance.** Most universities and research funders are actively developing AI use policies. These are the most directly relevant to your work, and they will continue to evolve. For example, for researchers at the University of Southampton, point 3.8 of the [Ethics Policy for Research at University of Southampton](https://www.southampton.ac.uk/about/governance/regulations-policies/policies/ethics) shows the Principle of ethical conduct of research when using Artificial Intelligence (AI) and students should also consult guidance on [Using generative artificial intelligence during your studies ](https://www.southampton.ac.uk/about/governance/regulations-policies/policies/using-gen-ai-during-your-studies).
 - **Engage with your research community.** Methodological norms for AI use in research are being worked out discipline by discipline. Engaging with debates in your own field's journals and conferences is more valuable than generic AI news.
 - **Start small and validate.** If you are considering integrating an AI tool into your workflow, start with a small, low-stakes task and validate the outputs carefully before scaling up.
 - **Be transparent.** When in doubt about how much to disclose about your use of AI, err on the side of transparency. The research community is better served by over-disclosure than by the opposite.
@@ -260,3 +277,5 @@ A few practical suggestions for developing your AI literacy beyond this course:
 - [de Vries-Gao, A. (2025). The carbon and water footprints of data centers and what this could mean for artificial intelligence. Patterns, 6, 101430.](https://doi.org/10.1016/j.patter.2025.101430)
 - [Li, P., Yang, J., Islam, M. A., & Ren, S. (2023). Making AI less "thirsty": Uncovering and addressing the secret water footprint of AI models. Communications of the ACM.](https://dl.acm.org/doi/10.1145/3724499)
 - [Luccioni, A. S., Jernite, Y., & Strubell, E. (2024). Power hungry processing: Watts driving the cost of AI deployment. Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency, 85–99](https://doi.org/10.1145/3630106.3658542)
+- [Lannelongue, L., Grealey, J., Inouye, M., Green Algorithms: Quantifying the Carbon Footprint of Computation. Adv. Sci. 2021, 2100707. https://doi.org/10.1002/advs.202100707](https://calculator.green-algorithms.org/)
+- [Electricity Maps](https://app.electricitymaps.com/map/live/fifteen_minutes)
