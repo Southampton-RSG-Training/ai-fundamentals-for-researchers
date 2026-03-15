@@ -10,7 +10,7 @@ exercises: 5 # exercise time in minutes
 - What are supervised, unsupervised, and reinforcement learning?
 - What does it mean to train and test a model?
 - What is overfitting, and why does it matter?
-- When is machine learning the right choice — and when is it not?
+- When is machine learning the right choice and when is it not?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -18,7 +18,6 @@ exercises: 5 # exercise time in minutes
 
 - Explain what machine learning is and how it differs from traditional programming.
 - Distinguish between supervised, unsupervised, and reinforcement learning.
-- Identify the main types of ML task: regression, classification, and clustering.
 - Describe the concept of training, testing, and overfitting in plain language.
 - Explain the difference between interpretable and black box models, and why it matters.
 - Recognise when a traditional statistical approach may be more appropriate than machine learning.
