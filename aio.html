@@ -714,8 +714,8 @@ appropriate than machine learning.</li>
 <section><h2 class="section-heading" id="from-rules-to-learning">From Rules to Learning<a class="anchor" aria-label="anchor" href="#from-rules-to-learning"></a>
 </h2>
 <hr class="half-width">
-<p>In traditional programming, a human writes explicit rules and the
-computer follows them.</p>
+<p>In traditional programming, a human writes explicit rules for some
+data,the computer follows them and provides some output.</p>
 <p>For example, a researcher studying whether a scientific paper is
 relevant to a systematic review on arthritis interventions might write
 rules such as:</p>
@@ -740,8 +740,8 @@ detailed rules, we provide:</p>
 <ul>
 <li>
 <strong>Data</strong> - a large collection of abstracts</li>
-<li>The desired <strong>outputs</strong> - human judgements about
-whether papers are relevant</li>
+<li>The desired <strong>outputs</strong> for a subset of the data -
+human judgements about whether papers are relevant</li>
 </ul>
 <p>The system then learns the patterns that connect the two.</p>
 <p>The logic becomes:</p>
@@ -944,25 +944,6 @@ They may perform extremely well on familiar questions, but struggle when
 the questions are phrased differently.</p>
 <p>A well-trained model should capture underlying structure, not just
 memorise details.</p>
-</div>
-<div class="section level3">
-<h3 id="measuring-performance">Measuring Performance<a class="anchor" aria-label="anchor" href="#measuring-performance"></a>
-</h3>
-<p>Several metrics are used to evaluate model quality.</p>
-<ul>
-<li>
-<strong>Accuracy</strong> measures the proportion of correct
-predictions overall.</li>
-<li>
-<strong>Precision</strong> measures how many predicted positive
-cases were actually positive.</li>
-<li>
-<strong>Recall</strong> measures how many actual positive cases were
-correctly identified.</li>
-</ul>
-<p>Different research contexts prioritise different metrics. In medical
-screening, for example, recall may be especially important to avoid
-missing true cases.</p>
 <div id="demonstration-teachable-machine" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1021,7 +1002,7 @@ understand the rationale</li>
 <li>Large volumes of complex data (images, audio) make interpretability
 impractical</li>
 </ul>
-<figure><img src="fig/blackbox.svg" alt="diagram showing inputs to a black box producing unexplainable outputs" class="figure mx-auto d-block"><div class="figcaption">Original: Krauss Vector: Pduive23, CC BY-SA 4.0,
+<figure><img src="fig/blackbox.svg" alt="diagram showing inputs to a black box producing unexplainable outputs" class="figure mx-auto d-block"><div class="figcaption">Original: Krauss.Vector: Pduive23, CC BY-SA 4.0,
 via Wikimedia Commons</div>
 </figure></section><section><h2 class="section-heading" id="when-not-to-use-machine-learning">When Not to Use Machine Learning<a class="anchor" aria-label="anchor" href="#when-not-to-use-machine-learning"></a>
 </h2>
@@ -1082,25 +1063,6 @@ performs adequately.</li>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="what-can-go-wrong">What Can Go Wrong?<a class="anchor" aria-label="anchor" href="#what-can-go-wrong"></a>
-</h2>
-<hr class="half-width">
-<p>Machine learning systems are only as good as the data they are
-trained on.</p>
-<p>A common phrase is “garbage in, garbage out”. If the training data is
-incomplete, biased, or unrepresentative, the resulting model will
-reflect those limitations.</p>
-<p>Research-relevant examples include:</p>
-<ul>
-<li>A text analysis model trained only on English-language literature
-will struggle with multilingual texts.</li>
-<li>A medical diagnostic model trained predominantly on one demographic
-group may perform poorly for others.</li>
-</ul>
-<p>These issues are not purely technical, they’re ethically and
-societally important because they influence who benefits from AI systems
-and who may be disadvantaged by them. We will examine these ethical and
-societal questions in greater depth in <a href="5-ai-in-research.html">Episode 5</a>.</p>
 <div id="choosing-the-right-approach" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1156,6 +1118,25 @@ methods.</p></li>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="what-can-go-wrong">What Can Go Wrong?<a class="anchor" aria-label="anchor" href="#what-can-go-wrong"></a>
+</h2>
+<hr class="half-width">
+<p>Machine learning systems are only as good as the data they are
+trained on.</p>
+<p>A common phrase is “garbage in, garbage out”. If the training data is
+incomplete, biased, or unrepresentative, the resulting model will
+reflect those limitations.</p>
+<p>Research-relevant examples include:</p>
+<ul>
+<li>A text analysis model trained only on English-language literature
+will struggle with multilingual texts.</li>
+<li>A medical diagnostic model trained predominantly on one demographic
+group may perform poorly for others.</li>
+</ul>
+<p>These issues are not purely technical, they’re ethically and
+societally important because they influence who benefits from AI systems
+and who may be disadvantaged by them. We will examine these ethical and
+societal questions in greater depth in <a href="5-ai-in-research.html">Episode 5</a>.</p>
 </section><section><h2 class="section-heading" id="how-can-i-train-my-own-machine-learning-model">How Can I Train My Own Machine Learning Model?<a class="anchor" aria-label="anchor" href="#how-can-i-train-my-own-machine-learning-model"></a>
 </h2>
 <hr class="half-width">
@@ -1222,9 +1203,6 @@ following only hand-written rules.</li>
 <li>Supervised learning uses labelled examples, unsupervised learning
 finds structure without labels, and reinforcement learning learns
 through rewards.</li>
-<li>The main task types are regression (predicting a continuous value),
-classification (predicting a category), and clustering (grouping
-unlabelled data).</li>
 <li>Training and test sets help us assess whether a model generalises to
 new data.</li>
 <li>Overfitting occurs when a model memorises training data instead of
@@ -1253,6 +1231,12 @@ Schoot, R., De Bruin, J., Schram, R., Zahedi, P., De Boer, J., Weijdema,
 F., … &amp; Oberski, D. L. (2021). An open source machine learning
 framework for efficient and transparent systematic reviews. Nature
 machine intelligence, 3(2), 125-133.</a></li>
+<li><a href="https://teachablemachine.withgoogle.com/" class="external-link">Teachable
+Machine</a></li>
+<li><a href="https://www.geeksforgeeks.org/machine-learning/introduction-machine-learning/" class="external-link">geeksforgeeks
+Introduction to Machine Learning</a></li>
+<li><a href="https://www.freecodecamp.org/news/what-is-overfitting-machine-learning/" class="external-link">Overfitting
+in Machine Learning</a></li>
 </ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
@@ -1388,7 +1372,7 @@ already in use?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Examples may include:</p>
 <ul>
@@ -2712,7 +2696,7 @@ Where should we draw the line?</p>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="benefits-justify-costs">Benefits Justify Costs<a class="anchor" aria-label="anchor" href="#benefits-justify-costs"></a>
@@ -2925,7 +2909,7 @@ like?</li>
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Information that is missing:</strong></p>
 <ul>
