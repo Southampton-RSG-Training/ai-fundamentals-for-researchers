@@ -55,19 +55,6 @@ The logic becomes:
 
 In other words, the computer infers the rules for itself.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
-
-### AI for Systematic Reviews
-
-Tools such as [ASReview](https://asreview.nl/) use machine learning to accelerate the title and abstract screening stage of systematic reviews.
-
-[ASReview](https://asreview.nl/) is an open-source machine learning tool designed specifically to assist researchers with the title and abstract screening stage of systematic reviews. Rather than screening papers in a fixed order, ASReview learns from each inclusion or exclusion decision the reviewer makes and continuously re-ranks the remaining papers, surfacing the most likely relevant records first. 
-
-This means the most important papers tend to be found early, and screening can stop before every record has been manually checked.
-
-ASReview is free to use, runs in a web browser, requires no programming knowledge, and produces a full log of every decision made during screening, which can be reported in a methods section. It is described in a peer-reviewed paper in Nature Machine Intelligence [(van de Schoot et al., 2021)](https://www.nature.com/articles/s42256-020-00287-7) and has been used in fields including medicine, psychology, and environmental science.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Machine Learning Analogy
 
