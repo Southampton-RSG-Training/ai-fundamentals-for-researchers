@@ -34,8 +34,6 @@ The goal of this episode is not to tell you whether to use AI in your research, 
 
 AI techniques are being applied across virtually every research domain. The examples below are illustrative rather than exhaustive.  The aim of this episode is to help you begin connecting the technical ideas from earlier episodes to work that may be relevant to your own field.
 
-[Examples from research for each]
-
 ### Working with Text
 
 Text is one of the most abundant forms of data in research, and AI tools for working with text are among the most mature. Researchers are using LLMs and related tools to:
@@ -45,6 +43,20 @@ Text is one of the most abundant forms of data in research, and AI tools for wor
 - Draft and revise written outputs such as grant applications, reports, and manuscripts.
 - Extract structured information such as dates, entities, or relationships from unstructured documents such as historical records or clinical notes.
 - Analyse sentiment or tone across large amounts of text, such as social media data or policy documents.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+### AI for Systematic Reviews
+
+Tools such as [ASReview](https://asreview.nl/) use machine learning to accelerate the title and abstract screening stage of systematic reviews.
+
+[ASReview](https://asreview.nl/) is an open-source machine learning tool designed specifically to assist researchers with the title and abstract screening stage of systematic reviews. Rather than screening papers in a fixed order, ASReview learns from each inclusion or exclusion decision the reviewer makes and continuously re-ranks the remaining papers, surfacing the most likely relevant records first. 
+
+This means the most important papers tend to be found early, and screening can stop before every record has been manually checked.
+
+ASReview is free to use, runs in a web browser, requires no programming knowledge, and produces a full log of every decision made during screening, which can be reported in a methods section. It is described in a peer-reviewed paper in Nature Machine Intelligence [(van de Schoot et al., 2021)](https://www.nature.com/articles/s42256-020-00287-7) and has been used in fields including medicine, psychology, and environmental science.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ### Analysing Images and Signals
@@ -56,7 +68,25 @@ Convolutional neural networks (introduced in [Episode 3](3-deep-learning.md)) ha
 - Supporting diagnostic imaging in clinical settings by identifying tumours, fractures, or lesions.
 - Recognising patterns in audio signals such as birdsong, seismic activity, or cardiac rhythms.
 
-### Working with Tabular and Structured Data
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+### Machine Learning to Identify Bird Species from Birdsong Features  
+
+Researchers used machine learning methods to investigate which acoustic features of birdsong are most helpful for species identification ([Rivera et al., 2023](https://www.nature.com/articles/s41598-023-33825-5))
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+### Filling Gaps and Removing Clouds from Remote Sensing Images
+
+Researchers used neural networks to reconstruct missing areas in images from satellite remote sensing ([Wang et al., 2024](https://www.sciencedirect.com/science/article/abs/pii/S0034425724005728?via%3Dihub)). These images are a very important tool for observing the changes to the Earth's land surface. For example, they are used to assess the impacts of climate change on ecosystems and monitoring the responses from plants.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+### Working with Structured Quantitative Data
 
 Supervised machine learning methods are highly effective for analysing structured datasets of the kind that appear throughout quantitative research.  For example:
 
@@ -65,9 +95,17 @@ Supervised machine learning methods are highly effective for analysing structure
 - Classifying observations in ecology.
 - Building recommendation systems for research infrastructure, such as suggesting reviewers for journal submissions.
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
+
+### Detecting and Predicting Fraud in Credit Card Transactions
+
+Researchers studied the performance of three types of machine learning in detecting and predicting fraudulent credit card transactions.  One machine learning model (random forest) was 96% accurate. These models will hopefully be used to protect credit card holders from fraud ([Afriyie et al., 2023](https://www.sciencedirect.com/science/article/pii/S2772662223000036?via%3Dihub))
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ### Code and Data Analysis Assistance
 
-LLMs have rapidly become practical tools for researchers who work with data by writing code. AI coding assistants can write, explain, and debug code in languages such as Python and R, making computational methods more accessible to researchers who do not have a formal programming background. This can be incredibly useful but you should be cautious about using AI-written code in your research if you don't understand it. Due to the limitations in LLMs, AI generated code isn't always correct! 
+LLMs have rapidly become practical tools for researchers who work with data by writing code. AI coding assistants can write, explain, and debug code in languages such as Python and R, making computational methods more accessible to researchers who do not have a formal programming background. This can be incredibly useful but you should be cautious about using AI-written code in your research if you don't understand it. Due to the limitations in LLMs, AI generated code isn't always correct! There is currently limited peer-reviewed literature specifically evaluating LLM-generated research code in production workflows, most evidence is observational or anecdotal. 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 
@@ -161,8 +199,16 @@ AI models do not arrive in the world as neutral tools. They are trained on data 
 
 The consequences can be serious. Models used for clinical risk prediction have been shown to perform worse on patients from groups underrepresented in the training data. Automated tools used in hiring or admissions have reproduced patterns of discrimination from historical decisions.
 
-Example of bias in AI tools
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 
+### Racial Bias in Health Algorithms
+
+Researchers found evidence of racial bias in one of the most widely used algorithms in the US health care system.
+
+For patients assigned the same level of risk by the algorithm, Black patients were sicker than White patients. The authors estimated that this racial bias reduces the number of Black patients identified for extra care by more than half. This bias occurs because the algorithm uses health costs as a proxy for health needs. Less money is spent on Black patients who have the same level of need, and the algorithm thus falsely concludes that Black patients are healthier than equally sick White patients. Reformulating the algorithm so that it no longer uses costs as a proxy for needs eliminates the racial bias in predicting who needs extra care ([Obermeyer et al., 2019](https://www.science.org/doi/10.1126/science.aax2342)).
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Transparency and Reproducibility
 
@@ -197,9 +243,9 @@ You should check the current policies of your target journal or funder, and your
 
 ::::::::::::::::::::::::::::::::::::::::: challenge
 
-### Challenge: The Critical Reviewer
+### Critically Reviewing AI Use in Qualitative Research
 
-You are reviewing a manuscript submitted to your field's leading journal. In the methods section, the authors write:
+**Scenario**: You are reviewing a manuscript submitted to your field's leading journal. In the methods section, the authors write:
 
 > *"Qualitative thematic analysis of interview transcripts was supported by an AI language model, which was used to generate initial codes. These codes were then reviewed and refined by the research team. The AI tool assisted with the analysis of all 47 transcripts."*
 
@@ -240,13 +286,16 @@ Discuss the following questions:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Cognitive Offloading and De-skilling [TODO]
+## Cognitive Offloading and De-skilling with Generative AI
 
-The dangers of using AI for research tasks.  Use info from coding with AI.
+AI tools are can be incredibly useful for many research tasks but there is a risk that comes with using them that is easy to overlook: the less we do something ourselves, the less capable we become at doing it.
+This phenomenon has been described cognitive offloading. It is not a new issues, for example, using a calculator means we practise mental arithmetic less, and using GPS navigation means we build less of an internal sense of geography. Sometimes this is a reasonable trade-off, but in research, where the ability to think carefully, critically, and independently is central to what you do, its worth considering whether the trade-offs are worth it. 
 
-Researchers don't understand the code that's analysing their data or running their experiments -> can't say for sure that your research results are correct. We lose the understanding of how research software works.
+One example, relevant to anyone who develops or uses research software, is the use of AI coding assistants to generate code for experiments, simulations or data analysis.  If you're using code to process your data or run your analyses, that code is part of your methodology. If you did not write it and do not fully understand it, you cannot be certain it is doing what you think it is doing and therefore you cannot be fully confident in your results. AI-generated code can contain subtle errors that produce outputs which look plausible but are wrong. A researcher who understands the code can catch these errors but a researcher who doesn't understand the code may not, and these errors could affect your research results.
 
-More generally, in outsourcing tasks to AI we don't have use our brains for them and we lose the ability to do these tasks for ourselves. This is scary -> especially working in research we should value our ability to think critically and deeply.  Example of using google maps to navigate. 
+More generally, every time we outsource a cognitive task to an AI, we don't get the practice at doing it ourselves. Over time, this can make us lose the underlying skill. A researcher who always asks an LLM to summarise papers may gradually lose the habit of reading them carefully. A researcher who always asks an LLM to draft text may find their own writing voice harder to find. 
+
+Research depends on deep and independent thinking.  To do good research, researchers need to sit with a difficult problem, reason through it and arrive at your own conclusions.  Using AI thoughtfully involves deliberate decisions about which tasks to outsource to AI and which to do yourself, not because an AI couldn't do it, but because it a part of your human intelligence that you'd like to protect. 
 
 ## Looking Ahead: Developing Your AI Literacy
 
@@ -268,14 +317,19 @@ A few practical suggestions for developing your AI literacy beyond this course:
 - Transparency in methods is essential: report which tools were used, at what version, for what purpose, and how outputs were validated.
 - Privacy and data governance must be considered before inputting any sensitive or personal data into an AI tool.
 - Authorship, attribution, and environmental cost are emerging ethical considerations that researchers should engage with actively.
+- Consider the impacts on human intelligence when outsourcing tasks to AI
 - Developing AI literacy is an ongoing practice: follow institutional guidance, read model documentation, and engage with methodological debates in your own field.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## References
 
+- [Edwards, S. V., Reeve, A. H., & Jonsson, J. E. (2023). Machine learning classification of birdsong syllables from multiple species. Scientific Reports, 13, 7824.](https://doi.org/10.1038/s41598-023-33825-5)
+- [Debus, M., Appel, M., Häfner, S., Sabourin, G., & Mermoz, S. (2025). Identification of deforestation drivers in Cameroon using deep learning with Landsat-8 satellite imagery. Remote Sensing of Environment, 317, 114546.](https://doi.org/10.1016/j.rse.2024.114546)
+- [Afriyie, J. K., Tawiah, K., Pels, W. A., Addai-Henne, S., Dwamena, H. A., Owiredu, E. O., Ayeh, S. A., & Eshun, J. (2023). A supervised machine learning algorithm for detecting and predicting fraud in credit card transactions. Decision Analytics Journal, 6, 100163.](https://doi.org/10.1016/j.dajour.2023.100163)
 - [de Vries-Gao, A. (2025). The carbon and water footprints of data centers and what this could mean for artificial intelligence. Patterns, 6, 101430.](https://doi.org/10.1016/j.patter.2025.101430)
 - [Li, P., Yang, J., Islam, M. A., & Ren, S. (2023). Making AI less "thirsty": Uncovering and addressing the secret water footprint of AI models. Communications of the ACM.](https://dl.acm.org/doi/10.1145/3724499)
 - [Luccioni, A. S., Jernite, Y., & Strubell, E. (2024). Power hungry processing: Watts driving the cost of AI deployment. Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency, 85–99](https://doi.org/10.1145/3630106.3658542)
 - [Lannelongue, L., Grealey, J., Inouye, M., Green Algorithms: Quantifying the Carbon Footprint of Computation. Adv. Sci. 2021, 2100707. https://doi.org/10.1002/advs.202100707](https://calculator.green-algorithms.org/)
 - [Electricity Maps](https://app.electricitymaps.com/map/live/fifteen_minutes)
+- [Obermeyer, Z., Powers, B., Vogeli, C., & Mullainathan, S. (2019). Dissecting racial bias in an algorithm used to manage the health of populations. Science, 366(6464), 447-453.](https://www.science.org/doi/10.1126/science.aax2342)
