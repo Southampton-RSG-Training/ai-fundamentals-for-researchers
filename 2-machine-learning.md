@@ -290,12 +290,10 @@ If the machine learning component is central to your research, working with a Re
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Machine learning systems learn patterns from data rather than following only hand-written rules.
-- Supervised learning uses labelled examples, unsupervised learning finds structure without labels, and reinforcement learning learns through rewards.
+- Machine learning systems learn patterns from data rather than following rules.
 - Training and test sets help us assess whether a model generalises to new data.
-- Overfitting occurs when a model memorises training data instead of learning general patterns.
-- Interpretable models make their reasoning transparent; black box models do not — the right choice depends on whether explanation or prediction is the primary goal.
-- Traditional statistical methods are often more appropriate than machine learning when the goal is hypothesis testing, effect estimation, or causal inference, particularly with small datasets.
+- Interpretable models make their reasoning transparent whereas black box models do not.
+- Traditional statistical methods are often more appropriate than machine learning when the goal is explanation rather than prediction, particularly with small datasets.
 - The quality and representativeness of training data strongly influence model performance and fairness.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
