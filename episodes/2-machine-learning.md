@@ -27,7 +27,7 @@ exercises: 5 # exercise time in minutes
 
 ## From Rules to Learning
 
-In traditional programming, a human writes explicit rules and the computer follows them.
+In traditional programming, a human writes explicit rules for some data,the computer follows them and provides some output.
 
 For example, a researcher studying whether a scientific paper is relevant to a systematic review on arthritis interventions might write rules such as:
 
@@ -45,7 +45,7 @@ This works reasonably well when the criteria are clear and consistent. However, 
 Machine learning takes a different approach. Instead of writing detailed rules, we provide:
 
 - **Data** - a large collection of abstracts
-- The desired **outputs** - human judgements about whether papers are relevant
+- The desired **outputs** for a subset of the data - human judgements about whether papers are relevant
 
 The system then learns the patterns that connect the two.
 
@@ -164,16 +164,6 @@ An analogy is a student who memorises past exam papers word for word. They may p
 
 A well-trained model should capture underlying structure, not just memorise details.
 
-### Measuring Performance
-
-Several metrics are used to evaluate model quality.
-
-- **Accuracy** measures the proportion of correct predictions overall.
-- **Precision** measures how many predicted positive cases were actually positive.
-- **Recall** measures how many actual positive cases were correctly identified.
-
-Different research contexts prioritise different metrics. In medical screening, for example, recall may be especially important to avoid missing true cases.
-
 ::::::::::::::::::::::::::::::::::::: callout
 
 ## Demonstration: Teachable Machine
@@ -209,7 +199,7 @@ A black box model may be acceptable when:
 - Outputs will be validated independently before acting on them
 - Large volumes of complex data (images, audio) make interpretability impractical
 
-![Original:  Krauss Vector:  Pduive23, CC BY-SA 4.0, via Wikimedia Commons](fig/blackbox.svg){alt="diagram showing inputs to a black box producing unexplainable outputs"}
+![Original:  Krauss.Vector:  Pduive23, CC BY-SA 4.0, via Wikimedia Commons](fig/blackbox.svg){alt="diagram showing inputs to a black box producing unexplainable outputs"}
 
 
 ## When Not to Use Machine Learning
@@ -239,21 +229,6 @@ Many research workflows combine a statistical model to test a hypothesis, and th
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-## What Can Go Wrong?
-
-Machine learning systems are only as good as the data they are trained on.
-
-A common phrase is "garbage in, garbage out". If the training data is incomplete, biased, or unrepresentative, the resulting model will reflect those limitations.
-
-Research-relevant examples include:
-
-- A text analysis model trained only on English-language literature will struggle with multilingual texts.
-- A medical diagnostic model trained predominantly on one demographic group may perform poorly for others.
-
-These issues are not purely technical, they're ethically and societally important because they influence who benefits from AI systems and who may be disadvantaged by them. We will examine these ethical and societal questions in greater depth in [Episode 5](5-ai-in-research.md).
-
-
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Choosing the Right Approach
@@ -275,6 +250,20 @@ For each research scenario below, decide whether you would lean towards a tradit
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+## What Can Go Wrong?
+
+Machine learning systems are only as good as the data they are trained on.
+
+A common phrase is "garbage in, garbage out". If the training data is incomplete, biased, or unrepresentative, the resulting model will reflect those limitations.
+
+Research-relevant examples include:
+
+- A text analysis model trained only on English-language literature will struggle with multilingual texts.
+- A medical diagnostic model trained predominantly on one demographic group may perform poorly for others.
+
+These issues are not purely technical, they're ethically and societally important because they influence who benefits from AI systems and who may be disadvantaged by them. We will examine these ethical and societal questions in greater depth in [Episode 5](5-ai-in-research.md).
 
 
 ## How Can I Train My Own Machine Learning Model?
@@ -303,7 +292,6 @@ If the machine learning component is central to your research, working with a Re
 
 - Machine learning systems learn patterns from data rather than following only hand-written rules.
 - Supervised learning uses labelled examples, unsupervised learning finds structure without labels, and reinforcement learning learns through rewards.
-- The main task types are regression (predicting a continuous value), classification (predicting a category), and clustering (grouping unlabelled data).
 - Training and test sets help us assess whether a model generalises to new data.
 - Overfitting occurs when a model memorises training data instead of learning general patterns.
 - Interpretable models make their reasoning transparent; black box models do not — the right choice depends on whether explanation or prediction is the primary goal.
@@ -316,3 +304,7 @@ If the machine learning component is central to your research, working with a Re
 
 - [scikit-learn algorithm cheat sheet](https://scikit-learn.org/stable/machine_learning_map.html)
 - [Van De Schoot, R., De Bruin, J., Schram, R., Zahedi, P., De Boer, J., Weijdema, F., ... & Oberski, D. L. (2021). An open source machine learning framework for efficient and transparent systematic reviews. Nature machine intelligence, 3(2), 125-133.](https://www.nature.com/articles/s42256-020-00287-7)
+- [Teachable Machine](https://teachablemachine.withgoogle.com/)
+- [geeksforgeeks Introduction to Machine Learning](https://www.geeksforgeeks.org/machine-learning/introduction-machine-learning/)
+- [Overfitting in Machine Learning](https://www.freecodecamp.org/news/what-is-overfitting-machine-learning/)
+
