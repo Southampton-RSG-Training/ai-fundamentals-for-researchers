@@ -128,9 +128,6 @@ The environmental cost of AI is larger and more complex than most users apprecia
 ![Google Data Center, The Dalles, Oregon by Visitor7, CC BY-SA 3.0, via Wikimedia Commons](fig/google_data_centre.jpg){alt="Google Data Center, The Dalles, Oregon"}
 
 
-
-![Cern Data Centre by Hugovanmeijeren, CC BY-SA 3.0, via Wikimedia Commons](fig/cern_data_centre.jpg){alt="The CERN datacenter with World Wide Web and Mail servers. The rear of the equipment racks are exposed to the room, indicating cold aisle containment is being practiced."}
-
 Environmental costs accumulate across the full lifecycle of an AI model. This includes the water and carbon used to manufacture the specialist chips required to run the AI; the intensive one-off cost of training the model; and the ongoing costs of inference (the cost every time a query is run).
 
 **Lifetime costs**: Embodied carbon (the carbon produced from manufacturing the hardware) can account for a significant fraction of the overall environmental cost of the model, but it is challenging to calculate and seldom reported. 

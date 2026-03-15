@@ -38,6 +38,8 @@ An artificial neuron works in a simplified mathematical way:
 - If the result is large enough, the neuron produces an output. 
 - That output is then sent to the next layer.
 
+![A simplified diagram of an artificial neural network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons](fig/artificial_neural_network.svg){alt='Artificial neural network with layer coloring'}
+
 Both biological and artificial neurons act as filters that combine many incoming signals, weighted by importance, and decide whether the combined signal should be passed to the next layer and, if so, how strongly the it should be passed on. 
 
 The differences, however, are just as important. A biological neuron is a very complex living cell embedded in a chemical environment. It communicates using electrochemical pulses, it can form and prune thousands of connections dynamically, and it operates within a brain of roughly 86 billion neurons shaped by millions of years of evolution. On the other hand, an artificial neuron is an arithmetic operation of a weighted sum followed by a mathematical function. The weights are adjusted during training by an algorithm, not by biological processes. Modern neural networks, despite their name, are better understood as powerful pattern-matching mathematical models than as simulations of the brain.
@@ -45,7 +47,7 @@ The differences, however, are just as important. A biological neuron is a very c
 A single artificial neuron is rarely useful on its own. But, if you arrange many neurons together, you get a layer, and if you stack multiple layers you get a neural network.  It is the depth of the layer stacking that gives deep learning its name and its power.
 
 
-## Layers, Depth and Feature Learning
+### Layers and Depth
 
 A neural network is typically organised into three types of layers:
 
@@ -71,14 +73,40 @@ This hierarchical pattern detection is one of the main strengths of deep learnin
 
 The word **deep** simply refers to the number of hidden layers. A shallow model might have one hidden layer. A deep model may have dozens or even hundreds of layers.
 
-![A simplified diagram of an artificial neural network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons](fig/artificial_neural_network.svg){alt='Artificial neural network with layer coloring'}
+## Types of Neural Network
+
+There are many neural network architectures, each suited to particular tasks.  Just a few common examples are discussed below.  
+
+### Convolutional Neural Networks (CNNs)
+
+CNNs are particularly effective for image and video analysis. They use specialised layers that focus on local patterns, such as edges and textures. Image classification tools  are built on this type of architecture.
+
+Some examples of CNNs being used for image analysis in research include:
+
+- Analysing satellite imagery to detect environmental change.
+- Identifying cell structures in microscopy images.
+- Digitising and classifying historical documents.
+- Transcribing and analysing handwritten documents
+
+### Recurrent Neural Networks (RNNs)
+
+RNNs were designed to handle sequential data, such as time-series measurements or text. They process information step by step, maintaining a form of internal memory. In many applications, they have now been replaced by more advanced architectures.
+
+### Transformers
+
+Transformers are the foundation of most modern natural language processing systems. They are especially effective at modelling relationships within sequences of text and form the basis of contemporary large language models, which we will examine in the next episode.
+ 
+
+To read more about different neural network architectures have a look at the [Neural Network Zoo](https://www.asimovinstitute.org/neural-network-zoo/), a cheat sheet for neural network architectures.
 
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Discussion
+## Identifying Deep Learning in Research
 
-Deep learning has transformed image recognition and, in some contexts, now matches or exceeds human performance. Can you identify a research application in your field where this capability is useful or already in use?
+Deep learning has transformed image recognition and, in some contexts, now matches or exceeds human performance.
+
+Can you identify a research application in your field where deep learning for image recognition could be useful or is already in use?
 
 :::::::::::::::::::::::: solution 
 
@@ -93,6 +121,7 @@ Examples may include:
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## Training a Neural Network
 
@@ -116,7 +145,7 @@ This process is repeated across many examples, often millions, and over many pas
 
 You can experiment with the process of training a neural network interactively using tools such as [Tensorflow Playground](https://playground.tensorflow.org).
 
-The main task in TensorFlow Playground is classification: the network is trying to learn to separate two groups of data points — shown as orange and blue dots — by finding a boundary between them.
+The main task in TensorFlow Playground is classification: the network is trying to learn to separate two groups of data points (shown as orange and blue dots) by finding a boundary between them.
 
 ### What the colours mean
 
@@ -146,26 +175,6 @@ Modern neural networks often contain millions or even billions of adjustable par
 - **Iterating many thousands of times.** Models may require tens of thousands of passes through the training data to converge.
 
 This requires significant computational resources, often specialised hardware. Without large datasets and substantial computing power, deep models tend to perform poorly.
-
-
-## Types of Deep Learning
-
-There are many neural network architectures, each suited to particular tasks.  Just a few common examples are discussed below.  
-
-### Convolutional Neural Networks (CNNs)
-
-CNNs are particularly effective for image and video analysis. They use specialised layers that focus on local patterns, such as edges and textures. Image classification tools  are built on this type of architecture.
-
-### Recurrent Neural Networks (RNNs)
-
-RNNs were designed to handle sequential data, such as time-series measurements or text. They process information step by step, maintaining a form of internal memory. In many applications, they have now been replaced by more advanced architectures.
-
-### Transformers
-
-Transformers are the foundation of most modern natural language processing systems. They are especially effective at modelling relationships within sequences of text and form the basis of contemporary large language models, which we will examine in the next episode.
- 
-
-To read more about different neural network architectures have a look at the [Neural Network Zoo](https://www.asimovinstitute.org/neural-network-zoo/), a cheat sheet for neural network architectures.
 
 
 ## How can I Train My Own Deep Learning Model?
