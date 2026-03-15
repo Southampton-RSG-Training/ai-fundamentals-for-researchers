@@ -15,7 +15,7 @@ exercises: 2 # exercise time in minutes
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Give a working definition of Artificial Intelligence.
-- Explain the difference between narrow AI and general AI.
+- Explain a test for machine intelligence.
 - Describe how AI, machine learning, deep learning, and LLMs relate to each other using a nested diagram.
 
 
@@ -82,17 +82,8 @@ A 2025 pre-print reports the performance of AI systems including ELIZA and GPT-4
 
 This result illustrates how capable current systems have become at specific tasks. However, passing a five-minute conversation test is not the same as general intelligence. GPT-4.5 has been trained on an enormous quantity of human-written text, which makes it exceptionally good at producing human-like language and this is exactly what the Turing test measures. It is, in a sense, the task it was most directly prepared for.
 
-It's important that we also consider what the same system cannot do. It cannot walk into an unfamiliar laboratory and figure out how the equipment works. It cannot notice that a colleague seems stressed and decide whether to ask about it. It cannot read a paper, recognise that the methodology is flawed, and devise a better approach. These are things a competent human researcher does routinely, involving transferring knowledge and judgement flexibly across situations they have never seen before. No current AI system can do this reliably.
+It's important that we also consider what the same system cannot do. It cannot walk into an unfamiliar laboratory and figure out how the equipment works. It cannot notice that a colleague seems stressed and decide whether to ask about it. It cannot read a paper, recognise that the methodology is flawed, and devise a better approach. These are things a competent human researcher does routinely, involving transferring knowledge and judgement flexibly across situations they have never seen before. No current AI system has of the components we would associate with human intelligence.
 
-### Narrow AI vs General AI
-
-Some people categorise AI into narrow AI and general AI.
-
-**Narrow AI** (also called weak AI) refers to systems designed to perform a specific task. Examples include image classification, language translation, and recommendation systems. All AI systems in practical use today fall into this category. They can perform their assigned task very effectively, but they cannot transfer that ability broadly to unrelated domains.
-
-**General AI** (also called strong AI or Artificial General Intelligence) refers to a hypothetical system with human-level reasoning ability across a wide range of tasks. Such a system would be able to learn, reason, and adapt flexibly in unfamiliar situations. 
-
-General AI is the overarching goal of many AI companies. There is no consensus that any current system meets the definition of AGI, although the owners of AI companies including OpenAI and Anthropic claim that this is not far off.
 
 ## The AI Family Tree
 
@@ -141,7 +132,6 @@ The current wave of AI is therefore not the result of a single breakthrough, but
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Artificial Intelligence is a broad field concerned with systems that perform tasks associated with human intelligence.
-- All AI systems currently in use are narrow, task-specific systems.
 - Machine learning is a subset of AI that learns from data.
 - Deep learning is a subset of machine learning based on multi-layered neural networks.
 - Large language models are a specific type of deep learning model focused on language.
@@ -152,5 +142,6 @@ The current wave of AI is therefore not the result of a single breakthrough, but
 ## References
 
 - [Jones, C. R., & Bergen, B. K. (2025). Large language models pass the turing test. arXiv preprint arXiv:2503.23674.](https://arxiv.org/pdf/2503.23674)
-- [Artificial General Intelligence Wikipedia](https://en.wikipedia.org/wiki/Artificial_general_intelligence)
+- [Toosi, A., Bottino, A. G., Saboury, B., Siegel, E., & Rahmim, A. (2021). A brief history of AI: how to prevent another winter (a critical review). PET clinics, 16(4), 449-469.](https://arxiv.org/pdf/2109.01517)
+- [French, R. M. (2000). The Turing Test: the first 50 years. Trends in cognitive sciences, 4(3), 115-122.](https://link.springer.com/content/pdf/10.1023/A:1011288000451.pdf)
 
