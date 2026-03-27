@@ -5,7 +5,7 @@
 # ensuring that the author list and other fields remain accurate.
 
 cff-version: 1.2.0
-title: FIXME
+title: AI Fundamentals for Researchers
 message: >-
   Please cite this lesson using the information in this file
   when you refer to it in publications, and/or if you
@@ -13,10 +13,12 @@ message: >-
   training material.
 type: dataset
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Philippa
+    family-names: Broadbent
+  - given-names: Steve
+    family-names: Crouch
+  - given-names: Kamilla
+    family-names: Kopec-Harding
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  A beginner-level introduction to the landscape of Artificial Intelligence (AI) techniques. This course will help researchers build a foundational understanding of key areas within AI, including machine learning, deep learning, and large language models (LLMs) including what they are, how they work, and how they relate to one another within the broader AI ecosystem. Designed for researchers with little or no prior knowledge of AI, this course provides clear, accessible explanations without requiring any coding or statistics experience.
 license: CC-BY-4.0
