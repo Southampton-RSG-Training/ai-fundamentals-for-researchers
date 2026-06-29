@@ -244,24 +244,12 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         6. AI in Research
         </span>
-      </button>
+      
     </div><!--/div.accordion-header-->
-
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
-      <div class="accordion-body">
-        <ul><li><a href="#introduction">Introduction</a></li>
-<li><a href="#how-researchers-are-using-ai-today">How Researchers Are Using AI Today</a></li>
-<li><a href="#ethical-considerations">Ethical Considerations</a></li>
-<li><a href="#cognitive-offloading-and-de-skilling-with-generative-ai">Cognitive Offloading and De-skilling with Generative AI</a></li>
-<li><a href="#looking-ahead-developing-your-ai-literacy">Looking Ahead: Developing Your AI Literacy</a></li>
-<li><a href="#references">References</a></li>
-        </ul></div><!--/div.accordion-body-->
-    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -324,7 +312,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>AI in Research</h1>
-        <p>Last updated on 2026-03-15 |
+        <p>Last updated on 2026-06-29 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/5-ai-in-research.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -371,64 +359,51 @@ part of a research workflow.</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
-<hr class="half-width"><p>Throughout this course we have built up a conceptual map of the AI
+<div class="section level1">
+<h1 id="working-with-ai">Working with AI<a class="anchor" aria-label="anchor" href="#working-with-ai"></a></h1>
+<p>Throughout this course we have built up a conceptual map of the AI
 landscape: from the broad field of machine learning, to deep learning
 with neural networks, to the language capabilities of large language
 models. In this final episode we ask the question: “What can I do with
 AI in my research?”</p>
-<p>The goal of this episode is not to tell you whether to use AI in your
-research, but to allow you to make informed decisions when using AI
-including how to recognise opportunities, ask the right critical
-questions, and engage seriously with the ethical responsibilities that
-come with AI tools.</p>
-</section><section><h2 class="section-heading" id="how-researchers-are-using-ai-today">How Researchers Are Using AI Today<a class="anchor" aria-label="anchor" href="#how-researchers-are-using-ai-today"></a></h2>
-<hr class="half-width"><p>AI techniques are being applied across virtually every research
-domain. The examples below are illustrative rather than exhaustive. The
-aim of this episode is to help you begin connecting the technical ideas
-from earlier episodes to work that may be relevant to your own
-field.</p>
+<p>The aims of this episode are:</p>
+<ul><li>to connect the technical ideas from earlier episodes to work that
+may be relevant to your own field;</li>
+<li>to help you to make informed decisions when using AI including how
+to recognise opportunities, ask the right critical questions, and engage
+seriously with the ethical responsibilities that come with AI
+tools.</li>
+</ul><p>We can split AI in research into ‘Creating AI’ (i.e. building or
+fine-tuning your own models) and ‘Using AI’ (i.e. using existing AI
+tools for a research-related task).</p>
+<div class="section level2">
+<h2 id="creating-ai">Creating AI<a class="anchor" aria-label="anchor" href="#creating-ai"></a></h2>
 <div class="section level3">
-<h3 id="working-with-text">Working with Text<a class="anchor" aria-label="anchor" href="#working-with-text"></a></h3>
-<p>Text is one of the most abundant forms of data in research, and AI
-tools for working with text are among the most mature. Researchers are
-using LLMs and related tools to:</p>
-<ul><li>Assist with literature reviews by summarising large volumes of
-papers.</li>
-<li>Support qualitative coding of interview transcripts, field notes, or
-open-ended survey responses.</li>
-<li>Draft and revise written outputs such as grant applications,
-reports, and manuscripts.</li>
-<li>Extract structured information such as dates, entities, or
-relationships from unstructured documents such as historical records or
-clinical notes.</li>
-<li>Analyse sentiment or tone across large amounts of text, such as
-social media data or policy documents.</li>
-</ul><div id="ai-for-systematic-reviews" class="callout">
+<h3 id="working-with-structured-quantitative-data">Working with Structured Quantitative Data<a class="anchor" aria-label="anchor" href="#working-with-structured-quantitative-data"></a></h3>
+<p>Supervised machine learning methods are highly effective for
+analysing structured datasets of the kind that appear throughout
+quantitative research. For example:</p>
+<ul><li>Predicting outcomes in clinical trials or epidemiological
+studies.</li>
+<li>Detecting anomalies or fraud in financial datasets.</li>
+<li>Classifying observations in ecology.</li>
+<li>Building recommendation systems for research infrastructure, such as
+suggesting reviewers for journal submissions.</li>
+</ul><div id="detecting-and-predicting-fraud-in-credit-card-transactions" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="ai-for-systematic-reviews" class="callout-inner">
-<h3 class="callout-title">AI for Systematic Reviews</h3>
+<div id="detecting-and-predicting-fraud-in-credit-card-transactions" class="callout-inner">
+<h3 class="callout-title">Detecting and Predicting Fraud in Credit Card
+Transactions</h3>
 <div class="callout-content">
-<p>Tools such as <a href="https://asreview.nl/" class="external-link">ASReview</a> use machine
-learning to accelerate the title and abstract screening stage of
-systematic reviews.</p>
-<p><a href="https://asreview.nl/" class="external-link">ASReview</a> is an open-source machine
-learning tool designed specifically to assist researchers with the title
-and abstract screening stage of systematic reviews. Rather than
-screening papers in a fixed order, ASReview learns from each inclusion
-or exclusion decision the reviewer makes and continuously re-ranks the
-remaining papers, surfacing the most likely relevant records first.</p>
-<p>This means the most important papers tend to be found early, and
-screening can stop before every record has been manually checked.</p>
-<p>ASReview is free to use, runs in a web browser, requires no
-programming knowledge, and produces a full log of every decision made
-during screening, which can be reported in a methods section. It is
-described in a peer-reviewed paper in Nature Machine Intelligence <a href="https://www.nature.com/articles/s42256-020-00287-7" class="external-link">(van de Schoot
-et al., 2021)</a> and has been used in fields including medicine,
-psychology, and environmental science.</p>
+<p>Researchers studied the performance of three types of machine
+learning in detecting and predicting fraudulent credit card
+transactions. One machine learning model (random forest) was 96%
+accurate. These models will hopefully be used to protect credit card
+holders from fraud (<a href="https://www.sciencedirect.com/science/article/pii/S2772662223000036?via%3Dihub" class="external-link">Afriyie
+et al., 2023</a>)</p>
 </div>
 </div>
 </div>
@@ -480,32 +455,50 @@ responses from plants.</p>
 </div>
 </div>
 </div>
+</div>
+<div class="section level2">
+<h2 id="using-ai">Using AI<a class="anchor" aria-label="anchor" href="#using-ai"></a></h2>
 <div class="section level3">
-<h3 id="working-with-structured-quantitative-data">Working with Structured Quantitative Data<a class="anchor" aria-label="anchor" href="#working-with-structured-quantitative-data"></a></h3>
-<p>Supervised machine learning methods are highly effective for
-analysing structured datasets of the kind that appear throughout
-quantitative research. For example:</p>
-<ul><li>Predicting outcomes in clinical trials or epidemiological
-studies.</li>
-<li>Detecting anomalies or fraud in financial datasets.</li>
-<li>Classifying observations in ecology.</li>
-<li>Building recommendation systems for research infrastructure, such as
-suggesting reviewers for journal submissions.</li>
-</ul><div id="detecting-and-predicting-fraud-in-credit-card-transactions" class="callout">
+<h3 id="working-with-text">Working with Text<a class="anchor" aria-label="anchor" href="#working-with-text"></a></h3>
+<p>Text is one of the most abundant forms of data in research, and AI
+tools for working with text are among the most mature. Researchers are
+using LLMs and related tools to:</p>
+<ul><li>Assist with literature reviews by summarising large volumes of
+papers.</li>
+<li>Support qualitative coding of interview transcripts, field notes, or
+open-ended survey responses.</li>
+<li>Draft and revise written outputs such as grant applications,
+reports, and manuscripts.</li>
+<li>Extract structured information such as dates, entities, or
+relationships from unstructured documents such as historical records or
+clinical notes.</li>
+<li>Analyse sentiment or tone across large amounts of text, such as
+social media data or policy documents.</li>
+</ul><div id="ai-for-systematic-reviews" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="detecting-and-predicting-fraud-in-credit-card-transactions" class="callout-inner">
-<h3 class="callout-title">Detecting and Predicting Fraud in Credit Card
-Transactions</h3>
+<div id="ai-for-systematic-reviews" class="callout-inner">
+<h3 class="callout-title">AI for Systematic Reviews</h3>
 <div class="callout-content">
-<p>Researchers studied the performance of three types of machine
-learning in detecting and predicting fraudulent credit card
-transactions. One machine learning model (random forest) was 96%
-accurate. These models will hopefully be used to protect credit card
-holders from fraud (<a href="https://www.sciencedirect.com/science/article/pii/S2772662223000036?via%3Dihub" class="external-link">Afriyie
-et al., 2023</a>)</p>
+<p>Tools such as <a href="https://asreview.nl/" class="external-link">ASReview</a> use machine
+learning to accelerate the title and abstract screening stage of
+systematic reviews.</p>
+<p><a href="https://asreview.nl/" class="external-link">ASReview</a> is an open-source machine
+learning tool designed specifically to assist researchers with the title
+and abstract screening stage of systematic reviews. Rather than
+screening papers in a fixed order, ASReview learns from each inclusion
+or exclusion decision the reviewer makes and continuously re-ranks the
+remaining papers, surfacing the most likely relevant records first.</p>
+<p>This means the most important papers tend to be found early, and
+screening can stop before every record has been manually checked.</p>
+<p>ASReview is free to use, runs in a web browser, requires no
+programming knowledge, and produces a full log of every decision made
+during screening, which can be reported in a methods section. It is
+described in a peer-reviewed paper in Nature Machine Intelligence <a href="https://www.nature.com/articles/s42256-020-00287-7" class="external-link">(van de Schoot
+et al., 2021)</a> and has been used in fields including medicine,
+psychology, and environmental science.</p>
 </div>
 </div>
 </div>
@@ -541,23 +534,321 @@ interpret what those anomalies mean.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="ethical-considerations">Ethical Considerations<a class="anchor" aria-label="anchor" href="#ethical-considerations"></a></h2>
-<hr class="half-width"><p>Using AI in research is an ethical as well as a methodological
-question. The following are among the most important issues for
-researchers to engage with.</p>
+</div>
+</div>
+<div class="section level1">
+<h1 id="considerations-when-working-with-ai">Considerations When Working with AI<a class="anchor" aria-label="anchor" href="#considerations-when-working-with-ai"></a></h1>
+<div class="section level2">
+<h2 id="bias-and-fairness">Bias and Fairness<a class="anchor" aria-label="anchor" href="#bias-and-fairness"></a></h2>
+<p>AI models do not arrive in the world as neutral tools. They are
+trained on data generated by human societies, and those societies
+contain historical and structural inequalities. A model trained on
+historical medical records will reflect historical disparities in who
+received care and who was documented. A model trained on published
+academic literature will reflect who has historically had access to
+publish.</p>
+<p>The consequences can be serious. Models used for clinical risk
+prediction have been shown to perform worse on patients from groups
+underrepresented in the training data. Automated tools used in hiring or
+admissions have reproduced patterns of discrimination from historical
+decisions.</p>
+<div id="amazons-ai-recruiting-tool" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="amazons-ai-recruiting-tool" class="callout-inner">
+<h3 class="callout-title">Amazon’s AI Recruiting Tool</h3>
+<div class="callout-content">
+<p>One of the most widely cited examples of AI bias comes from Amazon.
+Beginning in 2014, Amazon built an experimental AI tool designed to
+screen job applicants’ resumes and rate candidates from one to five
+stars, with the goal of automating part of its hiring process for
+technical roles.</p>
+<p>The system was trained on roughly a decade of resumes the company had
+previously received. Because the tech industry is male-dominated, the
+majority of those resumes came from men, and the system learned to
+favour male candidates over female ones. In practice, this meant the
+tool downgraded resumes that included the word “women’s” — such as
+“women’s chess club” — and penalised graduates of certain all-women’s
+colleges.</p>
+</div>
+</div>
+</div>
+<div id="racial-bias-in-health-algorithms" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="racial-bias-in-health-algorithms" class="callout-inner">
+<h3 class="callout-title">Racial Bias in Health Algorithms</h3>
+<div class="callout-content">
+<p>Researchers found evidence of racial bias in one of the most widely
+used algorithms in the US health care system.</p>
+<p>For patients assigned the same level of risk by the algorithm, Black
+patients were sicker than White patients. The authors estimated that
+this racial bias reduces the number of Black patients identified for
+extra care by more than half. This bias occurs because the algorithm
+uses health costs as a proxy for health needs. Less money is spent on
+Black patients who have the same level of need, and the algorithm thus
+falsely concludes that Black patients are healthier than equally sick
+White patients. Reformulating the algorithm so that it no longer uses
+costs as a proxy for needs eliminates the racial bias in predicting who
+needs extra care (<a href="https://www.science.org/doi/10.1126/science.aax2342" class="external-link">Obermeyer et
+al., 2019</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="privacy-and-data-governance">Privacy and Data Governance<a class="anchor" aria-label="anchor" href="#privacy-and-data-governance"></a></h2>
+<p>Many AI tools, particularly cloud-based LLMs, process data on
+external servers. If you input sensitive data such as patient records,
+interview transcripts, or confidential documents, into a commercial AI
+tool, you may be:</p>
+<ul><li>Breaching participant confidentiality.</li>
+<li>Violating data protection legislation such as the UK GDPR.</li>
+<li>Contravening your institution’s data governance policies or your
+ethical approval conditions.</li>
+</ul><p>Before inputting any data into an AI tool, check your institution’s
+and research group’s guidance on what categories of data may be
+processed in this way, and review the tool provider’s privacy and data
+retention policies.</p>
+</div>
+<div class="section level2">
+<h2 id="attribution-and-authorship">Attribution and Authorship<a class="anchor" aria-label="anchor" href="#attribution-and-authorship"></a></h2>
+<p>LLMs have raised genuinely novel questions about authorship and
+attribution that the research community is still working through. Key
+issues include:</p>
+<ul><li>
+<strong>Authorship of AI-generated text:</strong> most major
+publishers and funders now have explicit policies stating that AI tools
+cannot be listed as authors, because authorship carries accountability
+that an AI model cannot hold. However, policies on <em>disclosing</em>
+the use of AI in drafting or editing text vary and are evolving
+rapidly.</li>
+<li>
+<strong>Attribution of AI-generated analysis:</strong> if an LLM
+assists with qualitative coding or data interpretation, how should that
+contribution be disclosed in the methods section?</li>
+<li>
+<strong>Copyright in training data:</strong> LLMs are trained on
+text that may include copyrighted material. The legal and ethical status
+of this is an active area of debate. By including AI-generated text or
+code in your research, you may inadvertantly be infringing
+copyright.</li>
+</ul><p>You should check the current policies of your target journal or
+funder, and your institution’s own guidance, before submitting work in
+which AI has played a role.</p>
+<div id="publishers-stance-on-ai-use-in-academic-research" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="publishers-stance-on-ai-use-in-academic-research" class="callout-inner">
+<h3 class="callout-title">Publisher’s Stance on AI Use in Academic
+Research</h3>
+<div class="callout-content">
+<p>Summarised from - Rana, N. K. (2025). Generative AI and academic
+research: A review of the policies from selected HEIs.</p>
+<ul><li><p><strong>Cambridge University Press:</strong> AI tools cannot be
+credited as authors, and authors remain fully responsible for the
+accuracy, integrity, and originality of their work.</p></li>
+<li><p><strong>Nature Portfolio:</strong> AI tools are not permitted as
+authors, their use must be transparently disclosed, and AI-generated
+images are generally prohibited due to unresolved legal and ethical
+concerns. Nature requires disclosure of LLM use in the Methods section
+(or an equivalent section), rather than in acknowledgements or
+citations.</p></li>
+<li><p><strong>Elsevier:</strong> Elsevier allows AI-assisted tools for
+writing support, limited to improving clarity and readability. However,
+core scholarly activities, such as generating scientific insights,
+drawing conclusions, or making recommendations, must remain human-led.
+Elsevier requires authors to declare any AI tool usage and does not
+allow AI tools to be listed as authors.</p></li>
+</ul></div>
+</div>
+</div>
 <div class="section level3">
-<h3 id="environmental-cost-of-ai">Environmental Cost of AI<a class="anchor" aria-label="anchor" href="#environmental-cost-of-ai"></a></h3>
+<h3 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a></h3>
+<p>The outputs of AI aren’t stable, they’re likely to vary depending on
+prompt wording and the AI model version among other factors. Therefore,
+they can’t be reliably cited in the same way as you would cite a
+research paper or software package.</p>
+<p>Several universities and libraries recommend citing the tool used
+including the version and date, and describing how it was used. Many AI
+tools now allow chats to be shared through URLs, meaning that specific
+chats can be cited if that would be appropriate and helpful to readers
+of the research.</p>
+<p><a href="https://guides.library.duke.edu/citing/AI?utm_source=chatgpt.com" class="external-link">Duke
+University Libraries</a> gives the following guidance on how to cite an
+AI Chat and AI Tool in several different referencing styles. For
+example, the APA style would be:</p>
+<p><strong>AI Chat</strong></p>
+<p>AI Company Name. (Year, Month Day). Title of chat [Description, such
+as Generative AI chat]. Tool Name/Model. URL of the chat.</p>
+<p>Example: OpenAI. (2025, August 21). <em>High school grammar
+concepts</em> [Generative AI chat]. ChatGPT. <a href="https://chatgpt.com/share/68a77b60-0ee4-800c-9acc-cd3fd573c311" class="external-link uri">https://chatgpt.com/share/68a77b60-0ee4-800c-9acc-cd3fd573c311</a></p>
+<p><strong>AI Tool</strong></p>
+<p>AI Company Name. (Year). Tool Name/Model [Description: e.g., Large
+language model]. URL of the tool</p>
+<p>Example: OpenAI. (2025). <em>ChatGPT</em> [Large language model]. <a href="https://chatgpt.com/" class="external-link uri">https://chatgpt.com/</a></p>
+<div id="critically-reviewing-ai-use-in-qualitative-research" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="critically-reviewing-ai-use-in-qualitative-research" class="callout-inner">
+<h3 class="callout-title">Critically Reviewing AI Use in Qualitative
+Research</h3>
+<div class="callout-content">
+<p><strong>Scenario</strong>: You are reviewing a manuscript submitted
+to your field’s leading journal. In the methods section, the authors
+write:</p>
+<blockquote>
+<p><em>“Qualitative thematic analysis of interview transcripts was
+supported by an AI language model, which was used to generate initial
+codes. These codes were then reviewed and refined by the research team.
+The AI tool assisted with the analysis of all 47 transcripts.”</em></p>
+</blockquote>
+<p>Discuss the following questions:</p>
+<ol style="list-style-type: decimal"><li>What information is missing from this methods description that you
+would need as a reviewer?</li>
+<li>What risks or limitations should the authors have acknowledged?</li>
+<li>What would a more complete and transparent methods statement look
+like?</li>
+</ol></div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Points to consider
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p><strong>Information that is missing:</strong></p>
+<ul><li>Which AI tool was used, and which version? (Without this, the
+approach cannot be evaluated or replicated.)</li>
+<li>What prompts or instructions were given to the model?</li>
+<li>How were AI-generated codes accepted, modified, or rejected?</li>
+<li>Was the tool validated on similar data or in similar research
+contexts?</li>
+<li>How was participant data handled? Was it anonymised before being
+input? Was the tool’s data retention policy checked against ethical
+approval conditions?</li>
+</ul><p><strong>Risks and limitations the authors should have
+acknowledged:</strong></p>
+<ul><li>LLMs can produce plausible-sounding codes that do not accurately
+reflect the content of the transcript.</li>
+<li>The model may perform inconsistently across different transcripts,
+introducing variability that is difficult to detect.</li>
+<li>The model’s outputs may reflect biases in its training data rather
+than patterns in the research data.</li>
+<li>If the same analysis were run again, the model might produce
+different initial codes.</li>
+</ul><p><strong>A more complete methods statement might include:</strong></p>
+<ul><li>The name and version of the AI tool used.</li>
+<li>A description of how the tool was prompted and integrated into the
+coding workflow.</li>
+<li>A statement of how participant data was handled in compliance with
+ethical approval and data protection requirements.</li>
+<li>A description of the human review process e.g. how many researchers
+reviewed codes, whether inter-rater reliability was assessed, how
+disagreements were resolved.</li>
+<li>An explicit acknowledgement of the limitations of AI-assisted coding
+and how these were mitigated.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="cognitive-offloading-and-de-skilling-with-generative-ai">Cognitive Offloading and De-skilling with Generative AI<a class="anchor" aria-label="anchor" href="#cognitive-offloading-and-de-skilling-with-generative-ai"></a></h2>
+<p>AI tools are can be incredibly useful for many research tasks but
+there is a risk that comes with using them that is easy to overlook: the
+less we do something ourselves, the less capable we become at doing
+it.</p>
+<p>This phenomenon has been described cognitive offloading. It is not a
+new issues, for example, using a calculator means we practise mental
+arithmetic less, and using GPS navigation means we build less of an
+internal sense of geography. Sometimes this is a reasonable trade-off,
+but in research, where the ability to think carefully, critically, and
+independently is central to what you do, its worth considering whether
+the trade-offs are worth it.</p>
+<p>One example, relevant to anyone who develops or uses research
+software, is the use of AI coding assistants to generate code for
+experiments, simulations or data analysis. If you’re using code to
+process your data or run your analyses, that code is part of your
+methodology. If you did not write it and do not fully understand it, you
+cannot be certain it is doing what you think it is doing and therefore
+you cannot be fully confident in your results. AI-generated code can
+contain subtle errors that produce outputs which look plausible but are
+wrong. A researcher who understands the code can catch these errors but
+a researcher who doesn’t understand the code may not, and these errors
+could affect your research results.</p>
+<p>More generally, every time we outsource a cognitive task to an AI, we
+don’t get the practice at doing it ourselves. Over time, this can make
+us lose the underlying skill. A researcher who always asks an LLM to
+summarise papers may gradually lose the habit of reading them carefully.
+A researcher who always asks an LLM to draft text may find their own
+writing voice harder to find.</p>
+<p>Research depends on deep and independent thinking. To do good
+research, researchers need to sit with a difficult problem, reason
+through it and arrive at your own conclusions. Using AI thoughtfully
+involves deliberate decisions about which tasks to outsource to AI and
+which to do yourself, not because an AI couldn’t do it, but because it’s
+a part of your human intelligence that you’d like to protect.</p>
+<div id="ai-impact-on-critical-thinking" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="ai-impact-on-critical-thinking" class="callout-inner">
+<h3 class="callout-title">AI Impact on Critical Thinking</h3>
+<div class="callout-content">
+<p>A large mixed-methods study investigated the impact of AI usage on
+critical thinking skills using surveys and in-depth interviews.</p>
+<p>It was found that AI tool use was significantly negatively associated
+with critical thinking abilities and that this association was mediated
+(explained) by increased cognitive offloading.</p>
+<p>The author argues that ‘these results highlight the potential
+cognitive costs of AI tool reliance, emphasising the need for
+educational strategies that promote critical engagement with AI
+technologies.’</p>
+<p><a href="https://www.mdpi.com/2075-4698/15/1/6?ref=blog.continue.dev" class="external-link">Gerlich,
+M. (2025). AI tools in society: Impacts on cognitive offloading and the
+future of critical thinking. Societies, 15(1), 6.</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="environmental-cost-of-ai">Environmental Cost of AI<a class="anchor" aria-label="anchor" href="#environmental-cost-of-ai"></a></h2>
 <p>The environmental cost of AI is larger and more complex than most
-users appreciate. Due to increasing demand, data centres could consume
-up to 9% of global electricity demand by 2030 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12613045/" class="external-link">Hankendi et
+users appreciate.</p>
+<p>AI tools run on data centres. These are large warehouses full of
+powerful computers that store data and run the calculations behind
+everyday digital services, including AI systems like chatbots. Data
+centres need large amounts of electricity to power the computers and,
+because these computers generate a lot of heat when running, they also
+require large amounts of water to keep them cool.</p>
+<p>Due to increasing demand, data centres could consume up to 9% of
+global electricity demand by 2030 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12613045/" class="external-link">Hankendi et
 al., 2025</a>). AI systems are the fastest-growing source of this
 demand, but measuring their precise impact is difficult because
-operators rarely separate AI from non-AI workloads in their
-environmental reporting. The most recent estimates suggest that in 2025,
-AI systems generated up to 79.7 million tonnes of carbon - comparable to
-the annual emissions of a major city - and consumed up to 764 billion
-litres of water, comparable to global bottled water consumption (<a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de Vries-Gao,
-2025</a>).</p>
+operators rarely separate AI computing tasks (often called ‘workloads’)
+from non-AI computing tasks (workloads) in their environmental
+reporting.</p>
+<p>The most recent estimates suggest that in 2025, AI systems generated
+carbon emissons comparable to the annual emissions of a major city (up
+to 79.7 million tonnes of carbon) and consumed an amount of water
+comparable to global bottled water consumption (up to 764 billion litres
+of water) (<a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de
+Vries-Gao, 2025</a>).</p>
 <figure><img src="fig/google_data_centre.jpg" alt="Google Data Center, The Dalles, Oregon" class="figure mx-auto d-block"><div class="figcaption">Google Data Center, The Dalles, Oregon by
 Visitor7, CC BY-SA 3.0, via Wikimedia Commons</div>
 </figure><p>Environmental costs accumulate across the full lifecycle of an AI
@@ -583,12 +874,7 @@ estimates suggesting a standard ChatGPT conversation of 20–50 exchanges
 requires roughly 500 millilitres of freshwater for cooling the servers
 in data centres (<a href="https://dl.acm.org/doi/10.1145/3724499" class="external-link">Li et
 al., 2023</a>).</p>
-<p>Some tools exist that can help developers better understand the cost
-of training and inference, for example in the Green Algorithms AI
-calculator users can enter details on the hardware, runtime, and
-location of the work and see the potential environmental cost: <a href="https://calculator.green-algorithms.org/ai" class="external-link">https://calculator.green-algorithms.org/ai</a>.</p>
-<figure><img src="fig/green_algorithms_calculator.png" alt="Screenshot of the green algorithms calculator" class="figure mx-auto d-block"><div class="figcaption">The Green Algorithms Calculator</div>
-</figure><p>Not all AI is equally environmentally expensive. General-purpose LLMs
+<p>Not all AI is equally environmentally expensive. General-purpose LLMs
 are orders of magnitude more energy-intensive per inference than
 smaller, task-specific models performing the same job. This means that
 the convenience of using a single general-purpose LLM interface can
@@ -597,58 +883,84 @@ multiplied across many uses. A fine-tuned model used for classification
 or information extraction may produce comparable results at a fraction
 of the per-query energy cost (<a href="https://doi.org/10.1145/3630106.3658542" class="external-link">Luccioni et al.,
 2024</a>).</p>
-<p>Similarly not all energy has the same environmental impact, data
-centers that run using renewable electricity (electricity that has a
-lower “carbon intensity”) will have reduced environmental impact. The <a href="https://app.electricitymaps.com/map/live/fifteen_minutes" class="external-link">Electricity
-Maps</a> website maps the amount of greenhouse gas (equivalent) emitted
-for every kWH of electricity produced, it’s clear that training an AI
-model in a data center in e.g. Scandinavia would have a lower
-environmental impact than training the model in Australia. However, the
-relationship between renewable energy and AI’s actual carbon footprint
-is more complex than it first appears. Many data centre operators claim
-to run on renewable energy by purchasing Renewable Energy Certificates
-(RECs), which allow them to offset their consumption on paper without
-necessarily drawing clean power from the grid in real time. This
-distinction - between matching renewable energy and actually using it -
-has attracted significant criticism of major providers including Google
-and Microsoft (<a href="https://www.nature.com/articles/s41558-022-01379-5" class="external-link">Bjørn et al.,
-2022</a>).</p>
+<p>Where the data centre is located also affects the environmental
+impact. A data centre draws electricity from its local grid and
+therefore its environmental footprint depends heavily on how the region
+in which it’s located generates power. A data centre on a grid powered
+mostly by renewables (wind, solar, hydropower) will have a far smaller
+footprint than an identical one on a grid powered mostly by fossil
+fuels, even when running exactly the same workload.</p>
+<p>The <a href="https://app.electricitymaps.com/map/live/fifteen_minutes" class="external-link">Electricity
+Maps</a> website maps the amount of greenhouse gas emitted for every
+unit of electricity produced for data centres across the world. Looking
+at the map, it’s clear that training an AI model in a data center in
+Scandinavia would have a lower environmental impact than training the
+model in Australia. Scandinavian grids rely heavily on hydropower and
+wind (low carbon intensity), while Australia’s still relies more on coal
+(much higher).</p>
 <figure><img src="fig/electricity_map.png" alt="Screenshot of the electricity maps website showing the carbon intensity i.e. the grams of CO2 equivalent per kilowatt-hour (gCO2eq/kWh) measuring the greenhouse gas emissions from generating electricity" class="figure mx-auto d-block"><div class="figcaption">Electricity Maps Carbon Intensity (the grams of
 CO2 equivalent per kilowatt-hour (gCO2eq/kWh) measuring the greenhouse
 gas emissions from generating electricity)</div>
-</figure><p>But overall, the biggest obstacle to accurate environmental
-accounting for AI is the problem of transparency. The companies
-operating the largest AI systems publish very little useful data.
-Furthermore, the published per-query emissions figures from AI providers
-typically reflect optimised, market-based conditions that incorporate
-REC purchases, rather than an accurate estimate of carbon and water
-usage (<a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de
-Vries-Gao, 2025</a>). Until providers are required to report
-location-based emissions data transparently and consistently, the true
-environmental cost of AI will remain difficult to measure and easy to
-understate (<a href="https://www.cell.com/joule/fulltext/S2542-4351(24)00347-7" class="external-link">Masanet
+</figure><div id="renewable-energy-certificates" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="renewable-energy-certificates" class="callout-inner">
+<h3 class="callout-title">Renewable Energy Certificates</h3>
+<div class="callout-content">
+<p>However, the relationship between renewable energy and AI’s actual
+carbon footprint is more complex than it first appears.</p>
+<p>Many data centre operators claim to run on renewable energy by
+purchasing Renewable Energy Certificates (RECs), which allow them to
+offset their consumption on paper without necessarily drawing clean
+power from the grid in real time.</p>
+<p>This distinction - between matching renewable energy and actually
+using it - has attracted significant criticism of major providers
+including Google and Microsoft (<a href="https://www.nature.com/articles/s41558-022-01379-5" class="external-link">Bjørn et al.,
+2022</a>).</p>
+</div>
+</div>
+</div>
+<p>Some tools exist that can help developers better understand the cost
+of training and inference, for example in the Green Algorithms AI
+calculator users can enter details on the hardware, runtime, and
+location of the work and see the potential environmental cost: <a href="https://calculator.green-algorithms.org/ai" class="external-link">https://calculator.green-algorithms.org/ai</a>.</p>
+<figure><img src="fig/green_algorithms_calculator.png" alt="Screenshot of the green algorithms calculator" class="figure mx-auto d-block"><div class="figcaption">The Green Algorithms Calculator</div>
+</figure><p>Overall, the biggest obstacle to accurate environmental accounting
+for AI is the problem of transparency. The companies operating the
+largest AI systems publish very little useful data. Furthermore, the
+published per-query emissions figures from AI providers typically
+reflect optimised, market-based conditions that incorporate REC
+purchases, rather than an accurate estimate of carbon and water usage
+(<a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de Vries-Gao,
+2025</a>).</p>
+<p>Until providers are required to report location-based emissions data
+transparently and consistently, the true environmental cost of AI will
+remain difficult to measure and easy to understate (<a href="https://www.cell.com/joule/fulltext/S2542-4351(24)00347-7" class="external-link">Masanet
 et al., 2024</a>).</p>
-<div id="environmental-cost-discussion" class="callout challenge">
+<div id="do-the-benefits-of-ai-justify-its-environmental-costs" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="environmental-cost-discussion" class="callout-inner">
-<h3 class="callout-title">Environmental Cost Discussion</h3>
+<div id="do-the-benefits-of-ai-justify-its-environmental-costs" class="callout-inner">
+<h3 class="callout-title">Do the benefits of AI justify its
+environmental costs?</h3>
 <div class="callout-content">
-<p>Can the societal benefits of AI justify its environmental costs?
-Where should we draw the line?</p>
+<p>Do the benefits of AI justify its environmental costs? Where should
+we draw the line?</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
   Points to consider
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="benefits-justify-costs">Benefits Justify Costs<a class="anchor" aria-label="anchor" href="#benefits-justify-costs"></a></h3>
@@ -711,206 +1023,9 @@ the institutions deploying them, or the researchers using them?</li>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="bias-and-fairness">Bias and Fairness<a class="anchor" aria-label="anchor" href="#bias-and-fairness"></a></h3>
-<p>AI models do not arrive in the world as neutral tools. They are
-trained on data generated by human societies, and those societies
-contain historical and structural inequalities. A model trained on
-historical medical records will reflect historical disparities in who
-received care and who was documented. A model trained on published
-academic literature will reflect who has historically had access to
-publish.</p>
-<p>The consequences can be serious. Models used for clinical risk
-prediction have been shown to perform worse on patients from groups
-underrepresented in the training data. Automated tools used in hiring or
-admissions have reproduced patterns of discrimination from historical
-decisions.</p>
-<div id="racial-bias-in-health-algorithms" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="racial-bias-in-health-algorithms" class="callout-inner">
-<h3 class="callout-title">Racial Bias in Health Algorithms</h3>
-<div class="callout-content">
-<p>Researchers found evidence of racial bias in one of the most widely
-used algorithms in the US health care system.</p>
-<p>For patients assigned the same level of risk by the algorithm, Black
-patients were sicker than White patients. The authors estimated that
-this racial bias reduces the number of Black patients identified for
-extra care by more than half. This bias occurs because the algorithm
-uses health costs as a proxy for health needs. Less money is spent on
-Black patients who have the same level of need, and the algorithm thus
-falsely concludes that Black patients are healthier than equally sick
-White patients. Reformulating the algorithm so that it no longer uses
-costs as a proxy for needs eliminates the racial bias in predicting who
-needs extra care (<a href="https://www.science.org/doi/10.1126/science.aax2342" class="external-link">Obermeyer et
-al., 2019</a>).</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="transparency-and-reproducibility">Transparency and Reproducibility<a class="anchor" aria-label="anchor" href="#transparency-and-reproducibility"></a></h3>
-<p>Research integrity depends on being transparent about your methods.
-When AI is part of your workflow, transparency requires:</p>
-<ul><li>Stating clearly which AI tools were used, for what purpose, and at
-what stage of the research.</li>
-<li>Citing specific model versions wherever possible, so that readers
-can assess potential limitations and replicate your approach.</li>
-<li>Describing how you validated or checked AI-generated outputs.</li>
-<li>Acknowledging limitations that arise specifically from using AI,
-such as the probabilistic nature of LLM outputs or the knowledge cutoff
-of the model used.</li>
-</ul></div>
-<div class="section level3">
-<h3 id="privacy-and-data-governance">Privacy and Data Governance<a class="anchor" aria-label="anchor" href="#privacy-and-data-governance"></a></h3>
-<p>Many AI tools, particularly cloud-based LLMs, process data on
-external servers. If you input sensitive data such as patient records,
-interview transcripts, or confidential documents, into a commercial AI
-tool, you may be:</p>
-<ul><li>Breaching participant confidentiality.</li>
-<li>Violating data protection legislation such as the UK GDPR.</li>
-<li>Contravening your institution’s data governance policies or your
-ethical approval conditions.</li>
-</ul><p>Before inputting any data into an AI tool, check your institution’s
-and research group’s guidance on what categories of data may be
-processed in this way, and review the tool provider’s privacy and data
-retention policies.</p>
-</div>
-<div class="section level3">
-<h3 id="attribution-and-authorship">Attribution and Authorship<a class="anchor" aria-label="anchor" href="#attribution-and-authorship"></a></h3>
-<p>LLMs have raised genuinely novel questions about authorship and
-attribution that the research community is still working through. Key
-issues include:</p>
-<ul><li>
-<strong>Authorship of AI-generated text:</strong> most major
-publishers and funders now have explicit policies stating that AI tools
-cannot be listed as authors, because authorship carries accountability
-that an AI model cannot hold. However, policies on <em>disclosing</em>
-the use of AI in drafting or editing text vary and are evolving
-rapidly.</li>
-<li>
-<strong>Attribution of AI-generated analysis:</strong> if an LLM
-assists with qualitative coding or data interpretation, how should that
-contribution be disclosed in the methods section?</li>
-<li>
-<strong>Copyright in training data:</strong> LLMs are trained on
-text that may include copyrighted material. The legal and ethical status
-of this is an active area of debate. By including AI-generated text or
-code in your research, you may inadvertantly be infringing
-copyright.</li>
-</ul><p>You should check the current policies of your target journal or
-funder, and your institution’s own guidance, before submitting work in
-which AI has played a role.</p>
-<div id="critically-reviewing-ai-use-in-qualitative-research" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="critically-reviewing-ai-use-in-qualitative-research" class="callout-inner">
-<h3 class="callout-title">Critically Reviewing AI Use in Qualitative
-Research</h3>
-<div class="callout-content">
-<p><strong>Scenario</strong>: You are reviewing a manuscript submitted
-to your field’s leading journal. In the methods section, the authors
-write:</p>
-<blockquote>
-<p><em>“Qualitative thematic analysis of interview transcripts was
-supported by an AI language model, which was used to generate initial
-codes. These codes were then reviewed and refined by the research team.
-The AI tool assisted with the analysis of all 47 transcripts.”</em></p>
-</blockquote>
-<p>Discuss the following questions:</p>
-<ol style="list-style-type: decimal"><li>What information is missing from this methods description that you
-would need as a reviewer?</li>
-<li>What risks or limitations should the authors have acknowledged?</li>
-<li>What would a more complete and transparent methods statement look
-like?</li>
-</ol></div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">
-  Points to consider
-  </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p><strong>Information that is missing:</strong></p>
-<ul><li>Which AI tool was used, and which version? (Without this, the
-approach cannot be evaluated or replicated.)</li>
-<li>What prompts or instructions were given to the model?</li>
-<li>How were AI-generated codes accepted, modified, or rejected?</li>
-<li>Was the tool validated on similar data or in similar research
-contexts?</li>
-<li>How was participant data handled? Was it anonymised before being
-input? Was the tool’s data retention policy checked against ethical
-approval conditions?</li>
-</ul><p><strong>Risks and limitations the authors should have
-acknowledged:</strong></p>
-<ul><li>LLMs can produce plausible-sounding codes that do not accurately
-reflect the content of the transcript.</li>
-<li>The model may perform inconsistently across different transcripts,
-introducing variability that is difficult to detect.</li>
-<li>The model’s outputs may reflect biases in its training data rather
-than patterns in the research data.</li>
-<li>If the same analysis were run again, the model might produce
-different initial codes.</li>
-</ul><p><strong>A more complete methods statement might include:</strong></p>
-<ul><li>The name and version of the AI tool used.</li>
-<li>A description of how the tool was prompted and integrated into the
-coding workflow.</li>
-<li>A statement of how participant data was handled in compliance with
-ethical approval and data protection requirements.</li>
-<li>A description of the human review process e.g. how many researchers
-reviewed codes, whether inter-rater reliability was assessed, how
-disagreements were resolved.</li>
-<li>An explicit acknowledgement of the limitations of AI-assisted coding
-and how these were mitigated.</li>
-</ul></div>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="cognitive-offloading-and-de-skilling-with-generative-ai">Cognitive Offloading and De-skilling with Generative AI<a class="anchor" aria-label="anchor" href="#cognitive-offloading-and-de-skilling-with-generative-ai"></a></h2>
-<hr class="half-width"><p>AI tools are can be incredibly useful for many research tasks but
-there is a risk that comes with using them that is easy to overlook: the
-less we do something ourselves, the less capable we become at doing it.
-This phenomenon has been described cognitive offloading. It is not a new
-issues, for example, using a calculator means we practise mental
-arithmetic less, and using GPS navigation means we build less of an
-internal sense of geography. Sometimes this is a reasonable trade-off,
-but in research, where the ability to think carefully, critically, and
-independently is central to what you do, its worth considering whether
-the trade-offs are worth it.</p>
-<p>One example, relevant to anyone who develops or uses research
-software, is the use of AI coding assistants to generate code for
-experiments, simulations or data analysis. If you’re using code to
-process your data or run your analyses, that code is part of your
-methodology. If you did not write it and do not fully understand it, you
-cannot be certain it is doing what you think it is doing and therefore
-you cannot be fully confident in your results. AI-generated code can
-contain subtle errors that produce outputs which look plausible but are
-wrong. A researcher who understands the code can catch these errors but
-a researcher who doesn’t understand the code may not, and these errors
-could affect your research results.</p>
-<p>More generally, every time we outsource a cognitive task to an AI, we
-don’t get the practice at doing it ourselves. Over time, this can make
-us lose the underlying skill. A researcher who always asks an LLM to
-summarise papers may gradually lose the habit of reading them carefully.
-A researcher who always asks an LLM to draft text may find their own
-writing voice harder to find.</p>
-<p>Research depends on deep and independent thinking. To do good
-research, researchers need to sit with a difficult problem, reason
-through it and arrive at your own conclusions. Using AI thoughtfully
-involves deliberate decisions about which tasks to outsource to AI and
-which to do yourself, not because an AI couldn’t do it, but because it a
-part of your human intelligence that you’d like to protect.</p>
-</section><section><h2 class="section-heading" id="looking-ahead-developing-your-ai-literacy">Looking Ahead: Developing Your AI Literacy<a class="anchor" aria-label="anchor" href="#looking-ahead-developing-your-ai-literacy"></a></h2>
-<hr class="half-width"><p>This course has given you a map of the AI landscape and the
+<div class="section level2">
+<h2 id="looking-ahead-developing-your-ai-literacy">Looking Ahead: Developing Your AI Literacy<a class="anchor" aria-label="anchor" href="#looking-ahead-developing-your-ai-literacy"></a></h2>
+<p>This course has given you a map of the AI landscape and the
 vocabulary to navigate it.</p>
 <p>A few practical suggestions for developing your AI literacy beyond
 this course:</p>
@@ -967,8 +1082,10 @@ debates in your own field.</li>
 </ul></div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-<hr class="half-width"><ul><li><a href="https://doi.org/10.1038/s41598-023-33825-5" class="external-link">Edwards, S. V.,
+</div>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<ul><li><a href="https://doi.org/10.1038/s41598-023-33825-5" class="external-link">Edwards, S. V.,
 Reeve, A. H., &amp; Jonsson, J. E. (2023). Machine learning
 classification of birdsong syllables from multiple species. Scientific
 Reports, 13, 7824.</a></li>
@@ -982,6 +1099,9 @@ K., Tawiah, K., Pels, W. A., Addai-Henne, S., Dwamena, H. A., Owiredu,
 E. O., Ayeh, S. A., &amp; Eshun, J. (2023). A supervised machine
 learning algorithm for detecting and predicting fraud in credit card
 transactions. Decision Analytics Journal, 6, 100163.</a></li>
+<li><a href="https://www.mdpi.com/2075-4698/15/1/6?ref=blog.continue.dev" class="external-link">Gerlich,
+M. (2025). AI tools in society: Impacts on cognitive offloading and the
+future of critical thinking. Societies, 15(1), 6.</a></li>
 <li><a href="https://doi.org/10.1016/j.patter.2025.101430" class="external-link">de Vries-Gao,
 A. (2025). The carbon and water footprints of data centers and what this
 could mean for artificial intelligence. Patterns, 6, 101430.</a></li>
@@ -1006,7 +1126,12 @@ Science, 366(6464), 447-453.</a></li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></div> <!-- / div.lesson-content -->
+ --></div>
+</div>
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="4-large-language-models.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -1066,8 +1191,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/5-ai-in-research.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/5-ai-in-research.html",
   "dateCreated": "2026-02-20",
-  "dateModified": "2026-03-15",
-  "datePublished": "2026-06-23"
+  "dateModified": "2026-06-29",
+  "datePublished": "2026-06-29"
 }
 
   </script><script>
