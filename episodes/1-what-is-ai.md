@@ -76,11 +76,11 @@ In 1950 Alan Turing proposed a test for machine intelligence, known as the Turin
 
 So, this test involves a human judge engaging in natural language conversations with both a human and a machine designed to generate human-like responses. The machine passes the test if it can convince the judge that it is human a significant fraction of the time. 
 
-A 2025 pre-print reports the performance of AI systems including ELIZA and GPT-4.5 in two randomised, controlled, and pre-registered Turing tests. Participants had 5 minute conversations simultaneously with another human participant and one of these systems before judging which conversational partner they thought was human. When prompted to adopt a humanlike persona, GPT-4.5 was judged to be the human 73% of the time: significantly more often than the real human participant was selected. In contrast, ELIZA was judged to be the human only 23% of the time[(Jones & Bergen, 2025)](https://arxiv.org/pdf/2503.23674).
+A 2026 article in PNAS reports the performance of AI systems including ELIZA and GPT-4.5 in two randomised, controlled, and pre-registered Turing tests. Participants had 5 minute conversations simultaneously with another human participant and one of these systems before judging which conversational partner they thought was human. When prompted to adopt a human-like persona, LLaMa-3.1 was judged to be the human 56% of the time and GPT-4.5 was judged to be the human 73% of the time, significantly more often than the real human participant was selected. In contrast, ELIZA was judged to be the human only 23% of the time[(Jones & Bergen, 2026)](https://www.pnas.org/doi/10.1073/pnas.2524472123).
 
 ![Juan Alberto Sánchez Margallo, CC BY 2.5, via Wikimedia Commons](fig/Turing_test_diagram.png){alt="Diagram of the Turing test"}
 
-This result illustrates how capable current systems have become at specific tasks. However, passing a five-minute conversation test is not the same as general intelligence. GPT-4.5 has been trained on an enormous quantity of human-written text, which makes it exceptionally good at producing human-like language and this is exactly what the Turing test measures. It is, in a sense, the task it was most directly prepared for.
+This result illustrates how capable current systems have become at specific tasks (i.e. having a human-like conversation). However, passing a five-minute conversation test is not the same as general intelligence. GPT-4.5 has been trained on an enormous quantity of human-written text, which makes it exceptionally good at producing human-like language and this is exactly what the Turing test measures. It is, in a sense, the task it was most directly prepared for.
 
 It's important that we also consider what the same system cannot do. It cannot walk into an unfamiliar laboratory and figure out how the equipment works. It cannot notice that a colleague seems stressed and decide whether to ask about it. It cannot read a paper, recognise that the methodology is flawed, and devise a better approach. These are things a competent human researcher does routinely, involving transferring knowledge and judgement flexibly across situations they have never seen before. No current AI system has of the components we would associate with human intelligence.
 
@@ -141,7 +141,7 @@ The current wave of AI is therefore not the result of a single breakthrough, but
 
 ## References
 
-- [Jones, C. R., & Bergen, B. K. (2025). Large language models pass the turing test. arXiv preprint arXiv:2503.23674.](https://arxiv.org/pdf/2503.23674)
+- [Jones, C. R., & Bergen, B. K. (2026). Large language models pass a standard three-party Turing test. Proceedings of the National Academy of Sciences, 123(21), e2524472123.](https://www.pnas.org/doi/10.1073/pnas.2524472123)
 - [Toosi, A., Bottino, A. G., Saboury, B., Siegel, E., & Rahmim, A. (2021). A brief history of AI: how to prevent another winter (a critical review). PET clinics, 16(4), 449-469.](https://arxiv.org/pdf/2109.01517)
 - [French, R. M. (2000). The Turing Test: the first 50 years. Trends in cognitive sciences, 4(3), 115-122.](https://link.springer.com/content/pdf/10.1023/A:1011288000451.pdf)
 
