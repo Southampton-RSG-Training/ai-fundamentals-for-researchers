@@ -153,15 +153,6 @@ This split matters because we want to know whether the model performs well on ne
 3. During training, the model adjusts its internal parameters. You can think of these as thousands or millions of adjustable dials. The system tweaks these settings to reduce the number of mistakes it makes on the training data.
 4. After training, we evaluate the model on the test set. This tells us how well it generalises beyond the examples it was shown during learning.
 
-### Overfitting
-
-A key risk in machine learning is overfitting.
-
-Overfitting occurs when a model learns the training data too well, including its noise and quirks. Instead of learning general patterns, it effectively memorises the examples.
-
-An analogy is a student who memorises past exam papers word for word. They may perform extremely well on familiar questions, but struggle when the questions are phrased differently.
-
-A well-trained model should capture underlying structure, not just memorise details.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
@@ -173,33 +164,7 @@ Notice how the quality and quantity of training examples strongly influence the 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Interpretable Models vs Black Box Models
-
-Before choosing a machine learning approach, one of the most important questions to ask is:
-
-*"Do I need to understand why the model makes a particular prediction, or is the prediction itself sufficient?"*
-
-This is the distinction between **interpretable** and **black box** models.
-
-An **interpretable model** produces outputs that can be traced back to a clear, human-readable explanation. A linear regression, for instance, gives you a coefficient for each input variable and you can see directly how much each factor contributed to the prediction. A decision tree reaches its conclusion through a series of simple yes/no rules that can be printed out and inspected. When accountability, transparency, or regulatory compliance matter, interpretability may be essential.
-
-A **black box model**, such as a deep neural network with many layers, may produce highly accurate predictions, but the internal reasoning process is not directly accessible. You can observe the inputs and outputs, but the path between them involves thousands or millions of interacting numerical parameters that do not correspond to human-understandable concepts. 
-
-Consider an interpretable model when:
-
-- You need to explain or justify individual predictions
-- Your field has regulatory or ethical requirements for transparency
-- Discovering which variables matter is part of the research question
-- Stakeholders (e.g. patients, policymakers, or funders) need to understand the rationale
-
-A black box model may be acceptable when:
-
-- Predictive accuracy is the primary goal
-- Outputs will be validated independently before acting on them
-- Large volumes of complex data (images, audio) make interpretability impractical
-
-![Original:  Krauss.Vector:  Pduive23, CC BY-SA 4.0, via Wikimedia Commons](fig/blackbox.svg){alt="diagram showing inputs to a black box producing unexplainable outputs"}
-
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 
 ## When Not to Use Machine Learning
 
@@ -216,53 +181,7 @@ Machine learning, by contrast, is optimised for predictive performance. It works
 
 Many research workflows combine a statistical model to test a hypothesis, and then a machine learning model to build a practical prediction tool. The important thing is to choose machine learning or traditional statistics deliberately, based on your research question.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
-
-## Signs that a traditional statistical approach may be more appropriate
-
-- Your primary goal is to test a specific hypothesis.
-- Your dataset is small (many ML methods need substantial amounts of data to generalise reliably).
-- You need to quantify uncertainty formally, with confidence intervals or p-values.
-- Assumptions are well-understood and can be checked (e.g. normality, independence).
-- Interpretability is essential and a simpler statistical model performs adequately.
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Choosing the Right Approach
-
-For each research scenario below, decide whether you would lean towards a traditional statistical method, a machine learning model, or a combination of both:
-
-1. A clinical researcher wants to know whether a new drug significantly reduces blood pressure compared to a placebo, using data from a randomised controlled trial of 120 participants.
-2. A team wants to build a tool that automatically flags grant applications likely to score in the top 10%, trained on 50,000 previously scored applications.
-3. An ecologist wants to understand which environmental variables most strongly predict the presence of a rare species, and needs to report effect sizes to inform conservation policy.
-
-:::::::::::::::::::::::: solution
-
-1. **Traditional statistics.** The goal is hypothesis testing and effect estimation in a small, well-controlled dataset. A t-test or regression model is appropriate, interpretable, and produces the confidence intervals and p-values the clinical audience expects.
-
-2. **Machine learning.** The goal is prediction, the dataset is large, and accuracy on unseen applications is the primary criterion. Interpretability may still matter (to avoid bias in funding decisions), so the choice of model and evaluation for fairness would both warrant careful thought.
-
-3. **Traditional statistics, possibly combined with ML.** The goal is explanation and communication of effect sizes to a policy audience. A regression-based approach is likely more appropriate. If the dataset is large and the relationships complex, a machine learning model might improve predictive accuracy, but the interpretability requirement points toward simpler, explainable methods.
-
-:::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-## What Can Go Wrong?
-
-Machine learning systems are only as good as the data they are trained on.
-
-A common phrase is "garbage in, garbage out". If the training data is incomplete, biased, or unrepresentative, the resulting model will reflect those limitations.
-
-Research-relevant examples include:
-
-- A text analysis model trained only on English-language literature will struggle with multilingual texts.
-- A medical diagnostic model trained predominantly on one demographic group may perform poorly for others.
-
-These issues are not purely technical, they're ethically and societally important because they influence who benefits from AI systems and who may be disadvantaged by them. We will examine these ethical and societal questions in greater depth in [Episode 5](5-ai-in-research.md).
 
 
 ## How Can I Train My Own Machine Learning Model?
@@ -277,7 +196,7 @@ A basic understanding of **data preparation** is essential as most of the practi
 
 An understanding of **statistics** is also valuable. Understanding what your evaluation metrics actually mean, and being able to reason about whether your model has learned something meaningful or has simply exploited a pattern in the training data, requires a degree of statstical understanding.
 
-If you are new to programming or data science, many researchers begin with the Carpentries lessons on [Plotting and Programming in Python ](https://swcarpentry.github.io/python-novice-gapminder/) or [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/), followed by the [Introduction to Machine Learning with Python](https://carpentries-incubator.github.io/machine-learning-novice-sklearn/) lesson in the Carpentries Incubator.
+If you are new to programming or data science, many researchers begin with the Carpentries lessons on [Plotting and Programming in Python ](https://swcarpentry.github.io/python-novice-gapminder/) or [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/), followed by  [Introduction to Machine Learning with Python](https://carpentries-incubator.github.io/machine-learning-novice-sklearn/) or [Machine Learning for Tabular Data in R](https://southampton-rsg-training.github.io/machine-learning-in-r/).
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 
