@@ -199,7 +199,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Introduction</a>
+        <a href="introduction.html">1. Learning Objectives</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -237,9 +237,10 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#what-is-a-neural-network">What is a Neural Network?</a></li>
-<li><a href="#types-of-neural-network">Types of Neural Network</a></li>
 <li><a href="#training-a-neural-network">Training a Neural Network</a></li>
 <li><a href="#how-can-i-train-my-own-deep-learning-model">How can I Train My Own Deep Learning Model?</a></li>
+<li><a href="#choosing-the-right-machine-learning-or-deep-learning-model-interpretable-models-vs-black-box-models">Choosing the Right Machine Learning or Deep Learning Model:
+Interpretable Models vs Black Box Models</a></li>
 <li><a href="#references">References</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -323,7 +324,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Deep Learning and Neural Networks</h1>
-        <p>Last updated on 2026-03-15 |
+        <p>Last updated on 2026-06-30 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/3-deep-learning.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -379,9 +380,7 @@ importance.</li>
 <li>These weighted values are added together.</li>
 <li>If the result is large enough, the neuron produces an output.</li>
 <li>That output is then sent to the next layer.</li>
-</ul><figure><img src="fig/artificial_neural_network.svg" alt="Artificial neural network with layer coloring" class="figure mx-auto d-block"><div class="figcaption">A simplified diagram of an artificial neural
-network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons</div>
-</figure><p>Both biological and artificial neurons act as filters that combine
+</ul><p>Both biological and artificial neurons act as filters that combine
 many incoming signals, weighted by importance, and decide whether the
 combined signal should be passed to the next layer and, if so, how
 strongly the it should be passed on.</p>
@@ -408,7 +407,9 @@ layers:</p>
 <li>One or more hidden layers, where most of the computation
 happens.</li>
 <li>An output layer, which produces the final prediction.</li>
-</ul><p>As data passes through the network, each layer transforms it into a
+</ul><figure><img src="fig/artificial_neural_network.svg" alt="Artificial neural network with layer coloring" class="figure mx-auto d-block"><div class="figcaption">A simplified diagram of an artificial neural
+network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons</div>
+</figure><p>As data passes through the network, each layer transforms it into a
 slightly more abstract representation.</p>
 <p>For example, in image recognition:</p>
 <ul><li>An early layer might detect simple edges and lines.</li>
@@ -423,9 +424,15 @@ deep learning.</p>
 <p>The word <strong>deep</strong> simply refers to the number of hidden
 layers. A shallow model might have one hidden layer. A deep model may
 have dozens or even hundreds of layers.</p>
+<div id="types-of-neural-network" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-</section><section><h2 class="section-heading" id="types-of-neural-network">Types of Neural Network<a class="anchor" aria-label="anchor" href="#types-of-neural-network"></a></h2>
-<hr class="half-width"><p>There are many neural network architectures, each suited to
+<span class="callout-header">Callout</span>
+<div id="types-of-neural-network" class="callout-inner">
+<h3 class="callout-title">Types of Neural Network</h3>
+<div class="callout-content">
+<p>There are many neural network architectures, each suited to
 particular tasks. Just a few common examples are discussed below.</p>
 <div class="section level3">
 <h3 id="convolutional-neural-networks-cnns">Convolutional Neural Networks (CNNs)<a class="anchor" aria-label="anchor" href="#convolutional-neural-networks-cnns"></a></h3>
@@ -457,6 +464,10 @@ episode.</p>
 <p>To read more about different neural network architectures have a look
 at the <a href="https://www.asimovinstitute.org/neural-network-zoo/" class="external-link">Neural
 Network Zoo</a>, a cheat sheet for neural network architectures.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="identifying-deep-learning-in-research" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -491,21 +502,16 @@ learning for image recognition could be useful or is already in use?</p>
 </div>
 </section><section><h2 class="section-heading" id="training-a-neural-network">Training a Neural Network<a class="anchor" aria-label="anchor" href="#training-a-neural-network"></a></h2>
 <hr class="half-width"><p>First, a collection of software “neurons” are created and connected
-together, allowing them to send messages to each other. Next, the
-network is asked to solve a problem, which it attempts to do over and
-over, each time strengthening the connections that lead to success and
-diminishing those that lead to failure.</p>
+together, allowing them to send messages to each other.</p>
 <p>During training, a neural network follows a repeated cycle.</p>
 <ol style="list-style-type: decimal"><li>The network receives an input and produces a prediction.</li>
 <li>The prediction is compared with the correct answer.</li>
 <li>The difference between them is calculated as an error.</li>
-<li>This error signal is sent backwards through the network.</li>
+<li>This error signal is sent backwards through the network (known as
+backpropagation).</li>
 <li>The weights are adjusted slightly to reduce future errors.</li>
-</ol><p>Sending the error backwards through the network is known as
-<strong>backpropagation</strong>. We’ll mention this again in the next
-episode in the context of large language models.</p>
-<p>This process is repeated across many examples, often millions, and
-over many passes through the dataset.</p>
+</ol><p>This process is repeated across many times and on many examples,
+often millions.</p>
 <div id="try-training-a-neural-network" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -556,27 +562,6 @@ the predictions, shown by colour intensity, changes over time.</li>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="why-so-much-data-and-computing-power">Why So Much Data and Computing Power?<a class="anchor" aria-label="anchor" href="#why-so-much-data-and-computing-power"></a></h3>
-<p>Modern neural networks often contain millions or even billions of
-adjustable parameters. Training them involves:</p>
-<ul><li>
-<strong>Processing very large datasets.</strong> In TensorFlow
-Playground you are working with a few hundred data points at most, a
-fraction of what real-world models require. Real models might be trained
-on millions of data points.</li>
-<li>
-<strong>Performing repeated calculations across all
-parameters.</strong> A deep learning model may have billions of
-equivalent values all being updated simultaneously.</li>
-<li>
-<strong>Iterating many thousands of times.</strong> Models may
-require tens of thousands of passes through the training data to
-converge.</li>
-</ul><p>This requires significant computational resources, often specialised
-hardware. Without large datasets and substantial computing power, deep
-models tend to perform poorly.</p>
-</div>
 </section><section><h2 class="section-heading" id="how-can-i-train-my-own-deep-learning-model">How can I Train My Own Deep Learning Model?<a class="anchor" aria-label="anchor" href="#how-can-i-train-my-own-deep-learning-model"></a></h2>
 <hr class="half-width"><p>Training a deep learning model from scratch is significantly more
 demanding than training a conventional machine learning model, but it is
@@ -593,7 +578,9 @@ plus additional capabilities. You will need familiarity with a
 both of which have extensive documentation and active research
 communities.</p>
 <p><strong>Access to appropriate hardware</strong> is a practical
-requirement. Training deep learning models on a standard laptop CPU is
+requirement. Modern neural networks use very large datasets, contain
+millions of adjustable parameters, and iterate thousands of time.
+Therefore, training deep learning models on a standard laptop CPU is
 rarely feasible for research-scale tasks. Most researchers use GPUs,
 either through institutional high-performance computing (HPC) facilities
 or cloud platforms such as Google Colab, which provides free GPU access
@@ -608,7 +595,46 @@ architecture and training dynamics than conventional ML. You need enough
 conceptual understanding to diagnose when training is going wrong, for
 example, when a model is failing to learn, overfitting, or producing
 unexpected outputs.</p>
-<div id="keypoints1" class="callout keypoints">
+</div>
+</section><section><h2 class="section-heading" id="choosing-the-right-machine-learning-or-deep-learning-model-interpretable-models-vs-black-box-models">Choosing the Right Machine Learning or Deep Learning Model:
+Interpretable Models vs Black Box Models<a class="anchor" aria-label="anchor" href="#choosing-the-right-machine-learning-or-deep-learning-model-interpretable-models-vs-black-box-models"></a></h2>
+<hr class="half-width"><p>Before choosing a machine learning approach, one of the most
+important questions to ask is:</p>
+<p><em>“Do I need to understand why the model makes a particular
+prediction, or is the prediction itself sufficient?”</em></p>
+<p>This is the distinction between <strong>interpretable</strong> and
+<strong>black box</strong> models.</p>
+<p>An <strong>interpretable model</strong> produces outputs that can be
+traced back to a clear, human-readable explanation. A linear regression,
+for instance, gives you a coefficient for each input variable and you
+can see directly how much each factor contributed to the prediction. A
+decision tree reaches its conclusion through a series of simple yes/no
+rules that can be printed out and inspected. When accountability,
+transparency, or regulatory compliance matter, interpretability may be
+essential.</p>
+<figure><img src="fig/decision_tree.png" alt="example of a decision tree" class="figure mx-auto d-block"><div class="figcaption">An example of a decision tree</div>
+</figure><p>A <strong>black box model</strong>, such as a deep neural network
+with many layers, may produce highly accurate predictions, but the
+internal reasoning process is not directly accessible. You can observe
+the inputs and outputs, but the path between them involves thousands or
+millions of interacting numerical parameters that do not correspond to
+human-understandable concepts.</p>
+<p>Consider an interpretable model when:</p>
+<ul><li>You need to explain or justify individual predictions</li>
+<li>Your field has regulatory or ethical requirements for
+transparency</li>
+<li>Discovering which variables matter is part of the research
+question</li>
+<li>Stakeholders (e.g. patients, policymakers, or funders) need to
+understand the rationale</li>
+</ul><p>A black box model may be acceptable when:</p>
+<ul><li>Predictive accuracy is the primary goal</li>
+<li>Outputs will be validated independently before acting on them</li>
+<li>Large volumes of complex data (images, audio) make interpretability
+impractical</li>
+</ul><figure><img src="fig/blackbox.svg" alt="diagram showing inputs to a black box producing unexplainable outputs" class="figure mx-auto d-block"><div class="figcaption">Original: Krauss.Vector: Pduive23, CC BY-SA 4.0,
+via Wikimedia Commons</div>
+</figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -626,7 +652,6 @@ image, audio, and text analysis.</li>
 <li>Large models require extensive data and computing resources to train
 effectively.</li>
 </ul></div>
-</div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -703,7 +728,7 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/3-deep-learning.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/3-deep-learning.html",
   "dateCreated": "2026-02-20",
-  "dateModified": "2026-03-15",
+  "dateModified": "2026-06-30",
   "datePublished": "2026-06-30"
 }
 
