@@ -33,16 +33,23 @@ These tasks might include recognising images, understanding language, making rec
 
 ## Noticing AI
 
-Can you think of an AI system you have encountered recently? What task was it performing?
+Think of a recent example of an AI system you have used or encountered.
 
-Write down one example and briefly describe what input it received and what output it produced.
+Briefly describe:
+
+- the task it was performing
+- the information it received as input
+- the output it generated.
+
 
 :::::::::::::::::::::::: solution 
 
 Examples might include:
 
+- A generative AI tool like ChatGPT, Microsoft Copilot or Claude to edit your writing.
+- A code assistant like GitHub Copilot improving your research code.
 - A spam filter classifying incoming emails as “spam” or “not spam”.
-- A recommendation system suggesting articles, products, or videos based on previous behaviour.
+- A video streaming platform suggesting films based on previous watching behaviour.
 - Autocomplete predicting the next word or line of code while you type.
 - A medical imaging tool highlighting areas of a scan that may require clinical attention.
 

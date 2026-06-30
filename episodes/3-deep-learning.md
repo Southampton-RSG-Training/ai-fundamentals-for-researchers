@@ -38,7 +38,6 @@ An artificial neuron works in a simplified mathematical way:
 - If the result is large enough, the neuron produces an output. 
 - That output is then sent to the next layer.
 
-![A simplified diagram of an artificial neural network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons](fig/artificial_neural_network.svg){alt='Artificial neural network with layer coloring'}
 
 Both biological and artificial neurons act as filters that combine many incoming signals, weighted by importance, and decide whether the combined signal should be passed to the next layer and, if so, how strongly the it should be passed on. 
 
@@ -54,6 +53,8 @@ A neural network is typically organised into three types of layers:
 - An input layer, which receives the raw data.
 - One or more hidden layers, where most of the computation happens.
 - An output layer, which produces the final prediction.
+
+![A simplified diagram of an artificial neural network. Glosser.ca, CC BY-SA 3.0, via Wikimedia Commons](fig/artificial_neural_network.svg){alt='Artificial neural network with layer coloring'}
 
 As data passes through the network, each layer transforms it into a slightly more abstract representation.
 
@@ -72,6 +73,8 @@ In text processing:
 This hierarchical pattern detection is one of the main strengths of deep learning.
 
 The word **deep** simply refers to the number of hidden layers. A shallow model might have one hidden layer. A deep model may have dozens or even hundreds of layers.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
 
 ## Types of Neural Network
 
@@ -99,6 +102,7 @@ Transformers are the foundation of most modern natural language processing syste
 
 To read more about different neural network architectures have a look at the [Neural Network Zoo](https://www.asimovinstitute.org/neural-network-zoo/), a cheat sheet for neural network architectures.
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -125,19 +129,17 @@ Examples may include:
 
 ## Training a Neural Network
 
-First, a collection of software “neurons” are created and connected together, allowing them to send messages to each other. Next, the network is asked to solve a problem, which it attempts to do over and over, each time strengthening the connections that lead to success and diminishing those that lead to failure.
+First, a collection of software “neurons” are created and connected together, allowing them to send messages to each other.
 
 During training, a neural network follows a repeated cycle.
 
 1. The network receives an input and produces a prediction.
 2. The prediction is compared with the correct answer.
 3. The difference between them is calculated as an error.
-4. This error signal is sent backwards through the network.
+4. This error signal is sent backwards through the network (known as backpropagation).
 5. The weights are adjusted slightly to reduce future errors.
 
-Sending the error backwards through the network is known as **backpropagation**.  We'll mention this again in the next episode in the context of large language models.
-
-This process is repeated across many examples, often millions, and over many passes through the dataset.
+This process is repeated across many times and on many examples, often millions.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -166,16 +168,6 @@ The lines connecting neurons in the hidden layers show the weights of the connec
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Why So Much Data and Computing Power?
-
-Modern neural networks often contain millions or even billions of adjustable parameters. Training them involves:
-
-- **Processing very large datasets.**  In TensorFlow Playground you are working with a few hundred data points at most, a fraction of what real-world models require. Real models might be trained on millions of data points.
-- **Performing repeated calculations across all parameters.** A deep learning model may have billions of equivalent values all being updated simultaneously.
-- **Iterating many thousands of times.** Models may require tens of thousands of passes through the training data to converge.
-
-This requires significant computational resources, often specialised hardware. Without large datasets and substantial computing power, deep models tend to perform poorly.
-
 
 ## How can I Train My Own Deep Learning Model?
 
@@ -185,11 +177,41 @@ Training a deep learning model from scratch is significantly more demanding than
 
 Deep learning requires all of the skills needed for conventional machine learning (programming in Python, data preparation, evaluation) plus additional capabilities. You will need familiarity with a **deep learning framework** such as PyTorch or TensorFlow, both of which have extensive documentation and active research communities.
 
-**Access to appropriate hardware** is a practical requirement. Training deep learning models on a standard laptop CPU is rarely feasible for research-scale tasks. Most researchers use GPUs, either through institutional high-performance computing (HPC) facilities or cloud platforms such as Google Colab, which provides free GPU access for smaller experiments.
+**Access to appropriate hardware** is a practical requirement. Modern neural networks use very large datasets, contain millions of adjustable parameters, and iterate thousands of time.  Therefore, training deep learning models on a standard laptop CPU is rarely feasible for research-scale tasks. Most researchers use GPUs, either through institutional high-performance computing (HPC) facilities or cloud platforms such as Google Colab, which provides free GPU access for smaller experiments.
 
 **Experiment management** becomes important at this level of complexity. Tracking which model configuration produced which results, managing large datasets, and handling training runs that may take hours or days requires a great deal of organisation and tools such as Weights & Biases or MLflow.
 
 Deep learning also demands a somewhat deeper understanding of model architecture and training dynamics than conventional ML. You need enough conceptual understanding to diagnose when training is going wrong, for example, when a model is failing to learn, overfitting, or producing unexpected outputs.
+
+
+## Choosing the Right Machine Learning or Deep Learning Model: Interpretable Models vs Black Box Models
+
+Before choosing a machine learning approach, one of the most important questions to ask is:
+
+*"Do I need to understand why the model makes a particular prediction, or is the prediction itself sufficient?"*
+
+This is the distinction between **interpretable** and **black box** models.
+
+An **interpretable model** produces outputs that can be traced back to a clear, human-readable explanation. A linear regression, for instance, gives you a coefficient for each input variable and you can see directly how much each factor contributed to the prediction. A decision tree reaches its conclusion through a series of simple yes/no rules that can be printed out and inspected. When accountability, transparency, or regulatory compliance matter, interpretability may be essential.
+
+![An example of a decision tree](fig/decision_tree.png){alt="example of a decision tree"}
+
+A **black box model**, such as a deep neural network with many layers, may produce highly accurate predictions, but the internal reasoning process is not directly accessible. You can observe the inputs and outputs, but the path between them involves thousands or millions of interacting numerical parameters that do not correspond to human-understandable concepts. 
+
+Consider an interpretable model when:
+
+- You need to explain or justify individual predictions
+- Your field has regulatory or ethical requirements for transparency
+- Discovering which variables matter is part of the research question
+- Stakeholders (e.g. patients, policymakers, or funders) need to understand the rationale
+
+A black box model may be acceptable when:
+
+- Predictive accuracy is the primary goal
+- Outputs will be validated independently before acting on them
+- Large volumes of complex data (images, audio) make interpretability impractical
+
+![Original:  Krauss.Vector:  Pduive23, CC BY-SA 4.0, via Wikimedia Commons](fig/blackbox.svg){alt="diagram showing inputs to a black box producing unexplainable outputs"}
 
 
 
