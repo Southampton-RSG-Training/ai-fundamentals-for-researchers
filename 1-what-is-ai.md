@@ -1,7 +1,7 @@
 ---
 title: "What is Artificial Intelligence?"
-teaching: 25 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+teaching: 15 # teaching time in minutes
+exercises: 5 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -74,6 +74,8 @@ Researchers began using probability and statistics to handle uncertainty and var
 
 **Modern machine learning (2000s–present)**
 With increased data and computing power, systems began to "learn" patterns directly from large datasets. Rather than being told exactly what to do, they infer patterns from examples.
+
+### How do we assess artificial intelligence?
 
 Throughout all these phases, the goal has remained broadly the same: to build systems that can carry out tasks we associate with intelligent behaviour.
 
