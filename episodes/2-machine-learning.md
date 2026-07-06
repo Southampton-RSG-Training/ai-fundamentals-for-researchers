@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning - Teaching Computers from Data"
 teaching: 20 # teaching time in minutes
-exercises: 5 # exercise time in minutes
+exercises: 25 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -154,14 +154,19 @@ This split matters because we want to know whether the model performs well on ne
 4. After training, we evaluate the model on the test set. This tells us how well it generalises beyond the examples it was shown during learning.
 
 
-::::::::::::::::::::::::::::::::::::: callout
+::::::::::::::::::::::::::::::::::::: challenge
 
-## Demonstration: Teachable Machine
+## Image Classification with the Teachable Machine
 
-A useful way to build understanding without the need to write code is to experiment with tools such as [Teachable Machine](https://teachablemachine.withgoogle.com/). These tools allow you to train a simple image or sound classifier using your own examples, without any coding required.
+A useful way to build understanding without the need to write code is to experiment with tools such as [Teachable Machine](https://teachablemachine.withgoogle.com/) which allow you to train a simple image or sound classifier using your own examples, without any coding required.
+
+*"Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. You train a computer to recognize your images, sounds, and poses without writing any machine learning code."*
+
+Find two different objects and have a go training an image classifying machine learning model.
 
 Notice how the quality and quantity of training examples strongly influence the behaviour of the model.
 
+For more information about the Teachable Machine, have a look through the FAQs on their website: [https://teachablemachine.withgoogle.com/faq](https://teachablemachine.withgoogle.com/faq) 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
@@ -190,9 +195,9 @@ For many research tasks, training a machine learning model from scratch can be u
 
 ### What skills this requires
 
-Training a conventional machine learning model requires **programming skills**, typically in Python or R, and familiarity with standard machine learning libraries such as scikit-learn (Python) or caret/tidymodels (R). You do not need to understand the mathematical derivations of the algorithms, but you do need to be comfortable working with tabular data, splitting datasets, selecting and configuring models, and interpreting evaluation metrics.
+Training a conventional machine learning model requires **programming skills**, typically in Python or R, and familiarity with standard machine learning libraries such as scikit-learn (Python) or randomForest/xgboost/tidymodels (R).
 
-A basic understanding of **data preparation** is essential as most of the practical work in machine learning involves cleaning, transforming, and structuring data rather than tuning models. Familiarity with concepts such as cross-validation, train/test splits, and overfitting (covered earlier in this episode) will take you a long way.
+A basic understanding of **data preparation** is essential as most of the practical work in machine learning involves cleaning, transforming, and structuring data rather than tuning models. 
 
 An understanding of **statistics** is also valuable. Understanding what your evaluation metrics actually mean, and being able to reason about whether your model has learned something meaningful or has simply exploited a pattern in the training data, requires a degree of statstical understanding.
 

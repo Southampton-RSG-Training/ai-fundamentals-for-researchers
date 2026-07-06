@@ -1,7 +1,7 @@
 ---
 title: "Large Language Models"
-teaching: 25 # teaching time in minutes
-exercises: 5 # exercise time in minutes
+teaching: 20 # teaching time in minutes
+exercises: 15 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -83,7 +83,6 @@ The attention mechanism combined with the availability of large-scale computing 
 
 ## How LLMs Are Trained: Pre-training and Fine-tuning
 
-Building a capable LLM is typically a two-stage process.
 
 ### Stage 1: Pre-training
 
@@ -225,7 +224,6 @@ For each statement below, decide whether it is true or false, and briefly explai
 1. When an LLM answers a question, it searches the internet and retrieves the most relevant facts.
 2. A fine-tuned LLM trained on medical literature will always give accurate medical information.
 3. Two researchers using the same LLM with the same prompt will always receive identical outputs.
-4. LLMs learn from their conversations with users, updating their knowledge in real time.
 
 ::::::::::::::::::::: solution
 
@@ -236,8 +234,6 @@ For each statement below, decide whether it is true or false, and briefly explai
 2. **False.** Fine-tuning on domain-specific text can improve performance in a given area, but it does not eliminate hallucination. A model can still produce confident but incorrect medical information. Domain expertise does not guarantee accuracy.
 
 3. **False.** LLM outputs are probabilistic. The same input can produce different outputs across different sessions, or even within the same session, because the model samples from a distribution of possible next words rather than selecting a single deterministic answer.
-
-4. **False** (for most deployed LLMs). Once trained and deployed, an LLM's parameters are fixed — it does not learn from or retain information from individual conversations. Each session typically starts fresh from the same model state. (Some specialised systems are designed to update over time, but this is not the default.)
 
 :::::::::::::::::::::::::::::
 
@@ -252,15 +248,15 @@ Go to a conversational AI tool such as ChatGPT, Microsoft Copilot or Claude and 
 
 1. Ask the model to provide three references on a niche academic topic. Note any invented or inaccurate citations.
 2. Ask the same question twice and compare outputs.
-3. Ask about a very recent event, publication, or development in your field. Observe how the model responds — it may admit uncertainty, speculate, give outdated information, or turn to web search capabilities.
-4. Ask the model to summarise a short paragraph you provide.
+3. Ask about a very recent event, publication, or development in your field and observe how the model responds.  Does it admit uncertainty, speculate, give outdated information, or turn to web search capabilities?
+4. Ask the model to summarise a short paragraph you provide.  You could use the paragraph above about the attention mechanism or provide one of your own.
 
 :::::::::::::::::::::::: solution 
 
-1. Hallucination demo
-2. Stochasticity demo
-3. Knowledge cutoff demo
-4. This illustrates a task where LLMs genuinely add value when the output is reviewed critically.
+1. Possibility of hallucination
+2. Stochasticity demonstration - two responses to the same prompt are likely to differ.
+3. Knowledge cutoff demonstration - LLMs only have knowledge of events prior to when they were trained. 
+4. This illustrates a task where LLMs usually do well.
 
 :::::::::::::::::::::::::::::::::
 

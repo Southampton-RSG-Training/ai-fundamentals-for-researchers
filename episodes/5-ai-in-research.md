@@ -1,7 +1,7 @@
 ---
 title: "AI in Research"
-teaching: 20
-exercises: 5
+teaching: 50
+exercises: 20
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -256,13 +256,27 @@ Discuss the following questions:
 
 ## Cognitive Offloading and De-skilling with Generative AI
 
-AI tools are can be incredibly useful for many research tasks but there is a risk that comes with using them that is easy to overlook: the less we do something ourselves, the less capable we become at doing it.
+AI tools are incredibly useful for research but there's a risk that's easy to overlook: the less we do something ourselves, the less capable we become at doing it.
+This phenomenon has been called cognitive offloading and it isn't a new issue. For example:
 
-This phenomenon has been described cognitive offloading. It is not a new issues, for example, using a calculator means we practise mental arithmetic less, and using GPS navigation means we build less of an internal sense of geography. Sometimes this is a reasonable trade-off, but in research, where the ability to think carefully, critically, and independently is central to what you do, its worth considering whether the trade-offs are worth it. 
+- Calculators → we practice mental arithmetic less
+- GPS → we build less internal sense of geography
 
-One example, relevant to anyone who develops or uses research software, is the use of AI coding assistants to generate code for experiments, simulations or data analysis.  If you're using code to process your data or run your analyses, that code is part of your methodology. If you did not write it and do not fully understand it, you cannot be certain it is doing what you think it is doing and therefore you cannot be fully confident in your results. AI-generated code can contain subtle errors that produce outputs which look plausible but are wrong. A researcher who understands the code can catch these errors but a researcher who doesn't understand the code may not, and these errors could affect your research results.
+Sometimes that trade-off is fine. However, research depends on thinking carefully, critically, and independently, so it's important to consider whether the trade-off is worth it here. 
 
-More generally, every time we outsource a cognitive task to an AI, we don't get the practice at doing it ourselves. Over time, this can make us lose the underlying skill. A researcher who always asks an LLM to summarise papers may gradually lose the habit of reading them carefully. A researcher who always asks an LLM to draft text may find their own writing voice harder to find. 
+**Example: AI-generated code**
+
+If you use code to process data or run analyses, that code is part of your methodology. 
+
+- If you didn't write it and don't fully understand it, you can't be 100% confident in your results.
+- AI-generated code can contain subtle errors that produce plausible-looking but wrong results
+- A researcher who understands the code can catch these errors but one who doesn't, might not
+- Those errors can directly affect your results
+
+More generally, every time we outsource a cognitive task to an AI, we don't get the practice at doing it ourselves. Over time, this can make us lose the underlying skill. 
+
+- A researcher who always asks an LLM to summarise papers may gradually lose the habit of reading them carefully. 
+- A researcher who always asks an LLM to draft text may find their own writing voice harder to find. 
 
 Research depends on deep and independent thinking.  To do good research, researchers need to sit with a difficult problem, reason through it and arrive at your own conclusions.  Using AI thoughtfully involves deliberate decisions about which tasks to outsource to AI and which to do yourself, not because an AI couldn't do it, but because it's a part of your human intelligence that you'd like to protect. 
 
@@ -330,7 +344,7 @@ Some tools exist that can help developers better understand the cost of training
 ![The Green Algorithms Calculator](fig/green_algorithms_calculator.png){alt="Screenshot of the green algorithms calculator"}
 
 
-Overall, the biggest obstacle to accurate environmental accounting for AI is the problem of transparency. The companies operating the largest AI systems publish very little useful data. Furthermore, the published per-query emissions figures from AI providers typically reflect optimised, market-based conditions that incorporate REC purchases, rather than an accurate estimate of carbon and water usage ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). 
+Overall, the biggest obstacle to accurate environmental accounting for AI is the problem of transparency. The companies operating the largest AI systems publish very little useful data. Furthermore, the published per-query emissions figures from AI providers typically reflect optimised, market-based conditions rather than an accurate estimate of carbon and water usage ([de Vries-Gao, 2025](https://doi.org/10.1016/j.patter.2025.101430)). 
 
 Until providers are required to report location-based emissions data transparently and consistently, the true environmental cost of AI will remain difficult to measure and easy to understate ([Masanet et al., 2024](https://www.cell.com/joule/fulltext/S2542-4351(24)00347-7)).
 
