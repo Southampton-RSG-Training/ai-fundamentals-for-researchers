@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">58%</div>
+    <div class="progress-bar incubator" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">53%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -327,7 +327,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Large Language Models</h1>
-        <p>Last updated on 2026-06-30 |
+        <p>Last updated on 2026-07-06 |
 
         <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/4-large-language-models.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -461,8 +461,7 @@ do. Essentially all major LLMs today including ChatGPT, Claude, and
 Gemini are built on the Transformer architecture.</p>
 </div>
 </section><section><h2 class="section-heading" id="how-llms-are-trained-pre-training-and-fine-tuning">How LLMs Are Trained: Pre-training and Fine-tuning<a class="anchor" aria-label="anchor" href="#how-llms-are-trained-pre-training-and-fine-tuning"></a></h2>
-<hr class="half-width"><p>Building a capable LLM is typically a two-stage process.</p>
-<div class="section level3">
+<hr class="half-width"><div class="section level3">
 <h3 id="stage-1-pre-training">Stage 1: Pre-training<a class="anchor" aria-label="anchor" href="#stage-1-pre-training"></a></h3>
 <p>In the pre-training stage, the model is trained from scratch on an
 enormous, general-purpose body of text. The training objective is to
@@ -698,8 +697,6 @@ retrieves the most relevant facts.</li>
 accurate medical information.</li>
 <li>Two researchers using the same LLM with the same prompt will always
 receive identical outputs.</li>
-<li>LLMs learn from their conversations with users, updating their
-knowledge in real time.</li>
 </ol></div>
 </div>
 </div>
@@ -708,7 +705,7 @@ knowledge in real time.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p><strong>False.</strong> A standard LLM generates responses based
 on patterns learned during training — it does not retrieve information
@@ -724,11 +721,6 @@ input can produce different outputs across different sessions, or even
 within the same session, because the model samples from a distribution
 of possible next words rather than selecting a single deterministic
 answer.</p></li>
-<li><p><strong>False</strong> (for most deployed LLMs). Once trained and
-deployed, an LLM’s parameters are fixed — it does not learn from or
-retain information from individual conversations. Each session typically
-starts fresh from the same model state. (Some specialised systems are
-designed to update over time, but this is not the default.)</p></li>
 </ol></div>
 </div>
 </div>
@@ -747,10 +739,12 @@ Claude and ask the following questions:</p>
 Note any invented or inaccurate citations.</li>
 <li>Ask the same question twice and compare outputs.</li>
 <li>Ask about a very recent event, publication, or development in your
-field. Observe how the model responds — it may admit uncertainty,
+field and observe how the model responds. Does it admit uncertainty,
 speculate, give outdated information, or turn to web search
-capabilities.</li>
-<li>Ask the model to summarise a short paragraph you provide.</li>
+capabilities?</li>
+<li>Ask the model to summarise a short paragraph you provide. You could
+use the paragraph above about the attention mechanism or provide one of
+your own.</li>
 </ol></div>
 </div>
 </div>
@@ -759,13 +753,14 @@ capabilities.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li>Hallucination demo</li>
-<li>Stochasticity demo</li>
-<li>Knowledge cutoff demo</li>
-<li>This illustrates a task where LLMs genuinely add value when the
-output is reviewed critically.</li>
+<ol style="list-style-type: decimal"><li>Possibility of hallucination</li>
+<li>Stochasticity demonstration - two responses to the same prompt are
+likely to differ.</li>
+<li>Knowledge cutoff demonstration - LLMs only have knowledge of events
+prior to when they were trained.</li>
+<li>This illustrates a task where LLMs usually do well.</li>
 </ol></div>
 </div>
 </div>
@@ -921,8 +916,8 @@ any links that you are not going to use.
   "url": "https://carpentries.github.io/workbench-template-md/4-large-language-models.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/4-large-language-models.html",
   "dateCreated": "2026-02-20",
-  "dateModified": "2026-06-30",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-06",
+  "datePublished": "2026-07-06"
 }
 
   </script><script>
