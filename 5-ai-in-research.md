@@ -1,12 +1,11 @@
 ---
 title: "AI in Research"
-teaching: 50
+teaching: 40
 exercises: 20
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How are AI techniques being used across research disciplines today?
 - What questions should I ask before adopting an AI tool in my research workflow?
 - What ethical responsibilities do I have as a researcher using AI?
 - How do I handle transparency and reproducibility when AI has been part of my methodology?
@@ -15,110 +14,11 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Identify AI applications relevant to your own research discipline.
 - Apply a set of critical evaluation questions to any AI tool before adopting it.
 - Describe the key ethical concerns raised by the use of AI in research, including bias, transparency, privacy, and attribution.
 - Explain why reproducibility is a particular challenge when AI is part of a research workflow.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-# Working with AI
-
-Throughout this course we have built up a conceptual map of the AI landscape: from the broad field of machine learning, to deep learning with neural networks, to the language capabilities of large language models. In this final episode we ask the question: "What can I do with AI in my research?"
-
-The aims of this episode are:
-
-- to connect the technical ideas from earlier episodes to work that may be relevant to your own field; 
-- to help you to make informed decisions when using AI including how to recognise opportunities, ask the right critical questions, and engage seriously with the ethical responsibilities that come with AI tools.
-
-We can split AI in research into 'Creating AI' (i.e. building or fine-tuning your own models) and 'Using AI' (i.e. using existing AI tools for a research-related task).
-
-
-## Creating AI
-
-### Working with Structured Quantitative Data
-
-Supervised machine learning methods are highly effective for analysing structured datasets of the kind that appear throughout quantitative research.  For example:
-
-- Predicting outcomes in clinical trials or epidemiological studies.
-- Detecting anomalies or fraud in financial datasets.
-- Classifying observations in ecology.
-- Building recommendation systems for research infrastructure, such as suggesting reviewers for journal submissions.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
-
-### Detecting and Predicting Fraud in Credit Card Transactions
-
-Researchers studied the performance of three types of machine learning in detecting and predicting fraudulent credit card transactions.  One machine learning model (random forest) was 96% accurate. These models will hopefully be used to protect credit card holders from fraud ([Afriyie et al., 2023](https://www.sciencedirect.com/science/article/pii/S2772662223000036?via%3Dihub))
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-### Analysing Images and Signals
-
-Convolutional neural networks (introduced in [Episode 3](3-deep-learning.md)) have transformed the analysis of visual data and complex signals. Applications include:
-
-- Classifying cell types or identifying anomalies in microscopy images.
-- Detecting objects or changes in satellite or aerial imagery for environmental, geographic, or agricultural research.
-- Supporting diagnostic imaging in clinical settings by identifying tumours, fractures, or lesions.
-- Recognising patterns in audio signals such as birdsong, seismic activity, or cardiac rhythms.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
-
-### Machine Learning to Identify Bird Species from Birdsong Features  
-
-Researchers used machine learning methods to investigate which acoustic features of birdsong are most helpful for species identification ([Rivera et al., 2023](https://www.nature.com/articles/s41598-023-33825-5))
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
-
-### Filling Gaps and Removing Clouds from Remote Sensing Images
-
-Researchers used neural networks to reconstruct missing areas in images from satellite remote sensing ([Wang et al., 2024](https://www.sciencedirect.com/science/article/abs/pii/S0034425724005728?via%3Dihub)). These images are a very important tool for observing the changes to the Earth's land surface. For example, they are used to assess the impacts of climate change on ecosystems and monitoring the responses from plants.
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Using AI
-
-### Working with Text
-
-Text is one of the most abundant forms of data in research, and AI tools for working with text are among the most mature. Researchers are using LLMs and related tools to:
-
-- Assist with literature reviews by summarising large volumes of papers.
-- Support qualitative coding of interview transcripts, field notes, or open-ended survey responses.
-- Draft and revise written outputs such as grant applications, reports, and manuscripts.
-- Extract structured information such as dates, entities, or relationships from unstructured documents such as historical records or clinical notes.
-- Analyse sentiment or tone across large amounts of text, such as social media data or policy documents.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
-
-### AI for Systematic Reviews
-
-Tools such as [ASReview](https://asreview.nl/) use machine learning to accelerate the title and abstract screening stage of systematic reviews.
-
-[ASReview](https://asreview.nl/) is an open-source machine learning tool designed specifically to assist researchers with the title and abstract screening stage of systematic reviews. Rather than screening papers in a fixed order, ASReview learns from each inclusion or exclusion decision the reviewer makes and continuously re-ranks the remaining papers, surfacing the most likely relevant records first. 
-
-This means the most important papers tend to be found early, and screening can stop before every record has been manually checked.
-
-ASReview is free to use, runs in a web browser, requires no programming knowledge, and produces a full log of every decision made during screening, which can be reported in a methods section. It is described in a peer-reviewed paper in Nature Machine Intelligence [(van de Schoot et al., 2021)](https://www.nature.com/articles/s42256-020-00287-7) and has been used in fields including medicine, psychology, and environmental science.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-### Code and Data Analysis Assistance
-
-LLMs have rapidly become practical tools for researchers who work with data by writing code. AI coding assistants can write, explain, and debug code in languages such as Python and R, making computational methods more accessible to researchers who do not have a formal programming background. This can be incredibly useful but you should be cautious about using AI-written code in your research if you don't understand it. Due to the limitations in LLMs, AI generated code isn't always correct! There is currently limited peer-reviewed literature specifically evaluating LLM-generated research code in production workflows, most evidence is observational or anecdotal. 
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
-
-### AI as a Collaborator
-
-A theme running through all of these applications is that AI tools work best when used as a tool to complement the expertise of a human researcher, rather than replacing the researcher. An LLM that assists with qualitative coding still requires a researcher who understands the domain, the methodology, and the data. A computer vision model that flags anomalies in microscopy images still requires a scientist who can interpret what those anomalies mean.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 # Considerations When Working with AI
@@ -402,7 +302,6 @@ A few practical suggestions for developing your AI literacy beyond this course:
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- AI techniques are being applied across research disciplines, from text analysis and image classification to code generation and structured data modelling.
 - Before adopting any AI tool, ask: what was it trained on? Has it been validated? Can results be reproduced? Can outputs be explained? What are the failure modes?
 - AI models reflect the biases in their training data.
 - Transparency in methods is essential: report which tools were used, at what version, for what purpose, and how outputs were validated.
