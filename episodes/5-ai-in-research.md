@@ -121,7 +121,6 @@ Discuss the following questions:
 
 1. What information is missing from this methods description that you would need as a reviewer?
 2. What risks or limitations should the authors have acknowledged?
-3. What would a more complete and transparent methods statement look like?
 
 ::::::::::::::::::::: solution
 
@@ -142,13 +141,6 @@ Discuss the following questions:
 - The model's outputs may reflect biases in its training data rather than patterns in the research data.
 - If the same analysis were run again, the model might produce different initial codes.
 
-**A more complete methods statement might include:**
-
-- The name and version of the AI tool used.
-- A description of how the tool was prompted and integrated into the coding workflow.
-- A statement of how participant data was handled in compliance with ethical approval and data protection requirements.
-- A description of the human review process e.g. how many researchers reviewed codes, whether inter-rater reliability was assessed, how disagreements were resolved.
-- An explicit acknowledgement of the limitations of AI-assisted coding and how these were mitigated.
 
 :::::::::::::::::::::::::::::
 
