@@ -148,44 +148,21 @@ Discuss the following questions:
 
 ## Cognitive Offloading and De-skilling with Generative AI
 
-AI tools are incredibly useful for research but there's a risk that's easy to overlook: the less we do something ourselves, the less capable we become at doing it.
-This phenomenon has been called cognitive offloading and it isn't a new issue. For example:
+Cognitive offloading refers to reducing cognitive demand by offloading effort to the external world, most relevantly here, to technology.  It can include activities like writing things down, using search engines, a calculator, GPS, and most recently using AI.  Offloading cognition can help us overcome working memory capacity limitations and achieve things that would not be possible without offloading ([Risko & Gilbert, 2016](https://www.cell.com/trends/cognitive-sciences/abstract/S1364-6613(16)30098-5?ref=employerbranding.news)). 
 
-- Calculators → we practice mental arithmetic less
-- GPS → we build less internal sense of geography
+However, there are some negative effects of cognitive offloading:
 
-Sometimes that trade-off is fine. However, research depends on thinking carefully, critically, and independently, so it's important to consider whether the trade-off is worth it here. 
+- Cognitive offloading to technology can prevent information entering working memory and inhibit information being stored in long term memory. This means that the user only knows the gist or location of the information rather than a deep understanding ([Skulmowski, 2023](https://link.springer.com/article/10.1007/s10648-023-09818-1)).
+- Many studies have found that cognitive offloading increased estimates of own knowledge ([Risko & Gilbert, 2016](https://www.cell.com/trends/cognitive-sciences/abstract/S1364-6613(16)30098-5?ref=employerbranding.news)) and this was also found for users of AI ([Skulmowski, 2023](https://link.springer.com/article/10.1007/s10648-023-09818-1))
+- AI tool use was significantly negatively associated with critical thinking abilities and that this association was mediated (explained) by increased cognitive offloading ([Gerlich, 2025](https://www.mdpi.com/2075-4698/15/1/6?ref=blog.continue.dev)). 
 
-**Example: AI-generated code**
+So, every time we outsource a cognitive task to an AI, we reduce memory for information related to the task and reduce our critical thinking skills, all while believing that our knowledge and skills are better than they actually are. This could cause skills that are critical to research to decay, for example: 
 
-If you use code to process data or run analyses, that code is part of your methodology. 
+- A researcher who always asks AI to summarise papers may gradually lose the habit of reading them carefully. 
+- A researcher who always asks AI to draft text may find their own writing voice harder to find.
+- A researcher who uses AI to write their research code may never learn to code themself.  
 
-- If you didn't write it and don't fully understand it, you can't be 100% confident in your results.
-- AI-generated code can contain subtle errors that produce plausible-looking but wrong results
-- A researcher who understands the code can catch these errors but one who doesn't, might not
-- Those errors can directly affect your results
-
-More generally, every time we outsource a cognitive task to an AI, we don't get the practice at doing it ourselves. Over time, this can make us lose the underlying skill. 
-
-- A researcher who always asks an LLM to summarise papers may gradually lose the habit of reading them carefully. 
-- A researcher who always asks an LLM to draft text may find their own writing voice harder to find. 
-
-Research depends on deep and independent thinking.  To do good research, researchers need to sit with a difficult problem, reason through it and arrive at your own conclusions.  Using AI thoughtfully involves deliberate decisions about which tasks to outsource to AI and which to do yourself, not because an AI couldn't do it, but because it's a part of your human intelligence that you'd like to protect. 
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout
-
-### AI Impact on Critical Thinking
-
-A large mixed-methods study investigated the impact of AI usage on critical thinking skills using surveys and in-depth interviews.
-
-It was found that AI tool use was significantly negatively associated with critical thinking abilities and that this association was mediated (explained) by increased cognitive offloading. 
-
-The author argues that 'these results highlight the potential cognitive costs of AI tool reliance, emphasising the need for educational strategies that promote critical engagement with AI technologies.'
-
-[Gerlich, M. (2025). AI tools in society: Impacts on cognitive offloading and the future of critical thinking. Societies, 15(1), 6.](https://www.mdpi.com/2075-4698/15/1/6?ref=blog.continue.dev)
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
+Research depends on deep and independent thinking.  To do good research, researchers need to sit with a difficult problem, reason through it and arrive at their own conclusions.  Therefore, it's important to make deliberate decisions about which tasks to outsource to AI and which to do yourself, considering the consequences for the research and the researcher.
 
 
 ## Environmental Cost of AI
