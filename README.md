@@ -22,11 +22,11 @@ The list of authors of the course is available in [CITATION.cff](CITATION.cff).
 
 Current maintainers of this lesson are:
 
-* [Philippa Broadbent](https://github.com/phillybroadbent)
+* [Philippa Wilding](https://github.com/phillybroadbent)
 
 ## Contact
 
-Please get in touch with [Philippa Broadbent](pkb1r22@soton.ac.uk) with any questions about this lesson.
+Please get in touch with [Philippa Wilding](pkb1r22@soton.ac.uk) with any questions about this lesson.
 
 
 ## Acknowledgements
