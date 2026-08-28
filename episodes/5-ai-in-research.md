@@ -148,24 +148,30 @@ Discuss the following questions:
 
 ## Cognitive Offloading and De-skilling with Generative AI
 
-Cognitive offloading refers to reducing cognitive demand by offloading effort to the external world, most relevantly here, to technology.  It can include activities like writing things down, using search engines, a calculator, GPS, and most recently using AI.  Offloading cognition can help us overcome working memory capacity limitations and achieve things that would not be possible without offloading ([Risko & Gilbert, 2016](https://www.cell.com/trends/cognitive-sciences/abstract/S1364-6613(16)30098-5?ref=employerbranding.news)). 
+*Many thanks to Dr Anna-Stiina Wallinheimo for her contributions to this section*
 
-However, there are some negative effects of cognitive offloading:
+Cognitive offloading refers to transferring some of the internal cognitive processing  to the external world, most relevantly here, to AI-related technology. It can include activities like writing things down, using search engines, a calculator, GPS, and most recently using AI. Offloading cognition can help us overcome working memory (WM) capacity limitations and achieve things that would not be possible without offloading  ([Risko & Gilbert, 2016](https://www.cell.com/trends/cognitive-sciences/abstract/S1364-6613(16)30098-5?ref=employerbranding.news)). 
 
-- Cognitive offloading to technology can prevent information entering working memory and inhibit information being stored in long term memory. This means that the user only knows the gist or location of the information rather than a deep understanding ([Skulmowski, 2023](https://link.springer.com/article/10.1007/s10648-023-09818-1)).
+However, there can be some negative effects of cognitive offloading that we need to be aware of:
+
+- Cognitive offloading to technology can prevent information entering WM and inhibit information being stored in long term memory. This means that the user only knows the gist or location of the information rather than a deep understanding of it  ([Skulmowski, 2023](https://link.springer.com/article/10.1007/s10648-023-09818-1)).
 - Many studies have found that cognitive offloading increased estimates of own knowledge ([Risko & Gilbert, 2016](https://www.cell.com/trends/cognitive-sciences/abstract/S1364-6613(16)30098-5?ref=employerbranding.news)) and this was also found for users of AI ([Skulmowski, 2023](https://link.springer.com/article/10.1007/s10648-023-09818-1))
-- AI tool use was significantly negatively associated with critical thinking abilities and that this association was mediated (explained) by increased cognitive offloading ([Gerlich, 2025](https://www.mdpi.com/2075-4698/15/1/6?ref=blog.continue.dev)). 
+- AI tool use was significantly negatively associated with critical thinking abilities and this association was mediated (explained) by increased cognitive offloading ([Gerlich, 2025](https://www.mdpi.com/2075-4698/15/1/6?ref=blog.continue.dev)). 
 
-So, every time we outsource a cognitive task to an AI, we reduce memory for information related to the task and reduce our critical thinking skills, all while believing that our knowledge and skills are better than they actually are. This could cause skills that are critical to research to decay, for example: 
+So, it is possible that when we outsource a cognitive task to AI, we reduce memory for information related to the task and weaken  our critical thinking skills, all while believing that our knowledge and skills are better than they actually are. This could cause skills that are critical to research to decay, for example:
 
 - A researcher who always asks AI to summarise papers may gradually lose the habit of reading them carefully. 
 - A researcher who always asks AI to draft text may find their own writing voice harder to find.
-- A researcher who uses AI to write their research code may never learn to code themself.  
+- A researcher who uses AI to write their research code may never learn to code independently.  
+
+However, there are some instances when cognitive offloading to AI might be beneficial.  Worry and anxiety about a task can consume WM resources before they can be used for the task itself, reducing task performance.  When anxiety is depleting WM, cognitive offloading can free up additional WM capacity and increase task performance ([Wallinheimo et al., 2019](https://escholarship.org/content/qt6qt734d0/qt6qt734d0_noSplash_78c3bb650456c4ed127fc770e8b715e8.pdf)).  To consider an example in research, many researchers find coding anxiety-inducing.  Anxiety surrounding unfamiliar error messages and getting it "wrong" may consume WM in much the same way. Offloading some coding tasks to AI may reduce unproductive anxiety and improve research code among these researchers.
 
 Research depends on deep and independent thinking.  To do good research, researchers need to sit with a difficult problem, reason through it and arrive at their own conclusions.  Therefore, it's important to make deliberate decisions about which tasks to outsource to AI and which to do yourself, considering the consequences for the research and the researcher.
 
 
 ## Environmental Cost of AI
+
+*Many thanks to Dr Kirsty Pringle for her contributions to this section*
 
 The environmental cost of AI is larger and more complex than most users appreciate. 
 

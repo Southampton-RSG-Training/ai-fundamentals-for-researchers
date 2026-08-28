@@ -1,7 +1,7 @@
 # This template CITATION.cff file was generated with cffinit.
 # Visit https://bit.ly/cffinit to replace its contents
 # with information about your lesson.
-# Remember to update this file periodically, 
+# Remember to update this file periodically,
 # ensuring that the author list and other fields remain accurate.
 
 cff-version: 1.2.0
@@ -14,11 +14,15 @@ message: >-
 type: dataset
 authors:
   - given-names: Philippa
-    family-names: Broadbent
+    family-names: Wilding
   - given-names: Steve
     family-names: Crouch
   - given-names: Kamilla
     family-names: Kopec-Harding
+  - given-names: Kirsty
+    family-names: Pringle
+  - given-names: Anna-Stiina
+    family-names: Wallinheimo
 abstract: >-
   A beginner-level introduction to the landscape of Artificial Intelligence (AI) techniques. This course will help researchers build a foundational understanding of key areas within AI, including machine learning, deep learning, and large language models (LLMs) including what they are, how they work, and how they relate to one another within the broader AI ecosystem. Designed for researchers with little or no prior knowledge of AI, this course provides clear, accessible explanations without requiring any coding or statistics experience.
 license: CC-BY-4.0
